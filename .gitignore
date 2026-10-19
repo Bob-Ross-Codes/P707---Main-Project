@@ -104,3 +104,9 @@ InitTestScene*.unity*
 
 # Auto-generated cache in Assets folder
 /[Aa]ssets/[Ss]ceneDependencyCache*
+onnxruntime.dll
+k4arecord.dll
+k4abt.dll
+k4a.dll
+dnn_model_2_0_op11.onnx
+depthengine_2_0.dll
