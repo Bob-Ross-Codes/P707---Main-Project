@@ -4562,7 +4562,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3009547981241159591, guid: 7a6c7d6703cda9a46845f1a6d435fdfa, type: 3}
       propertyPath: currentMode
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3009547981241159591, guid: 7a6c7d6703cda9a46845f1a6d435fdfa, type: 3}
       propertyPath: cameraPosition
