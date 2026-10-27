@@ -1,0 +1,334 @@
+{
+  "assetCategories": {
+    "imperfection": {
+      "metal": {
+        "scratched": {}
+      }
+    }
+  },
+  "averageColor": "#000000",
+  "categories": [
+    "surface",
+    "imperfections"
+  ],
+  "comp_version": 1,
+  "description": "",
+  "environment": {
+    "biome": "undefined",
+    "region": "undefined"
+  },
+  "highest_available_res": 8192,
+  "id": "uh4obh1c",
+  "json": {
+    "contentLength": 7030,
+    "uri": "uh4obh1c.json"
+  },
+  "maps": [
+    {
+      "averageColor": "#7D7D7D",
+      "bitDepth": 32,
+      "colorSpace": "Linear",
+      "contentLength": 20884393,
+      "maxIntensity": 129,
+      "mimeType": "image/x-exr",
+      "minIntensity": 118,
+      "name": "Gloss",
+      "physicalSize": "0.7x0.7",
+      "resolution": "8192x8192",
+      "type": "gloss",
+      "uri": "uh4obh1c_8K_Gloss.exr"
+    },
+    {
+      "averageColor": "#7D7D7D",
+      "bitDepth": 8,
+      "colorSpace": "Linear",
+      "contentLength": 10004453,
+      "maxIntensity": 129,
+      "mimeType": "image/jpeg",
+      "minIntensity": 118,
+      "name": "Gloss",
+      "physicalSize": "0.7x0.7",
+      "resolution": "8192x8192",
+      "type": "gloss",
+      "uri": "uh4obh1c_8K_Gloss.jpg"
+    },
+    {
+      "averageColor": "#010101",
+      "bitDepth": 16,
+      "colorSpace": "Linear",
+      "contentLength": 10796786,
+      "maxIntensity": 26,
+      "mimeType": "image/x-exr",
+      "minIntensity": 0,
+      "name": "Mask",
+      "physicalSize": "0.7x0.7",
+      "resolution": "8192x8192",
+      "type": "mask",
+      "uri": "uh4obh1c_8K_Mask.exr"
+    },
+    {
+      "averageColor": "#010101",
+      "bitDepth": 8,
+      "colorSpace": "Linear",
+      "contentLength": 9469445,
+      "maxIntensity": 26,
+      "mimeType": "image/jpeg",
+      "minIntensity": 0,
+      "name": "Mask",
+      "physicalSize": "0.7x0.7",
+      "resolution": "8192x8192",
+      "type": "mask",
+      "uri": "uh4obh1c_8K_Mask.jpg"
+    },
+    {
+      "averageColor": "#828282",
+      "bitDepth": 32,
+      "colorSpace": "Linear",
+      "contentLength": 17347040,
+      "maxIntensity": 137,
+      "mimeType": "image/x-exr",
+      "minIntensity": 126,
+      "name": "Roughness",
+      "physicalSize": "0.7x0.7",
+      "resolution": "8192x8192",
+      "type": "roughness",
+      "uri": "uh4obh1c_8K_Roughness.exr"
+    },
+    {
+      "averageColor": "#828282",
+      "bitDepth": 8,
+      "colorSpace": "Linear",
+      "contentLength": 9808032,
+      "maxIntensity": 137,
+      "mimeType": "image/jpeg",
+      "minIntensity": 126,
+      "name": "Roughness",
+      "physicalSize": "0.7x0.7",
+      "resolution": "8192x8192",
+      "type": "roughness",
+      "uri": "uh4obh1c_8K_Roughness.jpg"
+    }
+  ],
+  "meta": [
+    {
+      "key": "scanArea",
+      "name": "Scan Area",
+      "value": "0.7x0.7 m"
+    },
+    {
+      "key": "height",
+      "name": "Height",
+      "value": "0 m"
+    },
+    {
+      "key": "tileable",
+      "name": "Tileable",
+      "value": true
+    },
+    {
+      "key": "tiling_directions",
+      "name": "Tiling Directions",
+      "value": [
+        "x",
+        "y"
+      ]
+    },
+    {
+      "key": "texelDensity",
+      "name": "Texel Density",
+      "value": "11702 px/m"
+    },
+    {
+      "key": "calibration",
+      "name": "Calibration",
+      "value": "GretagMacbeth ColorChecker Color Rendition Chart"
+    },
+    {
+      "key": "scanner",
+      "name": "Scanner",
+      "value": "MKX"
+    }
+  ],
+  "models": [],
+  "name": "Scratched Metal",
+  "pack": null,
+  "physicalSize": null,
+  "points": 1,
+  "previews": {
+    "images": [
+      {
+        "contentLength": 109924,
+        "resolution": "360x360",
+        "tags": [
+          "thumb"
+        ],
+        "uri": "uh4obh1c_Grid_360.png"
+      },
+      {
+        "contentLength": 144738,
+        "resolution": "420x420",
+        "tags": [
+          "thumb"
+        ],
+        "uri": "uh4obh1c_Grid_420.png"
+      },
+      {
+        "contentLength": 367021,
+        "resolution": "720x720",
+        "tags": [
+          "thumb",
+          "retina"
+        ],
+        "uri": "uh4obh1c_Grid_720.png"
+      },
+      {
+        "contentLength": 485181,
+        "resolution": "840x840",
+        "tags": [
+          "thumb",
+          "retina"
+        ],
+        "uri": "uh4obh1c_Grid_840.png"
+      },
+      {
+        "contentLength": 1087223,
+        "resolution": "1440x768",
+        "tags": [
+          "preview"
+        ],
+        "uri": "uh4obh1c_Popup_1440.png"
+      },
+      {
+        "contentLength": 1965035,
+        "resolution": "1920x1080",
+        "tags": [
+          "preview"
+        ],
+        "uri": "uh4obh1c_Popup_1920.png"
+      },
+      {
+        "contentLength": 4041275,
+        "resolution": "2880x1536",
+        "tags": [
+          "preview",
+          "retina"
+        ],
+        "uri": "uh4obh1c_Popup_2880.png"
+      },
+      {
+        "contentLength": 6608453,
+        "resolution": "3840x2160",
+        "tags": [
+          "preview",
+          "retina"
+        ],
+        "uri": "uh4obh1c_Popup_3840.png"
+      }
+    ],
+    "relativeSize": "1x1",
+    "scaleReferences": []
+  },
+  "process_date": "2024-04-17 03:08:51",
+  "properties": [],
+  "referencePreviews": {
+    "maps": [],
+    "models": []
+  },
+  "references": [],
+  "revised": false,
+  "revision": 0,
+  "semanticTags": {
+    "architectural_style": {},
+    "asset_type": "imperfection",
+    "contains": [
+      "scratches",
+      "metal",
+      "steel",
+      "iron",
+      "scuffs",
+      "surface imperfection",
+      "damages"
+    ],
+    "descriptive": [
+      "Scratched",
+      "Damaged",
+      "Shiny",
+      "Worn"
+    ],
+    "environment": [],
+    "industry": [
+      "archviz",
+      "games",
+      "VFX"
+    ],
+    "interior_exterior": [
+      "interior"
+    ],
+    "locations": {},
+    "maxSize": 0.7,
+    "minSize": 0.7,
+    "name": "Scratched Metal",
+    "orientation": [
+      "floor",
+      "wall"
+    ],
+    "resolution": 8192,
+    "state": [
+      "damaged"
+    ],
+    "subject_matter": "manmade",
+    "theme": [
+      ""
+    ]
+  },
+  "tags": [
+    "imperfection",
+    "scratches",
+    "scratched",
+    "damage",
+    "damaged",
+    "metal",
+    "steel",
+    "iron",
+    "scuffs",
+    "scuffed",
+    "surface imperfection"
+  ],
+  "texelDensity": 11703,
+  "texture_type": "basic",
+  "ue_plugin_archives": [
+    {
+      "contentLength": 9463272,
+      "gltfVersion": "2.0",
+      "tier": 0,
+      "type": "gltf",
+      "uri": "ue_plugin_archives/tier_0/uh4obh1c_tier_0.zip",
+      "version": 1
+    },
+    {
+      "contentLength": 4714361,
+      "gltfVersion": "2.0",
+      "tier": 1,
+      "type": "gltf",
+      "uri": "ue_plugin_archives/tier_1/uh4obh1c_tier_1.zip",
+      "version": 1
+    },
+    {
+      "contentLength": 1335051,
+      "gltfVersion": "2.0",
+      "tier": 2,
+      "type": "gltf",
+      "uri": "ue_plugin_archives/tier_2/uh4obh1c_tier_2.zip",
+      "version": 1
+    },
+    {
+      "contentLength": 645426,
+      "gltfVersion": "2.0",
+      "tier": 3,
+      "type": "gltf",
+      "uri": "ue_plugin_archives/tier_3/uh4obh1c_tier_3.zip",
+      "version": 1
+    }
+  ],
+  "version": 2
+}
