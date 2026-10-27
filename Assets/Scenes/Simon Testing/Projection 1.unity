@@ -1868,6 +1868,15 @@ MonoBehaviour:
   target: {fileID: 1978773435}
   matchRotation: 0
   updateEveryFrame: 1
+  useSmoothing: 0
+  smoothX: 1
+  smoothY: 1
+  smoothZ: 1
+  smoothSpeedX: 5
+  smoothSpeedY: 5
+  smoothSpeedZ: 5
+  smoothRotation: 1
+  rotationSmoothSpeed: 5
 --- !u!54 &322196531
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -8590,6 +8599,15 @@ MonoBehaviour:
   target: {fileID: 1500636813}
   matchRotation: 1
   updateEveryFrame: 1
+  useSmoothing: 0
+  smoothX: 1
+  smoothY: 1
+  smoothZ: 1
+  smoothSpeedX: 5
+  smoothSpeedY: 5
+  smoothSpeedZ: 5
+  smoothRotation: 1
+  rotationSmoothSpeed: 5
 --- !u!23 &1541959945
 MeshRenderer:
   m_ObjectHideFlags: 0
