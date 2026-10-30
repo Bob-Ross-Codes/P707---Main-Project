@@ -45,6 +45,8 @@ public class PlayerAreaTracker : MonoBehaviour
     public float RelativeZPercent => relativeZ_Percent;
     public float RelativeXMeters => relativeX_Meters;
     public float RelativeZMeters => relativeZ_Meters;
+    public bool IsInsideArea { get; private set; }
+
 
     private void Update()
     {
@@ -53,30 +55,37 @@ public class PlayerAreaTracker : MonoBehaviour
 
     private void CalculateRelativeCoordinates()
     {
-        if (kinectTransform == null || playerCollider == null) return;
+        if (kinectTransform == null || playerCollider == null)
+        {
+            IsInsideArea = false;
+            return;
+        }
 
-        // Player's actual world center taking BoxCollider center offset into account
         Vector3 playerWorldPos = playerCollider.bounds.center;
-
-        // Convert player's world position into Kinect's local coordinate system
         Vector3 localToKinect = kinectTransform.InverseTransformPoint(playerWorldPos);
 
-        // Center of the bounding area in Kinect local space is (0, 0, centerDistanceD)
-        // Area bounds:
-        // X ranges from: -areaWidthX / 2 to +areaWidthX / 2
-        // Z ranges from: (centerDistanceD - areaDepthZ / 2) to (centerDistanceD + areaDepthZ / 2)
         float minX = -areaWidthX * 0.5f;
         float maxX = areaWidthX * 0.5f;
+
         float minZ = centerDistanceD - (areaDepthZ * 0.5f);
         float maxZ = centerDistanceD + (areaDepthZ * 0.5f);
 
-        // 1. Coordinates measured from the bottom-left corner of the box in meters
+        // Check the actual position before clamping the coordinates.
+        IsInsideArea =
+            localToKinect.x >= minX &&
+            localToKinect.x <= maxX &&
+            localToKinect.z >= minZ &&
+            localToKinect.z <= maxZ;
+
+        // Keep the existing coordinate calculations.
         relativeX_Meters = Mathf.Clamp(localToKinect.x - minX, 0f, areaWidthX);
         relativeZ_Meters = Mathf.Clamp(localToKinect.z - minZ, 0f, areaDepthZ);
 
-        // 2. Normalized percentage (0% to 100%)
-        relativeX_Percent = Mathf.Clamp01((localToKinect.x - minX) / areaWidthX) * 100f;
-        relativeZ_Percent = Mathf.Clamp01((localToKinect.z - minZ) / areaDepthZ) * 100f;
+        relativeX_Percent =
+            Mathf.Clamp01((localToKinect.x - minX) / areaWidthX) * 100f;
+
+        relativeZ_Percent =
+            Mathf.Clamp01((localToKinect.z - minZ) / areaDepthZ) * 100f;
     }
 
     private void OnDrawGizmos()
