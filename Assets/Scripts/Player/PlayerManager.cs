@@ -6,6 +6,8 @@ public class PlayerManager : MonoBehaviour
     [Tooltip("The GameObject whose global position/rotation to match.")]
     [SerializeField] private Transform target;
 
+    public Transform Target => target;
+
     [Header("Options")]
     [SerializeField] private bool matchRotation = true;
     [SerializeField] private bool updateEveryFrame = false;
