@@ -1,5 +1,4 @@
 
-using System.Collections;
 using UnityEngine;
 
 public class BuildingFade : MonoBehaviour
@@ -14,20 +13,14 @@ public class BuildingFade : MonoBehaviour
     public float fadeDuration = 2f;
 
     [Range(0f, 2f)]
-    public float fade = 2f;
-
-    public bool Fadestate = false;
-
-    [Header("Manual Triggers")]
-    public bool fadeInTrigger;
-    public bool fadeOutTrigger;
+    public float fade = 0f;
 
     [Header("Timeline Trigger")]
     public bool useTimelineTrigger = true;
-    public float signalTime;
+
+    public float signalTime = 10f;
 
     private MaterialPropertyBlock block;
-    private Coroutine currentFade;
 
     private static readonly int FadeID =
         Shader.PropertyToID("_Fade");
@@ -40,88 +33,25 @@ public class BuildingFade : MonoBehaviour
 
     private void Start()
     {
-        m_TimelineController = FindFirstObjectByType<TimelineController>();
+        m_TimelineController =
+            FindFirstObjectByType<TimelineController>();
     }
 
     private void Update()
     {
-        // Manual triggers
-        if (fadeInTrigger)
-        {
-            fadeInTrigger = false;
-            FadeIn();
-        }
-
-        if (fadeOutTrigger)
-        {
-            fadeOutTrigger = false;
-            FadeOut();
-        }
-
-        // Timeline trigger
         if (useTimelineTrigger && m_TimelineController != null)
         {
-            if (m_TimelineController.timelineValue < signalTime)
-            {
-                FadeOut();
-            }
-            else
-            {
-                FadeIn();
-            }
-        }
-    }
+            float timelineValue = m_TimelineController.timelineValue;
 
-    public void FadeOut()
-    {
-        if (Fadestate)
-        {
-            StartFade(0f);
-            Fadestate = false;
-        }
-    }
-
-    public void FadeIn()
-    {
-        if (!Fadestate)
-        {
-            StartFade(2f);
-            Fadestate = true;
-        }
-    }
-
-    private void StartFade(float target)
-    {
-        if (currentFade != null)
-        {
-            StopCoroutine(currentFade);
-        }
-
-        currentFade = StartCoroutine(FadeRoutine(target));
-    }
-
-    private IEnumerator FadeRoutine(float target)
-    {
-        float startValue = fade;
-        float elapsed = 0f;
-
-        while (elapsed < fadeDuration)
-        {
-            elapsed += Time.deltaTime;
-
-            float t = Mathf.Clamp01(elapsed / fadeDuration);
-
-            fade = Mathf.Lerp(startValue, target, t);
+            // Calculate fade based directly on timeline position
+            fade = Mathf.Clamp(
+                (timelineValue - signalTime) / fadeDuration,
+                0f,
+                2f
+            );
 
             ApplyFade();
-
-            yield return null;
         }
-
-        fade = target;
-        ApplyFade();
-
-        currentFade = null;
     }
 
     private void ApplyFade()

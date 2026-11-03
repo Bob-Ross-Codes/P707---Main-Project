@@ -938,11 +938,8 @@ MonoBehaviour:
   - {fileID: 37639695}
   - {fileID: 37639689}
   - {fileID: 37639691}
-  fadeDuration: 2
+  fadeDuration: 90
   fade: 0
-  Fadestate: 0
-  fadeInTrigger: 0
-  fadeOutTrigger: 0
   useTimelineTrigger: 1
   signalTime: 30
 --- !u!64 &41739873
@@ -1614,11 +1611,8 @@ MonoBehaviour:
   - {fileID: 976453286}
   - {fileID: 976453288}
   - {fileID: 976453290}
-  fadeDuration: 2
+  fadeDuration: 60
   fade: 0
-  Fadestate: 0
-  fadeInTrigger: 0
-  fadeOutTrigger: 0
   useTimelineTrigger: 1
   signalTime: 20
 --- !u!4 &974552134
@@ -2289,11 +2283,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: '::'
   renderers:
   - {fileID: 1134237839}
-  fadeDuration: 2
+  fadeDuration: 30
   fade: 0
-  Fadestate: 0
-  fadeInTrigger: 0
-  fadeOutTrigger: 0
   useTimelineTrigger: 1
   signalTime: 10
 --- !u!1001 &1708325924
