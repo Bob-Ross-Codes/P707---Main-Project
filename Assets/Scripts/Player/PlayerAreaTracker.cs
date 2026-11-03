@@ -1,6 +1,6 @@
 using UnityEngine;
 
-[ExecuteAlways]
+[ExecuteAlways] 
 public class PlayerAreaTracker : MonoBehaviour
 {
     [Header("References")]
@@ -25,7 +25,7 @@ public class PlayerAreaTracker : MonoBehaviour
 
     [Header("Display Settings")]
     [Tooltip("When checked: sliders show 0% to 100%. When unchecked: sliders show meters.")]
-    [SerializeField] private bool showAsPercentage = true;
+    
 
     [Header("Live Coordinates (Read Only)")]
     [Range(0f, 100f)]
