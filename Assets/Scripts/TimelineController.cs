@@ -1,4 +1,3 @@
-
 using UnityEngine;
 using UnityEngine.Playables;
 
@@ -13,8 +12,9 @@ public class TimelineController : MonoBehaviour
     {
         if (director == null) return;
 
-        // Prevent reaching the exact end
-        director.time = Mathf.Min(timelineValue, 99.9f);
+        float normalizedTime = timelineValue / 100f;
+
+        director.time = normalizedTime * director.duration;
 
         director.Evaluate();
     }
