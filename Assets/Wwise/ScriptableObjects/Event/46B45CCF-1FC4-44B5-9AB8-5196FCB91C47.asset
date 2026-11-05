@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea5fc44d9b676714592d29859236fcd8, type: 3}
+  m_Name: 46B45CCF-1FC4-44B5-9AB8-5196FCB91C47
+  m_EditorClassIdentifier: AK.Wwise.Unity.API.WwiseTypes::WwiseEventReference
+  objectName: Play_856286__hear_it_use_it__gentle_waves_on_pebble_beach_whitehaven
+  id: 3412337620
+  guid: 46B45CCF-1FC4-44B5-9AB8-5196FCB91C47
+  IsInUserDefinedSoundBank: 0

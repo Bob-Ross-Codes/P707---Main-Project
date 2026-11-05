@@ -1,0 +1,48 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Mac",
+  "BasePlatform": "Mac",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "172",
+  "SoundBanks": [
+   {
+    "Id": "3412337620",
+    "Type": "Event",
+    "GUID": "{46B45CCF-1FC4-44B5-9AB8-5196FCB91C47}",
+    "Language": "SFX",
+    "Hash": "{77BFA5EF-3828-E56A-DB80-5B1243F5BFE0}",
+    "ObjectPath": "Play_856286__hear_it_use_it__gentle_waves_on_pebble_beach_whitehaven",
+    "ShortName": "Play_856286__hear_it_use_it__gentle_waves_on_pebble_beach_whitehaven",
+    "Path": "Event/Play_856286__hear_it_use_it__gentle_waves_on_pebble_beach_whitehaven.bnk",
+    "Media": [
+     {
+      "Id": "197076145",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Beach\\856286__hear_it_use_it__gentle-waves-on-pebble-beach-whitehaven.wav",
+      "Path": "Media/197076145.wem",
+      "CachePath": "D2/{D2318B9E-DADF-E3D1-0B27-CA4CF6F9A6EB}.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "3412337620",
+      "Name": "Play_856286__hear_it_use_it__gentle_waves_on_pebble_beach_whitehaven",
+      "ObjectPath": "\\Events\\Default Work Unit\\Play_856286__hear_it_use_it__gentle_waves_on_pebble_beach_whitehaven",
+      "GUID": "{46B45CCF-1FC4-44B5-9AB8-5196FCB91C47}",
+      "DurationType": "OneShot",
+      "DurationMin": "542.9887",
+      "DurationMax": "542.9887",
+      "MediaRefs": [
+       {
+        "Id": "197076145"
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "FileHash": "{CFE4851B-4087-CDA3-F03E-2CA3A2668A53}"
+ }
+}
