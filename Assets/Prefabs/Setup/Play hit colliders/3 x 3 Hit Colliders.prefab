@@ -1,0 +1,166 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &1525875722521730746
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 895318292888779670, guid: ae599857e6269e340841d43b0ea21140, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.3197348
+      objectReference: {fileID: 0}
+    - target: {fileID: 895318292888779670, guid: ae599857e6269e340841d43b0ea21140, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -1.416
+      objectReference: {fileID: 0}
+    - target: {fileID: 1316285044628587831, guid: ae599857e6269e340841d43b0ea21140, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.3197348
+      objectReference: {fileID: 0}
+    - target: {fileID: 1316285044628587831, guid: ae599857e6269e340841d43b0ea21140, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -1.4160001
+      objectReference: {fileID: 0}
+    - target: {fileID: 3233945193475006210, guid: ae599857e6269e340841d43b0ea21140, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.3197348
+      objectReference: {fileID: 0}
+    - target: {fileID: 3233945193475006210, guid: ae599857e6269e340841d43b0ea21140, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.035699904
+      objectReference: {fileID: 0}
+    - target: {fileID: 4661815505997037542, guid: ae599857e6269e340841d43b0ea21140, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.3197348
+      objectReference: {fileID: 0}
+    - target: {fileID: 4661815505997037542, guid: ae599857e6269e340841d43b0ea21140, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -1.4160001
+      objectReference: {fileID: 0}
+    - target: {fileID: 5104083814695849585, guid: ae599857e6269e340841d43b0ea21140, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.3197348
+      objectReference: {fileID: 0}
+    - target: {fileID: 5104083814695849585, guid: ae599857e6269e340841d43b0ea21140, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1.48733
+      objectReference: {fileID: 0}
+    - target: {fileID: 5652916123824381587, guid: ae599857e6269e340841d43b0ea21140, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.3197348
+      objectReference: {fileID: 0}
+    - target: {fileID: 5652916123824381587, guid: ae599857e6269e340841d43b0ea21140, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.035699904
+      objectReference: {fileID: 0}
+    - target: {fileID: 5830560828404876679, guid: ae599857e6269e340841d43b0ea21140, type: 3}
+      propertyPath: m_Name
+      value: East Collider
+      objectReference: {fileID: 0}
+    - target: {fileID: 6118965092161409511, guid: ae599857e6269e340841d43b0ea21140, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.18252502
+      objectReference: {fileID: 0}
+    - target: {fileID: 6118965092161409511, guid: ae599857e6269e340841d43b0ea21140, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.49999994
+      objectReference: {fileID: 0}
+    - target: {fileID: 6118965092161409511, guid: ae599857e6269e340841d43b0ea21140, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.8866316
+      objectReference: {fileID: 0}
+    - target: {fileID: 6118965092161409511, guid: ae599857e6269e340841d43b0ea21140, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6118965092161409511, guid: ae599857e6269e340841d43b0ea21140, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6118965092161409511, guid: ae599857e6269e340841d43b0ea21140, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6118965092161409511, guid: ae599857e6269e340841d43b0ea21140, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6118965092161409511, guid: ae599857e6269e340841d43b0ea21140, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6118965092161409511, guid: ae599857e6269e340841d43b0ea21140, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6118965092161409511, guid: ae599857e6269e340841d43b0ea21140, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6729297765423780008, guid: ae599857e6269e340841d43b0ea21140, type: 3}
+      propertyPath: m_Name
+      value: South Collider
+      objectReference: {fileID: 0}
+    - target: {fileID: 6758399517606766103, guid: ae599857e6269e340841d43b0ea21140, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.3197348
+      objectReference: {fileID: 0}
+    - target: {fileID: 6758399517606766103, guid: ae599857e6269e340841d43b0ea21140, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.7034699
+      objectReference: {fileID: 0}
+    - target: {fileID: 6815309918023036223, guid: ae599857e6269e340841d43b0ea21140, type: 3}
+      propertyPath: m_Name
+      value: North East Collider
+      objectReference: {fileID: 0}
+    - target: {fileID: 7007678175333991097, guid: ae599857e6269e340841d43b0ea21140, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.3197348
+      objectReference: {fileID: 0}
+    - target: {fileID: 7007678175333991097, guid: ae599857e6269e340841d43b0ea21140, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1.48733
+      objectReference: {fileID: 0}
+    - target: {fileID: 7047535978121870158, guid: ae599857e6269e340841d43b0ea21140, type: 3}
+      propertyPath: m_Name
+      value: 3 x 3 Hit Colliders
+      objectReference: {fileID: 0}
+    - target: {fileID: 7047535978121870158, guid: ae599857e6269e340841d43b0ea21140, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7838887510347421590, guid: ae599857e6269e340841d43b0ea21140, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.3197348
+      objectReference: {fileID: 0}
+    - target: {fileID: 7838887510347421590, guid: ae599857e6269e340841d43b0ea21140, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.035699904
+      objectReference: {fileID: 0}
+    - target: {fileID: 8016071163029400065, guid: ae599857e6269e340841d43b0ea21140, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.3197348
+      objectReference: {fileID: 0}
+    - target: {fileID: 8016071163029400065, guid: ae599857e6269e340841d43b0ea21140, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1.48733
+      objectReference: {fileID: 0}
+    - target: {fileID: 8610688068484024655, guid: ae599857e6269e340841d43b0ea21140, type: 3}
+      propertyPath: m_Name
+      value: South East Collider
+      objectReference: {fileID: 0}
+    - target: {fileID: 9212437673942866349, guid: ae599857e6269e340841d43b0ea21140, type: 3}
+      propertyPath: m_Name
+      value: North Collider
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects:
+    - {fileID: 5144867935126833369, guid: ae599857e6269e340841d43b0ea21140, type: 3}
+    - {fileID: 312346270506698276, guid: ae599857e6269e340841d43b0ea21140, type: 3}
+    - {fileID: 1650657822357927207, guid: ae599857e6269e340841d43b0ea21140, type: 3}
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: ae599857e6269e340841d43b0ea21140, type: 3}
