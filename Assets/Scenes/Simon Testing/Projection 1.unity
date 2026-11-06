@@ -3468,6 +3468,13 @@ MonoBehaviour:
   verticalSpeed: 0.8
   mouseButtonSpeed: 0.3
   scrollWheelSensitivity: 0.2
+  maxLeftMeters: 5.01
+  maxRightMeters: 0.79
+  maxUpMeters: 3.08
+  maxDownMeters: 1.54
+  showMovementLimits: 1
+  movementLimitColor: {r: 0, g: 1, b: 1, a: 1}
+  showModeIndicator: 1
   kinectComponents:
   - {fileID: 287588095}
   - {fileID: 1134141235}
