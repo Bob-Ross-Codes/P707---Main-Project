@@ -1,0 +1,610 @@
+{
+  "accessors": [
+    {
+      "bufferView": 2,
+      "componentType": 5126,
+      "count": 1401,
+      "max": [
+        -1270.1427001953125,
+        185.80770874023438,
+        282.8050231933594
+      ],
+      "min": [
+        -1290.628662109375,
+        165.63784790039063,
+        -68.66818237304688
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 16812,
+      "componentType": 5126,
+      "count": 1401,
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 3,
+      "componentType": 5126,
+      "count": 1401,
+      "type": "VEC4"
+    },
+    {
+      "bufferView": 1,
+      "componentType": 5126,
+      "count": 1401,
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 0,
+      "componentType": 5125,
+      "count": 7014,
+      "type": "SCALAR"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 33624,
+      "componentType": 5126,
+      "count": 1400,
+      "max": [
+        -575.838623046875,
+        185.80035400390625,
+        282.56878662109375
+      ],
+      "min": [
+        -596.0543823242188,
+        165.60336303710938,
+        -68.4905776977539
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 50424,
+      "componentType": 5126,
+      "count": 1400,
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 3,
+      "byteOffset": 22416,
+      "componentType": 5126,
+      "count": 1400,
+      "type": "VEC4"
+    },
+    {
+      "bufferView": 1,
+      "byteOffset": 11208,
+      "componentType": 5126,
+      "count": 1400,
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 0,
+      "byteOffset": 28056,
+      "componentType": 5125,
+      "count": 7008,
+      "type": "SCALAR"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 67224,
+      "componentType": 5126,
+      "count": 1408,
+      "max": [
+        -217.57350158691406,
+        185.80838012695313,
+        282.54443359375
+      ],
+      "min": [
+        -237.78993225097656,
+        165.5970916748047,
+        -68.65383911132813
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 84120,
+      "componentType": 5126,
+      "count": 1408,
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 3,
+      "byteOffset": 44816,
+      "componentType": 5126,
+      "count": 1408,
+      "type": "VEC4"
+    },
+    {
+      "bufferView": 1,
+      "byteOffset": 22408,
+      "componentType": 5126,
+      "count": 1408,
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 0,
+      "byteOffset": 56088,
+      "componentType": 5125,
+      "count": 7056,
+      "type": "SCALAR"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 101016,
+      "componentType": 5126,
+      "count": 1416,
+      "max": [
+        -926.9481201171875,
+        185.81103515625,
+        282.4750061035156
+      ],
+      "min": [
+        -947.1690673828125,
+        165.59658813476563,
+        -69.34904479980469
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 118008,
+      "componentType": 5126,
+      "count": 1416,
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 3,
+      "byteOffset": 67344,
+      "componentType": 5126,
+      "count": 1416,
+      "type": "VEC4"
+    },
+    {
+      "bufferView": 1,
+      "byteOffset": 33672,
+      "componentType": 5126,
+      "count": 1416,
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 0,
+      "byteOffset": 84312,
+      "componentType": 5125,
+      "count": 7092,
+      "type": "SCALAR"
+    }
+  ],
+  "asset": {
+    "generator": "fab-model-conversion",
+    "version": "2.0"
+  },
+  "bufferViews": [
+    {
+      "buffer": 0,
+      "byteLength": 112680,
+      "target": 34963
+    },
+    {
+      "buffer": 0,
+      "byteLength": 45000,
+      "byteOffset": 112680,
+      "byteStride": 8,
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 135000,
+      "byteOffset": 157680,
+      "byteStride": 12,
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 90000,
+      "byteOffset": 292680,
+      "byteStride": 16,
+      "target": 34962
+    }
+  ],
+  "buffers": [
+    {
+      "byteLength": 382680,
+      "uri": "scene.bin"
+    }
+  ],
+  "images": [
+    {
+      "uri": "textures/T_Wooden_Plank_Pack_01_baseColor.jpeg"
+    },
+    {
+      "uri": "textures/T_Wooden_Plank_Pack_01_metallicRoughness.png"
+    },
+    {
+      "uri": "textures/T_Wooden_Plank_Pack_01_normal.jpeg"
+    }
+  ],
+  "materials": [
+    {
+      "doubleSided": true,
+      "name": "T_Wooden_Plank_Pack_01",
+      "normalTexture": {
+        "index": 2
+      },
+      "pbrMetallicRoughness": {
+        "baseColorTexture": {
+          "index": 0
+        },
+        "metallicRoughnessTexture": {
+          "index": 1
+        }
+      }
+    }
+  ],
+  "meshes": [
+    {
+      "name": "SM_Wooden_Plank_Vol_01_04_T_Wooden_Plank_Pack_01_0",
+      "primitives": [
+        {
+          "attributes": {
+            "NORMAL": 1,
+            "POSITION": 0,
+            "TANGENT": 2,
+            "TEXCOORD_0": 3
+          },
+          "indices": 4,
+          "material": 0,
+          "mode": 4
+        }
+      ]
+    },
+    {
+      "name": "SM_Wooden_Plank_Vol_01_02_T_Wooden_Plank_Pack_01_0",
+      "primitives": [
+        {
+          "attributes": {
+            "NORMAL": 6,
+            "POSITION": 5,
+            "TANGENT": 7,
+            "TEXCOORD_0": 8
+          },
+          "indices": 9,
+          "material": 0,
+          "mode": 4
+        }
+      ]
+    },
+    {
+      "name": "SM_Wooden_Plank_Vol_01_01_T_Wooden_Plank_Pack_01_0",
+      "primitives": [
+        {
+          "attributes": {
+            "NORMAL": 11,
+            "POSITION": 10,
+            "TANGENT": 12,
+            "TEXCOORD_0": 13
+          },
+          "indices": 14,
+          "material": 0,
+          "mode": 4
+        }
+      ]
+    },
+    {
+      "name": "SM_Wooden_Plank_Vol_01_03_T_Wooden_Plank_Pack_01_0",
+      "primitives": [
+        {
+          "attributes": {
+            "NORMAL": 16,
+            "POSITION": 15,
+            "TANGENT": 17,
+            "TEXCOORD_0": 18
+          },
+          "indices": 19,
+          "material": 0,
+          "mode": 4
+        }
+      ]
+    }
+  ],
+  "nodes": [
+    {
+      "children": [
+        1
+      ],
+      "matrix": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        2.220446049250313e-16,
+        -1.0,
+        0.0,
+        0.0,
+        1.0,
+        2.220446049250313e-16,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "name": "Sketchfab_model"
+    },
+    {
+      "children": [
+        2
+      ],
+      "matrix": [
+        0.009999999776482582,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.009999999776482582,
+        0.0,
+        0.0,
+        -0.009999999776482582,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "name": "sm_wooden_plank_pack_vol_01_all.fbx"
+    },
+    {
+      "children": [
+        3,
+        6,
+        9,
+        12
+      ],
+      "name": "RootNode"
+    },
+    {
+      "children": [
+        4
+      ],
+      "matrix": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.9999999999999867,
+        1.6292068494294582e-07,
+        0.0,
+        0.0,
+        -1.6292068494294582e-07,
+        0.9999999999999867,
+        0.0,
+        -161.949951171875,
+        11.415390014648438,
+        0.0,
+        1.0
+      ],
+      "name": "SM_Wooden_Plank_Vol_01_04"
+    },
+    {
+      "children": [
+        5
+      ],
+      "matrix": [
+        1.0,
+        0.0,
+        -0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        1280.3857421875,
+        -175.72279357910156,
+        -107.06842041015625,
+        1.0
+      ],
+      "name": "Object_4"
+    },
+    {
+      "mesh": 0,
+      "name": "SM_Wooden_Plank_Vol_01_04_T_Wooden_Plank_Pack_01_0"
+    },
+    {
+      "children": [
+        7
+      ],
+      "matrix": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.9999999999999867,
+        1.6292068494294582e-07,
+        0.0,
+        0.0,
+        -1.6292068494294582e-07,
+        0.9999999999999867,
+        0.0,
+        46.62060546875,
+        11.39447021484375,
+        0.0,
+        1.0
+      ],
+      "name": "SM_Wooden_Plank_Vol_01_02"
+    },
+    {
+      "children": [
+        8
+      ],
+      "matrix": [
+        1.0,
+        0.0,
+        -0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        585.946533203125,
+        -175.70187377929688,
+        -107.03910827636719,
+        1.0
+      ],
+      "name": "Object_7"
+    },
+    {
+      "mesh": 1,
+      "name": "SM_Wooden_Plank_Vol_01_02_T_Wooden_Plank_Pack_01_0"
+    },
+    {
+      "children": [
+        10
+      ],
+      "matrix": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.9999999999999867,
+        1.6292068494294582e-07,
+        0.0,
+        0.0,
+        -1.6292068494294582e-07,
+        0.9999999999999867,
+        0.0,
+        141.7713623046875,
+        11.395347595214844,
+        0.0,
+        1.0
+      ],
+      "name": "SM_Wooden_Plank_Vol_01_01"
+    },
+    {
+      "children": [
+        11
+      ],
+      "matrix": [
+        1.0,
+        0.0,
+        -0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        227.68170166015625,
+        -175.70274353027344,
+        -106.94529724121094,
+        1.0
+      ],
+      "name": "Object_10"
+    },
+    {
+      "mesh": 2,
+      "name": "SM_Wooden_Plank_Vol_01_01_T_Wooden_Plank_Pack_01_0"
+    },
+    {
+      "children": [
+        13
+      ],
+      "matrix": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.9999999999999867,
+        1.6292068494294582e-07,
+        0.0,
+        0.0,
+        -1.6292068494294582e-07,
+        0.9999999999999867,
+        0.0,
+        -51.2872314453125,
+        11.39642333984375,
+        0.0,
+        1.0
+      ],
+      "name": "SM_Wooden_Plank_Vol_01_03"
+    },
+    {
+      "children": [
+        14
+      ],
+      "matrix": [
+        1.0,
+        0.0,
+        -0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        937.05859375,
+        -175.7038116455078,
+        -106.56298065185547,
+        1.0
+      ],
+      "name": "Object_13"
+    },
+    {
+      "mesh": 3,
+      "name": "SM_Wooden_Plank_Vol_01_03_T_Wooden_Plank_Pack_01_0"
+    }
+  ],
+  "samplers": [
+    {
+      "magFilter": 9729,
+      "minFilter": 9987,
+      "wrapS": 10497,
+      "wrapT": 10497
+    }
+  ],
+  "scene": 0,
+  "scenes": [
+    {
+      "name": "Sketchfab_Scene",
+      "nodes": [
+        0
+      ]
+    }
+  ],
+  "textures": [
+    {
+      "sampler": 0,
+      "source": 0
+    },
+    {
+      "sampler": 0,
+      "source": 1
+    },
+    {
+      "sampler": 0,
+      "source": 2
+    }
+  ]
+}
