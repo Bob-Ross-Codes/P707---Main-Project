@@ -1,0 +1,47 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Mac",
+  "BasePlatform": "Mac",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "172",
+  "SoundBanks": [
+   {
+    "Id": "352130103",
+    "Type": "Event",
+    "GUID": "{361C9617-6FCF-4AD9-BF34-E18724A775B0}",
+    "Language": "SFX",
+    "Hash": "{EB15541C-F05D-8430-9883-40D004C6517A}",
+    "ObjectPath": "Birds",
+    "ShortName": "Birds",
+    "Path": "Event/Birds.bnk",
+    "Media": [
+     {
+      "Id": "160072912",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Animals\\Birds.wav",
+      "Path": "Media/160072912.wem",
+      "CachePath": "32/{321D2FB1-4BA9-2BB2-D996-43F9D988E33D}.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "352130103",
+      "Name": "Birds",
+      "ObjectPath": "\\Events\\Default Work Unit\\Birds",
+      "GUID": "{361C9617-6FCF-4AD9-BF34-E18724A775B0}",
+      "MaxAttenuation": "100",
+      "DurationType": "Infinite",
+      "MediaRefs": [
+       {
+        "Id": "160072912"
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "FileHash": "{B3D98DBD-A333-F6ED-CF29-7EC66276EECD}"
+ }
+}

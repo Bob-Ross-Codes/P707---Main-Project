@@ -1,0 +1,407 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{F6E9921B-A458-4A4D-97D5-9A7D9972FA9B}" SchemaVersion="133">
+	<Containers>
+		<WorkUnit Name="Default Work Unit" ID="{F6E9921B-A458-4A4D-97D5-9A7D9972FA9B}" PersistMode="Standalone">
+			<ChildrenList>
+				<Folder Name="Ambience" ID="{1EC7A534-CEE0-48F2-8360-6E5CCA23F436}" ShortID="703326860">
+					<ChildrenList>
+						<Sound Name="Beach" ID="{61CCBD89-DCCF-4DF2-99E6-49E9884E1E2C}" ShortID="124113965">
+							<PropertyList>
+								<Property Name="3DPosition" Type="int16" Value="1"/>
+								<Property Name="3DSpatialization" Type="int16" Value="2"/>
+								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+								<Property Name="SpeakerPanning" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Attenuation">
+									<Custom>
+										<Attenuation Name="Attenuation (Custom)" ID="{1550B16D-D9F6-4BFB-83CA-DC7A87FFC1E5}" ShortID="132395314">
+											<CurveUsageInfoList>
+												<VolumeDryUsage>
+													<CurveUsageInfo Platform="Linked" CurveToUse="Custom">
+														<Curve Name="VolumeDry" ID="{BC10B836-52D9-407B-B69A-8EF52ED5A063}">
+															<PropertyList>
+																<Property Name="Flags" Type="int32" Value="3"/>
+															</PropertyList>
+															<PointList>
+																<Point>
+																	<XPos>0</XPos>
+																	<YPos>0</YPos>
+																	<Flags>5</Flags>
+																</Point>
+																<Point>
+																	<XPos>100</XPos>
+																	<YPos>-200</YPos>
+																	<Flags>37</Flags>
+																</Point>
+															</PointList>
+														</Curve>
+													</CurveUsageInfo>
+												</VolumeDryUsage>
+												<VolumeWetGameUsage>
+													<CurveUsageInfo Platform="Linked" CurveToUse="UseVolumeDry"/>
+												</VolumeWetGameUsage>
+												<VolumeWetUserUsage>
+													<CurveUsageInfo Platform="Linked" CurveToUse="UseVolumeDry"/>
+												</VolumeWetUserUsage>
+												<LowPassFilterUsage>
+													<CurveUsageInfo Platform="Linked" CurveToUse="None"/>
+												</LowPassFilterUsage>
+												<HighPassFilterUsage>
+													<CurveUsageInfo Platform="Linked" CurveToUse="None"/>
+												</HighPassFilterUsage>
+												<DualShelfUsage>
+													<CurveUsageInfo Platform="Linked" CurveToUse="None"/>
+												</DualShelfUsage>
+												<SpreadUsage>
+													<CurveUsageInfo Platform="Linked" CurveToUse="None"/>
+												</SpreadUsage>
+												<FocusUsage>
+													<CurveUsageInfo Platform="Linked" CurveToUse="None"/>
+												</FocusUsage>
+												<ObstructionVolumeUsage>
+													<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
+												</ObstructionVolumeUsage>
+												<ObstructionLPFUsage>
+													<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
+												</ObstructionLPFUsage>
+												<ObstructionHPFUsage>
+													<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
+												</ObstructionHPFUsage>
+												<ObstructionDSFUsage>
+													<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
+												</ObstructionDSFUsage>
+												<OcclusionVolumeUsage>
+													<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
+												</OcclusionVolumeUsage>
+												<OcclusionLPFUsage>
+													<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
+												</OcclusionLPFUsage>
+												<OcclusionHPFUsage>
+													<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
+												</OcclusionHPFUsage>
+												<OcclusionDSFUsage>
+													<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
+												</OcclusionDSFUsage>
+												<DiffractionVolumeUsage>
+													<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
+												</DiffractionVolumeUsage>
+												<DiffractionLPFUsage>
+													<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
+												</DiffractionLPFUsage>
+												<DiffractionHPFUsage>
+													<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
+												</DiffractionHPFUsage>
+												<DiffractionDSFUsage>
+													<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
+												</DiffractionDSFUsage>
+												<TransmissionVolumeUsage>
+													<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
+												</TransmissionVolumeUsage>
+												<TransmissionLPFUsage>
+													<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
+												</TransmissionLPFUsage>
+												<TransmissionHPFUsage>
+													<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
+												</TransmissionHPFUsage>
+												<TransmissionDSFUsage>
+													<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
+												</TransmissionDSFUsage>
+											</CurveUsageInfoList>
+										</Attenuation>
+									</Custom>
+								</Reference>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{7406BB7B-08AA-4828-8AD5-E96E108E4D13}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Ambience" ID="{60F405B7-0E96-4D90-A135-B36F51AFD517}" WorkUnitID="{4A32BEAA-3CEB-4DFF-BEDB-A9E9155EE3CC}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Beach" ID="{B33C89BC-8F92-4EAD-9E0C-3949A3434E16}">
+									<Language>SFX</Language>
+									<AudioFile>Ambience\Beach.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="655517902"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<PositioningInfo>
+								<Panner Name="" ID="{9D869BE0-62E2-491A-BAF7-81787670A554}"/>
+								<Position Name="" ID="{95906B71-E9DE-4A0A-B777-737ACA1AEB1A}"/>
+							</PositioningInfo>
+							<ActiveSourceList>
+								<ActiveSource Name="Beach" ID="{B33C89BC-8F92-4EAD-9E0C-3949A3434E16}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="forest" ID="{68C359BE-9324-4825-BC0C-AD680C408D2C}" ShortID="137101526">
+							<PropertyList>
+								<Property Name="3DPosition" Type="int16" Value="1"/>
+								<Property Name="3DSpatialization" Type="int16" Value="2"/>
+								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+								<Property Name="SpeakerPanning" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Attenuation">
+									<Custom>
+										<Attenuation Name="Attenuation (Custom)" ID="{F454E422-0EAA-4134-B55A-33198CA5CA88}" ShortID="1012215384">
+											<CurveUsageInfoList>
+												<VolumeDryUsage>
+													<CurveUsageInfo Platform="Linked" CurveToUse="Custom">
+														<Curve Name="VolumeDry" ID="{9A25173A-3E2B-4BC9-9E25-BF47D35C9432}">
+															<PropertyList>
+																<Property Name="Flags" Type="int32" Value="3"/>
+															</PropertyList>
+															<PointList>
+																<Point>
+																	<XPos>0</XPos>
+																	<YPos>0</YPos>
+																	<Flags>5</Flags>
+																</Point>
+																<Point>
+																	<XPos>100</XPos>
+																	<YPos>-200</YPos>
+																	<Flags>37</Flags>
+																</Point>
+															</PointList>
+														</Curve>
+													</CurveUsageInfo>
+												</VolumeDryUsage>
+												<VolumeWetGameUsage>
+													<CurveUsageInfo Platform="Linked" CurveToUse="UseVolumeDry"/>
+												</VolumeWetGameUsage>
+												<VolumeWetUserUsage>
+													<CurveUsageInfo Platform="Linked" CurveToUse="UseVolumeDry"/>
+												</VolumeWetUserUsage>
+												<LowPassFilterUsage>
+													<CurveUsageInfo Platform="Linked" CurveToUse="None"/>
+												</LowPassFilterUsage>
+												<HighPassFilterUsage>
+													<CurveUsageInfo Platform="Linked" CurveToUse="None"/>
+												</HighPassFilterUsage>
+												<DualShelfUsage>
+													<CurveUsageInfo Platform="Linked" CurveToUse="None"/>
+												</DualShelfUsage>
+												<SpreadUsage>
+													<CurveUsageInfo Platform="Linked" CurveToUse="None"/>
+												</SpreadUsage>
+												<FocusUsage>
+													<CurveUsageInfo Platform="Linked" CurveToUse="None"/>
+												</FocusUsage>
+												<ObstructionVolumeUsage>
+													<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
+												</ObstructionVolumeUsage>
+												<ObstructionLPFUsage>
+													<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
+												</ObstructionLPFUsage>
+												<ObstructionHPFUsage>
+													<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
+												</ObstructionHPFUsage>
+												<ObstructionDSFUsage>
+													<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
+												</ObstructionDSFUsage>
+												<OcclusionVolumeUsage>
+													<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
+												</OcclusionVolumeUsage>
+												<OcclusionLPFUsage>
+													<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
+												</OcclusionLPFUsage>
+												<OcclusionHPFUsage>
+													<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
+												</OcclusionHPFUsage>
+												<OcclusionDSFUsage>
+													<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
+												</OcclusionDSFUsage>
+												<DiffractionVolumeUsage>
+													<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
+												</DiffractionVolumeUsage>
+												<DiffractionLPFUsage>
+													<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
+												</DiffractionLPFUsage>
+												<DiffractionHPFUsage>
+													<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
+												</DiffractionHPFUsage>
+												<DiffractionDSFUsage>
+													<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
+												</DiffractionDSFUsage>
+												<TransmissionVolumeUsage>
+													<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
+												</TransmissionVolumeUsage>
+												<TransmissionLPFUsage>
+													<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
+												</TransmissionLPFUsage>
+												<TransmissionHPFUsage>
+													<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
+												</TransmissionHPFUsage>
+												<TransmissionDSFUsage>
+													<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
+												</TransmissionDSFUsage>
+											</CurveUsageInfoList>
+										</Attenuation>
+									</Custom>
+								</Reference>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{7406BB7B-08AA-4828-8AD5-E96E108E4D13}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Ambience" ID="{60F405B7-0E96-4D90-A135-B36F51AFD517}" WorkUnitID="{4A32BEAA-3CEB-4DFF-BEDB-A9E9155EE3CC}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="forest" ID="{527386CF-A10D-4723-9112-8CA56FAFC54D}">
+									<Language>SFX</Language>
+									<AudioFile>Ambience\forest.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="177690935"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<PositioningInfo>
+								<Panner Name="" ID="{7B2E71F8-1D1B-41E0-B702-C597D7D803ED}"/>
+								<Position Name="" ID="{5917DC4B-2DA4-428D-8CBB-A3BA553D1D17}"/>
+							</PositioningInfo>
+							<ActiveSourceList>
+								<ActiveSource Name="forest" ID="{527386CF-A10D-4723-9112-8CA56FAFC54D}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+					</ChildrenList>
+				</Folder>
+				<Folder Name="Animals" ID="{5445D91E-845E-4148-BACC-A79E3EF6AE32}" ShortID="300692921">
+					<ChildrenList>
+						<Sound Name="Birds" ID="{B785E7F0-5853-405B-845C-3033639E209C}" ShortID="519542612">
+							<PropertyList>
+								<Property Name="3DPosition" Type="int16" Value="1"/>
+								<Property Name="3DSpatialization" Type="int16" Value="2"/>
+								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+								<Property Name="SpeakerPanning" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Attenuation">
+									<Custom>
+										<Attenuation Name="Attenuation (Custom)" ID="{941BDB14-2D26-4885-8876-4B5A35A0DAA0}" ShortID="1037294729">
+											<CurveUsageInfoList>
+												<VolumeDryUsage>
+													<CurveUsageInfo Platform="Linked" CurveToUse="Custom">
+														<Curve Name="VolumeDry" ID="{C5050AA0-F4E8-4DD7-A83C-70CE3B6F9275}">
+															<PropertyList>
+																<Property Name="Flags" Type="int32" Value="3"/>
+															</PropertyList>
+															<PointList>
+																<Point>
+																	<XPos>0</XPos>
+																	<YPos>0</YPos>
+																	<Flags>5</Flags>
+																</Point>
+																<Point>
+																	<XPos>100</XPos>
+																	<YPos>-200</YPos>
+																	<Flags>37</Flags>
+																</Point>
+															</PointList>
+														</Curve>
+													</CurveUsageInfo>
+												</VolumeDryUsage>
+												<VolumeWetGameUsage>
+													<CurveUsageInfo Platform="Linked" CurveToUse="UseVolumeDry"/>
+												</VolumeWetGameUsage>
+												<VolumeWetUserUsage>
+													<CurveUsageInfo Platform="Linked" CurveToUse="UseVolumeDry"/>
+												</VolumeWetUserUsage>
+												<LowPassFilterUsage>
+													<CurveUsageInfo Platform="Linked" CurveToUse="None"/>
+												</LowPassFilterUsage>
+												<HighPassFilterUsage>
+													<CurveUsageInfo Platform="Linked" CurveToUse="None"/>
+												</HighPassFilterUsage>
+												<DualShelfUsage>
+													<CurveUsageInfo Platform="Linked" CurveToUse="None"/>
+												</DualShelfUsage>
+												<SpreadUsage>
+													<CurveUsageInfo Platform="Linked" CurveToUse="None"/>
+												</SpreadUsage>
+												<FocusUsage>
+													<CurveUsageInfo Platform="Linked" CurveToUse="None"/>
+												</FocusUsage>
+												<ObstructionVolumeUsage>
+													<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
+												</ObstructionVolumeUsage>
+												<ObstructionLPFUsage>
+													<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
+												</ObstructionLPFUsage>
+												<ObstructionHPFUsage>
+													<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
+												</ObstructionHPFUsage>
+												<ObstructionDSFUsage>
+													<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
+												</ObstructionDSFUsage>
+												<OcclusionVolumeUsage>
+													<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
+												</OcclusionVolumeUsage>
+												<OcclusionLPFUsage>
+													<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
+												</OcclusionLPFUsage>
+												<OcclusionHPFUsage>
+													<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
+												</OcclusionHPFUsage>
+												<OcclusionDSFUsage>
+													<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
+												</OcclusionDSFUsage>
+												<DiffractionVolumeUsage>
+													<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
+												</DiffractionVolumeUsage>
+												<DiffractionLPFUsage>
+													<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
+												</DiffractionLPFUsage>
+												<DiffractionHPFUsage>
+													<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
+												</DiffractionHPFUsage>
+												<DiffractionDSFUsage>
+													<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
+												</DiffractionDSFUsage>
+												<TransmissionVolumeUsage>
+													<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
+												</TransmissionVolumeUsage>
+												<TransmissionLPFUsage>
+													<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
+												</TransmissionLPFUsage>
+												<TransmissionHPFUsage>
+													<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
+												</TransmissionHPFUsage>
+												<TransmissionDSFUsage>
+													<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
+												</TransmissionDSFUsage>
+											</CurveUsageInfoList>
+										</Attenuation>
+									</Custom>
+								</Reference>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{7406BB7B-08AA-4828-8AD5-E96E108E4D13}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Ambience" ID="{60F405B7-0E96-4D90-A135-B36F51AFD517}" WorkUnitID="{4A32BEAA-3CEB-4DFF-BEDB-A9E9155EE3CC}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Birds" ID="{931F9511-50E5-48AE-AA61-D63AA949B86F}">
+									<Language>SFX</Language>
+									<AudioFile>Animals\Birds.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="160072912"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<PositioningInfo>
+								<Panner Name="" ID="{4C088DF1-ADCA-45D7-8E85-EEDED577C1CD}"/>
+								<Position Name="" ID="{4FA9BFE9-34A8-4C6A-B32A-8A69AB646C55}"/>
+							</PositioningInfo>
+							<ActiveSourceList>
+								<ActiveSource Name="Birds" ID="{931F9511-50E5-48AE-AA61-D63AA949B86F}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+					</ChildrenList>
+				</Folder>
+			</ChildrenList>
+		</WorkUnit>
+	</Containers>
+</WwiseDocument>

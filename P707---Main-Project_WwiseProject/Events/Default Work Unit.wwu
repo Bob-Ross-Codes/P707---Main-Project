@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{7466929F-AB45-4224-B6A2-D1C3F01208BD}" SchemaVersion="133">
+	<Events>
+		<WorkUnit Name="Default Work Unit" ID="{7466929F-AB45-4224-B6A2-D1C3F01208BD}" PersistMode="Standalone">
+			<ChildrenList>
+				<Event Name="Birds" ID="{361C9617-6FCF-4AD9-BF34-E18724A775B0}">
+					<ChildrenList>
+						<Action Name="" ID="{5990F603-76B8-476C-8E6B-C3D3B0C9B833}" ShortID="803076704">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Birds" ID="{B785E7F0-5853-405B-845C-3033639E209C}" WorkUnitID="{F6E9921B-A458-4A4D-97D5-9A7D9972FA9B}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Beach" ID="{6CACF3D2-3102-4F74-8179-E36E0AFE8767}">
+					<ChildrenList>
+						<Action Name="" ID="{B608109F-04B7-4732-8CB1-422F7579CB9E}" ShortID="209194609">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Beach" ID="{61CCBD89-DCCF-4DF2-99E6-49E9884E1E2C}" WorkUnitID="{F6E9921B-A458-4A4D-97D5-9A7D9972FA9B}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="forest" ID="{C32C339D-F28E-44EE-A670-4E0C276055F9}">
+					<ChildrenList>
+						<Action Name="" ID="{0EF1F3A3-956A-42C5-B70C-D8A32CD3247E}" ShortID="583373164">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="forest" ID="{68C359BE-9324-4825-BC0C-AD680C408D2C}" WorkUnitID="{F6E9921B-A458-4A4D-97D5-9A7D9972FA9B}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+			</ChildrenList>
+		</WorkUnit>
+	</Events>
+</WwiseDocument>

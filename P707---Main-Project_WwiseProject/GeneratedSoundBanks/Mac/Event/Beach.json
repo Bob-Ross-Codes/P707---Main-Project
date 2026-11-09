@@ -1,0 +1,47 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Mac",
+  "BasePlatform": "Mac",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "172",
+  "SoundBanks": [
+   {
+    "Id": "4075332698",
+    "Type": "Event",
+    "GUID": "{6CACF3D2-3102-4F74-8179-E36E0AFE8767}",
+    "Language": "SFX",
+    "Hash": "{D5A0F9B3-851C-70D6-0977-92824934195F}",
+    "ObjectPath": "Beach",
+    "ShortName": "Beach",
+    "Path": "Event/Beach.bnk",
+    "Media": [
+     {
+      "Id": "655517902",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Ambience\\Beach.wav",
+      "Path": "Media/655517902.wem",
+      "CachePath": "01/{011357F7-1AB9-C5AD-FC06-673E2854CC80}.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "4075332698",
+      "Name": "Beach",
+      "ObjectPath": "\\Events\\Default Work Unit\\Beach",
+      "GUID": "{6CACF3D2-3102-4F74-8179-E36E0AFE8767}",
+      "MaxAttenuation": "100",
+      "DurationType": "Infinite",
+      "MediaRefs": [
+       {
+        "Id": "655517902"
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "FileHash": "{ED90DFCD-B618-7768-6D1C-95E7E9304809}"
+ }
+}
