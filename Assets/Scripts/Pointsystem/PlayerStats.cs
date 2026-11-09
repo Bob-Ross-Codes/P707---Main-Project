@@ -7,11 +7,18 @@ public class PlayerStats : MonoBehaviour
     public float Playerspeed;
     public float timeThreshold;
 
+    public int Playerpoints; 
+
     private Coroutine speedCoroutine;
 
     void Start()
     {
-        //Playerspeed = Hvad end speed er
+        //Find Amount of interest points in scene
+        PlayerZoneTrigger[] triggers = FindObjectsByType<PlayerZoneTrigger>(FindObjectsSortMode.None);
+        Debug.Log("Number of hit colliders: " + triggers.Length);
+
+        // Give penalty depending of amount of interest points in the scene
+        Playerpoints = Playerpoints - triggers.Length;
     }
 
     private void Update()

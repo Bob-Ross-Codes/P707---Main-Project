@@ -3,10 +3,6 @@ using System.Collections;
 
 public class CategorizeUserPoint : MonoBehaviour
 {
-    [Header("User Point Value")]
-    [Tooltip("Total amout of UserPoints.")]
-    public int UserPointTotalValue;
-
     [Header("Loop point counts")]
     [Tooltip("Amount of current loops")]
     public int loopCount;
@@ -23,28 +19,29 @@ public class CategorizeUserPoint : MonoBehaviour
 
     private Coroutine standCoroutine;
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        //Find Amount of interest points in scene
-        PlayerZoneTrigger[] triggers = FindObjectsByType<PlayerZoneTrigger>(FindObjectsSortMode.None);
-        Debug.Log("Number of hit colliders: " + triggers.Length);
+    private PlayerStats playerStats;
 
-        // Give penalty depending of amount of interest points in the scene
-        UserPointTotalValue = UserPointTotalValue - triggers.Length;
+    private void Start()
+    {
+        playerStats = FindFirstObjectByType<PlayerStats>();
+
+        if (HasVisitedAgeSection == true)
+        {
+            playerStats.Playerpoints++;
+        }
     }
 
     //On First Time Enter. Found interest point, gives 1 point subtracted from the penalty. 
     public void GainInteractionPoint()
     {
-        UserPointTotalValue++;
+        playerStats.Playerpoints++;
         HasVisitedInterestpoint = true;
     }
 
     //On First Time Enter. Check if this current age has been visited
     public void SceneShiftTrigger()
     {
-
+        HasVisitedAgeSection = true;
     }
 
     //On Player Enter. Visit again bous;
@@ -52,13 +49,10 @@ public class CategorizeUserPoint : MonoBehaviour
     {
         if (HasVisitedInterestpoint)
         {
-            UserPointTotalValue++;
+            playerStats.Playerpoints++;
         } 
     }
     
-
-    
-
     //While inside colider Event. Dwell cheker.
     public void WithinInterestPoint()
     {
@@ -92,7 +86,7 @@ public class CategorizeUserPoint : MonoBehaviour
     {
         if (Exitearly ==true)
         {
-            UserPointTotalValue--;
+            playerStats.Playerpoints--;
             Exitearly = false;
         }
     }
@@ -100,17 +94,17 @@ public class CategorizeUserPoint : MonoBehaviour
     //The regular 1 point call
     public void DwellTimePoint()
     {
-        UserPointTotalValue++;
+        playerStats.Playerpoints++;
     }
 
 
     public void GainReturnPointInterestPoint()
     {
-        UserPointTotalValue += 2;
+        playerStats.Playerpoints += 2;
     }
 
     public void GainReturnPointScene()
     {
-        UserPointTotalValue += 3;
+        playerStats.Playerpoints +=3;
     }
 }
