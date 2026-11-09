@@ -11,8 +11,12 @@ public class PlayerStats : MonoBehaviour
 
     void Start()
     {
-        speedCoroutine = StartCoroutine(CheckPlayerSpeed());
         //Playerspeed = Hvad end speed er
+    }
+
+    private void Update()
+    {
+        speedCoroutine = StartCoroutine(CheckPlayerSpeed());
     }
 
     IEnumerator CheckPlayerSpeed()
@@ -42,6 +46,6 @@ public class PlayerStats : MonoBehaviour
 
     private void OnLowSpeed()
     {
-        
+        Debug.Log("Lower speed achieved");
     }
 }

@@ -4,16 +4,22 @@ using System.Collections;
 public class CategorizeUserPoint : MonoBehaviour
 {
     [Header("User Point Value")]
-    public int UserPointValue = 0;
-    public int UserPointPenaltyStart = 2;
-    public int UserPointValueStart;
+    [Tooltip("Total amout of UserPoints.")]
+    public int UserPointTotalValue;
 
-    [Header("PointGain Amounts")]
-    public int PointAmount_InterestPoint;
-    public int PointAmount_ScenePoint;
+    [Header("Loop point counts")]
+    [Tooltip("Amount of current loops")]
+    public int loopCount;
+    [Tooltip("Max amount of loops in logic")]
+    public int maxLoops;
+
+    [Header("Penalty/Rewardtriggers")]
+    public bool Exitearly;
+    public bool HasVisitedInterestpoint;
+    public bool HasVisitedAgeSection;
 
     [Header("TestValues")]
-    public bool testpoint;
+    public bool Test;
 
     private Coroutine standCoroutine;
 
@@ -25,55 +31,86 @@ public class CategorizeUserPoint : MonoBehaviour
         Debug.Log("Number of hit colliders: " + triggers.Length);
 
         // Give penalty depending of amount of interest points in the scene
-        UserPointValueStart = triggers.Length / UserPointPenaltyStart;
-        UserPointValue = UserPointValue - UserPointValueStart;
-
-        standCoroutine = StartCoroutine(DwellTimer());
+        UserPointTotalValue = UserPointTotalValue - triggers.Length;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        if (testpoint)
-        {
-            GainInteractionPoint();
-            testpoint = false;
-        }
-    }
-
+    //On First Time Enter. Found interest point, gives 1 point subtracted from the penalty. 
     public void GainInteractionPoint()
     {
-        UserPointValue++;
-        
+        UserPointTotalValue++;
+        HasVisitedInterestpoint = true;
+    }
+
+    //On First Time Enter. Check if this current age has been visited
+    public void SceneShiftTrigger()
+    {
+
+    }
+
+    //On Player Enter. Visit again bous;
+    public void Revisitbsonus()
+    {
+        if (HasVisitedInterestpoint)
+        {
+            UserPointTotalValue++;
+        } 
+    }
+    
+
+    
+
+    //While inside colider Event. Dwell cheker.
+    public void WithinInterestPoint()
+    {
+        standCoroutine = StartCoroutine(DwellTimer());
     }
 
     IEnumerator DwellTimer()
     {
-        int loopCount = 0;
-        int maxLoops = 5;
-
         while (loopCount < maxLoops)
         {
-            yield return new WaitForSeconds(10f);
+            //Alter this if another penalty is required
+            int EarlyExitLoopThreshhold = 0;
+
+            if (loopCount < EarlyExitLoopThreshhold)
+            {
+                Exitearly = true;
+            }
+            else if (loopCount > EarlyExitLoopThreshhold)
+            {
+                Exitearly = false;
+            }
+                yield return new WaitForSeconds(10f);
 
             DwellTimePoint();
             loopCount++;
         }
     }
 
+    //OnplayerExit. Penalty check
+    public void OnexitPenalty()
+    {
+        if (Exitearly ==true)
+        {
+            UserPointTotalValue--;
+            Exitearly = false;
+        }
+    }
+
+    //The regular 1 point call
     public void DwellTimePoint()
     {
-        UserPointValue++;
+        UserPointTotalValue++;
     }
 
 
     public void GainReturnPointInterestPoint()
     {
-        UserPointValue += 2;
+        UserPointTotalValue += 2;
     }
 
     public void GainReturnPointScene()
     {
-        UserPointValue += 3;
+        UserPointTotalValue += 3;
     }
 }
