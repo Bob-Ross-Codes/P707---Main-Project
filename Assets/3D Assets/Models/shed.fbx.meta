@@ -3,7 +3,22 @@ guid: 9d470fff24db08c4c9d793ad088d2a8c
 ModelImporter:
   serializedVersion: 24300
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Panel1
+    second: {fileID: 2100000, guid: 897595fc35260024e85332f43ecbfaf0, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: darkerpanel
+    second: {fileID: 2100000, guid: 6c86d95bf54254e4e95735c56c03af2e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: pasted__Panel1
+    second: {fileID: 2100000, guid: 0d07746b707da954799d04659ef4f72a, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
