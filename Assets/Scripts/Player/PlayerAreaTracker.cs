@@ -45,6 +45,8 @@ public class PlayerAreaTracker : MonoBehaviour
     public float RelativeZPercent => relativeZ_Percent;
     public float RelativeXMeters => relativeX_Meters;
     public float RelativeZMeters => relativeZ_Meters;
+    public float AreaWidthX => areaWidthX;
+    public float AreaDepthZ => areaDepthZ;
 
     private void Update()
     {
