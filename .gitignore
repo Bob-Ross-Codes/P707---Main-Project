@@ -111,15 +111,31 @@ k4a.dll
 dnn_model_2_0_op11.onnx
 depthengine_2_0.dll
 
-# Wwise cache and temporary files
-/WwiseProject/.cache/
-/WwiseProject/.backup/
-/WwiseProject/**/Cache/
+# ==========================================
+# Wwise generated cache and temporary files
+# ==========================================
 
-# Wwise temporary analysis and profiling files
-/WwiseProject/**/*.akd
-/WwiseProject/**/*.prof
-/WwiseProject/**/*.validationcache
+# Generated cache
+**/.cache/
+**/Cache/
+**/.backup/
 
-# Keep generated SoundBanks tracked
-!/Assets/StreamingAssets/Audio/GeneratedSoundBanks/
+# Profiling recordings
+*.prof
+
+# Validation and analysis cache
+*.validationcache
+*.akd
+
+# ==========================================
+# Keep Wwise project assets tracked
+# ==========================================
+
+# Do NOT ignore:
+# - Originals/
+# - GeneratedSoundBanks/
+# - *.wproj
+# - *.wwu
+# - *.bnk
+# - *.wem
+# - *.wsettings
