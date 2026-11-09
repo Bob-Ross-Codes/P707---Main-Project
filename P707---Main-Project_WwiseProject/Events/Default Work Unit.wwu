@@ -1,6 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{F816F4EB-9732-44E4-93E6-9D88B7E000F9}" SchemaVersion="133">
 	<Events>
-		<WorkUnit Name="Default Work Unit" ID="{F816F4EB-9732-44E4-93E6-9D88B7E000F9}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{F816F4EB-9732-44E4-93E6-9D88B7E000F9}" PersistMode="Standalone">
+			<ChildrenList>
+				<Event Name="Play_856286__hear_it_use_it__gentle_waves_on_pebble_beach_whitehaven" ID="{46B45CCF-1FC4-44B5-9AB8-5196FCB91C47}">
+					<ChildrenList>
+						<Action Name="" ID="{4359464D-90E2-4745-9984-018C59793B1F}" ShortID="909798960">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="856286__hear_it_use_it__gentle-waves-on-pebble-beach-whitehaven" ID="{25B7872F-C041-4401-B89C-8DEFEC613AF4}" WorkUnitID="{0D3FE886-7FE6-4E53-AFFA-CF5C842D0F2A}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+			</ChildrenList>
+		</WorkUnit>
 	</Events>
 </WwiseDocument>

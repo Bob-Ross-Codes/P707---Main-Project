@@ -1,6 +1,55 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{0D3FE886-7FE6-4E53-AFFA-CF5C842D0F2A}" SchemaVersion="133">
 	<Containers>
-		<WorkUnit Name="Default Work Unit" ID="{0D3FE886-7FE6-4E53-AFFA-CF5C842D0F2A}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{0D3FE886-7FE6-4E53-AFFA-CF5C842D0F2A}" PersistMode="Standalone">
+			<ChildrenList>
+				<Folder Name="Sounds" ID="{7634137B-B5BD-42B0-ABA4-D45183DF8E1B}" ShortID="194005923">
+					<ChildrenList>
+						<Folder Name="birds" ID="{EFD34042-B88E-4BBD-864C-73AD4CB716F7}" ShortID="832576742"/>
+					</ChildrenList>
+				</Folder>
+				<Folder Name="Beach" ID="{398F3422-8454-48AE-9736-5269B9A27D5E}" ShortID="232360230">
+					<ChildrenList>
+						<Sound Name="856286__hear_it_use_it__gentle-waves-on-pebble-beach-whitehaven" ID="{25B7872F-C041-4401-B89C-8DEFEC613AF4}" ShortID="265456772">
+							<PropertyList>
+								<Property Name="3DPosition" Type="int16" Value="1"/>
+								<Property Name="3DSpatialization" Type="int16" Value="2"/>
+								<Property Name="SpeakerPanning" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{31B4CFAD-5106-4908-83D3-744E88FAD9E5}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{43813DDC-7293-491F-84E2-089A35452691}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="856286__hear_it_use_it__gentle-waves-on-pebble-beach-whitehaven" ID="{ECF43F25-0D32-473B-95CC-5E211AB78D69}">
+									<Language>SFX</Language>
+									<AudioFile>Beach\856286__hear_it_use_it__gentle-waves-on-pebble-beach-whitehaven.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="197076145"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<PositioningInfo>
+								<Panner Name="" ID="{FCD96714-57F7-4A66-81E9-A8A2B189A824}">
+									<PropertyList>
+										<Property Name="PanX" Type="Real64" Value="0.505902192242841"/>
+										<Property Name="PanY" Type="Real64" Value="0.542495479204345"/>
+										<Property Name="PanZ" Type="Real64" Value="1"/>
+									</PropertyList>
+								</Panner>
+								<Position Name="" ID="{7A7A7604-6688-4C85-8942-64BD577A6D6A}"/>
+							</PositioningInfo>
+							<ActiveSourceList>
+								<ActiveSource Name="856286__hear_it_use_it__gentle-waves-on-pebble-beach-whitehaven" ID="{ECF43F25-0D32-473B-95CC-5E211AB78D69}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+					</ChildrenList>
+				</Folder>
+			</ChildrenList>
+		</WorkUnit>
 	</Containers>
 </WwiseDocument>
