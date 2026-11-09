@@ -1,6 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{F1CC7850-FE4B-46D7-BEF5-3C1ED33EEE19}" SchemaVersion="133">
 	<MixingSessions>
-		<WorkUnit Name="Default Work Unit" ID="{F1CC7850-FE4B-46D7-BEF5-3C1ED33EEE19}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{F1CC7850-FE4B-46D7-BEF5-3C1ED33EEE19}" PersistMode="Standalone">
+			<ChildrenList>
+				<MixingSession Name="4000 FVT" ID="{2089B3E0-A845-49C2-8AEB-57AC3FCB8489}">
+					<ObjectList>
+						<ObjectRef Name="Ambience" ID="{60F405B7-0E96-4D90-A135-B36F51AFD517}" WorkUnitID="{4A32BEAA-3CEB-4DFF-BEDB-A9E9155EE3CC}"/>
+						<ObjectRef Name="SFX" ID="{3E0C36AD-46B5-4CFD-9664-EB8A285CA060}" WorkUnitID="{4A32BEAA-3CEB-4DFF-BEDB-A9E9155EE3CC}"/>
+					</ObjectList>
+				</MixingSession>
+			</ChildrenList>
+		</WorkUnit>
 	</MixingSessions>
 </WwiseDocument>

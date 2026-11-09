@@ -2022,7 +2022,7 @@ Transform:
   m_GameObject: {fileID: 285251843}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.56, y: 3.38, z: 0.47}
+  m_LocalPosition: {x: 7.24, y: 3, z: 12.81}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -5328,10 +5328,10 @@ MonoBehaviour:
   verticalSpeed: 0.8
   mouseButtonSpeed: 0.3
   scrollWheelSensitivity: 0.2
-  maxLeftMeters: 1
+  maxLeftMeters: 4.05
   maxRightMeters: 1
-  maxUpMeters: 1
-  maxDownMeters: 1
+  maxUpMeters: 1.09
+  maxDownMeters: 1.49
   showMovementLimits: 1
   movementLimitColor: {r: 0, g: 1, b: 1, a: 1}
   showModeIndicator: 1
@@ -6837,7 +6837,7 @@ Transform:
   m_GameObject: {fileID: 790129190}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.870397, y: 0.0000014241641, z: 6.7240005}
+  m_LocalPosition: {x: -7.43, y: 3, z: 14.26}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -6850,13 +6850,13 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 790129190}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7f1cf72b374893543b7ac2cf6ab34a71, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AudioDebugBall
   ballRadius: 0.25
-  ballColor: {r: 0, g: 1, b: 1, a: 1}
+  ballColor: {r: 0.8018868, g: 0.064557746, b: 0, a: 1}
   listener: {fileID: 2109917997}
   maxDistance: 30
   maxDb: 0
@@ -12948,7 +12948,7 @@ Transform:
   m_GameObject: {fileID: 1506899079}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.6817856, y: -0.0000006143773, z: 8.065647}
+  m_LocalPosition: {x: -2.42, y: 3, z: 11.08}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
