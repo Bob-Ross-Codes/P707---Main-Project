@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 7402276177595398508}
   - component: {fileID: 3949051823205761154}
   m_Layer: 0
-  m_Name: Kinect Location
+  m_Name: Kinect Mock up Model
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
