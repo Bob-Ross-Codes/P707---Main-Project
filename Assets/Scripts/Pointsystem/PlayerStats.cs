@@ -22,7 +22,13 @@ public class PlayerStats : MonoBehaviour
     //Coroutine for 
     private Coroutine speedCoroutine;
 
-    
+    [Header("Playerspeed")]
+    public float speed;
+    public float smoothing = 5f;
+    private Vector3 lastPosition;
+    private float smoothSpeed;
+
+
 
     void Start()
     {
@@ -32,6 +38,9 @@ public class PlayerStats : MonoBehaviour
 
         // Give penalty depending of amount of interest points in the scene
         Playerpoints = Playerpoints - triggers.Length;
+
+        // Speed position
+        lastPosition = transform.position;
     }
 
     private void Update()
@@ -48,7 +57,32 @@ public class PlayerStats : MonoBehaviour
             Lookercategorization = false;
             Cookercategorization = true;
         }
-        
+
+        // Calculate distance moved this frame
+        float distance = Vector3.Distance(
+            transform.position,
+            lastPosition
+        );
+
+        if (distance < 0.001f)
+        {
+            distance = 0f;
+        }
+
+        // Calculate raw speed (units per second)
+        float rawSpeed = distance / Time.deltaTime;
+
+        // Smooth the speed to prevent jitter
+        smoothSpeed = Mathf.Lerp(
+            smoothSpeed,
+            rawSpeed,
+            Time.deltaTime * smoothing
+        );
+
+        speed = Mathf.Max(0f, smoothSpeed);
+
+        // Remember position for next frame
+        lastPosition = transform.position;
     }
 
     IEnumerator CheckPlayerSpeed()

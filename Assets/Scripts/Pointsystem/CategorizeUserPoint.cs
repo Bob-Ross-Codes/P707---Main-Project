@@ -20,7 +20,6 @@ public class CategorizeUserPoint : MonoBehaviour
     public bool HasReceivedRevisitBonus;
     [Tooltip("Player have visited the time before")]
     public bool HasVisitedAgeSection;
-  
 
     [Header("TestValues")]
     public bool Test;
