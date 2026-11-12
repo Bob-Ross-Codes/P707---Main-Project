@@ -15,7 +15,7 @@ Material:
   - _EMISSION
   - _NORMALMAP
   - _OCCLUSIONMAP
-  - _PARALLAXMAP
+  - _PIXEL_DISPLACEMENT
   m_InvalidKeywords: []
   m_LightmapFlags: 6
   m_EnableInstancingVariants: 0
@@ -100,7 +100,7 @@ Material:
     - _Cutoff: 0.5
     - _DetailAlbedoMapScale: 1
     - _DetailNormalMapScale: 1
-    - _DisplacementMode: 0
+    - _DisplacementMode: 1
     - _DstBlend: 0
     - _DstBlendAlpha: 0
     - _EnvironmentReflections: 1
@@ -109,7 +109,7 @@ Material:
     - _GlossyReflections: 0
     - _Metallic: 0
     - _OcclusionStrength: 0.645
-    - _Parallax: 0
+    - _Parallax: 0.068
     - _Projection: 0
     - _QueueControl: 0
     - _QueueOffset: 0
