@@ -1,7 +1,7 @@
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
+[DefaultExecutionOrder(-100)]
 public class PlayerModeController : MonoBehaviour
 {
     public enum ControlMode
@@ -13,142 +13,234 @@ public class PlayerModeController : MonoBehaviour
     [Header("Mode Selection")]
     [SerializeField] private ControlMode currentMode = ControlMode.KinectTracking;
 
-    [Header("Target To Move")]
-    [Tooltip("The GameObject or Player Transform that contains the colliders to move in debug mode.")]
+    [Header("Tracked Positions")]
+    [Tooltip("Optional tracked player visual/root to move alongside the head while debugging.")]
     [SerializeField] private Transform playerTransform;
+
+    [Tooltip("Tracked head output used by the projection camera. Its PlayerManager target is the live Kinect position.")]
     [SerializeField] private Transform cameraPosition;
 
     [Header("Movement Speeds (Meters per Second)")]
     [SerializeField] private float keyboardSpeed = 3f;
     [SerializeField] private float verticalSpeed = 2f;
     [SerializeField] private float mouseButtonSpeed = 3f;
-    [Tooltip("Sensitivity for scroll wheel Z movement.")]
+    [Tooltip("Change in WASD speed per scroll notch, in meters per second.")]
     [SerializeField] private float scrollWheelSensitivity = 0.5f;
 
-    [Header("Kinect Components To Toggle")]
-    [Tooltip("Drag any Kinect-related scripts/components here to disable them during manual control.")]
-    [SerializeField] private List<MonoBehaviour> kinectComponents = new List<MonoBehaviour>();
+    [Header("WASD Movement Limits (Meters from live Kinect position)")]
+    [Min(0f)] public float maxLeftMeters = 1f;
+    [Min(0f)] public float maxRightMeters = 1f;
+    [Tooltip("Maximum W movement along world +Z.")]
+    [Min(0f)] public float maxUpMeters = 1f;
+    [Tooltip("Maximum S movement along world -Z.")]
+    [Min(0f)] public float maxDownMeters = 1f;
 
-    [Tooltip("Optional: Entire Kinect GameObjects to deactivate completely when in manual mode.")]
-    [SerializeField] private List<GameObject> kinectGameObjects = new List<GameObject>();
+    [Header("Scene View Limits")]
+    public bool showMovementLimits = true;
+    public Color movementLimitColor = Color.cyan;
+
+    [Header("Mode Indicator")]
+    [SerializeField] private bool showModeIndicator = true;
+
+    // Preserve references serialized by existing scenes. Debug mode leaves Kinect tracking enabled.
+    [HideInInspector] [SerializeField] private MonoBehaviour[] kinectComponents;
+    [HideInInspector] [SerializeField] private GameObject[] kinectGameObjects;
+
+    private PlayerManager playerPositionManager;
+    private PlayerManager cameraPositionManager;
+    private Vector3 debugOffset;
+    private Vector3 playerPositionWithoutTracking;
+    private Vector3 cameraPositionWithoutTracking;
+
+    private const float MinimumKeyboardSpeed = 0.05f;
+    private const float MaximumKeyboardSpeed = 10f;
 
     private void Start()
     {
-        ApplyMode(currentMode);
+        playerPositionManager = playerTransform != null
+            ? playerTransform.GetComponent<PlayerManager>()
+            : null;
+        cameraPositionManager = cameraPosition != null
+            ? cameraPosition.GetComponent<PlayerManager>()
+            : null;
+
+        SaveUntrackedPositions();
     }
 
     private void Update()
     {
         Keyboard keyboard = Keyboard.current;
-        Mouse mouse = Mouse.current;
+        if (keyboard == null || !keyboard.tabKey.wasPressedThisFrame)
+            return;
 
-        if (keyboard == null) return;
+        currentMode = currentMode == ControlMode.KinectTracking
+            ? ControlMode.ManualDebug
+            : ControlMode.KinectTracking;
 
-        // 1. Toggle Mode with Tab key
-        if (keyboard.tabKey.wasPressedThisFrame)
-        {
-            currentMode = (currentMode == ControlMode.KinectTracking)
-                ? ControlMode.ManualDebug
-                : ControlMode.KinectTracking;
+        debugOffset = Vector3.zero;
 
-            ApplyMode(currentMode);
-        }
-
-        // 2. Only process manual inputs when in Manual Debug Mode
         if (currentMode == ControlMode.ManualDebug)
         {
-            HandleManualMovement(keyboard, mouse);
+            SaveUntrackedPositions();
+        }
+        else
+        {
+            ApplyTrackedPositions();
+            SaveUntrackedPositions();
         }
     }
 
-    private void OnValidate()
+    private void LateUpdate()
     {
-        if (Application.isPlaying)
-        {
-            ApplyMode(currentMode);
-        }
+        if (currentMode != ControlMode.ManualDebug)
+            return;
+
+        Keyboard keyboard = Keyboard.current;
+        if (keyboard != null)
+            debugOffset += ReadMovement(keyboard, Mouse.current);
+
+        debugOffset = ClampDebugOffset(debugOffset);
+
+        // Rebuild from the live Kinect targets each frame so tracking stays active under the offset.
+        ApplyTrackedPositions();
     }
 
-    private void ApplyMode(ControlMode mode)
+    private Vector3 ClampDebugOffset(Vector3 offset)
     {
-        bool enableKinect = (mode == ControlMode.KinectTracking);
+        float leftLimit = Mathf.Max(0f, maxLeftMeters);
+        float rightLimit = Mathf.Max(0f, maxRightMeters);
+        float upLimit = Mathf.Max(0f, maxUpMeters);
+        float downLimit = Mathf.Max(0f, maxDownMeters);
 
-        foreach (var comp in kinectComponents)
-        {
-            if (comp != null)
-            {
-                comp.enabled = enableKinect;
-            }
-        }
-
-        foreach (var go in kinectGameObjects)
-        {
-            if (go != null)
-            {
-                go.SetActive(enableKinect);
-            }
-        }
+        return new Vector3(
+            Mathf.Clamp(offset.x, -leftLimit, rightLimit),
+            offset.y,
+            Mathf.Clamp(offset.z, -downLimit, upLimit)
+        );
     }
 
-    private void HandleManualMovement(Keyboard keyboard, Mouse mouse)
+    private void SaveUntrackedPositions()
     {
-        if (playerTransform == null) return;
+        if (playerTransform != null)
+            playerPositionWithoutTracking = playerTransform.position;
 
+        if (cameraPosition != null)
+            cameraPositionWithoutTracking = cameraPosition.position;
+    }
+
+    private void ApplyTrackedPositions()
+    {
+        ApplyOffset(playerTransform, playerPositionManager, playerPositionWithoutTracking);
+        ApplyOffset(cameraPosition, cameraPositionManager, cameraPositionWithoutTracking);
+    }
+
+    private void ApplyOffset(Transform output, PlayerManager manager, Vector3 fallbackPosition)
+    {
+        if (output == null)
+            return;
+
+        Transform trackedTarget = manager != null ? manager.Target : null;
+        Vector3 trackedPosition = trackedTarget != null && trackedTarget != output
+            ? trackedTarget.position
+            : fallbackPosition;
+
+        output.position = trackedPosition + debugOffset;
+    }
+
+    private Vector3 ReadMovement(Keyboard keyboard, Mouse mouse)
+    {
         float moveX = 0f;
         float moveY = 0f;
         float moveZ = 0f;
 
-        // Keyboard Controls: WASD & Arrow Keys (Horizontal Plane)
         if (keyboard.wKey.isPressed || keyboard.upArrowKey.isPressed) moveZ += 1f;
         if (keyboard.sKey.isPressed || keyboard.downArrowKey.isPressed) moveZ -= 1f;
         if (keyboard.aKey.isPressed || keyboard.leftArrowKey.isPressed) moveX -= 1f;
         if (keyboard.dKey.isPressed || keyboard.rightArrowKey.isPressed) moveX += 1f;
-
-        // Vertical Controls: Q (Down) / E (Up)
         if (keyboard.eKey.isPressed) moveY += 1f;
         if (keyboard.qKey.isPressed) moveY -= 1f;
 
-        // Mouse Button Controls: Left click = -X, Right click = +X
-        if (mouse != null)
-        {
-            if (mouse.leftButton.isPressed)
-            {
-                moveX -= 1f;
-            }
-            if (mouse.rightButton.isPressed)
-            {
-                moveX += 1f;
-            }
-        }
-
-        // Normalize planar horizontal movement to prevent speed boosting diagonally
         Vector3 planarInput = new Vector3(moveX, 0f, moveZ);
         if (planarInput.sqrMagnitude > 1f)
-        {
             planarInput.Normalize();
+
+        float scrollY = mouse != null ? mouse.scroll.ReadValue().y : 0f;
+        if (Mathf.Abs(scrollY) > 0.01f)
+        {
+            keyboardSpeed = Mathf.Clamp(
+                keyboardSpeed + Mathf.Sign(scrollY) * scrollWheelSensitivity,
+                MinimumKeyboardSpeed,
+                MaximumKeyboardSpeed
+            );
         }
 
-        Vector3 deltaPosition = planarInput * (keyboardSpeed * Time.deltaTime);
+        Vector3 movement = planarInput * (keyboardSpeed * Time.deltaTime);
+        movement.y = moveY * (verticalSpeed * Time.deltaTime);
 
-        // Apply vertical movement (scaled independently by verticalSpeed)
-        deltaPosition.y = moveY * (verticalSpeed * Time.deltaTime);
-
-        // Mouse Scroll Wheel Controls: Scroll up = +Z, Scroll down = -Z
         if (mouse != null)
         {
-            float scrollY = mouse.scroll.ReadValue().y;
-            if (Mathf.Abs(scrollY) > 0.01f)
-            {
-                deltaPosition.z += Mathf.Sign(scrollY) * scrollWheelSensitivity;
-            }
+            float mouseMoveX = 0f;
+            if (mouse.leftButton.isPressed) mouseMoveX -= 1f;
+            if (mouse.rightButton.isPressed) mouseMoveX += 1f;
+            movement.x += mouseMoveX * (mouseButtonSpeed * Time.deltaTime);
         }
 
-        // Apply movement
-        playerTransform.position += deltaPosition;
+        return movement;
+    }
 
-        if (cameraPosition != null)
-        {
-            cameraPosition.position += deltaPosition;
-        }
+    private void OnGUI()
+    {
+        if (!showModeIndicator || currentMode != ControlMode.ManualDebug)
+            return;
+
+        GUI.Box(
+            new Rect(12f, 12f, 500f, 28f),
+            $"DEBUG OFFSET  |  Kinect live  |  WASD {keyboardSpeed:0.00} m/s  |  scroll speed  |  TAB exit"
+        );
+    }
+
+    private void OnDrawGizmos()
+    {
+        if (!showMovementLimits)
+            return;
+
+        Vector3 center = GetTrackedHeadPosition();
+        float left = Mathf.Max(0f, maxLeftMeters);
+        float right = Mathf.Max(0f, maxRightMeters);
+        float up = Mathf.Max(0f, maxUpMeters);
+        float down = Mathf.Max(0f, maxDownMeters);
+
+        Vector3 lowerLeft = center + Vector3.left * left + Vector3.back * down;
+        Vector3 lowerRight = center + Vector3.right * right + Vector3.back * down;
+        Vector3 upperRight = center + Vector3.right * right + Vector3.forward * up;
+        Vector3 upperLeft = center + Vector3.left * left + Vector3.forward * up;
+
+        Gizmos.color = movementLimitColor;
+        Gizmos.DrawLine(lowerLeft, lowerRight);
+        Gizmos.DrawLine(lowerRight, upperRight);
+        Gizmos.DrawLine(upperRight, upperLeft);
+        Gizmos.DrawLine(upperLeft, lowerLeft);
+        Gizmos.DrawWireSphere(center, 0.025f);
+
+#if UNITY_EDITOR
+        UnityEditor.Handles.color = movementLimitColor;
+        UnityEditor.Handles.Label(
+            upperLeft + Vector3.up * 0.05f,
+            $"WASD limits (XZ)  L:{left:0.00}  R:{right:0.00}  U:{up:0.00}  D:{down:0.00} m"
+        );
+#endif
+    }
+
+    private Vector3 GetTrackedHeadPosition()
+    {
+        PlayerManager manager = cameraPositionManager;
+        if (manager == null && cameraPosition != null)
+            manager = cameraPosition.GetComponent<PlayerManager>();
+
+        Transform trackedTarget = manager != null ? manager.Target : null;
+        if (trackedTarget != null && trackedTarget != cameraPosition)
+            return trackedTarget.position;
+
+        return cameraPosition != null ? cameraPosition.position : transform.position;
     }
 }
