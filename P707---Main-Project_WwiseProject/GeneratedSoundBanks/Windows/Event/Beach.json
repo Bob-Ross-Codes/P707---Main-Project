@@ -10,7 +10,7 @@
     "Type": "Event",
     "GUID": "{6CACF3D2-3102-4F74-8179-E36E0AFE8767}",
     "Language": "SFX",
-    "Hash": "{D5A0F9B3-851C-70D6-0977-92824934195F}",
+    "Hash": "{6D0E3D40-E210-723F-9217-B145F4B7DA5C}",
     "ObjectPath": "Beach",
     "ShortName": "Beach",
     "Path": "Event/Beach.bnk",
@@ -42,6 +42,6 @@
     ]
    }
   ],
-  "FileHash": "{C8919697-AF20-697C-D74E-5CC386EF1761}"
+  "FileHash": "{6330967B-B0EE-1905-C29E-894462DE3270}"
  }
 }

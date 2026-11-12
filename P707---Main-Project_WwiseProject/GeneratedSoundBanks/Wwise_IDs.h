@@ -15,7 +15,9 @@ namespace AK
     {
         static const AkUniqueID BEACH = 4075332698U;
         static const AkUniqueID BIRDS = 352130103U;
+        static const AkUniqueID CREAKS = 415232454U;
         static const AkUniqueID FOREST = 491961918U;
+        static const AkUniqueID PLAY_WIND = 1020223172U;
     } // namespace EVENTS
 
     namespace BUSSES

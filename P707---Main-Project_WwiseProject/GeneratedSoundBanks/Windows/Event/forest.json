@@ -10,7 +10,7 @@
     "Type": "Event",
     "GUID": "{C32C339D-F28E-44EE-A670-4E0C276055F9}",
     "Language": "SFX",
-    "Hash": "{C90CC299-98D1-F2B0-4C2C-37EBFFEAE15F}",
+    "Hash": "{6B8C1F5B-6730-E69B-83BC-E1D86D8B9572}",
     "ObjectPath": "forest",
     "ShortName": "forest",
     "Path": "Event/forest.bnk",
@@ -42,6 +42,6 @@
     ]
    }
   ],
-  "FileHash": "{9F7B8933-978A-A3CF-9E7B-BE01A92092DB}"
+  "FileHash": "{BA66E78F-945B-57F9-168A-335CA7528507}"
  }
 }

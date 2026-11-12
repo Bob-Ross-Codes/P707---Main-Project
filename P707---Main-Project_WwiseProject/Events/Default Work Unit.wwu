@@ -36,6 +36,38 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="Creaks" ID="{9E9DB855-D311-44FC-B1AB-DC89022CE809}">
+					<PropertyList>
+						<Property Name="CooldownTime" Type="Real32">
+							<ValueList>
+								<Value>11.2</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
+					<ChildrenList>
+						<Action Name="" ID="{02698022-B027-4022-B82C-44DCB1FBA0A5}" ShortID="341108187">
+							<PropertyList>
+								<Property Name="Probability" Type="Real64" Value="73"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Tree Creak" ID="{4B936DB0-EE74-466B-AD70-C06594671F18}" WorkUnitID="{E389BBDD-6D70-43F2-8E65-0537B3C8F6C4}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_wind" ID="{AEE5B413-2C7D-4FF0-A170-6FDCE2099835}">
+					<ChildrenList>
+						<Action Name="" ID="{A99155A6-F4D2-49AA-A012-FBAF9DFF4FDD}" ShortID="567062970">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="tree wind" ID="{A1D3A8F9-C5DD-4046-BF4B-032A9BD92090}" WorkUnitID="{E389BBDD-6D70-43F2-8E65-0537B3C8F6C4}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>
