@@ -1,15 +1,28 @@
 
 using UnityEngine;
 using System.Collections;
+using UnityEngine.ProBuilder.MeshOperations;
 
 public class PlayerStats : MonoBehaviour
 {
+    [Header("Playerstats and Categorization")]
+    [Tooltip("Current speed of player")]
     public float Playerspeed;
+    [Tooltip("Amount of points")]
+    public int Playerpoints;
+    [Tooltip("How long the player needs to stand still for lowspeed")]
     public float timeThreshold;
+    [Tooltip("Threshold between the two types")]
+    public int CategorizationDivitionThreshold;
+    [Tooltip("Player is classified as a Looker")]
+    public bool Lookercategorization;
+    [Tooltip("Player is classified as a Cooker")]
+    public bool Cookercategorization;
 
-    public int Playerpoints; 
-
+    //Coroutine for 
     private Coroutine speedCoroutine;
+
+    
 
     void Start()
     {
@@ -24,6 +37,18 @@ public class PlayerStats : MonoBehaviour
     private void Update()
     {
         speedCoroutine = StartCoroutine(CheckPlayerSpeed());
+
+        if (Playerpoints < CategorizationDivitionThreshold)
+        {
+            Lookercategorization = true;
+            Cookercategorization = false;
+        }
+        else if (Playerpoints > CategorizationDivitionThreshold)
+        {
+            Lookercategorization = false;
+            Cookercategorization = true;
+        }
+        
     }
 
     IEnumerator CheckPlayerSpeed()

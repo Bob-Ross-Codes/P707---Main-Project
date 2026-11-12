@@ -1276,8 +1276,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerStats
   Playerspeed: 0
-  timeThreshold: 0
   Playerpoints: 0
+  timeThreshold: 5
+  CategorizationDivitionThreshold: 3
+  Lookercategorization: 0
+  Cookercategorization: 0
 --- !u!114 &330631969
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1292,8 +1295,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::CategorizeUserPoint
   loopCount: 0
   maxLoops: 5
+  EarlyExitThreshhold: 0
   Exitearly: 0
   HasVisitedInterestpoint: 0
+  HasReceivedRevisitBonus: 0
   HasVisitedAgeSection: 0
   Test: 0
 --- !u!4 &330631970

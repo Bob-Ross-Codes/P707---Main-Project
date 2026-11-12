@@ -3,16 +3,24 @@ using System.Collections;
 
 public class CategorizeUserPoint : MonoBehaviour
 {
-    [Header("Loop point counts")]
+    [Header("Dwelltime point count")]
     [Tooltip("Amount of current loops")]
     public int loopCount;
     [Tooltip("Max amount of loops in logic")]
     public int maxLoops;
-
+    [Tooltip("Loops aqquired before penalty")]
+    public int EarlyExitThreshhold;
+ 
     [Header("Penalty/Rewardtriggers")]
+    [Tooltip("Player left interestpoint early")]
     public bool Exitearly;
+    [Tooltip("Player have visited current interestpoint")]
     public bool HasVisitedInterestpoint;
+    [Tooltip("Player has recieved bonuspoint for revisiting")]
+    public bool HasReceivedRevisitBonus;
+    [Tooltip("Player have visited the time before")]
     public bool HasVisitedAgeSection;
+  
 
     [Header("TestValues")]
     public bool Test;
@@ -24,17 +32,12 @@ public class CategorizeUserPoint : MonoBehaviour
     private void Start()
     {
         playerStats = FindFirstObjectByType<PlayerStats>();
-
-        if (HasVisitedAgeSection == true)
-        {
-            playerStats.Playerpoints++;
-        }
     }
 
     //On First Time Enter. Found interest point, gives 1 point subtracted from the penalty. 
     public void GainInteractionPoint()
     {
-        playerStats.Playerpoints++;
+        GainPoints(1);
         HasVisitedInterestpoint = true;
     }
 
@@ -45,14 +48,15 @@ public class CategorizeUserPoint : MonoBehaviour
     }
 
     //On Player Enter. Visit again bous;
-    public void Revisitbsonus()
+    public void RevisitBonus()
     {
-        if (HasVisitedInterestpoint)
+        if (HasVisitedInterestpoint && !HasReceivedRevisitBonus)
         {
-            playerStats.Playerpoints++;
-        } 
+            GainPoints(1);
+            HasReceivedRevisitBonus = true;
+        }
     }
-    
+
     //While inside colider Event. Dwell cheker.
     public void WithinInterestPoint()
     {
@@ -63,20 +67,17 @@ public class CategorizeUserPoint : MonoBehaviour
     {
         while (loopCount < maxLoops)
         {
-            //Alter this if another penalty is required
-            int EarlyExitLoopThreshhold = 0;
-
-            if (loopCount < EarlyExitLoopThreshhold)
+            if (loopCount < EarlyExitThreshhold)
             {
                 Exitearly = true;
             }
-            else if (loopCount > EarlyExitLoopThreshhold)
+            else if (loopCount > EarlyExitThreshhold)
             {
                 Exitearly = false;
             }
                 yield return new WaitForSeconds(10f);
 
-            DwellTimePoint();
+            GainPoints(1);
             loopCount++;
         }
     }
@@ -86,25 +87,20 @@ public class CategorizeUserPoint : MonoBehaviour
     {
         if (Exitearly ==true)
         {
-            playerStats.Playerpoints--;
+            LosePoints(1);
             Exitearly = false;
         }
     }
 
     //The regular 1 point call
-    public void DwellTimePoint()
+    public void GainPoints(int amountGain)
     {
-        playerStats.Playerpoints++;
+        playerStats.Playerpoints += amountGain;
     }
 
-
-    public void GainReturnPointInterestPoint()
+    //The regular 1 point loss
+    public void LosePoints(int amountLose)
     {
-        playerStats.Playerpoints += 2;
-    }
-
-    public void GainReturnPointScene()
-    {
-        playerStats.Playerpoints +=3;
+        playerStats.Playerpoints -= amountLose;
     }
 }
