@@ -1155,6 +1155,7 @@ MonoBehaviour:
   CategorizationDivitionThreshold: 0
   Lookercategorization: 0
   Cookercategorization: 0
+  test: 0
   speed: 0
   smoothing: 5
   isLowSpeed: 0

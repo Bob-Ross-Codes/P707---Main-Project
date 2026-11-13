@@ -56,6 +56,12 @@ public class CategorizeUserPoint : MonoBehaviour
         }
     }
 
+    //On Player Exit. cooldown period for when leaving interest point and returning to acctually ge tthe points.
+    public void Cooldownperiod()
+    {
+  
+    }
+
     //While inside colider Event. Dwell cheker.
     public void WithinInterestPoint()
     {
@@ -91,13 +97,13 @@ public class CategorizeUserPoint : MonoBehaviour
         }
     }
 
-    //The regular 1 point call
+    //The regular point gain call
     public void GainPoints(int amountGain)
     {
         playerStats.Playerpoints += amountGain;
     }
 
-    //The regular 1 point loss
+    //The regular point loss call
     public void LosePoints(int amountLose)
     {
         playerStats.Playerpoints -= amountLose;

@@ -1,7 +1,10 @@
 
-using UnityEngine;
 using System.Collections;
+using UnityEngine;
 using UnityEngine.ProBuilder.MeshOperations;
+using UnityEngine.SceneManagement;
+using UnityEngine.SocialPlatforms.Impl;
+using static UnityEngine.Rendering.HighDefinition.ScalableSettingLevelParameter;
 
 public class PlayerStats : MonoBehaviour
 {
@@ -19,6 +22,8 @@ public class PlayerStats : MonoBehaviour
 
     //Coroutine for 
     private Coroutine speedCoroutine;
+
+    public bool test;
 
     [Header("Playerspeed")]
     public float speed;
@@ -83,8 +88,34 @@ public class PlayerStats : MonoBehaviour
 
         // Remember position
         lastPosition = transform.position;
-    }
 
+        //Savepoints depending on scene
+        string currentScene = SceneManager.GetActiveScene().name;
+
+        if (test == true)
+        {
+            //SavePoint
+            SaveSystem.SaveStat1(Playerpoints);
+            //Save WHOLE FILE AS NEW
+            SaveSystem.SaveAsNewFile();
+            //Show path
+            Debug.Log(Application.persistentDataPath + "/save.json");
+            test = false;
+        }
+
+        if (currentScene == "MainMenu")
+        {
+            SaveSystem.SaveStat1(Playerpoints);
+        }
+        else if (currentScene == "Level1")
+        {
+            SaveSystem.SaveStat2(Playerpoints);
+        }
+        else if (currentScene == "Level2")
+        {
+            SaveSystem.SaveStat3(Playerpoints);
+        }
+    }
     IEnumerator CheckPlayerSpeed()
     {
         float timer = 0f;
