@@ -1150,9 +1150,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 969450aaea4e6444b978ae1a7c3ad4b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerStats
-  Playerspeed: 0
   Playerpoints: 0
-  timeThreshold: 0
+  timeThreshold: 10
+  speedThreshold: 1
   CategorizationDivitionThreshold: 0
   Lookercategorization: 0
   Cookercategorization: 0
@@ -1388,7 +1388,6 @@ GameObject:
   m_Component:
   - component: {fileID: 330631970}
   - component: {fileID: 330631969}
-  - component: {fileID: 330631968}
   m_Layer: 0
   m_Name: PointManager
   m_TagString: Untagged
@@ -1396,26 +1395,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &330631968
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 330631967}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 969450aaea4e6444b978ae1a7c3ad4b1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PlayerStats
-  Playerspeed: 0
-  Playerpoints: 0
-  timeThreshold: 5
-  CategorizationDivitionThreshold: 3
-  Lookercategorization: 0
-  Cookercategorization: 0
-  speed: 0
-  smoothing: 5
 --- !u!114 &330631969
 MonoBehaviour:
   m_ObjectHideFlags: 0

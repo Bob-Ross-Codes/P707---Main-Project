@@ -6,8 +6,6 @@ using UnityEngine.ProBuilder.MeshOperations;
 public class PlayerStats : MonoBehaviour
 {
     [Header("Playerstats and Categorization")]
-    [Tooltip("Current speed of player")]
-    public float Playerspeed;
     [Tooltip("Amount of points")]
     public int Playerpoints;
     [Tooltip("How long the player needs to stand still for lowspeed")]
@@ -27,6 +25,7 @@ public class PlayerStats : MonoBehaviour
     public float smoothing = 5f;
     private Vector3 lastPosition;
     private float smoothSpeed;
+    public bool isLowSpeed;
 
 
 
@@ -64,46 +63,53 @@ public class PlayerStats : MonoBehaviour
             lastPosition
         );
 
-        if (distance < 0.001f)
-        {
-            distance = 0f;
-        }
-
-        // Calculate raw speed (units per second)
+        // Calculate raw speed
         float rawSpeed = distance / Time.deltaTime;
 
-        // Smooth the speed to prevent jitter
+        // Smooth the speed
         smoothSpeed = Mathf.Lerp(
             smoothSpeed,
             rawSpeed,
             Time.deltaTime * smoothing
         );
 
+        // Apply deadzone
+        if (smoothSpeed < 0.001f)
+        {
+            smoothSpeed = 0f;
+        }
+
         speed = Mathf.Max(0f, smoothSpeed);
 
-        // Remember position for next frame
+        // Remember position
         lastPosition = transform.position;
     }
 
     IEnumerator CheckPlayerSpeed()
     {
         float timer = 0f;
-
+        
         while (true)
         {
-            if (Playerspeed < 1f)
+            if (speed < 1f)
             {
                 timer += Time.deltaTime;
 
-                if (timer >= timeThreshold)
+                if (timer >= timeThreshold && !isLowSpeed)
                 {
+                    isLowSpeed = true;
                     OnLowSpeed();
-                    timer = 0f;
                 }
             }
             else
             {
                 timer = 0f;
+
+                if (isLowSpeed)
+                {
+                    isLowSpeed = false;
+                    OnSpeedRecovered();
+                }
             }
 
             yield return null;
@@ -113,5 +119,10 @@ public class PlayerStats : MonoBehaviour
     private void OnLowSpeed()
     {
         Debug.Log("Lower speed achieved");
+    }
+
+    private void OnSpeedRecovered()
+    {
+        Debug.Log("Speed recovered");
     }
 }
