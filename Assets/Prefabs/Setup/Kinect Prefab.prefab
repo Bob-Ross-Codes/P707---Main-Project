@@ -42,6 +42,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1560824909418656191}
+  - component: {fileID: 1667786362633122228}
   m_Layer: 0
   m_Name: Kinect Prefab
   m_TagString: Untagged
@@ -65,6 +66,18 @@ Transform:
   - {fileID: 1467929782682917025}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1667786362633122228
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8558477967003567804}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bfab5873cc40ac0469c9fa51cd97d9fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PersistentKinect
 --- !u!1001 &695049577250658310
 PrefabInstance:
   m_ObjectHideFlags: 0

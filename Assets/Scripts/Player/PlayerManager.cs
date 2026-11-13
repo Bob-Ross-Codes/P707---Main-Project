@@ -6,6 +6,10 @@ public class PlayerManager : MonoBehaviour
     [Tooltip("The GameObject whose global position/rotation to match.")]
     [SerializeField] private Transform target;
 
+    [Header("Auto-Find Settings")]
+    [Tooltip("Name of the bone to look for automatically if target is unassigned (e.g., 'pelvis' or 'head').")]
+    [SerializeField] private string autoFindBoneName = "";
+
     public Transform Target => target;
 
     [Header("Options")]
@@ -27,6 +31,17 @@ public class PlayerManager : MonoBehaviour
     public bool smoothRotation = true;
     [Min(0.01f)] public float rotationSmoothSpeed = 5f;
 
+    private void Awake()
+    {
+        CheckAndFindTarget();
+    }
+
+    private void OnEnable()
+    {
+        // Re-check when the scene finishes loading or object is enabled
+        CheckAndFindTarget();
+    }
+
     private void Start()
     {
         SnapToTarget();
@@ -34,9 +49,34 @@ public class PlayerManager : MonoBehaviour
 
     private void Update()
     {
+        if (target == null)
+        {
+            CheckAndFindTarget();
+        }
+
         if (updateEveryFrame)
         {
             SnapToTarget();
+        }
+    }
+
+    private void CheckAndFindTarget()
+    {
+        if (target != null) return;
+
+        if (!string.IsNullOrEmpty(autoFindBoneName))
+        {
+            // Search all transforms in the scene for one matching the bone name
+            Transform[] allTransforms = FindObjectsByType<Transform>(FindObjectsSortMode.None);
+            foreach (Transform t in allTransforms)
+            {
+                if (t.name.Equals(autoFindBoneName, System.StringComparison.OrdinalIgnoreCase))
+                {
+                    target = t;
+                    Debug.Log($"[{gameObject.name}] Automatically re-linked target to bone: {t.name}");
+                    break;
+                }
+            }
         }
     }
 
@@ -45,11 +85,8 @@ public class PlayerManager : MonoBehaviour
     {
         if (target == null)
         {
-            Debug.LogWarning(
-                $"[{nameof(PlayerManager)}] No target assigned on {gameObject.name}.",
-                this
-            );
-            return;
+            CheckAndFindTarget();
+            if (target == null) return;
         }
 
         if (!useSmoothing)
@@ -65,25 +102,20 @@ public class PlayerManager : MonoBehaviour
         Vector3 currentPosition = transform.position;
         Vector3 targetPosition = target.position;
 
-        // Smooth each position axis independently.
         float x = smoothX
-            ? Mathf.Lerp(currentPosition.x, targetPosition.x,
-                smoothSpeedX * Time.deltaTime)
+            ? Mathf.Lerp(currentPosition.x, targetPosition.x, smoothSpeedX * Time.deltaTime)
             : targetPosition.x;
 
         float y = smoothY
-            ? Mathf.Lerp(currentPosition.y, targetPosition.y,
-                smoothSpeedY * Time.deltaTime)
+            ? Mathf.Lerp(currentPosition.y, targetPosition.y, smoothSpeedY * Time.deltaTime)
             : targetPosition.y;
 
         float z = smoothZ
-            ? Mathf.Lerp(currentPosition.z, targetPosition.z,
-                smoothSpeedZ * Time.deltaTime)
+            ? Mathf.Lerp(currentPosition.z, targetPosition.z, smoothSpeedZ * Time.deltaTime)
             : targetPosition.z;
 
         transform.position = new Vector3(x, y, z);
 
-        // Smooth rotation independently.
         if (matchRotation)
         {
             if (smoothRotation)

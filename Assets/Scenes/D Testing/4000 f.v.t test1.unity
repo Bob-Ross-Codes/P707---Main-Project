@@ -1701,6 +1701,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerManager
   target: {fileID: 1506638596}
+  autoFindBoneName: 
   matchRotation: 0
   updateEveryFrame: 1
   useSmoothing: 1
@@ -5512,6 +5513,37 @@ Transform:
   - {fileID: 934540061}
   m_Father: {fileID: 884785406}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &959662671
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 959662672}
+  m_Layer: 0
+  m_Name: KinectSpawnPoint
+  m_TagString: KinectSpawnPoint
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &959662672
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 959662671}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.712, y: 1.8, z: 11.078}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &972685304
 GameObject:
   m_ObjectHideFlags: 0
@@ -7500,6 +7532,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Kinect Prefab
       objectReference: {fileID: 0}
+    - target: {fileID: 8558477967003567804, guid: 75321fb6c3d0c3e4095d1e2c1ffb3c2c, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7823,6 +7859,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerManager
   target: {fileID: 1506638595}
+  autoFindBoneName: 
   matchRotation: 1
   updateEveryFrame: 1
   useSmoothing: 0
@@ -10963,6 +11000,7 @@ Transform:
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
+  - {fileID: 959662672}
   - {fileID: 1506638594}
   - {fileID: 2133251220}
   - {fileID: 1835422546}
