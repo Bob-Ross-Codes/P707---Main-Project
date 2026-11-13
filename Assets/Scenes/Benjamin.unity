@@ -1152,12 +1152,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PlayerStats
   Playerpoints: 0
   timeThreshold: 10
-  speedThreshold: 1
   CategorizationDivitionThreshold: 0
   Lookercategorization: 0
   Cookercategorization: 0
   speed: 0
   smoothing: 5
+  isLowSpeed: 0
 --- !u!65 &241912438
 BoxCollider:
   m_ObjectHideFlags: 0
