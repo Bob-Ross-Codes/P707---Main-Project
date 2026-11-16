@@ -37,6 +37,8 @@ public class PlayerZoneTrigger : MonoBehaviour
     private bool hasEnteredEver = false;
     private bool hasExitedEver = false;
 
+    public float DurationThreshold => durationThreshold;
+
     private void OnTriggerEnter(Collider other)
     {
         // Check if the colliding object matches the designated player collider

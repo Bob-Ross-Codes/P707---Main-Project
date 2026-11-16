@@ -11417,7 +11417,7 @@ Transform:
   m_GameObject: {fileID: 1281786692}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.53, y: -0.079, z: 3.06}
+  m_LocalPosition: {x: -5.53, y: 0.215, z: 2.899}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -18028,7 +18028,7 @@ Transform:
   m_GameObject: {fileID: 2109917996}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 5.8550396, y: 1.5808306, z: 5.3566337}
+  m_LocalPosition: {x: 5.8550396, y: 1.2868305, z: 5.5176334}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -18092,8 +18092,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::HeadcoupledPerspective
   headPosition: {fileID: 1354031885}
   virtualScreen: {fileID: 1916564443}
-  screenWidth: 3.6
-  screenHeight: 2
+  screenWidth: 5
+  screenHeight: 2.8
   enableHeadCoupledPerspective: 1
   showGizmos: 1
   showGrid: 1
