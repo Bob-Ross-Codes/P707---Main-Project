@@ -17,10 +17,17 @@ An immersive installation: a visitor stands in front of a large screen and sees 
   - `BuildingFade.cs`, `TreeFade.cs` — fade era content in and out; buildings use the `_Fade` property of `Assets/3D Assets/Fadeshader.shadergraph`.
   - `Player/` — smoothing of the tracked head (`PlayerManager`), play-area mapping (`PlayerAreaTracker`), zone events (`PlayerZoneTrigger`).
   - `WWise/` — audio triggers and debug helpers.
+  - `NPC/` — `NpcWalker` steers a root-motion walker along a route of waypoint objects. Standing NPCs need no script, only an Animator.
 - `Assets/From Sample/` — Microsoft's Kinect body-tracking sample (skeleton, tracker, puppet avatar).
 - `Assets/Config/` and `Assets/StreamingAssets/config.json` — Kinect sample configuration.
 - `Assets/Scenes/` — eras are separate scenes named by year (4000 f.v.t., 1130, 1620, 1650). Each teammate has a `<Name> Testing/` folder; work in your own.
 - `Assets/Prefabs/Setup/` — Kinect and screen rig prefabs.
+- `Assets/Prefabs/Atmosphere 1645/` — ambient particle layers (dust, ground mist, smoke haze, chaff) as one prefab.
+- `Assets/Prefabs/NPCs/` — NPC prefabs and their Animator controllers. Character models and extra clips are in `Assets/3D Assets/NPCs/`; walk, idle and talk clips come from `Assets/3D Assets/Kevin Iglesias/`.
+
+## Branches
+
+- `animation-background-test` is the main branch for moving parts: NPCs, particles and other ambient animation. Do that work here, in `Assets/Scenes/Thias Testing/1650 Animation Test.unity`.
 
 ## Conventions
 
