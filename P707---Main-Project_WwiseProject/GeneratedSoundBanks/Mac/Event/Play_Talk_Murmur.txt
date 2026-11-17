@@ -1,0 +1,6 @@
+Event	ID	Name			Wwise Object Path	Notes
+	1309368419	Play_Talk_Murmur			\1645 Street\Play_Talk_Murmur	
+
+Streamed Audio	ID	Name	Audio source file	Generated audio file	Wwise Object Path	Notes
+	551273041	Talk_Murmur	.cache\D2\{D28877C3-47CA-9AC4-36DB-976BC5C19C02}.wem	551273041.wem	\Containers\1645 Street\Talk_Murmur	
+

@@ -25,6 +25,13 @@ public class NpcFootsteps : MonoBehaviour
         walkStateHash = Animator.StringToHash(walkState);
     }
 
+    // Start, not Awake: Wwise is initialised by another object's Awake/OnEnable.
+    private void Start()
+    {
+        // Events posted by name don't load their auto-defined SoundBank; AK.Wwise.Event fields do.
+        AkBankManager.LoadBank(footstepEvent, false, false, AkBankTypeEnum.AkBankType_Event);
+    }
+
     private void Update()
     {
         AnimatorStateInfo state = animator.GetCurrentAnimatorStateInfo(0);

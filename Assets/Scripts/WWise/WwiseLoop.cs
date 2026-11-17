@@ -13,6 +13,8 @@ public class WwiseLoop : MonoBehaviour
     // Start, not OnEnable: Wwise is initialised by another object's Awake/OnEnable.
     private void Start()
     {
+        // Events posted by name don't load their auto-defined SoundBank; AK.Wwise.Event fields do.
+        AkBankManager.LoadBank(eventName, false, false, AkBankTypeEnum.AkBankType_Event);
         playingId = AkUnitySoundEngine.PostEvent(eventName, gameObject);
         if (playingId == AkUnitySoundEngine.AK_INVALID_PLAYING_ID)
             Debug.LogWarning($"{name}: Wwise event '{eventName}' did not start. Is it in the SoundBanks?", this);

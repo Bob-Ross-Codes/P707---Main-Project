@@ -13,6 +13,8 @@ public class RandomSoundTrigger : MonoBehaviour
 
     private void Start()
     {
+        // Events posted by name don't load their auto-defined SoundBank; AK.Wwise.Event fields do.
+        AkBankManager.LoadBank(eventName, false, false, AkBankTypeEnum.AkBankType_Event);
         StartCoroutine(PlayRandomly());
     }
 
