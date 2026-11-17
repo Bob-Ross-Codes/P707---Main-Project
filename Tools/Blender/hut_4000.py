@@ -543,6 +543,313 @@ def build_hides(bm, uv):
     hide(bm, uv, k, random.uniform(0, 6.28), 1.0, 0.8, 0.0, 0.1, FUR, cap=True)
 
 
+# ---------------------------------------------------------------- interior
+# Furnishing after Ertebølle finds: hearth, fur beds on reed bedding, baskets, pointed-base pots,
+# bows, a fish leister, pelts on the lattice, firewood. Exported as its own FBX so it can be toggled.
+FLOOR = 0.17   # just above the terrain inside the hut (up to 0.156 m above the hut origin at the wall)
+I_WOOD, I_CORD, I_REED, I_FUR, I_FUR2, I_STONE, I_EARTH, I_ASH, I_CHAR, I_CLAY, I_FLINT = range(11)
+
+
+def make_ground_textures():
+    s = 512
+    for name, a, b, strength in (("Hut_Stone", (0.30, 0.30, 0.29), (0.62, 0.60, 0.56), 4.0),
+                                 ("Hut_Earth", (0.24, 0.19, 0.14), (0.50, 0.43, 0.33), 3.0)):
+        low, mid, fine = fbm(s, 1.6), fbm(s, 1.0), fbm(s, 0.5)
+        col = mix(a, b, np.clip(low * 0.8 + mid * 0.5 - 0.3, 0, 1))
+        col *= (0.85 + 0.3 * fine)[..., None]
+        save_png(col, os.path.join(TEX, name + "_BaseColor.png"))
+        save_png(normal_from_height(mid * 0.5 + fine * 0.5, strength), os.path.join(TEX, name + "_Normal.png"))
+
+
+def at(deg, r, z=FLOOR):
+    a = math.radians(deg)
+    return Vector((r * math.cos(a), r * math.sin(a), z))
+
+
+def wall_limit(p, margin=0.1):
+    return base_radius(math.atan2(p.y, p.x)) * 0.97 - margin
+
+
+def set_uv(faces, uv, mat, scale=2.0):
+    for f in faces:
+        f.material_index = mat
+        for loop in f.loops:
+            q = loop.vert.co
+            loop[uv].uv = ((q.x + q.y) * scale, q.z * scale + q.x)
+
+
+def rock(bm, uv, c, size, flat=0.6, mat=I_STONE, bump=0.25):
+    seed = random.uniform(0, 100)
+    vs = bmesh.ops.create_icosphere(bm, subdivisions=2, radius=1.0)["verts"]
+    sx, sy, sz = size * random.uniform(0.8, 1.2), size * random.uniform(0.8, 1.2), size * flat
+    rot = random.uniform(0, math.pi)
+    for v in vs:
+        d = v.co.copy()
+        k = 1 + bump * noise.noise(d * 1.3 + Vector((seed, 0, 0)))
+        x, y = d.x * sx * k, d.y * sy * k
+        v.co = c + Vector((x * math.cos(rot) - y * math.sin(rot), x * math.sin(rot) + y * math.cos(rot), d.z * sz * k))
+    set_uv({f for v in vs for f in v.link_faces}, uv, mat)
+
+
+def lathe(bm, uv, c, prof, mat, axis=Vector((0, 0, 1)), segs=20, wobble=0.04, u_rep=1.0):
+    """Revolve [(r, h)] round axis through c. Profile order sets the facing side."""
+    up = axis.normalized()
+    x = up.orthogonal().normalized()
+    y = up.cross(x)
+    seed = random.uniform(0, 100)
+    rings = []
+    for j, (r, h) in enumerate(prof):
+        ring = []
+        for i in range(segs):
+            a = 2 * math.pi * i / segs
+            rr = r * (1 + wobble * n3(seed, math.cos(a), math.sin(a) + j * 0.3))
+            ring.append(bm.verts.new(c + up * h + (x * math.cos(a) + y * math.sin(a)) * rr))
+        rings.append(ring)
+    for j in range(len(prof) - 1):
+        for i in range(segs):
+            i2 = (i + 1) % segs
+            f = bm.faces.new([rings[j][i], rings[j][i2], rings[j + 1][i2], rings[j + 1][i]])
+            f.material_index = mat
+            for loop, (a, b) in zip(f.loops, ((i, j), (i + 1, j), (i + 1, j + 1), (i, j + 1))):
+                loop[uv].uv = (a / segs * u_rep, b / (len(prof) - 1))
+
+
+def rug(bm, uv, k, c, half_len, rot, mat, mound=None, aspect=0.75):
+    """A hide lying on the floor (or on a bedding mound); turns up where it meets the wall."""
+    NR, NA = 9, 32
+    uoff = random.random()
+
+    def pos(rho, al):
+        d = rho * deer_outline(k, al, aspect) * half_len
+        p = c + Vector((d * math.sin(al + rot), d * math.cos(al + rot), 0))
+        if mound:
+            mc, ax, ay, mh = mound
+            q = (p.x - mc.x) ** 2 / ax ** 2 + (p.y - mc.y) ** 2 / ay ** 2
+            p.z += mh * max(0.0, 1 - q) ** 0.6
+        p.z += 0.012 + 0.012 * n3(k, p.x * 3, p.y * 3) + 0.02 * max(0, rho - 0.8) ** 2 / 0.04
+        lim = wall_limit(p, 0.12)
+        r = Vector((p.x, p.y)).length
+        if r > lim:   # fold up against the wall
+            p.x, p.y, p.z = p.x * lim / r, p.y * lim / r, p.z + (r - lim)
+        return p
+
+    centre = bm.verts.new(pos(0, 0))
+    rings = [[bm.verts.new(pos(r / NR, 2 * math.pi * m / NA)) for m in range(NA)] for r in range(1, NR + 1)]
+    uvat = lambda r, m: (uoff + 2 * m / NA, 0.97 * r / NR)
+    for m in range(NA):
+        m2 = (m + 1) % NA
+        f = bm.faces.new([centre, rings[0][m], rings[0][m2]])
+        f.material_index = mat
+        for loop, x in zip(f.loops, ((uoff + 2 * m / NA, 0), uvat(1, m), uvat(1, m + 1))):
+            loop[uv].uv = x
+        for r in range(NR - 1):
+            f = bm.faces.new([rings[r][m], rings[r + 1][m], rings[r + 1][m2], rings[r][m2]])
+            f.material_index = mat
+            for loop, x in zip(f.loops, (uvat(r + 1, m), uvat(r + 2, m), uvat(r + 2, m + 1), uvat(r + 1, m + 1))):
+                loop[uv].uv = x
+
+
+def pelt(bm, uv, k, deg, z_top, half_len, mat):
+    """A small pelt hung by its neck from the lattice, inside."""
+    th = math.radians(deg)
+    t = z_to_t(z_top - half_len)
+    n = dome_normal(th, t)
+    upv = (dome(th, t + 0.01) - dome(th, t - 0.01)).normalized()
+    side = upv.cross(n).normalized()
+    c = surf(th, t, -0.11)
+    NU, NV = 10, 14
+    vs = {}
+    for i in range(NU + 1):
+        for j in range(NV + 1):
+            u, v = i / NU * 2 - 1, j / NV * 2 - 1
+            al = math.atan2(u, v)
+            e = deer_outline(k, al, 0.5)
+            rr = math.hypot(u, v) / max(e, 0.01) if (u or v) else 0
+            p = c + side * u * half_len * 0.5 + upv * v * half_len - n * (0.025 * math.sin(math.pi * (v + 1) / 2) * (1 - rr))
+            vs[i, j] = (p, rr <= 1.0, (0.5 + u * 0.25, rr * 0.97))
+    made = {}
+    for i in range(NU):
+        for j in range(NV):
+            q = [(i, j), (i + 1, j), (i + 1, j + 1), (i, j + 1)]
+            if not all(vs[x][1] for x in q):
+                continue
+            for x in q:
+                if x not in made:
+                    made[x] = bm.verts.new(vs[x][0])
+            f = bm.faces.new([made[x] for x in q])
+            f.material_index = mat
+            for loop, x in zip(f.loops, q):
+                loop[uv].uv = vs[x][2]
+
+
+def lean_pole(bm, uv, deg, z_top, length, r, seed, foot_in=0.22):
+    """A pole standing on the floor near the wall with its top resting on the lattice."""
+    th = math.radians(deg)
+    top = surf(th, z_to_t(z_top), -0.1)
+    foot = at(deg, Vector((top.x, top.y)).length - foot_in, FLOOR)
+    d = (top - foot).normalized()
+    end = foot + d * length
+    pts = wobble_path(foot, end, 12, 0.01, seed)
+    tube(bm, uv, pts, [r] * len(pts), I_WOOD, sides=6)
+    return foot, end, d
+
+
+def build_interior():
+    make_ground_textures()
+    tx = lambda n: (os.path.join(TEX, n + "_BaseColor.png"), os.path.join(TEX, n + "_Normal.png"))
+    get = lambda name, *a: bpy.data.materials.get(name) or material(name, *a)
+    mats = [get("Hut_Wood"), get("Hut_Cord"), get("Hut_Reed"), get("Hut_Fur"), get("Hut_Fur_Pale"),
+            get("Hut_Stone", (0.45, 0.44, 0.42), *tx("Hut_Stone")),
+            get("Hut_Earth", (0.36, 0.3, 0.23), *tx("Hut_Earth")),
+            get("Hut_Ash", (0.55, 0.54, 0.52)),
+            get("Hut_Charcoal", (0.05, 0.045, 0.04)),
+            get("Hut_Clay", (0.30, 0.22, 0.16)),
+            get("Hut_Flint", (0.16, 0.15, 0.15))]
+
+    bm = bmesh.new()
+    uv = bm.loops.layers.uv.new()
+
+    # trampled earth floor, filling the hut to the reed lining
+    NA, NR = 64, 8
+    ctr = bm.verts.new(Vector((0, 0, FLOOR)))
+    rings = []
+    for r in range(1, NR + 1):
+        row = []
+        for m in range(NA):
+            th = 2 * math.pi * m / NA
+            rr = (hrad(th, z_to_t(FLOOR)) + 0.035) * r / NR   # reaches just under the rawhide panels
+            row.append(bm.verts.new(Vector((rr * math.cos(th), rr * math.sin(th), FLOOR + 0.008 * n3(th * 3, r, 0)))))
+        rings.append(row)
+    rings.append([bm.verts.new(v.co - Vector((0, 0, 0.3))) for v in rings[-1]])   # earth edge dropping into the ground
+    for m in range(NA):
+        m2 = (m + 1) % NA
+        fs = [bm.faces.new([ctr, rings[0][m], rings[0][m2]])]
+        fs += [bm.faces.new([rings[r][m], rings[r][m2], rings[r + 1][m2], rings[r + 1][m]][::-1]) for r in range(NR)]
+        set_uv(fs, uv, I_EARTH, 0.6)
+    for f in bm.faces:   # top/down projection for the floor, side projection for its edge
+        f.normal_update()
+        side = abs(f.normal.z) < 0.5
+        for loop in f.loops:
+            q = loop.vert.co
+            loop[uv].uv = ((q.x + q.y) * 0.6, q.z * 0.6) if side else (q.x * 0.6, q.y * 0.6)
+
+    # hearth: stone ring, ash, burnt sticks
+    hc = Vector((0.05, 0.15, FLOOR))
+    for i in range(13):
+        a = 2 * math.pi * i / 13 + random.uniform(-0.08, 0.08)
+        rr = 0.38 + random.uniform(-0.06, 0.05)
+        size = random.uniform(0.065, 0.14)
+        rock(bm, uv, hc + Vector((rr * math.cos(a), rr * math.sin(a), size * 0.15)), size)
+    lathe(bm, uv, hc, [(0.36, 0.0), (0.25, 0.018), (0.1, 0.028), (0.0, 0.03)], I_ASH, segs=24, wobble=0.1)
+    for i in range(6):
+        a = random.uniform(0, 2 * math.pi)
+        p0 = hc + Vector((0.04 * math.cos(a), 0.04 * math.sin(a), 0.045))
+        p1 = hc + Vector((random.uniform(0.25, 0.42) * math.cos(a), random.uniform(0.25, 0.42) * math.sin(a), 0.03))
+        pts = wobble_path(p0, p1, 6, 0.01, 90 + i)
+        tube(bm, uv, pts, [0.018 * (0.6 + 0.4 * k / 6) for k in range(7)], I_CHAR, sides=5)
+    for i in range(8):
+        rock(bm, uv, hc + Vector((random.uniform(-0.15, 0.15), random.uniform(-0.15, 0.15), 0.03)),
+             random.uniform(0.015, 0.03), 0.5, I_CHAR, 0.4)
+
+    # beds: reed bedding mounds with a fur on top
+    soft = bmesh.new()
+    suv = soft.loops.layers.uv.new()
+    for k, (deg, r, rot, mat) in enumerate(((45, 1.15, 0.6, I_FUR), (150, 1.15, -0.5, I_FUR2))):
+        mc = at(deg, r)
+        ax, ay, mh = 0.6, 0.62, 0.12
+        vs = bmesh.ops.create_icosphere(bm, subdivisions=3, radius=1.0)["verts"]
+        for v in vs:   # reed bedding, a bit wider than the furs on it
+            d = v.co.copy()
+            v.co = mc + Vector((d.x * ax * 1.12, d.y * ay * 1.12, d.z * mh * 0.95)) * (1 + 0.06 * noise.noise(d * 2 + Vector((k * 9, 0, 0))))
+        set_uv({f for v in vs for f in v.link_faces}, uv, I_REED, 1.2)
+        rug(soft, suv, 40 + k, mc, 0.72, rot + math.radians(deg) - math.pi / 2, mat, (mc, ax, ay, mh))
+        rug(soft, suv, 50 + k, mc + Vector((0.1, -0.05, 0)), 0.55, rot + 2.6, I_FUR2 if mat == I_FUR else I_FUR,
+            (mc, ax, ay, mh + 0.02))
+    rug(soft, suv, 60, at(222, 1.2), 0.62, 0.9, I_FUR)
+    for k, (deg, z) in enumerate(((122, 1.75), (188, 1.7))):
+        pelt(soft, suv, 70 + k, deg, z, random.uniform(0.38, 0.45), I_FUR if k else I_FUR2)
+    # rolled-up fur
+    rc = at(192, 1.45, FLOOR + 0.1)
+    axis = Vector((math.cos(math.radians(282)), math.sin(math.radians(282)), 0))
+    lathe(bm, uv, rc - axis * 0.32, [(0.0, 0.0), (0.09, 0.0), (0.1, 0.02), (0.1, 0.62), (0.09, 0.64), (0.0, 0.64)],
+          I_FUR, axis, segs=14, wobble=0.12, u_rep=2)
+
+    # baskets
+    for k, (deg, r, sc) in enumerate(((-20, 1.45, 1.0), (-5, 1.5, 0.75), (122, 1.5, 0.9))):
+        c = at(deg, r)
+        prof = [(0.0, 0.0), (0.17, 0.0), (0.19, 0.1), (0.21, 0.22), (0.22, 0.3), (0.205, 0.31),
+                (0.2, 0.22), (0.18, 0.1), (0.16, 0.015), (0.0, 0.015)]
+        lathe(bm, uv, c, [(a * sc, b * sc) for a, b in prof], I_REED, segs=24, wobble=0.05, u_rep=3)
+        for h in (0.1, 0.2, 0.3):
+            rr = (0.19 + 0.1 * (h - 0.1)) * sc + 0.004
+            ring = [c + Vector((rr * math.cos(a), rr * math.sin(a), h * sc)) for a in np.linspace(0, 2 * math.pi, 25)]
+            tube(bm, uv, ring, [0.008 * sc] * 25, I_CORD, sides=4)
+
+    # pointed-base pots, one pushed into the floor by the hearth, one by the back wall
+    pot = [(0.0, 0.0), (0.05, 0.03), (0.11, 0.1), (0.14, 0.2), (0.13, 0.3), (0.12, 0.36), (0.13, 0.4),
+           (0.115, 0.405), (0.105, 0.36), (0.115, 0.3), (0.125, 0.2), (0.095, 0.1), (0.0, 0.05)]
+    lathe(bm, uv, at(-15, 0.68, FLOOR - 0.06), pot, I_CLAY, Vector((0.08, 0.05, 1)), segs=22, wobble=0.03)
+    lathe(bm, uv, at(95, 1.5, FLOOR - 0.05), [(a * 1.2, b * 1.2) for a, b in pot], I_CLAY,
+          Vector((-0.05, -0.12, 1)), segs=22, wobble=0.03)
+    # wooden bowl and a coil of cord by the hearth
+    lathe(bm, uv, at(205, 0.62), [(0.0, 0.0), (0.09, 0.0), (0.14, 0.05), (0.15, 0.08), (0.14, 0.085),
+                                    (0.125, 0.05), (0.08, 0.025), (0.0, 0.025)], I_WOOD, segs=20, wobble=0.04)
+    cc = at(-40, 0.75, FLOOR + 0.008)
+    coil = [cc + Vector(((0.03 + 0.012 * a / (2 * math.pi)) * math.cos(a), (0.03 + 0.012 * a / (2 * math.pi)) * math.sin(a),
+                         0.004 * math.sin(a * 3))) for a in np.linspace(0, 2 * math.pi * 6, 180)]
+    tube(bm, uv, coil, [0.006] * len(coil), I_CORD, sides=4)
+
+    # stone slab seat
+    rock(bm, uv, at(15, 1.35, FLOOR + 0.05), 0.28, 0.22, I_STONE, 0.15)
+
+    # firewood stacked by the door
+    fc = at(-58, 1.35)
+    tang = Vector((-math.sin(math.radians(-58)), math.cos(math.radians(-58)), 0))
+    outw = Vector((math.cos(math.radians(-58)), math.sin(math.radians(-58)), 0))
+    for layer in range(3):
+        for i in range(4 - layer):
+            r = random.uniform(0.035, 0.05)
+            c = fc + outw * ((i - (3 - layer) / 2) * 0.1) + Vector((0, 0, r + layer * 0.085))
+            L = random.uniform(0.55, 0.85)
+            d = (tang + outw * random.uniform(-0.1, 0.1)).normalized()
+            pts = wobble_path(c - d * L / 2, c + d * L / 2, 6, 0.01, 100 + layer * 10 + i)
+            tube(bm, uv, pts, [r] * len(pts), I_WOOD, sides=7)
+
+    # bows, a three-pronged fish leister and a flint-tipped spear leaning on the back wall
+    for k, deg in enumerate((70, 84)):
+        foot, end, d = lean_pole(bm, uv, deg, 1.45, 0.02, 0.001, 200 + k)  # just to get the line
+        side = d.cross(Vector((0, 0, 1))).normalized()
+        L = 1.55
+        pts = [foot + d * L * s + side * 0.1 * math.sin(math.pi * s) for s in np.linspace(0, 1, 25)]
+        tube(bm, uv, pts, [0.009 + 0.008 * math.sin(math.pi * s) for s in np.linspace(0, 1, 25)], I_WOOD, sides=6)
+        tube(bm, uv, [foot + d * 0.02, foot + d * (L - 0.02)], [0.0025, 0.0025], I_CORD, sides=4)
+    foot, end, d = lean_pole(bm, uv, 112, 1.6, 2.3, 0.018, 210)
+    side = d.cross(Vector((0, 0, 1))).normalized()
+    for s in (-1, 0, 1):
+        tip = [end - d * 0.05, end + d * 0.12 + side * 0.035 * s, end + d * 0.3 + side * 0.05 * s]
+        tube(bm, uv, tip, [0.008, 0.006, 0.003], I_WOOD, sides=4)
+    lashing(bm, uv, end - d * 0.02, d, 0.022, I_CORD, turns=4, height=0.06)
+    foot, end, d = lean_pole(bm, uv, 58, 1.5, 2.0, 0.017, 211)
+    lathe(bm, uv, end - d * 0.02, [(0.0, 0.0), (0.024, 0.03), (0.012, 0.09), (0.0, 0.13)], I_FLINT, d, segs=6, wobble=0.15)
+    lashing(bm, uv, end - d * 0.03, d, 0.018, I_CORD, turns=3, height=0.05)
+
+    hard = new_obj("InteriorHard", bm, mats)
+    softo = new_obj("InteriorSoft", soft, mats)
+    mod = softo.modifiers.new("Solidify", "SOLIDIFY")
+    mod.thickness = 0.015
+    bpy.context.view_layer.objects.active = softo
+    bpy.ops.object.modifier_apply(modifier=mod.name)
+    bpy.ops.object.select_all(action="DESELECT")
+    hard.select_set(True)
+    softo.select_set(True)
+    bpy.context.view_layer.objects.active = hard
+    bpy.ops.object.join()
+    ob = bpy.context.active_object
+    ob.name = ob.data.name = "Hut 4000 Interior"
+    bpy.ops.object.material_slot_remove_unused()
+    return ob
+
+
 # ---------------------------------------------------------------- build
 def build():
     os.makedirs(TEX, exist_ok=True)
@@ -593,14 +900,14 @@ def build():
     return hut
 
 
-def export(hut):
+def export(hut, name="Hut 4000"):
     bpy.ops.object.select_all(action="DESELECT")
     hut.select_set(True)
-    bpy.ops.export_scene.fbx(filepath=os.path.join(OUT, "Hut 4000.fbx"), use_selection=True,
+    bpy.ops.export_scene.fbx(filepath=os.path.join(OUT, name + ".fbx"), use_selection=True,
                              object_types={"MESH"}, apply_scale_options="FBX_SCALE_UNITS",
                              axis_forward="-Z", axis_up="Y", bake_space_transform=True,
                              mesh_smooth_type="FACE", path_mode="STRIP")
-    print("HUT tris:", sum(len(p.vertices) - 2 for p in hut.data.polygons))
+    print(name, "tris:", sum(len(p.vertices) - 2 for p in hut.data.polygons))
 
 
 def preview(hut):
@@ -618,7 +925,9 @@ def preview(hut):
     shots = [("door", Vector((0.8, -6.5, 1.6)), Vector((0, 0, 1.1))),
              ("back", Vector((4.5, 4.5, 2.2)), Vector((0, 0, 1.1))),
              ("side", Vector((-6.0, -2.0, 3.2)), Vector((0, 0, 1.0))),
-             ("inside", Vector((0.3, 0.9, 1.0)), Vector((-0.6, -1.6, 1.0)))]
+             ("inside", Vector((0.3, 0.9, 1.0)), Vector((-0.6, -1.6, 1.0))),
+             ("inside_back", Vector((0.1, -1.7, 1.35)), Vector((0.0, 0.6, 0.45))),
+             ("inside_left", Vector((1.2, -0.9, 1.3)), Vector((-1.0, 0.6, 0.4)))]
     for name, loc, aim in shots:
         cam.location = loc
         cam.rotation_euler = (aim - loc).to_track_quat("-Z", "Y").to_euler()
@@ -630,5 +939,7 @@ def preview(hut):
 bpy.ops.wm.read_factory_settings(use_empty=True)
 hut = build()
 export(hut)
+interior = build_interior()
+export(interior, "Hut 4000 Interior")
 if PREVIEW:
     preview(hut)
