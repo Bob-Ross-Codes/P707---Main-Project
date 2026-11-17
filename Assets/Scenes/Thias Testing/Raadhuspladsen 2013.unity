@@ -8308,6 +8308,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Raadhuspladsen 2013 (block-out)
       objectReference: {fileID: 0}
+    - target: {fileID: 5473992710459079287, guid: c8e57457933134a20a549771b0ce033a, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
