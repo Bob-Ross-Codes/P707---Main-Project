@@ -272,6 +272,10 @@ PrefabInstance:
       value: Right Wall Hit Collider
       objectReference: {fileID: 0}
     - target: {fileID: 6055852282996525941, guid: d0f13807df4447e459e29767040415be, type: 3}
+      propertyPath: durationThreshold
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6055852282996525941, guid: d0f13807df4447e459e29767040415be, type: 3}
       propertyPath: targetPlayerCollider
       value: 
       objectReference: {fileID: 1351200967}
@@ -377,7 +381,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7189112562077230271, guid: d0f13807df4447e459e29767040415be, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.906
+      value: 2.459
       objectReference: {fileID: 0}
     - target: {fileID: 7189112562077230271, guid: d0f13807df4447e459e29767040415be, type: 3}
       propertyPath: m_LocalPosition.y
@@ -773,7 +777,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7189112562077230271, guid: d0f13807df4447e459e29767040415be, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.91
+      value: -1.436
       objectReference: {fileID: 0}
     - target: {fileID: 7189112562077230271, guid: d0f13807df4447e459e29767040415be, type: 3}
       propertyPath: m_LocalPosition.y

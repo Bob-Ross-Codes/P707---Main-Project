@@ -1700,8 +1700,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 85c726f542bd18d46b7256942af74597, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerManager
-  target: {fileID: 1506638596}
-  autoFindBoneName: 
+  target: {fileID: 0}
+  autoFindBoneName: head
   matchRotation: 0
   updateEveryFrame: 1
   useSmoothing: 1
@@ -7541,16 +7541,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 75321fb6c3d0c3e4095d1e2c1ffb3c2c, type: 3}
---- !u!4 &1506638595 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 5757466298405744581, guid: 75321fb6c3d0c3e4095d1e2c1ffb3c2c, type: 3}
-  m_PrefabInstance: {fileID: 1506638594}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &1506638596 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 5757466299558884486, guid: 75321fb6c3d0c3e4095d1e2c1ffb3c2c, type: 3}
-  m_PrefabInstance: {fileID: 1506638594}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1517492653
 GameObject:
   m_ObjectHideFlags: 0
@@ -7858,8 +7848,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 85c726f542bd18d46b7256942af74597, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerManager
-  target: {fileID: 1506638595}
-  autoFindBoneName: 
+  target: {fileID: 0}
+  autoFindBoneName: pelvis
   matchRotation: 1
   updateEveryFrame: 1
   useSmoothing: 0
