@@ -17,6 +17,10 @@ namespace AK
         static const AkUniqueID BIRDS = 352130103U;
         static const AkUniqueID CREAKS = 415232454U;
         static const AkUniqueID FOREST = 491961918U;
+        static const AkUniqueID PLAY_CHURCH_BELL = 82652465U;
+        static const AkUniqueID PLAY_FOOTSTEP = 1602358412U;
+        static const AkUniqueID PLAY_TALK_MURMUR = 1309368419U;
+        static const AkUniqueID PLAY_TOWN_AMBIENCE = 3675968581U;
         static const AkUniqueID PLAY_WIND = 1020223172U;
     } // namespace EVENTS
 

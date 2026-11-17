@@ -681,6 +681,23 @@ MonoBehaviour:
   arriveDistance: 0.5
   pauseSeconds: {x: 3, y: 10}
   speedVariation: {x: 0.65, y: 0.78}
+--- !u!114 &100452262
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 100452259}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5e626d3b7032424589e55477321a1b1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::NpcFootsteps
+  footstepEvent: Play_Footstep
+  walkState: Walk
+  footfalls:
+  - 0
+  - 0.5
 --- !u!1 &103522262 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2805122521344352324, guid: c66b10a2f423044839dbc1e5b9a9866c, type: 3}
@@ -709,6 +726,23 @@ MonoBehaviour:
   arriveDistance: 0.5
   pauseSeconds: {x: 3, y: 10}
   speedVariation: {x: 0.65, y: 0.78}
+--- !u!114 &103522265
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 103522262}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5e626d3b7032424589e55477321a1b1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::NpcFootsteps
+  footstepEvent: Play_Footstep
+  walkState: Walk
+  footfalls:
+  - 0
+  - 0.5
 --- !u!1001 &111817247
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9445,6 +9479,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 2807448306315479485, guid: 985d3cc1ae4ac46c691e7686f9a0faa4, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1415280571}
+    - targetCorrespondingSourceObject: {fileID: 2807448306315479485, guid: 985d3cc1ae4ac46c691e7686f9a0faa4, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1415280572}
   m_SourcePrefab: {fileID: 100100000, guid: 985d3cc1ae4ac46c691e7686f9a0faa4, type: 3}
 --- !u!1001 &711705530
 PrefabInstance:
@@ -16699,6 +16736,51 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: c7b0728925cb2a041917300838c33927, type: 3}
   m_PrefabInstance: {fileID: 1068331845}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1070240703
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1070240704}
+  - component: {fileID: 1070240705}
+  m_Layer: 0
+  m_Name: Talk Murmur
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1070240704
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1070240703}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -5.0463, y: 1.6744002, z: 16.984402}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1527250716}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1070240705
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1070240703}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c2b745e584b944101bcaba802f279e40, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::WwiseLoop
+  eventName: Play_Talk_Murmur
 --- !u!1 &1080011515
 GameObject:
   m_ObjectHideFlags: 0
@@ -18176,6 +18258,53 @@ Transform:
   - {fileID: 287588094}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: -15.458, y: 52.64, z: 0}
+--- !u!1 &1284835177
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1284835178}
+  - component: {fileID: 1284835179}
+  m_Layer: 0
+  m_Name: Church Bell
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1284835178
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1284835177}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.3749121, y: 10.776464, z: 30.212322}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1527250716}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1284835179
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1284835177}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9ae28e98aaa9ebf4aac0a46b7be61091, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::RandomSoundTrigger
+  eventName: Play_Church_Bell
+  minInterval: 40
+  maxInterval: 90
 --- !u!1 &1300523389
 GameObject:
   m_ObjectHideFlags: 0
@@ -19994,6 +20123,23 @@ MonoBehaviour:
   arriveDistance: 0.5
   pauseSeconds: {x: 3, y: 10}
   speedVariation: {x: 0.65, y: 0.78}
+--- !u!114 &1415280572
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1415280569}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5e626d3b7032424589e55477321a1b1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::NpcFootsteps
+  footstepEvent: Play_Footstep
+  walkState: Walk
+  footfalls:
+  - 0
+  - 0.5
 --- !u!1 &1419192222
 GameObject:
   m_ObjectHideFlags: 0
@@ -21597,6 +21743,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 2805122521344352324, guid: c66b10a2f423044839dbc1e5b9a9866c, type: 3}
       insertIndex: -1
       addedObject: {fileID: 103522264}
+    - targetCorrespondingSourceObject: {fileID: 2805122521344352324, guid: c66b10a2f423044839dbc1e5b9a9866c, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 103522265}
   m_SourcePrefab: {fileID: 100100000, guid: c66b10a2f423044839dbc1e5b9a9866c, type: 3}
 --- !u!1 &1506767878
 GameObject:
@@ -21969,6 +22118,40 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: c7b0728925cb2a041917300838c33927, type: 3}
   m_PrefabInstance: {fileID: 1522789007}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1527250715
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1527250716}
+  m_Layer: 0
+  m_Name: Audio 1645
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1527250716
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1527250715}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 2113638165}
+  - {fileID: 1070240704}
+  - {fileID: 1284835178}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1529941211
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -24655,6 +24838,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 3999346353118375730, guid: 94dd24cd773a540ffb0e49ef3dd3a8c4, type: 3}
       insertIndex: -1
       addedObject: {fileID: 100452261}
+    - targetCorrespondingSourceObject: {fileID: 3999346353118375730, guid: 94dd24cd773a540ffb0e49ef3dd3a8c4, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 100452262}
   m_SourcePrefab: {fileID: 100100000, guid: 94dd24cd773a540ffb0e49ef3dd3a8c4, type: 3}
 --- !u!1 &1728679585
 GameObject:
@@ -31596,6 +31782,8 @@ GameObject:
   - component: {fileID: 2109918000}
   - component: {fileID: 2109917999}
   - component: {fileID: 2109917998}
+  - component: {fileID: 2109918002}
+  - component: {fileID: 2109918001}
   m_Layer: 0
   m_Name: HeadcoupledPerspective
   m_TagString: Untagged
@@ -31736,6 +31924,91 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
+--- !u!114 &2109918001
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2109917996}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 68965fdfb4ab0514ca1490fcfbb695ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: AK.Wwise.Unity.MonoBehaviour::AkAudioListener
+  isDefaultListener: 1
+  bOverrideScalingFactor: 0
+  scalingFactor: -1
+  listenerId: 0
+--- !u!114 &2109918002
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2109917996}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 83c9c495f097e8d43af6b27948e5c826, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: AK.Wwise.Unity.MonoBehaviour::AkGameObj
+  m_listeners:
+    initialListenerList: []
+    useDefaultListeners: 1
+  isEnvironmentAware: 1
+  isStaticObject: 0
+  usePositionOffsetData: 0
+  m_positionOffsetData:
+    KeepMe: 0
+    positionOffset: {x: 0, y: 0, z: 0}
+  scalingFactor: 1
+  m_posOffsetData: {fileID: 0}
+  listenerMask: 1
+--- !u!1 &2113638164
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2113638165}
+  - component: {fileID: 2113638166}
+  m_Layer: 0
+  m_Name: Town Ambience
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2113638165
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2113638164}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1527250716}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2113638166
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2113638164}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c2b745e584b944101bcaba802f279e40, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::WwiseLoop
+  eventName: Play_Town_Ambience
 --- !u!1001 &2113875331
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -32517,3 +32790,4 @@ SceneRoots:
   - {fileID: 1880514562}
   - {fileID: 6506500320883180855}
   - {fileID: 743250774}
+  - {fileID: 1527250716}

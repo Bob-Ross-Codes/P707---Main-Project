@@ -1,0 +1,48 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Mac",
+  "BasePlatform": "Mac",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "172",
+  "SoundBanks": [
+   {
+    "Id": "82652465",
+    "Type": "Event",
+    "GUID": "{BEF2B429-02D3-41F2-8ED4-6E5C971E8B59}",
+    "Language": "SFX",
+    "Hash": "{EBC5EC28-BED7-9186-9273-90E068B9AFD9}",
+    "ObjectPath": "Play_Church_Bell",
+    "ShortName": "Play_Church_Bell",
+    "Path": "Event/Play_Church_Bell.bnk",
+    "Media": [
+     {
+      "Id": "749519039",
+      "Language": "SFX",
+      "Streaming": "true",
+      "Location": "Loose",
+      "ShortName": "1645\\Processed\\Bell_Distant_Tolls.wav",
+      "Path": "Media/749519039.wem",
+      "CachePath": "7E/{7E3631F8-5F40-C3DA-F79E-E2732524FBC0}.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "82652465",
+      "Name": "Play_Church_Bell",
+      "ObjectPath": "\\Events\\1645 Street\\Play_Church_Bell",
+      "GUID": "{BEF2B429-02D3-41F2-8ED4-6E5C971E8B59}",
+      "DurationType": "OneShot",
+      "DurationMin": "11.5",
+      "DurationMax": "11.5",
+      "MediaRefs": [
+       {
+        "Id": "749519039"
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "FileHash": "{391DCBF2-7A12-8679-E935-2FB339172AE1}"
+ }
+}

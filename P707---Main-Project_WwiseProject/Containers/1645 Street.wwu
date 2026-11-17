@@ -1,0 +1,366 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{A4B137B4-9DA3-4154-BF08-715DF34BFDCB}" SchemaVersion="133">
+	<Containers>
+		<WorkUnit Name="1645 Street" ID="{A4B137B4-9DA3-4154-BF08-715DF34BFDCB}" PersistMode="Standalone">
+			<ChildrenList>
+				<RandomSequenceContainer Name="Footsteps" ID="{AB37C0C0-5ABF-4EFB-9F0B-98922DB84EFE}" ShortID="930223212">
+					<PropertyList>
+						<Property Name="3DPosition" Type="int16" Value="1"/>
+						<Property Name="3DSpatialization" Type="int16" Value="1"/>
+						<Property Name="RandomAvoidRepeatingCount" Type="int32" Value="3"/>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Attenuation">
+							<ObjectRef Name="Distance35" ID="{E8E70198-8EE4-436E-A7C6-3706D8CA311F}" WorkUnitID="{47323F40-C3F2-4E7F-897E-0E85526399CB}"/>
+						</Reference>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{7406BB7B-08AA-4828-8AD5-E96E108E4D13}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="SFX" ID="{3E0C36AD-46B5-4CFD-9664-EB8A285CA060}" WorkUnitID="{4A32BEAA-3CEB-4DFF-BEDB-A9E9155EE3CC}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<Sound Name="Footstep_01" ID="{6126E1EF-C4B6-4867-9FD3-8AEF51DB774A}" ShortID="517671347">
+							<PropertyList>
+								<Property Name="IsStreamingEnabled" Type="bool">
+									<ValueList>
+										<Value>True</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{7406BB7B-08AA-4828-8AD5-E96E108E4D13}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{4A32BEAA-3CEB-4DFF-BEDB-A9E9155EE3CC}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Footstep_01" ID="{8B841755-FA4B-4896-AEC0-740525DD45EB}">
+									<Language>SFX</Language>
+									<AudioFile>1645\Processed\Footstep_01.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="405193664"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Footstep_01" ID="{8B841755-FA4B-4896-AEC0-740525DD45EB}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Footstep_02" ID="{513E1E60-CE28-43D5-8173-C9FFFD350541}" ShortID="678175574">
+							<PropertyList>
+								<Property Name="IsStreamingEnabled" Type="bool">
+									<ValueList>
+										<Value>True</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{7406BB7B-08AA-4828-8AD5-E96E108E4D13}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{4A32BEAA-3CEB-4DFF-BEDB-A9E9155EE3CC}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Footstep_02" ID="{3443605E-718D-4E47-AB4C-BA04489C9807}">
+									<Language>SFX</Language>
+									<AudioFile>1645\Processed\Footstep_02.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="820824976"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Footstep_02" ID="{3443605E-718D-4E47-AB4C-BA04489C9807}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Footstep_03" ID="{FB8CD91D-5551-4D8C-B587-7B01ECDD2143}" ShortID="338284373">
+							<PropertyList>
+								<Property Name="IsStreamingEnabled" Type="bool">
+									<ValueList>
+										<Value>True</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{7406BB7B-08AA-4828-8AD5-E96E108E4D13}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{4A32BEAA-3CEB-4DFF-BEDB-A9E9155EE3CC}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Footstep_03" ID="{9F0AC9DC-618D-4FA2-BED3-758EAC5F021B}">
+									<Language>SFX</Language>
+									<AudioFile>1645\Processed\Footstep_03.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="72268247"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Footstep_03" ID="{9F0AC9DC-618D-4FA2-BED3-758EAC5F021B}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Footstep_04" ID="{9722C374-A54A-43C0-8203-E62A34427ABC}" ShortID="1017463794">
+							<PropertyList>
+								<Property Name="IsStreamingEnabled" Type="bool">
+									<ValueList>
+										<Value>True</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{7406BB7B-08AA-4828-8AD5-E96E108E4D13}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{4A32BEAA-3CEB-4DFF-BEDB-A9E9155EE3CC}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Footstep_04" ID="{EAE01FD3-AAFF-4520-9F98-4596955EF654}">
+									<Language>SFX</Language>
+									<AudioFile>1645\Processed\Footstep_04.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="191920192"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Footstep_04" ID="{EAE01FD3-AAFF-4520-9F98-4596955EF654}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Footstep_05" ID="{B8BC11C2-3B03-4F72-85AB-710F6844E4D6}" ShortID="1010502787">
+							<PropertyList>
+								<Property Name="IsStreamingEnabled" Type="bool">
+									<ValueList>
+										<Value>True</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{7406BB7B-08AA-4828-8AD5-E96E108E4D13}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{4A32BEAA-3CEB-4DFF-BEDB-A9E9155EE3CC}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Footstep_05" ID="{C02E058A-747E-4DA0-A8F7-3071B8C5B444}">
+									<Language>SFX</Language>
+									<AudioFile>1645\Processed\Footstep_05.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="559728073"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Footstep_05" ID="{C02E058A-747E-4DA0-A8F7-3071B8C5B444}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Footstep_06" ID="{79B5FA81-8B8B-47E7-8805-AC0C163AE861}" ShortID="49587483">
+							<PropertyList>
+								<Property Name="IsStreamingEnabled" Type="bool">
+									<ValueList>
+										<Value>True</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{7406BB7B-08AA-4828-8AD5-E96E108E4D13}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{4A32BEAA-3CEB-4DFF-BEDB-A9E9155EE3CC}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Footstep_06" ID="{89CBD8EA-0E9B-48C7-8B65-E71E022A1DBD}">
+									<Language>SFX</Language>
+									<AudioFile>1645\Processed\Footstep_06.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="557786920"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Footstep_06" ID="{89CBD8EA-0E9B-48C7-8B65-E71E022A1DBD}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Footstep_07" ID="{AF197E17-D3C8-4C04-B234-8BF253F63BAF}" ShortID="57431864">
+							<PropertyList>
+								<Property Name="IsStreamingEnabled" Type="bool">
+									<ValueList>
+										<Value>True</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{7406BB7B-08AA-4828-8AD5-E96E108E4D13}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{4A32BEAA-3CEB-4DFF-BEDB-A9E9155EE3CC}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Footstep_07" ID="{ECA7FE8C-F8AA-4942-A591-EA69E19AB346}">
+									<Language>SFX</Language>
+									<AudioFile>1645\Processed\Footstep_07.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="155111545"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Footstep_07" ID="{ECA7FE8C-F8AA-4942-A591-EA69E19AB346}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Footstep_08" ID="{539DC520-BDBC-4A46-A5B6-F0AAC82FB8E4}" ShortID="817780812">
+							<PropertyList>
+								<Property Name="IsStreamingEnabled" Type="bool">
+									<ValueList>
+										<Value>True</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{7406BB7B-08AA-4828-8AD5-E96E108E4D13}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{4A32BEAA-3CEB-4DFF-BEDB-A9E9155EE3CC}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Footstep_08" ID="{5F958A5B-DAB3-46E9-9410-DA705ED6DB39}">
+									<Language>SFX</Language>
+									<AudioFile>1645\Processed\Footstep_08.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="66437876"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Footstep_08" ID="{5F958A5B-DAB3-46E9-9410-DA705ED6DB39}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+					</ChildrenList>
+					<PositioningInfo>
+						<Position Name="" ID="{1E3BCE97-AED9-42E1-8734-B5735A6F5CAD}"/>
+					</PositioningInfo>
+				</RandomSequenceContainer>
+				<Sound Name="Talk_Murmur" ID="{B0583913-8F3D-475B-81BC-0764C13D0FEB}" ShortID="123586105">
+					<PropertyList>
+						<Property Name="3DPosition" Type="int16" Value="1"/>
+						<Property Name="3DSpatialization" Type="int16" Value="1"/>
+						<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+						<Property Name="IsStreamingEnabled" Type="bool">
+							<ValueList>
+								<Value>True</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Attenuation">
+							<ObjectRef Name="Distance35" ID="{E8E70198-8EE4-436E-A7C6-3706D8CA311F}" WorkUnitID="{47323F40-C3F2-4E7F-897E-0E85526399CB}"/>
+						</Reference>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{7406BB7B-08AA-4828-8AD5-E96E108E4D13}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="SFX" ID="{3E0C36AD-46B5-4CFD-9664-EB8A285CA060}" WorkUnitID="{4A32BEAA-3CEB-4DFF-BEDB-A9E9155EE3CC}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="Talk_Murmur_Loop" ID="{54C3C1FC-064C-497D-AE5E-EAF5BA5047D7}">
+							<Language>SFX</Language>
+							<AudioFile>1645\Processed\Talk_Murmur_Loop.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="551273041"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<PositioningInfo>
+						<Position Name="" ID="{FBCA7D66-26DA-44B7-940F-11DF022C3735}"/>
+					</PositioningInfo>
+					<ActiveSourceList>
+						<ActiveSource Name="Talk_Murmur_Loop" ID="{54C3C1FC-064C-497D-AE5E-EAF5BA5047D7}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="Town_Ambience" ID="{B2C4347E-1E8B-415E-9643-B94F8496EBD9}" ShortID="622703346">
+					<PropertyList>
+						<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+						<Property Name="IsStreamingEnabled" Type="bool">
+							<ValueList>
+								<Value>True</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{7406BB7B-08AA-4828-8AD5-E96E108E4D13}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Ambience" ID="{60F405B7-0E96-4D90-A135-B36F51AFD517}" WorkUnitID="{4A32BEAA-3CEB-4DFF-BEDB-A9E9155EE3CC}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="Town_Ambience_Loop" ID="{6A4E262D-D40D-49B2-9BA9-83A0A13FF274}">
+							<Language>SFX</Language>
+							<AudioFile>1645\Processed\Town_Ambience_Loop.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="303334212"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="Town_Ambience_Loop" ID="{6A4E262D-D40D-49B2-9BA9-83A0A13FF274}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="Church_Bell" ID="{D7E6B975-4777-4338-9DEC-2920A0B0C4C3}" ShortID="419833837">
+					<PropertyList>
+						<Property Name="3DPosition" Type="int16" Value="1"/>
+						<Property Name="3DSpatialization" Type="int16" Value="1"/>
+						<Property Name="IsStreamingEnabled" Type="bool">
+							<ValueList>
+								<Value>True</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{7406BB7B-08AA-4828-8AD5-E96E108E4D13}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Ambience" ID="{60F405B7-0E96-4D90-A135-B36F51AFD517}" WorkUnitID="{4A32BEAA-3CEB-4DFF-BEDB-A9E9155EE3CC}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="Bell_Distant_Tolls" ID="{E816F2EB-B375-4C39-952B-3374348F3113}">
+							<Language>SFX</Language>
+							<AudioFile>1645\Processed\Bell_Distant_Tolls.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="749519039"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<PositioningInfo>
+						<Position Name="" ID="{8C40E96B-1CE1-40BD-B599-6566A4A6EB98}"/>
+					</PositioningInfo>
+					<ActiveSourceList>
+						<ActiveSource Name="Bell_Distant_Tolls" ID="{E816F2EB-B375-4C39-952B-3374348F3113}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+			</ChildrenList>
+		</WorkUnit>
+	</Containers>
+</WwiseDocument>

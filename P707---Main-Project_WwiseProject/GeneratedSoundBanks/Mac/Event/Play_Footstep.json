@@ -1,0 +1,133 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Mac",
+  "BasePlatform": "Mac",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "172",
+  "SoundBanks": [
+   {
+    "Id": "1602358412",
+    "Type": "Event",
+    "GUID": "{3B8EA211-47FE-417D-BDE2-5D685776E400}",
+    "Language": "SFX",
+    "Hash": "{9123FB3C-5093-F035-7448-305A78481845}",
+    "ObjectPath": "Play_Footstep",
+    "ShortName": "Play_Footstep",
+    "Path": "Event/Play_Footstep.bnk",
+    "Media": [
+     {
+      "Id": "66437876",
+      "Language": "SFX",
+      "Streaming": "true",
+      "Location": "Loose",
+      "ShortName": "1645\\Processed\\Footstep_08.wav",
+      "Path": "Media/66437876.wem",
+      "CachePath": "3E/{3E0BA926-1EAE-E934-8516-EF3EAF79BBB2}.wem"
+     },
+     {
+      "Id": "72268247",
+      "Language": "SFX",
+      "Streaming": "true",
+      "Location": "Loose",
+      "ShortName": "1645\\Processed\\Footstep_03.wav",
+      "Path": "Media/72268247.wem",
+      "CachePath": "B4/{B4758EAE-6B0F-0BDD-7D92-23390126860B}.wem"
+     },
+     {
+      "Id": "155111545",
+      "Language": "SFX",
+      "Streaming": "true",
+      "Location": "Loose",
+      "ShortName": "1645\\Processed\\Footstep_07.wav",
+      "Path": "Media/155111545.wem",
+      "CachePath": "E5/{E5BE7FFF-3384-276E-62EB-6081BF0A98A9}.wem"
+     },
+     {
+      "Id": "191920192",
+      "Language": "SFX",
+      "Streaming": "true",
+      "Location": "Loose",
+      "ShortName": "1645\\Processed\\Footstep_04.wav",
+      "Path": "Media/191920192.wem",
+      "CachePath": "18/{18526E12-68F5-D368-CF1C-D8DC0168A9C8}.wem"
+     },
+     {
+      "Id": "405193664",
+      "Language": "SFX",
+      "Streaming": "true",
+      "Location": "Loose",
+      "ShortName": "1645\\Processed\\Footstep_01.wav",
+      "Path": "Media/405193664.wem",
+      "CachePath": "20/{20334E19-5409-D937-677E-ECFE2A48BE0A}.wem"
+     },
+     {
+      "Id": "557786920",
+      "Language": "SFX",
+      "Streaming": "true",
+      "Location": "Loose",
+      "ShortName": "1645\\Processed\\Footstep_06.wav",
+      "Path": "Media/557786920.wem",
+      "CachePath": "BA/{BA6D9514-86F6-B189-A65D-1932CE3E9A97}.wem"
+     },
+     {
+      "Id": "559728073",
+      "Language": "SFX",
+      "Streaming": "true",
+      "Location": "Loose",
+      "ShortName": "1645\\Processed\\Footstep_05.wav",
+      "Path": "Media/559728073.wem",
+      "CachePath": "93/{9377842C-BFA4-F3B7-40E9-4C9436313B60}.wem"
+     },
+     {
+      "Id": "820824976",
+      "Language": "SFX",
+      "Streaming": "true",
+      "Location": "Loose",
+      "ShortName": "1645\\Processed\\Footstep_02.wav",
+      "Path": "Media/820824976.wem",
+      "CachePath": "3B/{3BE54BC6-2511-73E0-21D1-F14F73346286}.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "1602358412",
+      "Name": "Play_Footstep",
+      "ObjectPath": "\\Events\\1645 Street\\Play_Footstep",
+      "GUID": "{3B8EA211-47FE-417D-BDE2-5D685776E400}",
+      "MaxAttenuation": "100",
+      "DurationType": "OneShot",
+      "DurationMin": "0.44",
+      "DurationMax": "0.44",
+      "MediaRefs": [
+       {
+        "Id": "66437876"
+       },
+       {
+        "Id": "72268247"
+       },
+       {
+        "Id": "155111545"
+       },
+       {
+        "Id": "191920192"
+       },
+       {
+        "Id": "405193664"
+       },
+       {
+        "Id": "557786920"
+       },
+       {
+        "Id": "559728073"
+       },
+       {
+        "Id": "820824976"
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "FileHash": "{67C8122D-519E-B7B4-30B4-8810A9784735}"
+ }
+}

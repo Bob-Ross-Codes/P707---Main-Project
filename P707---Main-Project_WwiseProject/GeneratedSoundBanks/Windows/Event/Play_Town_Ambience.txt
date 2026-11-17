@@ -1,0 +1,6 @@
+Event	ID	Name			Wwise Object Path	Notes
+	3675968581	Play_Town_Ambience			\1645 Street\Play_Town_Ambience	
+
+Streamed Audio	ID	Name	Audio source file	Generated audio file	Wwise Object Path	Notes
+	303334212	Town_Ambience	.cache\AB\{AB9D0269-5585-6E3F-C6A4-23CDF0A2EC51}.wem	303334212.wem	\Containers\1645 Street\Town_Ambience	
+
