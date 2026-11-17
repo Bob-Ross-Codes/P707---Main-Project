@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 8999ab898727e9a4ab238a2fe298b452
+guid: dd808791147a64148b4c79da3d9a131c
 ModelImporter:
   serializedVersion: 24300
   internalIDToNameTable: []
@@ -8,17 +8,17 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Building
-    second: {fileID: 2100000, guid: 91a34ae85d92f0d499a559626215d34e, type: 2}
+    second: {fileID: 2100000, guid: 2f17ef7e657543a468789bbd4e1bd89f, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Roofroof
-    second: {fileID: 2100000, guid: c236be913fdf694479a2742e35aee285, type: 2}
+    second: {fileID: 2100000, guid: f270a3a4aee95b84bb7e3ba90be3624d, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Spires
-    second: {fileID: 2100000, guid: 3eaf0a398c63c1c45b2bee6b2698686a, type: 2}
+    second: {fileID: 2100000, guid: ae1ec748ccc155042af1c785d4d2bd33, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
