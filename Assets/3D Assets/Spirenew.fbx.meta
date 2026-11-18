@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: dd808791147a64148b4c79da3d9a131c
+guid: b15637ad2c758a949b9012cb0953d309
 ModelImporter:
   serializedVersion: 24300
   internalIDToNameTable: []
@@ -8,17 +8,22 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Building
-    second: {fileID: 2100000, guid: 2f17ef7e657543a468789bbd4e1bd89f, type: 2}
+    second: {fileID: 2100000, guid: e06fa8d9566c96449aa014a5b0bf2cf1, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Roofroof
-    second: {fileID: 2100000, guid: f270a3a4aee95b84bb7e3ba90be3624d, type: 2}
+      name: Facade
+    second: {fileID: 2100000, guid: 704378a04c234d241ba68ce7ee425741, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Spires
-    second: {fileID: 2100000, guid: ae1ec748ccc155042af1c785d4d2bd33, type: 2}
+      name: Roof.001
+    second: {fileID: 2100000, guid: 7fba5073db9fa1540adc9d2a6fdd68c0, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Spikes
+    second: {fileID: 2100000, guid: a9f5e2cd1005b334ba93d0371aa73092, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
