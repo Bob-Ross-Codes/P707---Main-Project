@@ -1,0 +1,46 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Windows",
+  "BasePlatform": "Windows",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "172",
+  "SoundBanks": [
+   {
+    "Id": "3675968581",
+    "Type": "Event",
+    "GUID": "{C6976549-F5C3-4B34-A083-8E97663971E0}",
+    "Language": "SFX",
+    "Hash": "{ABFE6765-9141-31DF-E7BD-8F4194A466AC}",
+    "ObjectPath": "Play_Town_Ambience",
+    "ShortName": "Play_Town_Ambience",
+    "Path": "Event/Play_Town_Ambience.bnk",
+    "Media": [
+     {
+      "Id": "303334212",
+      "Language": "SFX",
+      "Streaming": "true",
+      "Location": "Loose",
+      "ShortName": "1645\\Processed\\Town_Ambience_Loop.wav",
+      "Path": "Media/303334212.wem",
+      "CachePath": "AB/{AB9D0269-5585-6E3F-C6A4-23CDF0A2EC51}.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "3675968581",
+      "Name": "Play_Town_Ambience",
+      "ObjectPath": "\\Events\\1645 Street\\Play_Town_Ambience",
+      "GUID": "{C6976549-F5C3-4B34-A083-8E97663971E0}",
+      "DurationType": "Infinite",
+      "MediaRefs": [
+       {
+        "Id": "303334212"
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "FileHash": "{D378B4DE-CB24-7F78-812D-00C45933517F}"
+ }
+}

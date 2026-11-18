@@ -1,0 +1,47 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Windows",
+  "BasePlatform": "Windows",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "172",
+  "SoundBanks": [
+   {
+    "Id": "1309368419",
+    "Type": "Event",
+    "GUID": "{0497C9AE-5C7B-4841-9CF0-99459423C13D}",
+    "Language": "SFX",
+    "Hash": "{321D5AEB-75E3-B46B-23C4-416DE62527EE}",
+    "ObjectPath": "Play_Talk_Murmur",
+    "ShortName": "Play_Talk_Murmur",
+    "Path": "Event/Play_Talk_Murmur.bnk",
+    "Media": [
+     {
+      "Id": "551273041",
+      "Language": "SFX",
+      "Streaming": "true",
+      "Location": "Loose",
+      "ShortName": "1645\\Processed\\Talk_Murmur_Loop.wav",
+      "Path": "Media/551273041.wem",
+      "CachePath": "D2/{D28877C3-47CA-9AC4-36DB-976BC5C19C02}.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "1309368419",
+      "Name": "Play_Talk_Murmur",
+      "ObjectPath": "\\Events\\1645 Street\\Play_Talk_Murmur",
+      "GUID": "{0497C9AE-5C7B-4841-9CF0-99459423C13D}",
+      "MaxAttenuation": "100",
+      "DurationType": "Infinite",
+      "MediaRefs": [
+       {
+        "Id": "551273041"
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "FileHash": "{4493AAE7-6A43-E7BC-4E77-F1B8289C9C35}"
+ }
+}

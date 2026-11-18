@@ -1,7 +1,7 @@
 # Sounds for the 1650 street scene
 
 Export these from Soundly as WAV into the folders here, then commit and push.
-File names don't matter. Keep each file under 100 MB.
+Keep file names short (under ~40 characters, no commas): long Soundly names break git checkout on Windows. Keep each file under 100 MB.
 
 | Folder | What is needed | Soundly search ideas |
 |---|---|---|
