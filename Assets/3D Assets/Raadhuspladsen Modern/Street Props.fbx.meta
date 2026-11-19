@@ -7,8 +7,23 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
+      name: RP_BasinFloor
+    second: {fileID: 2100000, guid: bcb616471320041949749202fde180bf, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: RP_BasinStone
+    second: {fileID: 2100000, guid: dc3a165a7edf142caac9fd6b4edbc2ec, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
       name: RP_BinGreen
     second: {fileID: 2100000, guid: b6d8e8c193f9b4d43beb753185f4732d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: RP_Bronze
+    second: {fileID: 2100000, guid: ad4a385c4c968495dba47b3b114dd821, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
@@ -19,6 +34,11 @@ ModelImporter:
       assembly: UnityEngine.CoreModule
       name: RP_FountainRock
     second: {fileID: 2100000, guid: fadbeb8ea517b4716aa0f21031edeb0f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: RP_FountainWater
+    second: {fileID: 2100000, guid: 2a3d13dd935cd43d7864d29a8fdf43e8, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule

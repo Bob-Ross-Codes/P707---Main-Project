@@ -25,24 +25,36 @@ def parent(name, kids):
     out.append(e); return e
 
 # ---------- Dragon Fountain basin (world position (-1.5,0,17.5) applied in Unity) ----------
-R = 6.4
-def basin_rim(bm):
-    seg = 48
-    ring = lambda r: [(r * math.cos(2 * math.pi * i / seg), r * math.sin(2 * math.pi * i / seg)) for i in range(seg)]
-    o, i_ = ring(R), ring(R - 0.55)
-    def v(p, y): return bm.verts.new(B(p[0], y, p[1]))
-    ot = [v(p, 0.55) for p in o]; it = [v(p, 0.55) for p in i_]; ob = [v(p, 0.0) for p in o]; ib = [v(p, 0.1) for p in i_]
+R = 6.45                      # outer radius of the basin wall
+def lathe(bm, profile, seg=96):
+    """Spin a (radius, height) profile around the up axis (Unity y)."""
+    rings = []
     for k in range(seg):
-        n = (k + 1) % seg
-        bm.faces.new((ot[k], ot[n], it[n], it[k])); bm.faces.new((ob[n], ob[k], ot[k], ot[n])); bm.faces.new((ib[k], ib[n], it[n], it[k]))
-    bm.faces.new(list(reversed(ib)))                                    # basin floor
-    bm.normal_update()
-    for f in bm.faces:                                                  # outward normals by centroid test
-        c = f.calc_center_median();
-rim = obj("FountainBasin", "RP_Granite", basin_rim, 2.0)
+        a = 2 * math.pi * k / seg
+        rings.append([bm.verts.new(B(r * math.cos(a), y, r * math.sin(a))) for r, y in profile])
+    for k in range(seg):
+        r0, r1 = rings[k], rings[(k + 1) % seg]
+        for i in range(len(profile) - 1):
+            bm.faces.new((r0[i], r1[i], r1[i + 1], r0[i + 1]))
+    bmesh.ops.recalc_face_normals(bm, faces=bm.faces)
+def basin_rim(bm):
+    prof = [(R + 0.08, 0.0), (R + 0.08, 0.06), (R, 0.08), (R, 0.36)]          # plinth step, outer wall
+    prof += [(R - 0.25 + 0.25 * math.cos(t), 0.36 + 0.24 * math.sin(t))       # half-round coping
+             for t in [i * math.pi / 10 for i in range(11)]]
+    prof += [(R - 0.5, 0.30), (R - 0.55, 0.05)]                              # inner wall, slight batter
+    lathe(bm, prof)
+obj("FountainBasin", "RP_BasinStone", basin_rim, 2.3)
+def floor(bm):
+    bmesh.ops.create_circle(bm, cap_ends=True, segments=96, radius=R - 0.52, matrix=Matrix.Translation(B(0, 0.05, 0)))
+obj("FountainFloor", "RP_BasinFloor", floor, 2.3)
 def water(bm):
-    bmesh.ops.create_circle(bm, cap_ends=True, segments=48, radius=R - 0.5, matrix=Matrix.Translation(B(0, 0.38, 0)))
-obj("FountainWater", "RP_Water", water, 4.0)
+    bmesh.ops.create_circle(bm, cap_ends=True, segments=96, radius=R - 0.52, matrix=Matrix.Translation(B(0, 0.42, 0)))
+obj("FountainWater", "RP_FountainWater", water, 4.0)
+def nozzles(bm):                                                         # bronze spouts on the coping, one per jet
+    for i in range(8):
+        a = (i + 0.5) * 2 * math.pi / 8; x, z = (R - 0.25) * math.cos(a), (R - 0.25) * math.sin(a)
+        cyl(bm, x, 0.58, z, 0.11, 0.08, 12); cyl(bm, x, 0.66, z, 0.06, 0.12, 10, 0.035)
+obj("FountainNozzles", "RP_Bronze", nozzles, 1.0, True)
 # the bronze dragon/bull group (Generated/DragonBullGroup.fbx, Meshy) sits on the basin floor in the prefab
 fountain = parent("Dragon Fountain", [o for o in out])
 

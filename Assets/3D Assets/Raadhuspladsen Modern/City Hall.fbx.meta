@@ -12,6 +12,11 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
+      name: RP_Bronze
+    second: {fileID: 2100000, guid: ad4a385c4c968495dba47b3b114dd821, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
       name: RP_Copper
     second: {fileID: 2100000, guid: 0c522731a281947e0bf1121362b77144, type: 2}
   - first:

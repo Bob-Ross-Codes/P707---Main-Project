@@ -45,8 +45,7 @@ def glazing(bm_glass, bm_frame):
             box(bm_glass, x, sy + h / 2, 0.38, w, h, 0.04)
             box(bm_frame, x, sy + h * 0.62, 0.34, w, 0.08, 0.06)           # transom
             box(bm_frame, x, sy + h / 2, 0.34, 0.08, h, 0.06)              # mullion
-            box(bm_frame, x, sy - 0.08, -0.05, w + 0.3, 0.16, 0.25)        # stone sill (limestone below)
-g = bmesh.new(); f = bmesh.new(); glazing(g, f)
+g = bmesh.new(); f = bmesh.new(); glazing(g, f); world_uv(g, 1.2); world_uv(f, 1.0)   # glass texture = 1.2 m of panes
 o = new_obj("Glass", g, "RP_Glass", C); objs.append(o)
 o = new_obj("Frames", f, "RP_Frame", C); objs.append(o)
 
@@ -206,6 +205,46 @@ def finial(bm):
     bmesh.ops.create_uvsphere(bm, u_segments=8, v_segments=6, radius=0.35, matrix=mathutils.Matrix.Translation(B(TX, 104.0, TZ)))
     box(bm, TX, 105.0, TZ, 0.08, 1.2, 0.08)
 solid("TowerFinial", "RP_Gold", finial)
+
+# ---------- detail pass: pilasters, corbel table, keystones, merlon caps, dormers, ridge ----------
+def pilasters(bm):
+    for s in (-1, 1):
+        for i in range(9):
+            x = s * (12.0 + 3.0 * i)
+            if abs(x) > W2 - 0.3: x = s * (W2 - 0.35)
+            box(bm, x, (1.2 + EAVE - 0.4) / 2, -0.09, 0.6, EAVE - 1.6, 0.18)
+solid("Pilasters", "RP_Brick", pilasters)
+def corbels(bm):
+    x = -W2 + 0.3
+    while x < W2 - 0.2:
+        if abs(x) > 11.3: box(bm, x, EAVE - 0.75, -0.12, 0.22, 0.32, 0.24)
+        x += 0.6
+solid("CorbelTable", "RP_Brick", corbels)
+def stone_trim(bm):
+    for (sy, h, w, arched) in floors:
+        for x in side_x + centre_x:
+            box(bm, x, sy + h + 0.12, -0.06, 0.36, 0.42, 0.14)                 # keystone over each opening
+            box(bm, x, sy - 0.1, -0.08, w + 0.5, 0.12, 0.2)                     # sill
+    x = -W2 + 0.5
+    while x < W2 - 0.4:
+        if abs(x) > 11.6: box(bm, x, EAVE + 3.06, 0.35, 1.12, 0.12, 0.82)       # merlon caps
+        x += 1.8
+solid("StoneTrim", "RP_Limestone", stone_trim)
+def dormers(bm):
+    for s in (-1, 1):
+        for i in range(5):
+            x = s * (15.0 + 4.5 * i)
+            box(bm, x, 23.6, 4.2, 1.6, 2.0, 2.2)                                 # cheeks + face
+solid("Dormers", "RP_Copper", dormers, 3.0)
+def dormer_glass(bm):
+    for s in (-1, 1):
+        for i in range(5):
+            box(bm, s * (15.0 + 4.5 * i), 23.6, 3.08, 0.9, 1.3, 0.04)
+solid("DormerGlass", "RP_Glass", dormer_glass, 1.2)
+def ridge(bm):
+    box(bm, 0, 29.05, 8.4, 2 * W2, 0.18, 0.3)
+    for x in range(-36, 37, 6): box(bm, x, 29.6, 8.4, 0.12, 1.0, 0.12)        # small finials along the ridge
+solid("Ridge", "RP_Bronze", ridge, 1.0)
 
 export(objs, "City Hall")
 print("exported", len(objs), "objects;", sum(len(o.data.polygons) for o in objs), "faces")

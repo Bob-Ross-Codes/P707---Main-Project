@@ -154,7 +154,8 @@ def facade_segment(name, p0, p1, coll, height, depth, rows, win_w=1.3, spacing=3
         box(bands, L / 2, sy - 0.25, -0.06, L, 0.25, 0.12)
     box(bands, L / 2, height - 0.3, -0.15, L + 0.2, 0.6, 0.3)
     boolean_cut(w, cut, coll)
-    for b in (glass, fr, bands): world_uv(b, 2.0)
+    world_uv(glass, 1.2)
+    for b in (fr, bands): world_uv(b, 2.0)
     objs += [w, new_obj(name + "_Glass", glass, "RP_Glass", coll), new_obj(name + "_Frames", fr, frame, coll),
              new_obj(name + "_Bands", bands, "RP_Limestone", coll)]
     rb = bmesh.new(); gable_roof(rb, 0, L, 0.3, depth, height, ridge or height + depth * 0.6); world_uv(rb, 3.0)

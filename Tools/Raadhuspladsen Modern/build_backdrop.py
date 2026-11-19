@@ -40,7 +40,31 @@ for o in new:
     o.data.transform(M @ o.matrix_world); o.matrix_world = Matrix.Identity(4)
     bm = bmesh.new(); bm.from_mesh(o.data)
     kill = [f for f in bm.faces if any(inside(-f.calc_center_median().x, -f.calc_center_median().y, p) for p in cuts)]
-    bmesh.ops.delete(bm, geom=kill, context='FACES'); bm.to_mesh(o.data); bm.free()
+    bmesh.ops.delete(bm, geom=kill, context='FACES')
+    # UVs: walls get one window bay per 3.0 m x 3.2 m storey, roofs a 3 m planar tile
+    uv = bm.loops.layers.uv.verify(); bm.normal_update()
+    for f in bm.faces:
+        n = f.normal
+        if abs(n.z) < 0.5:
+            t = Vector((-n.y, n.x)).normalized() if Vector((n.x, n.y)).length > 1e-6 else Vector((1, 0))
+            for l in f.loops: l[uv].uv = ((l.vert.co.x * t.x + l.vert.co.y * t.y) / 3.0, l.vert.co.z / 3.2)
+        else:
+            for l in f.loops: l[uv].uv = (l.vert.co.x / 3.0, l.vert.co.y / 3.0)
+    if o.name.startswith("Facades"):
+        # four Copenhagen facade colours, one per building (connected piece of the mesh)
+        names = ["RP_FacadeOchre", "RP_FacadeRed", "RP_FacadeWhite", "RP_FacadeGrey"]
+        o.data.materials.clear()
+        for nm in names: o.data.materials.append(mat(nm))
+        import random; rnd = random.Random(9); seen = set(); bm.faces.index_update()
+        for f in bm.faces:
+            if f.index in seen: continue
+            idx = rnd.randrange(4); stack = [f]
+            while stack:
+                g = stack.pop()
+                if g.index in seen: continue
+                seen.add(g.index); g.material_index = idx
+                stack += [h for e in g.edges for h in e.link_faces if h.index not in seen]
+    bm.to_mesh(o.data); bm.free()
     o.name = "Backdrop_" + o.name.split('.')[0]; out.append(o)
     print(o.name, "removed", len(kill), "faces")
 export(out, "Raadhuspladsen Backdrop")

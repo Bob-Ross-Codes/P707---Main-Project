@@ -12,12 +12,32 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
+      name: RP_FacadeGrey
+    second: {fileID: 2100000, guid: 9d90b0209adff4553911bfe4a867bc9b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: RP_FacadeOchre
+    second: {fileID: 2100000, guid: 961933d76cdcb467390247686647f7e6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: RP_FacadeRed
+    second: {fileID: 2100000, guid: b06f7bba010104fb29f5c62fe2e89516, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: RP_FacadeWhite
+    second: {fileID: 2100000, guid: bcac2ec577f43416f992782ef24124cc, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
       name: Roofs
     second: {fileID: 2100000, guid: ae7b95205b1f04a7ebb93c9aa4bc4994, type: 2}
   materials:
     materialImportMode: 1
-    materialName: 0
-    materialSearch: 1
+    materialName: 1
+    materialSearch: 0
     materialLocation: 1
     searchTexturesGlobally: 0
   animations:
