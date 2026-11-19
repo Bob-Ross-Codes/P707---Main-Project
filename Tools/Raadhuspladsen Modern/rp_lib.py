@@ -107,6 +107,7 @@ def arch_cutter(bm, x, y0, w, h, depth, z0=-0.5):
     for v in res['verts']:
         lx, ly, lz = v.co.x, v.co.y, v.co.z            # cone axis (Blender Z) -> Unity z
         v.co = B(x + lx, y0 + hb + ly, z0 + depth / 2 + lz)
+    bmesh.ops.reverse_faces(bm, faces=list({f for v in res['verts'] for f in v.link_faces}))     # B() mirrors, so flip the cylinder back outward
 
 def gable_roof(bm, x0, x1, z0, z1, y_eave, y_ridge, along_x=True):
     """Pitched roof over rect x0..x1, z0..z1 with the ridge along x (or along z)."""

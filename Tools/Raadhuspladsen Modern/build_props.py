@@ -43,14 +43,7 @@ rim = obj("FountainBasin", "RP_Granite", basin_rim, 2.0)
 def water(bm):
     bmesh.ops.create_circle(bm, cap_ends=True, segments=48, radius=R - 0.5, matrix=Matrix.Translation(B(0, 0.38, 0)))
 obj("FountainWater", "RP_Water", water, 4.0)
-def rock(bm):
-    r = bmesh.ops.create_icosphere(bm, subdivisions=3, radius=1.0)
-    noise = mathutils.noise
-    for v in r['verts']:
-        d = v.co.normalized(); s = 1.0 + 0.22 * noise.noise(d * 2.3) + 0.08 * noise.noise(d * 6.1)
-        v.co = Vector((d.x * 2.6 * s, d.y * 2.3 * s, max(-0.2, d.z) * 1.9 * s + 0.2))
-rk = obj("FountainRock", "RP_FountainRock", rock, 1.5)
-for p in rk.data.polygons: p.use_smooth = False
+# the bronze dragon/bull group (Generated/DragonBullGroup.fbx, Meshy) sits on the basin floor in the prefab
 fountain = parent("Dragon Fountain", [o for o in out])
 
 # ---------- street lamp (Raadhuspladsen masts, ~9 m) ----------

@@ -119,19 +119,7 @@ def dark_openings(bm):
     for xx in (-5.2, 5.2): box(bm, xx, 2.5, 1.1, 2.8, 5.0, 0.1)
 solid("PortalDark", "RP_Glass", dark_openings)
 
-# ---------- gilded Absalon (simplified bishop-warrior figure) ----------
-def absalon(bm):
-    z = -0.75
-    bmesh.ops.create_cone(bm, cap_ends=True, segments=12, radius1=0.9, radius2=0.45, depth=2.6,
-                          matrix=__import__('mathutils').Matrix.Translation(B(0, 11.6, z)))
-    bmesh.ops.create_uvsphere(bm, u_segments=10, v_segments=8, radius=0.32,
-                              matrix=__import__('mathutils').Matrix.Translation(B(0, 13.25, z)))
-    box(bm, 0, 10.1, z, 1.8, 0.5, 1.0)                              # plinth
-    box(bm, 0.75, 12.4, z - 0.2, 0.12, 2.6, 0.12)                   # crozier/axe shaft
-    box(bm, -0.7, 12.0, z - 0.25, 0.5, 0.9, 0.12)                   # shield arm
-for o in [solid("Absalon", "RP_Gold", absalon)]:
-    for p in o.data.polygons: p.use_smooth = True
-
+# Absalon himself is Generated/AbsalonStatue.fbx (Meshy), placed in the niche by the scene
 # ---------- copper roofs ----------
 def roofs(bm):
     gable_roof(bm, -W2, W2, 0.8, 16.0, EAVE + 0.3, 29.0)                   # front wing
