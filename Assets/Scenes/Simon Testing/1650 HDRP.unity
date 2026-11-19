@@ -985,6 +985,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Atmosphere 1645
       objectReference: {fileID: 0}
+    - target: {fileID: 5170942835771705423, guid: 6f45c2f718bfc4aeeb7e3aae73effed6, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5839238897577196152, guid: 6f45c2f718bfc4aeeb7e3aae73effed6, type: 3}
       propertyPath: m_LocalPosition.x
       value: 4.91
@@ -1026,7 +1030,8 @@ PrefabInstance:
       value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 2253621653586277866, guid: 6f45c2f718bfc4aeeb7e3aae73effed6, type: 3}
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 5158509356597579157, guid: 6f45c2f718bfc4aeeb7e3aae73effed6, type: 3}
       insertIndex: 2
@@ -1035,7 +1040,7 @@ PrefabInstance:
       insertIndex: 3
       addedObject: {fileID: 1386852578}
     - targetCorrespondingSourceObject: {fileID: 5158509356597579157, guid: 6f45c2f718bfc4aeeb7e3aae73effed6, type: 3}
-      insertIndex: 5
+      insertIndex: 4
       addedObject: {fileID: 193848721}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f45c2f718bfc4aeeb7e3aae73effed6, type: 3}
@@ -11064,7 +11069,7 @@ Transform:
   m_GameObject: {fileID: 279772172}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0.41739127, z: 0, w: 0.9087269}
-  m_LocalPosition: {x: -0.221, y: -0.783, z: -0.998}
+  m_LocalPosition: {x: -0.021, y: -0.783, z: -1.159}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -17377,11 +17382,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6337584482045418825, guid: 4233eb875e872fe44ab8eef1532cc271, type: 3}
       propertyPath: parameters.size.x
-      value: 11
+      value: 16.58
       objectReference: {fileID: 0}
     - target: {fileID: 6337584482045418825, guid: 4233eb875e872fe44ab8eef1532cc271, type: 3}
       propertyPath: parameters.size.y
-      value: 1.68
+      value: 2.86
       objectReference: {fileID: 0}
     - target: {fileID: 6337584482045418825, guid: 4233eb875e872fe44ab8eef1532cc271, type: 3}
       propertyPath: parameters.size.z
@@ -17433,7 +17438,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6337584482045418825, guid: 4233eb875e872fe44ab8eef1532cc271, type: 3}
       propertyPath: parameters.m_EditorNegativeFade.x
-      value: 0.09090903
+      value: 0.060313582
       objectReference: {fileID: 0}
     - target: {fileID: 6337584482045418825, guid: 4233eb875e872fe44ab8eef1532cc271, type: 3}
       propertyPath: parameters.m_EditorNegativeFade.z
@@ -17441,7 +17446,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6337584482045418825, guid: 4233eb875e872fe44ab8eef1532cc271, type: 3}
       propertyPath: parameters.m_EditorPositiveFade.x
-      value: 0.09090903
+      value: 0.060313582
       objectReference: {fileID: 0}
     - target: {fileID: 6337584482045418825, guid: 4233eb875e872fe44ab8eef1532cc271, type: 3}
       propertyPath: parameters.m_EditorPositiveFade.y
@@ -17457,11 +17462,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6337584482045418826, guid: 4233eb875e872fe44ab8eef1532cc271, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.957
+      value: 0.958
       objectReference: {fileID: 0}
     - target: {fileID: 6337584482045418826, guid: 4233eb875e872fe44ab8eef1532cc271, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 14.63
+      value: 24.02
       objectReference: {fileID: 0}
     - target: {fileID: 6337584482045418826, guid: 4233eb875e872fe44ab8eef1532cc271, type: 3}
       propertyPath: m_LocalRotation.w
@@ -56899,7 +56904,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -5154545750636030860, guid: ed4c6e335a2663e4ab88ea4ae97bd9c6, type: 3}
+  - {fileID: 2100000, guid: 0beb141deba7ab9458cd58e20dc0e741, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -59769,7 +59774,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4380692906431722888, guid: 94dd24cd773a540ffb0e49ef3dd3a8c4, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.6826
+      value: 2.72
       objectReference: {fileID: 0}
     - target: {fileID: 4380692906431722888, guid: 94dd24cd773a540ffb0e49ef3dd3a8c4, type: 3}
       propertyPath: m_LocalPosition.y
@@ -59777,7 +59782,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4380692906431722888, guid: 94dd24cd773a540ffb0e49ef3dd3a8c4, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 53.0268
+      value: 53.03
       objectReference: {fileID: 0}
     - target: {fileID: 4380692906431722888, guid: 94dd24cd773a540ffb0e49ef3dd3a8c4, type: 3}
       propertyPath: m_LocalRotation.w
@@ -62976,7 +62981,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Unity.RenderPipelines.HighDefinition.Runtime::UnityEngine.Rendering.HighDefinition.LocalVolumetricFog
   m_Version: 3
   parameters:
-    albedo: {r: 1, g: 1, b: 1, a: 1}
+    albedo: {r: 1, g: 0.95884377, b: 0.9198113, a: 1}
     meanFreePath: 10
     blendingMode: 1
     priority: 0
@@ -62984,14 +62989,14 @@ MonoBehaviour:
     volumeMask: {fileID: 0}
     textureScrollingSpeed: {x: 0, y: 0, z: 0}
     textureTiling: {x: 1, y: 1, z: 1}
-    positiveFade: {x: 0.0064808815, y: 0.06666667, z: 0.0055555557}
-    negativeFade: {x: 0.0064808815, y: 0.06666667, z: 0.0055555557}
-    m_EditorUniformFade: 0.1
-    m_EditorPositiveFade: {x: 0.0064808805, y: 0.06666666, z: 0.005555555}
-    m_EditorNegativeFade: {x: 0.0064808805, y: 0.06666666, z: 0.005555555}
+    positiveFade: {x: 0.056826565, y: 0.46385542, z: 0.0385}
+    negativeFade: {x: 0.056826565, y: 0.46385542, z: 0.0385}
+    m_EditorUniformFade: 1.54
+    m_EditorPositiveFade: {x: 0.0036900365, y: 0.030120473, z: 0.0024999997}
+    m_EditorNegativeFade: {x: 0.0036900365, y: 0.030120473, z: 0.0024999997}
     m_EditorAdvancedFade: 0
     scaleMode: 0
-    size: {x: 15.43, y: 1.5, z: 18}
+    size: {x: 27.1, y: 3.32, z: 40}
     invertFade: 0
     distanceFadeStart: 9990.78
     distanceFadeEnd: 10002.9
@@ -63008,7 +63013,7 @@ Transform:
   m_GameObject: {fileID: 1838261353}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.25, y: -0.39, z: 27.34}
+  m_LocalPosition: {x: -2.25, y: -0.57, z: 27.34}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
