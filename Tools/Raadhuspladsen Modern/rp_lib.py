@@ -66,6 +66,7 @@ def polygon(bm, pts, y, height=0.0):
         n = len(pts)
         for i in range(n):
             s = bm.faces.new((bot[i], bot[(i+1) % n], top[(i+1) % n], top[i]))
+        bmesh.ops.recalc_face_normals(bm, faces=[f for f in bm.faces if f.is_valid])
     bm.normal_update()
 
 def box(bm, cx, cy, cz, sx, sy, sz, yaw=0.0):
@@ -80,7 +81,10 @@ def box(bm, cx, cy, cz, sx, sy, sz, yaw=0.0):
 
 def export(objs, name):
     bpy.ops.object.select_all(action='DESELECT')
-    for o in objs: o.select_set(True)
+    for o in objs:
+        for c in o.users_collection: c.hide_viewport = False
+        o.hide_set(False); o.select_set(True)
+    assert all(o.select_get() for o in objs), "export: some objects could not be selected" 
     os.makedirs(ASSETS, exist_ok=True)
     bpy.ops.export_scene.fbx(filepath=f"{ASSETS}/{name}.fbx", use_selection=True, apply_scale_options='FBX_SCALE_UNITS',
         axis_forward='-Z', axis_up='Y', bake_space_transform=True, mesh_smooth_type='FACE', add_leaf_bones=False,
@@ -92,4 +96,67 @@ def collection(name):
         for o in list(c.objects): bpy.data.objects.remove(o, do_unlink=True)
     else:
         c = bpy.data.collections.new(name); bpy.context.scene.collection.children.link(c)
+    c.hide_viewport = False
     return c
+
+def arch_cutter(bm, x, y0, w, h, depth, z0=-0.5):
+    """Box + half-cylinder cutter for an arched opening, bottom at y0, total height h (needs use_self booleans)."""
+    r = w / 2; hb = h - r
+    box(bm, x, y0 + hb / 2, z0 + depth / 2, w, hb, depth)
+    res = bmesh.ops.create_cone(bm, cap_ends=True, segments=16, radius1=r, radius2=r, depth=depth)
+    for v in res['verts']:
+        lx, ly, lz = v.co.x, v.co.y, v.co.z            # cone axis (Blender Z) -> Unity z
+        v.co = B(x + lx, y0 + hb + ly, z0 + depth / 2 + lz)
+
+def gable_roof(bm, x0, x1, z0, z1, y_eave, y_ridge, along_x=True):
+    """Pitched roof over rect x0..x1, z0..z1 with the ridge along x (or along z)."""
+    if along_x:
+        zm = (z0 + z1) / 2
+        v = [B(x0, y_eave, z0), B(x1, y_eave, z0), B(x1, y_ridge, zm), B(x0, y_ridge, zm), B(x0, y_eave, z1), B(x1, y_eave, z1)]
+    else:
+        xm = (x0 + x1) / 2
+        v = [B(x0, y_eave, z1), B(x0, y_eave, z0), B(xm, y_ridge, z0), B(xm, y_ridge, z1), B(x1, y_eave, z1), B(x1, y_eave, z0)]
+    V = [bm.verts.new(p) for p in v]
+    bm.faces.new((V[0], V[1], V[2], V[3])); bm.faces.new((V[5], V[4], V[3], V[2]))
+    bm.faces.new((V[0], V[3], V[4])); bm.faces.new((V[1], V[5], V[2]))
+
+def boolean_cut(target, cutter_bm, coll):
+    cut = new_obj("cutter", cutter_bm, "RP_Brick", coll)
+    m = target.modifiers.new("cut", 'BOOLEAN'); m.object = cut; m.operation = 'DIFFERENCE'
+    m.solver = 'EXACT'; m.use_self = True; m.use_hole_tolerant = True
+    bpy.context.view_layer.objects.active = target; bpy.ops.object.modifier_apply(modifier="cut")
+    bpy.data.objects.remove(cut, do_unlink=True)
+
+def segment_matrix(p0, p1):
+    """Blender matrix placing a local frame (x along p0->p1, z inward = right-hand side) at p0 (Unity xz)."""
+    from mathutils import Matrix
+    dx, dz = p1[0] - p0[0], p1[1] - p0[1]
+    th = math.atan2(-dz, dx)                               # Unity yaw so local +x follows the segment
+    return Matrix.Translation(B(p0[0], 0, p0[1])) @ Matrix.Rotation(-th, 4, 'Z'), math.hypot(dx, dz)
+
+def facade_segment(name, p0, p1, coll, height, depth, rows, win_w=1.3, spacing=3.2, wall="RP_Brick",
+                   roof="RP_RoofSlate", ridge=None, frame="RP_Frame"):
+    """Brick block whose front follows p0->p1, windows cut per row (sill_y, win_h), simple pitched roof."""
+    M, L = segment_matrix(p0, p1)
+    n = max(1, int((L - 1.5) // spacing)); x0 = (L - (n - 1) * spacing) / 2
+    objs = []
+    bm = bmesh.new(); box(bm, L / 2, height / 2, 0.5, L, height, 1.0); box(bm, L / 2, height / 2, (1 + depth) / 2, L, height, depth - 1)
+    bmesh.ops.remove_doubles(bm, verts=bm.verts, dist=0.0005); world_uv(bm, 2.0)
+    w = new_obj(name + "_Wall", bm, wall, coll)
+    cut = bmesh.new(); glass = bmesh.new(); fr = bmesh.new(); bands = bmesh.new()
+    for (sy, h) in rows:
+        for i in range(n):
+            x = x0 + i * spacing
+            box(cut, x, sy + h / 2, 0.0, win_w, h, 1.2)
+            box(glass, x, sy + h / 2, 0.3, win_w, h, 0.04)
+            box(fr, x, sy + h / 2, 0.27, 0.07, h, 0.05); box(fr, x, sy + h * 0.7, 0.27, win_w, 0.07, 0.05)
+        box(bands, L / 2, sy - 0.25, -0.06, L, 0.25, 0.12)
+    box(bands, L / 2, height - 0.3, -0.15, L + 0.2, 0.6, 0.3)
+    boolean_cut(w, cut, coll)
+    for b in (glass, fr, bands): world_uv(b, 2.0)
+    objs += [w, new_obj(name + "_Glass", glass, "RP_Glass", coll), new_obj(name + "_Frames", fr, frame, coll),
+             new_obj(name + "_Bands", bands, "RP_Limestone", coll)]
+    rb = bmesh.new(); gable_roof(rb, 0, L, 0.3, depth, height, ridge or height + depth * 0.6); world_uv(rb, 3.0)
+    objs.append(new_obj(name + "_Roof", rb, roof, coll))
+    for o in objs: o.data.transform(M)
+    return objs

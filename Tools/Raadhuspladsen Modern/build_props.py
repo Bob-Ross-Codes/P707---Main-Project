@@ -6,8 +6,6 @@ import mathutils, random
 from mathutils import Matrix
 random.seed(7)
 C = collection("Props")
-for c in bpy.data.collections:
-    c.hide_viewport = c.name != "Props"
 out = []
 
 def obj(name, material, build, tile=1.0, smooth=False):

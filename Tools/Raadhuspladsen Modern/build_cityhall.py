@@ -14,15 +14,6 @@ def solid(name, material, build, tile=2.0):
     bm = bmesh.new(); build(bm); bmesh.ops.remove_doubles(bm, verts=bm.verts, dist=0.0005)
     bm.normal_update(); world_uv(bm, tile); o = new_obj(name, bm, material, C); objs.append(o); return o
 
-def arch_cutter(bm, x, y0, w, h, depth, z0=-0.5):
-    """Box + half-cylinder cutter for an arched opening, bottom at y0, total height h."""
-    r = w / 2; hb = h - r
-    box(bm, x, y0 + hb / 2, z0 + depth / 2, w, hb, depth)
-    res = bmesh.ops.create_cone(bm, cap_ends=True, segments=16, radius1=r, radius2=r, depth=depth)
-    for v in res['verts']:
-        lx, ly, lz = v.co.x, v.co.y, v.co.z            # cone axis = Blender Z -> we want Unity z
-        v.co = B(x + lx, y0 + hb + ly, z0 + depth / 2 + lz)
-
 # ---------- window layout on the front (x positions per floor) ----------
 side_x = [s * (13.5 + 3.0 * i) for s in (-1, 1) for i in range(8)]       # 13.5 .. 34.5 both sides
 centre_x = [-8.0, 8.0]
@@ -142,17 +133,6 @@ for o in [solid("Absalon", "RP_Gold", absalon)]:
     for p in o.data.polygons: p.use_smooth = True
 
 # ---------- copper roofs ----------
-def gable_roof(bm, x0, x1, z0, z1, y_eave, y_ridge, along_x=True):
-    """Simple pitched roof over rect x0..x1, z0..z1 with ridge running along x (or z)."""
-    if along_x:
-        zm = (z0 + z1) / 2
-        v = [B(x0, y_eave, z0), B(x1, y_eave, z0), B(x1, y_ridge, zm), B(x0, y_ridge, zm), B(x0, y_eave, z1), B(x1, y_eave, z1)]
-    else:
-        xm = (x0 + x1) / 2
-        v = [B(x0, y_eave, z1), B(x0, y_eave, z0), B(xm, y_ridge, z0), B(xm, y_ridge, z1), B(x1, y_eave, z1), B(x1, y_eave, z0)]
-    V = [bm.verts.new(p) for p in v]
-    bm.faces.new((V[0], V[1], V[2], V[3])); bm.faces.new((V[5], V[4], V[3], V[2]))
-    bm.faces.new((V[0], V[3], V[4])); bm.faces.new((V[1], V[5], V[2]))
 def roofs(bm):
     gable_roof(bm, -W2, W2, 0.8, 16.0, EAVE + 0.3, 29.0)                   # front wing
     gable_roof(bm, -W2, -22.0, 16.0, 112.0, EAVE + 0.3, 28.0, False)        # left wing
