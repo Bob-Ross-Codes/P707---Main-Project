@@ -12,11 +12,16 @@ public class InfoSettings : MonoBehaviour
 
     private Material MaterialRender;
 
-    void Start()
+
+    private void OnEnable()
     {
         animator = GetComponent<Animator>();
         animator.SetTrigger("FadeIN");
+    }
 
+    void Start()
+    {
+       
         // Create material
         MaterialRender = new Material(Shader.Find("Universal Render Pipeline/Lit"));
 
