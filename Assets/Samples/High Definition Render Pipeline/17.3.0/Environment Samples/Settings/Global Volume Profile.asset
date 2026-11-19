@@ -147,22 +147,22 @@ MonoBehaviour:
     m_Value: 3
   cascadeShadowSplit0:
     m_OverrideState: 1
-    m_Value: 0.0525
+    m_Value: 0.0475
   cascadeShadowSplit1:
     m_OverrideState: 1
-    m_Value: 0.21
+    m_Value: 0.13
   cascadeShadowSplit2:
     m_OverrideState: 1
     m_Value: 0.3
   cascadeShadowBorder0:
     m_OverrideState: 1
-    m_Value: 0.005012572
+    m_Value: 0.06727273
   cascadeShadowBorder1:
     m_OverrideState: 1
-    m_Value: 0.015075712
+    m_Value: 0.18372092
   cascadeShadowBorder2:
     m_OverrideState: 1
-    m_Value: 0.10967374
+    m_Value: 0.30809247
   cascadeShadowBorder3:
     m_OverrideState: 1
     m_Value: 0.06687122
@@ -691,8 +691,8 @@ MonoBehaviour:
     m_OverrideState: 0
     m_Value: {r: 0.5, g: 0.5, b: 0.5, a: 1}
   tint:
-    m_OverrideState: 0
-    m_Value: {r: 1, g: 1, b: 1, a: 1}
+    m_OverrideState: 1
+    m_Value: {r: 1, g: 0.7176048, b: 0.495283, a: 1}
   maxFogDistance:
     m_OverrideState: 0
     m_Value: 5000
@@ -710,10 +710,10 @@ MonoBehaviour:
     m_Value: 0
   maximumHeight:
     m_OverrideState: 1
-    m_Value: 256
+    m_Value: 40
   meanFreePath:
     m_OverrideState: 1
-    m_Value: 2500
+    m_Value: 76.7
   enableVolumetricFog:
     m_OverrideState: 1
     m_Value: 1
