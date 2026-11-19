@@ -1,0 +1,49 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Mac",
+  "BasePlatform": "Mac",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "172",
+  "SoundBanks": [
+   {
+    "Id": "1020223172",
+    "Type": "Event",
+    "GUID": "{AEE5B413-2C7D-4FF0-A170-6FDCE2099835}",
+    "Language": "SFX",
+    "Hash": "{8754E3DE-34D7-5B6F-9803-22D15DD4B180}",
+    "ObjectPath": "Play_wind",
+    "ShortName": "Play_wind",
+    "Path": "Event/Play_wind.bnk",
+    "Media": [
+     {
+      "Id": "74204188",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Soundly Audio\\Ambience, Forest, Woods, Wind, Heavy, Trees, Leaves, Creak, Crack, Rustle SND163124 9.wav",
+      "Path": "Media/74204188.wem",
+      "CachePath": "1A/{1A4EACDC-DD00-39AD-CDC2-8660A25E7609}.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "1020223172",
+      "Name": "Play_wind",
+      "ObjectPath": "\\Events\\Default Work Unit\\Play_wind",
+      "GUID": "{AEE5B413-2C7D-4FF0-A170-6FDCE2099835}",
+      "MaxAttenuation": "100",
+      "DurationType": "OneShot",
+      "DurationMin": "9.39359",
+      "DurationMax": "9.39359",
+      "MediaRefs": [
+       {
+        "Id": "74204188"
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "FileHash": "{54780EF7-4E74-A845-663A-368846419F47}"
+ }
+}

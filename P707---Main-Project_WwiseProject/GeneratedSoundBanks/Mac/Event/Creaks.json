@@ -1,0 +1,109 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Mac",
+  "BasePlatform": "Mac",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "172",
+  "SoundBanks": [
+   {
+    "Id": "415232454",
+    "Type": "Event",
+    "GUID": "{9E9DB855-D311-44FC-B1AB-DC89022CE809}",
+    "Language": "SFX",
+    "Hash": "{48C92429-C219-3573-D709-48AEED6B5EF5}",
+    "ObjectPath": "Creaks",
+    "ShortName": "Creaks",
+    "Path": "Event/Creaks.bnk",
+    "Media": [
+     {
+      "Id": "107591388",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Soundly Audio\\Ambience, Forest, Woods, Wind, Heavy, Trees, Leaves, Creak, Crack, Rustle SND163124 13.wav",
+      "Path": "Media/107591388.wem",
+      "CachePath": "9A/{9A613AAD-AEF6-77CD-D6DF-9AB4301C3C2F}.wem"
+     },
+     {
+      "Id": "231948466",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Soundly Audio\\Ambience, Forest, Woods, Wind, Heavy, Trees, Leaves, Creak, Crack, Rustle SND163124 17.wav",
+      "Path": "Media/231948466.wem",
+      "CachePath": "7F/{7FC8FB61-E37B-E838-FB58-B3830F11A7C8}.wem"
+     },
+     {
+      "Id": "465506461",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Soundly Audio\\Ambience, Forest, Woods, Wind, Heavy, Trees, Leaves, Creak, Crack, Rustle SND163124 5.wav",
+      "Path": "Media/465506461.wem",
+      "CachePath": "C7/{C7114315-B98C-1D63-5829-3FED50AACBA1}.wem"
+     },
+     {
+      "Id": "641764680",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Soundly Audio\\Ambience, Forest, Woods, Wind, Heavy, Trees, Leaves, Creak, Crack, Rustle SND163124 15.wav",
+      "Path": "Media/641764680.wem",
+      "CachePath": "41/{4127EEEE-7433-3989-E040-8138E48E1F6D}.wem"
+     },
+     {
+      "Id": "818011159",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Soundly Audio\\Ambience, Forest, Woods, Wind, Heavy, Trees, Leaves, Creak, Crack, Rustle SND163124 16.wav",
+      "Path": "Media/818011159.wem",
+      "CachePath": "30/{30D25316-784C-9518-6A13-404D7197282C}.wem"
+     },
+     {
+      "Id": "910940016",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Soundly Audio\\Ambience, Forest, Woods, Wind, Heavy, Trees, Leaves, Creak, Crack, Rustle SND163124 12.wav",
+      "Path": "Media/910940016.wem",
+      "CachePath": "38/{38269B4E-AD9D-1852-5B78-B23F07E52AF3}.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "415232454",
+      "Name": "Creaks",
+      "ObjectPath": "\\Events\\Default Work Unit\\Creaks",
+      "GUID": "{9E9DB855-D311-44FC-B1AB-DC89022CE809}",
+      "MaxAttenuation": "100",
+      "DurationType": "OneShot",
+      "DurationMin": "0",
+      "DurationMax": "3.56504",
+      "MediaRefs": [
+       {
+        "Id": "107591388"
+       },
+       {
+        "Id": "231948466"
+       },
+       {
+        "Id": "465506461"
+       },
+       {
+        "Id": "641764680"
+       },
+       {
+        "Id": "818011159"
+       },
+       {
+        "Id": "910940016"
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "FileHash": "{A90813BE-D4F9-8BDC-4BD6-B4FF58F336B4}"
+ }
+}

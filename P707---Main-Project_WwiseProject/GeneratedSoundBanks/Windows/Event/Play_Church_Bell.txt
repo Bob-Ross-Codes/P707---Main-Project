@@ -1,0 +1,6 @@
+Event	ID	Name			Wwise Object Path	Notes
+	82652465	Play_Church_Bell			\1645 Street\Play_Church_Bell	
+
+Streamed Audio	ID	Name	Audio source file	Generated audio file	Wwise Object Path	Notes
+	749519039	Church_Bell	.cache\7E\{7E3631F8-5F40-C3DA-F79E-E2732524FBC0}.wem	749519039.wem	\Containers\1645 Street\Church_Bell	
+

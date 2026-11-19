@@ -1,10 +1,11 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class KinectSpawnHandler : MonoBehaviour
 {
     [Header("Spawn Settings")]
-    [Tooltip("The tag or name of the GameObject in the new scene where the Kinect should be placed.")]
+    [Tooltip("The tag of the GameObject in the new scene where the Kinect/Player should be placed.")]
     [SerializeField] private string spawnPointTag = "KinectSpawnPoint";
 
     private void OnEnable()
@@ -19,23 +20,39 @@ public class KinectSpawnHandler : MonoBehaviour
 
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
-        RelocateToSpawnPoint(scene.name);
+        // Start a short routine to ensure the scene is fully initialized before moving
+        StartCoroutine(RelocateRoutine());
     }
 
-    public void RelocateToSpawnPoint(string sceneName = "")
+    private IEnumerator RelocateRoutine()
     {
+        // Wait one frame to let the new scene finish setting up its objects
+        yield return null;
+
         GameObject spawnPoint = GameObject.FindWithTag(spawnPointTag);
 
         if (spawnPoint != null)
         {
+            // 1. Temporarily disable CharacterController or Rigidbody if they exist so position changes aren't blocked
+            CharacterController charController = GetComponentInChildren<CharacterController>();
+            Rigidbody rb = GetComponentInChildren<Rigidbody>();
+
+            if (charController != null) charController.enabled = false;
+            if (rb != null) rb.isKinematic = true;
+
+            // 2. Move to the spawn point
             transform.position = spawnPoint.transform.position;
             transform.rotation = spawnPoint.transform.rotation;
 
-            Debug.Log($"[KinectSpawnHandler] Relocated Kinect to spawn point in scene: {sceneName}");
+            // 3. Re-enable physics/controllers
+            if (charController != null) charController.enabled = true;
+            if (rb != null) rb.isKinematic = false;
+
+            Debug.Log($"[KinectSpawnHandler] Successfully relocated to spawn point: {spawnPoint.name} at {spawnPoint.transform.position}");
         }
         else
         {
-            Debug.LogWarning($"[KinectSpawnHandler] No GameObject with tag '{spawnPointTag}' found in scene '{SceneManager.GetActiveScene().name}'. Keeping previous position.");
+            Debug.LogWarning($"[KinectSpawnHandler] No GameObject with tag '{spawnPointTag}' found in the active scene!");
         }
     }
 }

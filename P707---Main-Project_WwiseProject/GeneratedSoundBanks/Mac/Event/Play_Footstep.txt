@@ -1,0 +1,13 @@
+Event	ID	Name			Wwise Object Path	Notes
+	1602358412	Play_Footstep			\1645 Street\Play_Footstep	
+
+Streamed Audio	ID	Name	Audio source file	Generated audio file	Wwise Object Path	Notes
+	66437876	Footstep_08	.cache\3E\{3E0BA926-1EAE-E934-8516-EF3EAF79BBB2}.wem	66437876.wem	\Containers\1645 Street\Footsteps\Footstep_08	
+	72268247	Footstep_03	.cache\B4\{B4758EAE-6B0F-0BDD-7D92-23390126860B}.wem	72268247.wem	\Containers\1645 Street\Footsteps\Footstep_03	
+	155111545	Footstep_07	.cache\E5\{E5BE7FFF-3384-276E-62EB-6081BF0A98A9}.wem	155111545.wem	\Containers\1645 Street\Footsteps\Footstep_07	
+	191920192	Footstep_04	.cache\18\{18526E12-68F5-D368-CF1C-D8DC0168A9C8}.wem	191920192.wem	\Containers\1645 Street\Footsteps\Footstep_04	
+	405193664	Footstep_01	.cache\20\{20334E19-5409-D937-677E-ECFE2A48BE0A}.wem	405193664.wem	\Containers\1645 Street\Footsteps\Footstep_01	
+	557786920	Footstep_06	.cache\BA\{BA6D9514-86F6-B189-A65D-1932CE3E9A97}.wem	557786920.wem	\Containers\1645 Street\Footsteps\Footstep_06	
+	559728073	Footstep_05	.cache\93\{9377842C-BFA4-F3B7-40E9-4C9436313B60}.wem	559728073.wem	\Containers\1645 Street\Footsteps\Footstep_05	
+	820824976	Footstep_02	.cache\3B\{3BE54BC6-2511-73E0-21D1-F14F73346286}.wem	820824976.wem	\Containers\1645 Street\Footsteps\Footstep_02	
+
