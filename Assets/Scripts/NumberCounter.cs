@@ -15,6 +15,9 @@ public class NumberCounter : MonoBehaviour
     [Header("Trigger")]
     public bool testBool = false;
 
+    private bool hastriggered4000;
+    private bool hastriggered1620;
+
     int startValue;
     float timer = 0f;
     bool isCounting = false;
@@ -22,7 +25,6 @@ public class NumberCounter : MonoBehaviour
 
     void Awake()
     {
-        DontDestroyOnLoad(gameObject);
         counterText = transform.Find("Canvas/Number").GetComponent<TextMeshProUGUI>();
 
         FVT_text = transform.Find("Canvas/FVT").GetComponent<TextMeshProUGUI>();
@@ -36,15 +38,19 @@ public class NumberCounter : MonoBehaviour
 
     void Update()
     {
-        if (SceneManager.GetActiveScene().buildIndex == 1)
+        if (SceneManager.GetActiveScene().buildIndex == 1 && hastriggered4000 == false)
         {
             targetValue = 4000;
+            hastriggered4000 = true;
+            hastriggered1620 = false;
             StartCounting();
         }
 
-        if (SceneManager.GetActiveScene().buildIndex == 2)
+        if (SceneManager.GetActiveScene().buildIndex == 2 && hastriggered1620 == false)
         {
             targetValue = 1620;
+            hastriggered1620 = true;
+            hastriggered4000 = false;
             StartCounting();
         }
 
