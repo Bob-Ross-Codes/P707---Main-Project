@@ -25,9 +25,9 @@ public class NumberCounter : MonoBehaviour
 
     void Awake()
     {
-        counterText = transform.Find("Canvas/Number").GetComponent<TextMeshProUGUI>();
+        counterText = transform.Find("Canvas/Placement/Number").GetComponent<TextMeshProUGUI>();
 
-        FVT_text = transform.Find("Canvas/FVT").GetComponent<TextMeshProUGUI>();
+        FVT_text = transform.Find("Canvas/Placement/FVT").GetComponent<TextMeshProUGUI>();
     }
 
     void Start()
