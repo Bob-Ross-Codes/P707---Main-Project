@@ -9,8 +9,11 @@ EditorBuildSettings:
     path: Assets/Scenes/D Testing/WIP Tutorial 3.unity
     guid: 7aa54bef4516aaa41a1c310c54eac310
   - enabled: 1
-    path: Assets/Scenes/D Testing/4000 f.v.t test1.unity
-    guid: f3e04a0875758814e94570c2e2e7c7c3
+    path: Assets/Scenes/D Testing/4000 f.v.t test2.unity
+    guid: b889621d22f004c48baf8e994373a82c
+  - enabled: 1
+    path: Assets/Scenes/D Testing/1650 For test.unity
+    guid: 453d604cdb8ccfa4c9cf13e14d1036dc
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   m_UseUCBPForAssetBundles: 0
