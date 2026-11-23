@@ -103,7 +103,7 @@ Material:
     - _AlphaToMask: 0
     - _Blend: 0
     - _BlendModePreserveSpecular: 1
-    - _BumpScale: 1.4
+    - _BumpScale: 1.5
     - _ClearCoatMask: 0
     - _ClearCoatSmoothness: 0
     - _Cull: 2
@@ -119,11 +119,11 @@ Material:
     - _GlossyReflections: 0
     - _Metallic: 0.037
     - _OcclusionStrength: 1
-    - _Parallax: 0.079
+    - _Parallax: 0
     - _Projection: 0
     - _QueueOffset: 0
     - _ReceiveShadows: 1
-    - _Smoothness: 0.211
+    - _Smoothness: 0.384
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
     - _SrcBlend: 1
