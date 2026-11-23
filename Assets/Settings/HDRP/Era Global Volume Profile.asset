@@ -134,11 +134,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ddcec8a8eb2d684d833ac8f5d26aebd, type: 3}
   m_Name: HDShadowSettings
   m_EditorClassIdentifier: 
-  active: 1
+  active: 0
   interCascadeBorders: 1
   maxShadowDistance:
     m_OverrideState: 1
-    m_Value: 400
+    m_Value: 32.5
   directionalTransmissionMultiplier:
     m_OverrideState: 1
     m_Value: 1
@@ -147,16 +147,16 @@ MonoBehaviour:
     m_Value: 3
   cascadeShadowSplit0:
     m_OverrideState: 1
-    m_Value: 0.0475
+    m_Value: 0.015
   cascadeShadowSplit1:
     m_OverrideState: 1
-    m_Value: 0.13
+    m_Value: 0.1
   cascadeShadowSplit2:
     m_OverrideState: 1
     m_Value: 0.3
   cascadeShadowBorder0:
     m_OverrideState: 1
-    m_Value: 0.06727273
+    m_Value: 0.47254902
   cascadeShadowBorder1:
     m_OverrideState: 1
     m_Value: 0.18372092
@@ -713,7 +713,7 @@ MonoBehaviour:
     m_Value: 40
   meanFreePath:
     m_OverrideState: 1
-    m_Value: 76.7
+    m_Value: 83.26
   enableVolumetricFog:
     m_OverrideState: 1
     m_Value: 1
