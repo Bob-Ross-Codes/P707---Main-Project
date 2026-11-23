@@ -1719,7 +1719,7 @@
     "m_Type": "UnityEditor.Rendering.HighDefinition.ShaderGraph.LightingData",
     "m_ObjectId": "220ee2c7f4044c6ca53cbe119d13c81d",
     "m_NormalDropOffSpace": 0,
-    "m_BlendPreserveSpecular": true,
+    "m_BlendPreserveSpecular": false,
     "m_ReceiveDecals": true,
     "m_ReceiveSSR": false,
     "m_ReceiveSSRTransparent": false,
