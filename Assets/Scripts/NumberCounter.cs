@@ -16,8 +16,9 @@ public class NumberCounter : MonoBehaviour
     public bool testBool = false;
 
     private bool hastriggered4000;
-    private bool hastriggered1620;
+    private bool hastriggered1130;
 
+    private bool hastriggered1620;
     int startValue;
     float timer = 0f;
     bool isCounting = false;
@@ -42,15 +43,26 @@ public class NumberCounter : MonoBehaviour
         {
             targetValue = 4000;
             hastriggered4000 = true;
+            hastriggered1130 = false;
             hastriggered1620 = false;
             StartCounting();
         }
 
-        if (SceneManager.GetActiveScene().buildIndex == 2 && hastriggered1620 == false)
+        if (SceneManager.GetActiveScene().buildIndex == 2 && hastriggered1130 == false)
+        {
+            targetValue = 1130;
+            hastriggered4000 = false;
+            hastriggered1130 = true;
+            hastriggered1620 = false;
+            StartCounting();
+        }
+
+        if (SceneManager.GetActiveScene().buildIndex == 3 && hastriggered1620 == false)
         {
             targetValue = 1620;
-            hastriggered1620 = true;
             hastriggered4000 = false;
+            hastriggered1130 = false;
+            hastriggered1620 = true;
             StartCounting();
         }
 

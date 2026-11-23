@@ -133,7 +133,7 @@ Material:
     - _QueueControl: 0
     - _QueueOffset: 0
     - _ReceiveShadows: 1
-    - _Smoothness: 0.4472136
+    - _Smoothness: 0.8472136
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
     - _SrcBlend: 1
@@ -144,10 +144,10 @@ Material:
     - _WindBranchFreq: 1
     - _WindBranchSpeed: 1
     - _WindLeafAmpl: 0.12
-    - _WindLeafFreq: 0.3
-    - _WindLeafSpeed: 0.43
-    - _WindTreeAmpl: 0.36
-    - _WindTreeFreq: 0.05
+    - _WindLeafFreq: 0.06
+    - _WindLeafSpeed: 0.13
+    - _WindTreeAmpl: 0.06
+    - _WindTreeFreq: 0.01
     - _WindTreeSpeed: 0.1
     - _WorkflowMode: 1
     - _ZWrite: 1

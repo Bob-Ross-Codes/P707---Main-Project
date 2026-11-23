@@ -2941,9 +2941,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: Technical Setup
       objectReference: {fileID: 0}
+    - target: {fileID: 5463786405986654989, guid: 41390cf68bb956648830133fee34b73e, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5821329340535720317, guid: 41390cf68bb956648830133fee34b73e, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.009
+      objectReference: {fileID: 0}
     - target: {fileID: 5821329340535720317, guid: 41390cf68bb956648830133fee34b73e, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 7.7210016
+      value: 7.7210007
       objectReference: {fileID: 0}
     - target: {fileID: 8082033071064355421, guid: 41390cf68bb956648830133fee34b73e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2951,11 +2959,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8082033071064355421, guid: 41390cf68bb956648830133fee34b73e, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.88
+      value: 0.9
       objectReference: {fileID: 0}
     - target: {fileID: 8082033071064355421, guid: 41390cf68bb956648830133fee34b73e, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 5.444
+      value: 5.101
       objectReference: {fileID: 0}
     - target: {fileID: 8082033071064355421, guid: 41390cf68bb956648830133fee34b73e, type: 3}
       propertyPath: m_LocalRotation.w
@@ -5114,37 +5122,6 @@ Transform:
   - {fileID: 934540061}
   m_Father: {fileID: 884785406}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &959662671
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 959662672}
-  m_Layer: 0
-  m_Name: KinectSpawnPoint
-  m_TagString: KinectSpawnPoint
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &959662672
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 959662671}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.674, y: 0.88, z: 5.444}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &972685304
 GameObject:
   m_ObjectHideFlags: 0
@@ -5798,6 +5775,37 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 394224861}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1141735391
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1141735392}
+  m_Layer: 0
+  m_Name: Spawnpoint
+  m_TagString: KinectSpawnPoint
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1141735392
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1141735391}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -1.674, y: 0.9, z: 5.101}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1171347552
 GameObject:
@@ -9874,7 +9882,6 @@ Transform:
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
-  - {fileID: 959662672}
   - {fileID: 939402763}
   - {fileID: 1544428815}
   - {fileID: 442876048}
@@ -9883,3 +9890,4 @@ SceneRoots:
   - {fileID: 199336001}
   - {fileID: 591838986}
   - {fileID: 664016177}
+  - {fileID: 1141735392}
