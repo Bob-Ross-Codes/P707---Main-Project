@@ -31,7 +31,6 @@ Material:
   - _DISABLE_SSR
   - _DISABLE_SSR_TRANSPARENT
   - _DOUBLESIDED_ON
-  - _ENABLE_FOG_ON_TRANSPARENT
   - _SURFACE_TYPE_TRANSPARENT
   m_InvalidKeywords:
   - _FADING_ON
@@ -118,7 +117,7 @@ Material:
     - _DstBlend2: 10
     - _DstBlendAlpha: 10
     - _EnableBlendModePreserveSpecularLighting: 1
-    - _EnableFogOnTransparent: 1
+    - _EnableFogOnTransparent: 0
     - _ExcludeFromTUAndAA: 0
     - _FlipbookBlending: 0
     - _FlipbookMode: 0
