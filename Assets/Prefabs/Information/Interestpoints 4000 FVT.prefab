@@ -29,74 +29,12 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 3752510366454944052}
-  - {fileID: 6438408093153602545}
-  - {fileID: 8013513820620680116}
+  - {fileID: 4437550719881015115}
+  - {fileID: 3428482736894917407}
+  - {fileID: 6786063674439053822}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &1522598959496747425
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 6606006841932817743}
-    m_Modifications:
-    - target: {fileID: -8679921383154817045, guid: 0bbd1f732abfe44df8327bf08b5cdb48, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 0bbd1f732abfe44df8327bf08b5cdb48, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 0bbd1f732abfe44df8327bf08b5cdb48, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 0bbd1f732abfe44df8327bf08b5cdb48, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: -0.00000004371139
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 0bbd1f732abfe44df8327bf08b5cdb48, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 0bbd1f732abfe44df8327bf08b5cdb48, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 0bbd1f732abfe44df8327bf08b5cdb48, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 0bbd1f732abfe44df8327bf08b5cdb48, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 0bbd1f732abfe44df8327bf08b5cdb48, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 0bbd1f732abfe44df8327bf08b5cdb48, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 919132149155446097, guid: 0bbd1f732abfe44df8327bf08b5cdb48, type: 3}
-      propertyPath: m_Name
-      value: Model
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 0bbd1f732abfe44df8327bf08b5cdb48, type: 3}
---- !u!4 &1345418308401479242 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 0bbd1f732abfe44df8327bf08b5cdb48, type: 3}
-  m_PrefabInstance: {fileID: 1522598959496747425}
-  m_PrefabAsset: {fileID: 0}
---- !u!1001 &1738750072784498209
+--- !u!1001 &420751332208849082
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -104,155 +42,233 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 478466810286315909}
     m_Modifications:
-    - target: {fileID: 3717959574757791075, guid: c210376be35324bfd859fec339971d97, type: 3}
-      propertyPath: zoneSelection
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 4928304817013056981, guid: c210376be35324bfd859fec339971d97, type: 3}
-      propertyPath: m_Name
-      value: Interestpoint TH
-      objectReference: {fileID: 0}
-    - target: {fileID: 4928304817013056981, guid: c210376be35324bfd859fec339971d97, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8580764279840851349, guid: c210376be35324bfd859fec339971d97, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -1.553
-      objectReference: {fileID: 0}
-    - target: {fileID: 8580764279840851349, guid: c210376be35324bfd859fec339971d97, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -0.66467196
-      objectReference: {fileID: 0}
-    - target: {fileID: 8580764279840851349, guid: c210376be35324bfd859fec339971d97, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -2.672
-      objectReference: {fileID: 0}
-    - target: {fileID: 8580764279840851349, guid: c210376be35324bfd859fec339971d97, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8580764279840851349, guid: c210376be35324bfd859fec339971d97, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8580764279840851349, guid: c210376be35324bfd859fec339971d97, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8580764279840851349, guid: c210376be35324bfd859fec339971d97, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8580764279840851349, guid: c210376be35324bfd859fec339971d97, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8580764279840851349, guid: c210376be35324bfd859fec339971d97, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8580764279840851349, guid: c210376be35324bfd859fec339971d97, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects:
-    - targetCorrespondingSourceObject: {fileID: 1777276800292254190, guid: c210376be35324bfd859fec339971d97, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 5636295238742754484}
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: c210376be35324bfd859fec339971d97, type: 3}
---- !u!4 &39230780055445455 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 1777276800292254190, guid: c210376be35324bfd859fec339971d97, type: 3}
-  m_PrefabInstance: {fileID: 1738750072784498209}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &8013513820620680116 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 8580764279840851349, guid: c210376be35324bfd859fec339971d97, type: 3}
-  m_PrefabInstance: {fileID: 1738750072784498209}
-  m_PrefabAsset: {fileID: 0}
---- !u!1001 &3336373108162293348
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 478466810286315909}
-    m_Modifications:
-    - target: {fileID: 3717959574757791075, guid: c210376be35324bfd859fec339971d97, type: 3}
-      propertyPath: zoneSelection
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4928304817013056981, guid: c210376be35324bfd859fec339971d97, type: 3}
+    - target: {fileID: 1051849449015226817, guid: c9cefef997ebc4734bab3f752dd47e7f, type: 3}
       propertyPath: m_Name
       value: Interestpoint MID
       objectReference: {fileID: 0}
-    - target: {fileID: 4928304817013056981, guid: c210376be35324bfd859fec339971d97, type: 3}
+    - target: {fileID: 1051849449015226817, guid: c9cefef997ebc4734bab3f752dd47e7f, type: 3}
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8580764279840851349, guid: c210376be35324bfd859fec339971d97, type: 3}
+    - target: {fileID: 1548566668699467066, guid: c9cefef997ebc4734bab3f752dd47e7f, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.8694498
+      objectReference: {fileID: 0}
+    - target: {fileID: 1548566668699467066, guid: c9cefef997ebc4734bab3f752dd47e7f, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.70000005
+      objectReference: {fileID: 0}
+    - target: {fileID: 1548566668699467066, guid: c9cefef997ebc4734bab3f752dd47e7f, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.14999999
+      objectReference: {fileID: 0}
+    - target: {fileID: 1602818667145596610, guid: c9cefef997ebc4734bab3f752dd47e7f, type: 3}
+      propertyPath: m_text
+      value: "I omr\xE5det omkring R\xE5dhuspladsen er der ikke fundet egentlige
+        spor af hytter eller lignende, og kun \xE9t sted er der fundet et intakt
+        lag med spor fra stenalderen i form af flintaffald. Andre steder i omr\xE5det
+        l\xE5 affaldet fra stenalderen blandet rundt i yngre lag. Det er sikkert
+        sket, fordi man allerede i middelalderen eller senere hen har gravet, og
+        dermed forstyrret sporene fra stenalderen. Sporene fra stenalderen viser,
+        at der har v\xE6ret mennesker, som har boet i omr\xE5det i en periode, eller
+        har passeret forbi. Derfor viser vi i modellen en simpel boplads, som den
+        kunne have set ud. P\xE5 denne tid har der ikke v\xE6ret egentlige landsbyer
+        med mange hytter men snarere ensomt liggende hytter."
+      objectReference: {fileID: 0}
+    - target: {fileID: 1708709804305473277, guid: c9cefef997ebc4734bab3f752dd47e7f, type: 3}
+      propertyPath: m_text
+      value: "Billede fra indersiden af en rekonstrueret stenalderhytte fra Sagnlandet
+        Lejre, hvor der er fiskeredskaber, skind og ildsted inde i hytten. Hytten
+        er bygget som en rekonstruktion af en af Niv\xE5-hytterne fra Nordsj\xE6lland."
+      objectReference: {fileID: 0}
+    - target: {fileID: 1775859202961080974, guid: c9cefef997ebc4734bab3f752dd47e7f, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2101930939017328934, guid: c9cefef997ebc4734bab3f752dd47e7f, type: 3}
+      propertyPath: m_text
+      value: Spor af mennesker
+      objectReference: {fileID: 0}
+    - target: {fileID: 2507639271594446397, guid: c9cefef997ebc4734bab3f752dd47e7f, type: 3}
+      propertyPath: m_text
+      value: "Billede fra indersiden af en rekonstrueret stenalderhytte fra Sagnlandet
+        Lejre, hvor der er fiskeredskaber, skind og ildsted inde i hytten. Hytten
+        er bygget som en rekonstruktion af en af Niv\xE5-hytterne fra Nordsj\xE6lland."
+      objectReference: {fileID: 0}
+    - target: {fileID: 2745427459208275839, guid: c9cefef997ebc4734bab3f752dd47e7f, type: 3}
+      propertyPath: body
+      value: "I omr\xE5det omkring R\xE5dhuspladsen er der ikke fundet egentlige
+        spor af hytter eller lignende, og kun \xE9t sted er der fundet et intakt
+        lag med spor fra stenalderen i form af flintaffald. Andre steder i omr\xE5det
+        l\xE5 affaldet fra stenalderen blandet rundt i yngre lag. Det er sikkert
+        sket, fordi man allerede i middelalderen eller senere hen har gravet, og
+        dermed forstyrret sporene fra stenalderen. Sporene fra stenalderen viser,
+        at der har v\xE6ret mennesker, som har boet i omr\xE5det i en periode, eller
+        har passeret forbi. Derfor viser vi i modellen en simpel boplads, som den
+        kunne have set ud. P\xE5 denne tid har der ikke v\xE6ret egentlige landsbyer
+        med mange hytter men snarere ensomt liggende hytter."
+      objectReference: {fileID: 0}
+    - target: {fileID: 2745427459208275839, guid: c9cefef997ebc4734bab3f752dd47e7f, type: 3}
+      propertyPath: photo
+      value: 
+      objectReference: {fileID: 2800000, guid: 722086b7708b54e7c81c91a493a7bdc7, type: 3}
+    - target: {fileID: 2745427459208275839, guid: c9cefef997ebc4734bab3f752dd47e7f, type: 3}
+      propertyPath: title
+      value: Spor af mennesker
+      objectReference: {fileID: 0}
+    - target: {fileID: 2745427459208275839, guid: c9cefef997ebc4734bab3f752dd47e7f, type: 3}
+      propertyPath: caption
+      value: "Billede fra indersiden af en rekonstrueret stenalderhytte fra Sagnlandet
+        Lejre, hvor der er fiskeredskaber, skind og ildsted inde i hytten. Hytten
+        er bygget som en rekonstruktion af en af Niv\xE5-hytterne fra Nordsj\xE6lland."
+      objectReference: {fileID: 0}
+    - target: {fileID: 3045178787394915237, guid: c9cefef997ebc4734bab3f752dd47e7f, type: 3}
       propertyPath: m_LocalPosition.x
       value: -2.703
       objectReference: {fileID: 0}
-    - target: {fileID: 8580764279840851349, guid: c210376be35324bfd859fec339971d97, type: 3}
+    - target: {fileID: 3045178787394915237, guid: c9cefef997ebc4734bab3f752dd47e7f, type: 3}
       propertyPath: m_LocalPosition.y
       value: -0.66402143
       objectReference: {fileID: 0}
-    - target: {fileID: 8580764279840851349, guid: c210376be35324bfd859fec339971d97, type: 3}
+    - target: {fileID: 3045178787394915237, guid: c9cefef997ebc4734bab3f752dd47e7f, type: 3}
       propertyPath: m_LocalPosition.z
       value: -2.8520002
       objectReference: {fileID: 0}
-    - target: {fileID: 8580764279840851349, guid: c210376be35324bfd859fec339971d97, type: 3}
+    - target: {fileID: 3045178787394915237, guid: c9cefef997ebc4734bab3f752dd47e7f, type: 3}
       propertyPath: m_LocalRotation.w
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 8580764279840851349, guid: c210376be35324bfd859fec339971d97, type: 3}
+    - target: {fileID: 3045178787394915237, guid: c9cefef997ebc4734bab3f752dd47e7f, type: 3}
       propertyPath: m_LocalRotation.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8580764279840851349, guid: c210376be35324bfd859fec339971d97, type: 3}
+    - target: {fileID: 3045178787394915237, guid: c9cefef997ebc4734bab3f752dd47e7f, type: 3}
       propertyPath: m_LocalRotation.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8580764279840851349, guid: c210376be35324bfd859fec339971d97, type: 3}
+    - target: {fileID: 3045178787394915237, guid: c9cefef997ebc4734bab3f752dd47e7f, type: 3}
       propertyPath: m_LocalRotation.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8580764279840851349, guid: c210376be35324bfd859fec339971d97, type: 3}
+    - target: {fileID: 3045178787394915237, guid: c9cefef997ebc4734bab3f752dd47e7f, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8580764279840851349, guid: c210376be35324bfd859fec339971d97, type: 3}
+    - target: {fileID: 3045178787394915237, guid: c9cefef997ebc4734bab3f752dd47e7f, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8580764279840851349, guid: c210376be35324bfd859fec339971d97, type: 3}
+    - target: {fileID: 3045178787394915237, guid: c9cefef997ebc4734bab3f752dd47e7f, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4109202434645031681, guid: c9cefef997ebc4734bab3f752dd47e7f, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.8694498
+      objectReference: {fileID: 0}
+    - target: {fileID: 4109202434645031681, guid: c9cefef997ebc4734bab3f752dd47e7f, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.70000005
+      objectReference: {fileID: 0}
+    - target: {fileID: 4109202434645031681, guid: c9cefef997ebc4734bab3f752dd47e7f, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.14999999
+      objectReference: {fileID: 0}
+    - target: {fileID: 4131334680768775540, guid: c9cefef997ebc4734bab3f752dd47e7f, type: 3}
+      propertyPath: m_text
+      value: "I omr\xE5det omkring R\xE5dhuspladsen er der ikke fundet egentlige
+        spor af hytter eller lignende, og kun \xE9t sted er der fundet et intakt
+        lag med spor fra stenalderen i form af flintaffald. Andre steder i omr\xE5det
+        l\xE5 affaldet fra stenalderen blandet rundt i yngre lag. Det er sikkert
+        sket, fordi man allerede i middelalderen eller senere hen har gravet, og
+        dermed forstyrret sporene fra stenalderen. Sporene fra stenalderen viser,
+        at der har v\xE6ret mennesker, som har boet i omr\xE5det i en periode, eller
+        har passeret forbi. Derfor viser vi i modellen en simpel boplads, som den
+        kunne have set ud. P\xE5 denne tid har der ikke v\xE6ret egentlige landsbyer
+        med mange hytter men snarere ensomt liggende hytter."
+      objectReference: {fileID: 0}
+    - target: {fileID: 4267991570798208127, guid: c9cefef997ebc4734bab3f752dd47e7f, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4599695183649821342, guid: c9cefef997ebc4734bab3f752dd47e7f, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0.43399996
+      objectReference: {fileID: 0}
+    - target: {fileID: 4599695183649821342, guid: c9cefef997ebc4734bab3f752dd47e7f, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -0.46600005
+      objectReference: {fileID: 0}
+    - target: {fileID: 5247235575603844291, guid: c9cefef997ebc4734bab3f752dd47e7f, type: 3}
+      propertyPath: m_text
+      value: "Billede fra indersiden af en rekonstrueret stenalderhytte fra Sagnlandet
+        Lejre, hvor der er fiskeredskaber, skind og ildsted inde i hytten. Hytten
+        er bygget som en rekonstruktion af en af Niv\xE5-hytterne fra Nordsj\xE6lland."
+      objectReference: {fileID: 0}
+    - target: {fileID: 5624916185470311417, guid: c9cefef997ebc4734bab3f752dd47e7f, type: 3}
+      propertyPath: m_text
+      value: "I omr\xE5det omkring R\xE5dhuspladsen er der ikke fundet egentlige
+        spor af hytter eller lignende, og kun \xE9t sted er der fundet et intakt
+        lag med spor fra stenalderen i form af flintaffald. Andre steder i omr\xE5det
+        l\xE5 affaldet fra stenalderen blandet rundt i yngre lag. Det er sikkert
+        sket, fordi man allerede i middelalderen eller senere hen har gravet, og
+        dermed forstyrret sporene fra stenalderen. Sporene fra stenalderen viser,
+        at der har v\xE6ret mennesker, som har boet i omr\xE5det i en periode, eller
+        har passeret forbi. Derfor viser vi i modellen en simpel boplads, som den
+        kunne have set ud. P\xE5 denne tid har der ikke v\xE6ret egentlige landsbyer
+        med mange hytter men snarere ensomt liggende hytter."
+      objectReference: {fileID: 0}
+    - target: {fileID: 6140560549350192151, guid: c9cefef997ebc4734bab3f752dd47e7f, type: 3}
+      propertyPath: zoneSelection
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6663404496677509667, guid: c9cefef997ebc4734bab3f752dd47e7f, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0.43399996
+      objectReference: {fileID: 0}
+    - target: {fileID: 6663404496677509667, guid: c9cefef997ebc4734bab3f752dd47e7f, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -0.46600005
+      objectReference: {fileID: 0}
+    - target: {fileID: 6846314827708593189, guid: c9cefef997ebc4734bab3f752dd47e7f, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0.43399996
+      objectReference: {fileID: 0}
+    - target: {fileID: 6846314827708593189, guid: c9cefef997ebc4734bab3f752dd47e7f, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -0.46600005
+      objectReference: {fileID: 0}
+    - target: {fileID: 7135486568897155102, guid: c9cefef997ebc4734bab3f752dd47e7f, type: 3}
+      propertyPath: m_text
+      value: Spor af mennesker
+      objectReference: {fileID: 0}
+    - target: {fileID: 7346844633916176920, guid: c9cefef997ebc4734bab3f752dd47e7f, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.8694498
+      objectReference: {fileID: 0}
+    - target: {fileID: 7346844633916176920, guid: c9cefef997ebc4734bab3f752dd47e7f, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.70000005
+      objectReference: {fileID: 0}
+    - target: {fileID: 7346844633916176920, guid: c9cefef997ebc4734bab3f752dd47e7f, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.14999999
+      objectReference: {fileID: 0}
+    - target: {fileID: 7856907603732906471, guid: c9cefef997ebc4734bab3f752dd47e7f, type: 3}
+      propertyPath: m_text
+      value: Spor af mennesker
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects:
-    - targetCorrespondingSourceObject: {fileID: 1777276800292254190, guid: c210376be35324bfd859fec339971d97, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 7252547180533869515}
+    m_AddedGameObjects: []
     m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: c210376be35324bfd859fec339971d97, type: 3}
---- !u!4 &3956142339903954826 stripped
+  m_SourcePrefab: {fileID: 100100000, guid: c9cefef997ebc4734bab3f752dd47e7f, type: 3}
+--- !u!4 &3428482736894917407 stripped
 Transform:
-  m_CorrespondingSourceObject: {fileID: 1777276800292254190, guid: c210376be35324bfd859fec339971d97, type: 3}
-  m_PrefabInstance: {fileID: 3336373108162293348}
+  m_CorrespondingSourceObject: {fileID: 3045178787394915237, guid: c9cefef997ebc4734bab3f752dd47e7f, type: 3}
+  m_PrefabInstance: {fileID: 420751332208849082}
   m_PrefabAsset: {fileID: 0}
---- !u!4 &6438408093153602545 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 8580764279840851349, guid: c210376be35324bfd859fec339971d97, type: 3}
-  m_PrefabInstance: {fileID: 3336373108162293348}
-  m_PrefabAsset: {fileID: 0}
---- !u!1001 &4829943395696956577
+--- !u!1001 &1718120128009463022
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -260,193 +276,411 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 478466810286315909}
     m_Modifications:
-    - target: {fileID: 4928304817013056981, guid: c210376be35324bfd859fec339971d97, type: 3}
+    - target: {fileID: 1051849449015226817, guid: c9cefef997ebc4734bab3f752dd47e7f, type: 3}
       propertyPath: m_Name
       value: Interestpoint TV
       objectReference: {fileID: 0}
-    - target: {fileID: 4928304817013056981, guid: c210376be35324bfd859fec339971d97, type: 3}
+    - target: {fileID: 1051849449015226817, guid: c9cefef997ebc4734bab3f752dd47e7f, type: 3}
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8580764279840851349, guid: c210376be35324bfd859fec339971d97, type: 3}
+    - target: {fileID: 1548566668699467066, guid: c9cefef997ebc4734bab3f752dd47e7f, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.39105195
+      objectReference: {fileID: 0}
+    - target: {fileID: 1548566668699467066, guid: c9cefef997ebc4734bab3f752dd47e7f, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.30447403
+      objectReference: {fileID: 0}
+    - target: {fileID: 1602818667145596610, guid: c9cefef997ebc4734bab3f752dd47e7f, type: 3}
+      propertyPath: m_text
+      value: "I de sm\xE5 vige p\xE5 Sj\xE6llands \xF8stkyst fandtes sivskove, mens
+        der p\xE5 de udsatte kyster ud mod \xD8resund var \xE5ben strand med gr\xE6sser
+        og urter, der kunne t\xE5le b\xE5de salt og fugt. Planterne n\xF8d godt af
+        de tilf\xF8rte n\xE6ringsstoffer, som blev f\xF8rt med saltvandet ind over
+        strandengene og aflejredes, n\xE5r det bl\xE6ste. P\xE5 det lidt t\xF8rrere
+        land var der krat og tr\xE6bevoksning. Her voksede blandt andet egetr\xE6er.
+        Egetr\xE6er og hassel kan t\xE5le en vis saltp\xE5virkning og kan derfor,
+        i mods\xE6tning til de fleste andre tr\xE6er, rykke l\xE6ngere frem mod stranden."
+      objectReference: {fileID: 0}
+    - target: {fileID: 1708709804305473277, guid: c9cefef997ebc4734bab3f752dd47e7f, type: 3}
+      propertyPath: m_text
+      value: "Kysten mellem Sj\xE6lland og Amager var pr\xE6get af sm\xE5 afsk\xE6rmede
+        vige og med \xE5bne strand-arealer. Foto: CoastalSandpiper, Pixabay."
+      objectReference: {fileID: 0}
+    - target: {fileID: 2101930939017328934, guid: c9cefef997ebc4734bab3f752dd47e7f, type: 3}
+      propertyPath: m_text
+      value: Den salte kystmarsk
+      objectReference: {fileID: 0}
+    - target: {fileID: 2507639271594446397, guid: c9cefef997ebc4734bab3f752dd47e7f, type: 3}
+      propertyPath: m_text
+      value: "Kysten mellem Sj\xE6lland og Amager var pr\xE6get af sm\xE5 afsk\xE6rmede
+        vige og med \xE5bne strand-arealer. Foto: CoastalSandpiper, Pixabay."
+      objectReference: {fileID: 0}
+    - target: {fileID: 2745427459208275839, guid: c9cefef997ebc4734bab3f752dd47e7f, type: 3}
+      propertyPath: body
+      value: "I de sm\xE5 vige p\xE5 Sj\xE6llands \xF8stkyst fandtes sivskove, mens
+        der p\xE5 de udsatte kyster ud mod \xD8resund var \xE5ben strand med gr\xE6sser
+        og urter, der kunne t\xE5le b\xE5de salt og fugt. Planterne n\xF8d godt af
+        de tilf\xF8rte n\xE6ringsstoffer, som blev f\xF8rt med saltvandet ind over
+        strandengene og aflejredes, n\xE5r det bl\xE6ste. P\xE5 det lidt t\xF8rrere
+        land var der krat og tr\xE6bevoksning. Her voksede blandt andet egetr\xE6er.
+        Egetr\xE6er og hassel kan t\xE5le en vis saltp\xE5virkning og kan derfor,
+        i mods\xE6tning til de fleste andre tr\xE6er, rykke l\xE6ngere frem mod stranden."
+      objectReference: {fileID: 0}
+    - target: {fileID: 2745427459208275839, guid: c9cefef997ebc4734bab3f752dd47e7f, type: 3}
+      propertyPath: photo
+      value: 
+      objectReference: {fileID: 2800000, guid: 4f58a50ae47b947c6b3aaa77bb054d28, type: 3}
+    - target: {fileID: 2745427459208275839, guid: c9cefef997ebc4734bab3f752dd47e7f, type: 3}
+      propertyPath: title
+      value: Den salte kystmarsk
+      objectReference: {fileID: 0}
+    - target: {fileID: 2745427459208275839, guid: c9cefef997ebc4734bab3f752dd47e7f, type: 3}
+      propertyPath: caption
+      value: "Kysten mellem Sj\xE6lland og Amager var pr\xE6get af sm\xE5 afsk\xE6rmede
+        vige og med \xE5bne strand-arealer. Foto: CoastalSandpiper, Pixabay."
+      objectReference: {fileID: 0}
+    - target: {fileID: 3045178787394915237, guid: c9cefef997ebc4734bab3f752dd47e7f, type: 3}
       propertyPath: m_LocalPosition.x
       value: -3.303
       objectReference: {fileID: 0}
-    - target: {fileID: 8580764279840851349, guid: c210376be35324bfd859fec339971d97, type: 3}
+    - target: {fileID: 3045178787394915237, guid: c9cefef997ebc4734bab3f752dd47e7f, type: 3}
       propertyPath: m_LocalPosition.y
       value: -0.4331184
       objectReference: {fileID: 0}
-    - target: {fileID: 8580764279840851349, guid: c210376be35324bfd859fec339971d97, type: 3}
+    - target: {fileID: 3045178787394915237, guid: c9cefef997ebc4734bab3f752dd47e7f, type: 3}
       propertyPath: m_LocalPosition.z
       value: -3.012
       objectReference: {fileID: 0}
-    - target: {fileID: 8580764279840851349, guid: c210376be35324bfd859fec339971d97, type: 3}
+    - target: {fileID: 3045178787394915237, guid: c9cefef997ebc4734bab3f752dd47e7f, type: 3}
       propertyPath: m_LocalRotation.w
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 8580764279840851349, guid: c210376be35324bfd859fec339971d97, type: 3}
+    - target: {fileID: 3045178787394915237, guid: c9cefef997ebc4734bab3f752dd47e7f, type: 3}
       propertyPath: m_LocalRotation.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8580764279840851349, guid: c210376be35324bfd859fec339971d97, type: 3}
+    - target: {fileID: 3045178787394915237, guid: c9cefef997ebc4734bab3f752dd47e7f, type: 3}
       propertyPath: m_LocalRotation.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8580764279840851349, guid: c210376be35324bfd859fec339971d97, type: 3}
+    - target: {fileID: 3045178787394915237, guid: c9cefef997ebc4734bab3f752dd47e7f, type: 3}
       propertyPath: m_LocalRotation.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8580764279840851349, guid: c210376be35324bfd859fec339971d97, type: 3}
+    - target: {fileID: 3045178787394915237, guid: c9cefef997ebc4734bab3f752dd47e7f, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8580764279840851349, guid: c210376be35324bfd859fec339971d97, type: 3}
+    - target: {fileID: 3045178787394915237, guid: c9cefef997ebc4734bab3f752dd47e7f, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8580764279840851349, guid: c210376be35324bfd859fec339971d97, type: 3}
+    - target: {fileID: 3045178787394915237, guid: c9cefef997ebc4734bab3f752dd47e7f, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects:
-    - targetCorrespondingSourceObject: {fileID: 1777276800292254190, guid: c210376be35324bfd859fec339971d97, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1345418308401479242}
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: c210376be35324bfd859fec339971d97, type: 3}
---- !u!4 &3752510366454944052 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 8580764279840851349, guid: c210376be35324bfd859fec339971d97, type: 3}
-  m_PrefabInstance: {fileID: 4829943395696956577}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &6606006841932817743 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 1777276800292254190, guid: c210376be35324bfd859fec339971d97, type: 3}
-  m_PrefabInstance: {fileID: 4829943395696956577}
-  m_PrefabAsset: {fileID: 0}
---- !u!1001 &5310480449796154207
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 39230780055445455}
-    m_Modifications:
-    - target: {fileID: -8679921383154817045, guid: 10c82f5a6fa4a4aad99353cc9e7d73ee, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
+    - target: {fileID: 4109202434645031681, guid: c9cefef997ebc4734bab3f752dd47e7f, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.39105195
       objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 10c82f5a6fa4a4aad99353cc9e7d73ee, type: 3}
+    - target: {fileID: 4109202434645031681, guid: c9cefef997ebc4734bab3f752dd47e7f, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 0.30447403
       objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 10c82f5a6fa4a4aad99353cc9e7d73ee, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
+    - target: {fileID: 4131334680768775540, guid: c9cefef997ebc4734bab3f752dd47e7f, type: 3}
+      propertyPath: m_text
+      value: "I de sm\xE5 vige p\xE5 Sj\xE6llands \xF8stkyst fandtes sivskove, mens
+        der p\xE5 de udsatte kyster ud mod \xD8resund var \xE5ben strand med gr\xE6sser
+        og urter, der kunne t\xE5le b\xE5de salt og fugt. Planterne n\xF8d godt af
+        de tilf\xF8rte n\xE6ringsstoffer, som blev f\xF8rt med saltvandet ind over
+        strandengene og aflejredes, n\xE5r det bl\xE6ste. P\xE5 det lidt t\xF8rrere
+        land var der krat og tr\xE6bevoksning. Her voksede blandt andet egetr\xE6er.
+        Egetr\xE6er og hassel kan t\xE5le en vis saltp\xE5virkning og kan derfor,
+        i mods\xE6tning til de fleste andre tr\xE6er, rykke l\xE6ngere frem mod stranden."
       objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 10c82f5a6fa4a4aad99353cc9e7d73ee, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: -0.00000004371139
+    - target: {fileID: 4599695183649821342, guid: c9cefef997ebc4734bab3f752dd47e7f, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0.9221379
       objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 10c82f5a6fa4a4aad99353cc9e7d73ee, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
+    - target: {fileID: 4599695183649821342, guid: c9cefef997ebc4734bab3f752dd47e7f, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0.02213791
       objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 10c82f5a6fa4a4aad99353cc9e7d73ee, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 1
+    - target: {fileID: 5247235575603844291, guid: c9cefef997ebc4734bab3f752dd47e7f, type: 3}
+      propertyPath: m_text
+      value: "Kysten mellem Sj\xE6lland og Amager var pr\xE6get af sm\xE5 afsk\xE6rmede
+        vige og med \xE5bne strand-arealer. Foto: CoastalSandpiper, Pixabay."
       objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 10c82f5a6fa4a4aad99353cc9e7d73ee, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
+    - target: {fileID: 5624916185470311417, guid: c9cefef997ebc4734bab3f752dd47e7f, type: 3}
+      propertyPath: m_text
+      value: "I de sm\xE5 vige p\xE5 Sj\xE6llands \xF8stkyst fandtes sivskove, mens
+        der p\xE5 de udsatte kyster ud mod \xD8resund var \xE5ben strand med gr\xE6sser
+        og urter, der kunne t\xE5le b\xE5de salt og fugt. Planterne n\xF8d godt af
+        de tilf\xF8rte n\xE6ringsstoffer, som blev f\xF8rt med saltvandet ind over
+        strandengene og aflejredes, n\xE5r det bl\xE6ste. P\xE5 det lidt t\xF8rrere
+        land var der krat og tr\xE6bevoksning. Her voksede blandt andet egetr\xE6er.
+        Egetr\xE6er og hassel kan t\xE5le en vis saltp\xE5virkning og kan derfor,
+        i mods\xE6tning til de fleste andre tr\xE6er, rykke l\xE6ngere frem mod stranden."
       objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 10c82f5a6fa4a4aad99353cc9e7d73ee, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
+    - target: {fileID: 6663404496677509667, guid: c9cefef997ebc4734bab3f752dd47e7f, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0.9221379
       objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 10c82f5a6fa4a4aad99353cc9e7d73ee, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
+    - target: {fileID: 6663404496677509667, guid: c9cefef997ebc4734bab3f752dd47e7f, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0.02213791
       objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 10c82f5a6fa4a4aad99353cc9e7d73ee, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
+    - target: {fileID: 6846314827708593189, guid: c9cefef997ebc4734bab3f752dd47e7f, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0.9221379
       objectReference: {fileID: 0}
-    - target: {fileID: 919132149155446097, guid: 10c82f5a6fa4a4aad99353cc9e7d73ee, type: 3}
-      propertyPath: m_Name
-      value: Model
+    - target: {fileID: 6846314827708593189, guid: c9cefef997ebc4734bab3f752dd47e7f, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0.02213791
+      objectReference: {fileID: 0}
+    - target: {fileID: 7135486568897155102, guid: c9cefef997ebc4734bab3f752dd47e7f, type: 3}
+      propertyPath: m_text
+      value: Den salte kystmarsk
+      objectReference: {fileID: 0}
+    - target: {fileID: 7346844633916176920, guid: c9cefef997ebc4734bab3f752dd47e7f, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.39105195
+      objectReference: {fileID: 0}
+    - target: {fileID: 7346844633916176920, guid: c9cefef997ebc4734bab3f752dd47e7f, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.30447403
+      objectReference: {fileID: 0}
+    - target: {fileID: 7856907603732906471, guid: c9cefef997ebc4734bab3f752dd47e7f, type: 3}
+      propertyPath: m_text
+      value: Den salte kystmarsk
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 10c82f5a6fa4a4aad99353cc9e7d73ee, type: 3}
---- !u!4 &5636295238742754484 stripped
+  m_SourcePrefab: {fileID: 100100000, guid: c9cefef997ebc4734bab3f752dd47e7f, type: 3}
+--- !u!4 &4437550719881015115 stripped
 Transform:
-  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 10c82f5a6fa4a4aad99353cc9e7d73ee, type: 3}
-  m_PrefabInstance: {fileID: 5310480449796154207}
+  m_CorrespondingSourceObject: {fileID: 3045178787394915237, guid: c9cefef997ebc4734bab3f752dd47e7f, type: 3}
+  m_PrefabInstance: {fileID: 1718120128009463022}
   m_PrefabAsset: {fileID: 0}
---- !u!1001 &7146227726780075040
+--- !u!1001 &8389736666640005723
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 3956142339903954826}
+    m_TransformParent: {fileID: 478466810286315909}
     m_Modifications:
-    - target: {fileID: -8679921383154817045, guid: 4bd61e41b16f34c3cb3d718b4229bf32, type: 3}
-      propertyPath: m_LocalPosition.x
+    - target: {fileID: 1051849449015226817, guid: c9cefef997ebc4734bab3f752dd47e7f, type: 3}
+      propertyPath: m_Name
+      value: Interestpoint TH
+      objectReference: {fileID: 0}
+    - target: {fileID: 1051849449015226817, guid: c9cefef997ebc4734bab3f752dd47e7f, type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 4bd61e41b16f34c3cb3d718b4229bf32, type: 3}
+    - target: {fileID: 1548566668699467066, guid: c9cefef997ebc4734bab3f752dd47e7f, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.90787274
+      objectReference: {fileID: 0}
+    - target: {fileID: 1548566668699467066, guid: c9cefef997ebc4734bab3f752dd47e7f, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.70000005
+      objectReference: {fileID: 0}
+    - target: {fileID: 1548566668699467066, guid: c9cefef997ebc4734bab3f752dd47e7f, type: 3}
       propertyPath: m_LocalPosition.y
+      value: 0.14999999
+      objectReference: {fileID: 0}
+    - target: {fileID: 1602818667145596610, guid: c9cefef997ebc4734bab3f752dd47e7f, type: 3}
+      propertyPath: m_text
+      value: "Efter afslutningen p\xE5 sidste istid var havniveauet anderledes end
+        i dag. Da de store iskapper smeltede, steg det globale havniveau. I Danmark
+        blev landmasserne ikke l\xE6ngere presset ned af v\xE6gten af iskapperne,
+        og landmasserne begyndte derfor langsomt at h\xE6ve sig. Der opstod et \u201Dkapl\xF8b\u201D
+        mellem havniveaustigningen og landh\xE6vningen, og i stenalderen var der
+        i den nordlige del af Danmark et \xF8-hav: Stenalderhavet. I K\xF8benhavn
+        var havniveauet ca. 3,2 m h\xF8jere end i dag, og en stor del af det nuv\xE6rende
+        K\xF8benhavn ligger i omr\xE5der, der dengang var havd\xE6kket."
+      objectReference: {fileID: 0}
+    - target: {fileID: 1708709804305473277, guid: c9cefef997ebc4734bab3f752dd47e7f, type: 3}
+      propertyPath: m_text
+      value: "Illustration der med en r\xF8d streg viser stenalderkystlinjen i K\xF8benhavn."
+      objectReference: {fileID: 0}
+    - target: {fileID: 1775859202961080974, guid: c9cefef997ebc4734bab3f752dd47e7f, type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 4bd61e41b16f34c3cb3d718b4229bf32, type: 3}
+    - target: {fileID: 2101930939017328934, guid: c9cefef997ebc4734bab3f752dd47e7f, type: 3}
+      propertyPath: m_text
+      value: "Stenalderhavets h\xF8jde"
+      objectReference: {fileID: 0}
+    - target: {fileID: 2507639271594446397, guid: c9cefef997ebc4734bab3f752dd47e7f, type: 3}
+      propertyPath: m_text
+      value: "Illustration der med en r\xF8d streg viser stenalderkystlinjen i K\xF8benhavn."
+      objectReference: {fileID: 0}
+    - target: {fileID: 2742872415904744160, guid: c9cefef997ebc4734bab3f752dd47e7f, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2745427459208275839, guid: c9cefef997ebc4734bab3f752dd47e7f, type: 3}
+      propertyPath: body
+      value: "Efter afslutningen p\xE5 sidste istid var havniveauet anderledes end
+        i dag. Da de store iskapper smeltede, steg det globale havniveau. I Danmark
+        blev landmasserne ikke l\xE6ngere presset ned af v\xE6gten af iskapperne,
+        og landmasserne begyndte derfor langsomt at h\xE6ve sig. Der opstod et \u201Dkapl\xF8b\u201D
+        mellem havniveaustigningen og landh\xE6vningen, og i stenalderen var der
+        i den nordlige del af Danmark et \xF8-hav: Stenalderhavet. I K\xF8benhavn
+        var havniveauet ca. 3,2 m h\xF8jere end i dag, og en stor del af det nuv\xE6rende
+        K\xF8benhavn ligger i omr\xE5der, der dengang var havd\xE6kket."
+      objectReference: {fileID: 0}
+    - target: {fileID: 2745427459208275839, guid: c9cefef997ebc4734bab3f752dd47e7f, type: 3}
+      propertyPath: photo
+      value: 
+      objectReference: {fileID: 2800000, guid: 7923044051f16436db07be8b17590815, type: 3}
+    - target: {fileID: 2745427459208275839, guid: c9cefef997ebc4734bab3f752dd47e7f, type: 3}
+      propertyPath: title
+      value: "Stenalderhavets h\xF8jde"
+      objectReference: {fileID: 0}
+    - target: {fileID: 2745427459208275839, guid: c9cefef997ebc4734bab3f752dd47e7f, type: 3}
+      propertyPath: caption
+      value: "Illustration der med en r\xF8d streg viser stenalderkystlinjen i K\xF8benhavn."
+      objectReference: {fileID: 0}
+    - target: {fileID: 3045178787394915237, guid: c9cefef997ebc4734bab3f752dd47e7f, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -1.553
+      objectReference: {fileID: 0}
+    - target: {fileID: 3045178787394915237, guid: c9cefef997ebc4734bab3f752dd47e7f, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.66467196
+      objectReference: {fileID: 0}
+    - target: {fileID: 3045178787394915237, guid: c9cefef997ebc4734bab3f752dd47e7f, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -2.672
       objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 4bd61e41b16f34c3cb3d718b4229bf32, type: 3}
+    - target: {fileID: 3045178787394915237, guid: c9cefef997ebc4734bab3f752dd47e7f, type: 3}
       propertyPath: m_LocalRotation.w
-      value: -0.00000004371139
+      value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 4bd61e41b16f34c3cb3d718b4229bf32, type: 3}
+    - target: {fileID: 3045178787394915237, guid: c9cefef997ebc4734bab3f752dd47e7f, type: 3}
       propertyPath: m_LocalRotation.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 4bd61e41b16f34c3cb3d718b4229bf32, type: 3}
+    - target: {fileID: 3045178787394915237, guid: c9cefef997ebc4734bab3f752dd47e7f, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 4bd61e41b16f34c3cb3d718b4229bf32, type: 3}
+    - target: {fileID: 3045178787394915237, guid: c9cefef997ebc4734bab3f752dd47e7f, type: 3}
       propertyPath: m_LocalRotation.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 4bd61e41b16f34c3cb3d718b4229bf32, type: 3}
+    - target: {fileID: 3045178787394915237, guid: c9cefef997ebc4734bab3f752dd47e7f, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 4bd61e41b16f34c3cb3d718b4229bf32, type: 3}
+    - target: {fileID: 3045178787394915237, guid: c9cefef997ebc4734bab3f752dd47e7f, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 4bd61e41b16f34c3cb3d718b4229bf32, type: 3}
+    - target: {fileID: 3045178787394915237, guid: c9cefef997ebc4734bab3f752dd47e7f, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 919132149155446097, guid: 4bd61e41b16f34c3cb3d718b4229bf32, type: 3}
-      propertyPath: m_Name
-      value: Model
+    - target: {fileID: 4109202434645031681, guid: c9cefef997ebc4734bab3f752dd47e7f, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.90787274
+      objectReference: {fileID: 0}
+    - target: {fileID: 4109202434645031681, guid: c9cefef997ebc4734bab3f752dd47e7f, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.70000005
+      objectReference: {fileID: 0}
+    - target: {fileID: 4109202434645031681, guid: c9cefef997ebc4734bab3f752dd47e7f, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.14999999
+      objectReference: {fileID: 0}
+    - target: {fileID: 4131334680768775540, guid: c9cefef997ebc4734bab3f752dd47e7f, type: 3}
+      propertyPath: m_text
+      value: "Efter afslutningen p\xE5 sidste istid var havniveauet anderledes end
+        i dag. Da de store iskapper smeltede, steg det globale havniveau. I Danmark
+        blev landmasserne ikke l\xE6ngere presset ned af v\xE6gten af iskapperne,
+        og landmasserne begyndte derfor langsomt at h\xE6ve sig. Der opstod et \u201Dkapl\xF8b\u201D
+        mellem havniveaustigningen og landh\xE6vningen, og i stenalderen var der
+        i den nordlige del af Danmark et \xF8-hav: Stenalderhavet. I K\xF8benhavn
+        var havniveauet ca. 3,2 m h\xF8jere end i dag, og en stor del af det nuv\xE6rende
+        K\xF8benhavn ligger i omr\xE5der, der dengang var havd\xE6kket."
+      objectReference: {fileID: 0}
+    - target: {fileID: 4599695183649821342, guid: c9cefef997ebc4734bab3f752dd47e7f, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0.43399996
+      objectReference: {fileID: 0}
+    - target: {fileID: 4599695183649821342, guid: c9cefef997ebc4734bab3f752dd47e7f, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -0.46600005
+      objectReference: {fileID: 0}
+    - target: {fileID: 5247235575603844291, guid: c9cefef997ebc4734bab3f752dd47e7f, type: 3}
+      propertyPath: m_text
+      value: "Illustration der med en r\xF8d streg viser stenalderkystlinjen i K\xF8benhavn."
+      objectReference: {fileID: 0}
+    - target: {fileID: 5624916185470311417, guid: c9cefef997ebc4734bab3f752dd47e7f, type: 3}
+      propertyPath: m_text
+      value: "Efter afslutningen p\xE5 sidste istid var havniveauet anderledes end
+        i dag. Da de store iskapper smeltede, steg det globale havniveau. I Danmark
+        blev landmasserne ikke l\xE6ngere presset ned af v\xE6gten af iskapperne,
+        og landmasserne begyndte derfor langsomt at h\xE6ve sig. Der opstod et \u201Dkapl\xF8b\u201D
+        mellem havniveaustigningen og landh\xE6vningen, og i stenalderen var der
+        i den nordlige del af Danmark et \xF8-hav: Stenalderhavet. I K\xF8benhavn
+        var havniveauet ca. 3,2 m h\xF8jere end i dag, og en stor del af det nuv\xE6rende
+        K\xF8benhavn ligger i omr\xE5der, der dengang var havd\xE6kket."
+      objectReference: {fileID: 0}
+    - target: {fileID: 6140560549350192151, guid: c9cefef997ebc4734bab3f752dd47e7f, type: 3}
+      propertyPath: zoneSelection
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6663404496677509667, guid: c9cefef997ebc4734bab3f752dd47e7f, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0.43399996
+      objectReference: {fileID: 0}
+    - target: {fileID: 6663404496677509667, guid: c9cefef997ebc4734bab3f752dd47e7f, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -0.46600005
+      objectReference: {fileID: 0}
+    - target: {fileID: 6846314827708593189, guid: c9cefef997ebc4734bab3f752dd47e7f, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0.43399996
+      objectReference: {fileID: 0}
+    - target: {fileID: 6846314827708593189, guid: c9cefef997ebc4734bab3f752dd47e7f, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -0.46600005
+      objectReference: {fileID: 0}
+    - target: {fileID: 7135486568897155102, guid: c9cefef997ebc4734bab3f752dd47e7f, type: 3}
+      propertyPath: m_text
+      value: "Stenalderhavets h\xF8jde"
+      objectReference: {fileID: 0}
+    - target: {fileID: 7346844633916176920, guid: c9cefef997ebc4734bab3f752dd47e7f, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.90787274
+      objectReference: {fileID: 0}
+    - target: {fileID: 7346844633916176920, guid: c9cefef997ebc4734bab3f752dd47e7f, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.70000005
+      objectReference: {fileID: 0}
+    - target: {fileID: 7346844633916176920, guid: c9cefef997ebc4734bab3f752dd47e7f, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.14999999
+      objectReference: {fileID: 0}
+    - target: {fileID: 7856907603732906471, guid: c9cefef997ebc4734bab3f752dd47e7f, type: 3}
+      propertyPath: m_text
+      value: "Stenalderhavets h\xF8jde"
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 4bd61e41b16f34c3cb3d718b4229bf32, type: 3}
---- !u!4 &7252547180533869515 stripped
+  m_SourcePrefab: {fileID: 100100000, guid: c9cefef997ebc4734bab3f752dd47e7f, type: 3}
+--- !u!4 &6786063674439053822 stripped
 Transform:
-  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 4bd61e41b16f34c3cb3d718b4229bf32, type: 3}
-  m_PrefabInstance: {fileID: 7146227726780075040}
+  m_CorrespondingSourceObject: {fileID: 3045178787394915237, guid: c9cefef997ebc4734bab3f752dd47e7f, type: 3}
+  m_PrefabInstance: {fileID: 8389736666640005723}
   m_PrefabAsset: {fileID: 0}
