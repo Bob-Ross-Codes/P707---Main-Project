@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 8c5b11c3614570f4f968c4250e8310ef
+guid: 0c957d59e11f15a40aff7163404c87ce
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 2212143997101697181
-    second: 1130_TV2_0
+      213: 2967354332329504202
+    second: "Sk\xE6rmbillede 2026-11-23 103657_0"
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,7 +100,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: 1130_TV2_0
+      name: "Sk\xE6rmbillede 2026-11-23 103657_0"
       rect:
         serializedVersion: 2
         x: 0
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: d986243be3d13be10800000000000000
-      internalID: 2212143997101697181
+      spriteID: acd67352b092e2920800000000000000
+      internalID: 2967354332329504202
       vertices: []
       indices: 
       edges: []

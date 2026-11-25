@@ -11364,7 +11364,7 @@ TerrainCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_TerrainData: {fileID: 15600000, guid: 66e4292392cad24488788da25d1970ba, type: 2}
+  m_TerrainData: {fileID: 15600000, guid: fe218a387c416544888c492350effa99, type: 2}
   m_EnableTreeColliders: 1
 --- !u!218 &298982983
 Terrain:
@@ -11375,7 +11375,7 @@ Terrain:
   m_GameObject: {fileID: 298982981}
   m_Enabled: 1
   serializedVersion: 6
-  m_TerrainData: {fileID: 15600000, guid: 66e4292392cad24488788da25d1970ba, type: 2}
+  m_TerrainData: {fileID: 15600000, guid: fe218a387c416544888c492350effa99, type: 2}
   m_TreeDistance: 5000
   m_TreeBillboardDistance: 50
   m_TreeCrossFadeLength: 5
@@ -11596,6 +11596,13 @@ MonoBehaviour:
   smoothSpeedX: 5
   smoothSpeedY: 5
   smoothSpeedZ: 5
+  scaleSmoothingByDistance: 1
+  kinectOrigin: {fileID: 0}
+  minDistance: 1
+  maxDistance: 5
+  nearSmoothingFactor: 1
+  farSmoothingFactor: 0.25
+  scaleRotationWithDistance: 1
   smoothRotation: 1
   rotationSmoothSpeed: 5
 --- !u!54 &322196531
@@ -54092,6 +54099,13 @@ MonoBehaviour:
   smoothSpeedX: 5
   smoothSpeedY: 5
   smoothSpeedZ: 5
+  scaleSmoothingByDistance: 1
+  kinectOrigin: {fileID: 0}
+  minDistance: 1
+  maxDistance: 5
+  nearSmoothingFactor: 1
+  farSmoothingFactor: 0.25
+  scaleRotationWithDistance: 1
   smoothRotation: 1
   rotationSmoothSpeed: 5
 --- !u!23 &1541959945
