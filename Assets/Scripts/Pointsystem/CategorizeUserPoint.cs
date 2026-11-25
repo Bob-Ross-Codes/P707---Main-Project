@@ -1,43 +1,52 @@
 using UnityEngine;
 using System.Collections;
+using System.Runtime.CompilerServices;
+using Unity.VisualScripting;
+using System;
 
 public class CategorizeUserPoint : MonoBehaviour
 {
     [Header("Dwelltime point count")]
-    [Tooltip("Amount of current loops")]
-    public int loopCount;
-    [Tooltip("Max amount of loops in logic")]
-    public int maxLoops;
-    [Tooltip("Loops aqquired before penalty")]
-    public int EarlyExitThreshhold;
- 
+
+    [Tooltip("Private Values")]
+    [SerializeField]
+    private float ScoreMult;
+    private bool ScoreMultIsRunning;
+
+    [Tooltip("Time speed for how fast the scoremulitiplier counts up whitin interest point (in sec)")]
+    public float ScoreMultTimerLoop;
+
+    [Tooltip("What ScoreMult need to reach to miss penalty when leaving interest point (in sec)")]
+    public float ScoreLowPenaltyThreshold;
+
+    [Tooltip("Amount of points lost to penalty")]
+    public float Penalty;
+
     [Header("Penalty/Rewardtriggers")]
-    [Tooltip("Player left interestpoint early")]
-    public bool Exitearly;
-    [Tooltip("Player have visited current interestpoint")]
-    public bool HasVisitedInterestpoint;
+
     [Tooltip("Player has recieved bonuspoint for revisiting")]
     public bool HasReceivedRevisitBonus;
+
     [Tooltip("Player have visited the time before")]
     public bool HasVisitedAgeSection;
 
     [Header("TestValues")]
     public bool Test;
+    private bool Scoremultreset;
+
+    private PlayerStats playerStats;
 
     private Coroutine standCoroutine;
 
-    private PlayerStats playerStats;
+    public Array inter;
 
     private void Start()
     {
         playerStats = FindFirstObjectByType<PlayerStats>();
-    }
 
-    //On First Time Enter. Found interest point, gives 1 point subtracted from the penalty. 
-    public void GainInteractionPoint()
-    {
-        GainPoints(1);
-        HasVisitedInterestpoint = true;
+        //Find Amount of interest points in scene
+        PlayerZoneTrigger[] inter = FindObjectsByType<PlayerZoneTrigger>(FindObjectsSortMode.None);
+        Debug.Log("Number of hit colliders: " + inter.Length);
     }
 
     //On First Time Enter. Check if this current age has been visited
@@ -49,7 +58,7 @@ public class CategorizeUserPoint : MonoBehaviour
     //On Player Enter. Visit again bous;
     public void RevisitBonus()
     {
-        if (HasVisitedInterestpoint && !HasReceivedRevisitBonus)
+        if (HasReceivedRevisitBonus == false)
         {
             GainPoints(1);
             HasReceivedRevisitBonus = true;
@@ -59,52 +68,56 @@ public class CategorizeUserPoint : MonoBehaviour
     //On Player Exit. cooldown period for when leaving interest point and returning to acctually ge tthe points.
     public void Cooldownperiod()
     {
-  
+        //Reset Scoremult for each visit to interestpoint
+        Scoremultreset = false;
+
+        if (ScoreMult <= ScoreLowPenaltyThreshold)
+        {
+            LosePoints(Penalty);
+        }
+
+        playerStats.Playerpoints = playerStats.Playerpoints * ScoreMult;
+
     }
 
     //While inside colider Event. Dwell cheker.
     public void WithinInterestPoint()
     {
-        standCoroutine = StartCoroutine(DwellTimer());
+        if (!Scoremultreset)
+        {
+            ScoreMult = 0.5f;
+            Scoremultreset = true;
+        }
+
+        if (!ScoreMultIsRunning)
+        {
+            standCoroutine = StartCoroutine(DwellTimer());
+        }
     }
 
     IEnumerator DwellTimer()
     {
-        while (loopCount < maxLoops)
-        {
-            if (loopCount < EarlyExitThreshhold)
-            {
-                Exitearly = true;
-            }
-            else if (loopCount > EarlyExitThreshhold)
-            {
-                Exitearly = false;
-            }
-                yield return new WaitForSeconds(10f);
+        ScoreMultIsRunning = true;
 
-            GainPoints(1);
-            loopCount++;
-        }
-    }
-
-    //OnplayerExit. Penalty check
-    public void OnexitPenalty()
-    {
-        if (Exitearly ==true)
+        while (ScoreMult < 2.0f)
         {
-            LosePoints(1);
-            Exitearly = false;
+            ScoreMult += 0.01f;
+            ScoreMult = Mathf.Min(ScoreMult, 2.0f);
+
+            yield return new WaitForSeconds(ScoreMultTimerLoop);
         }
+
+        ScoreMultIsRunning = false;
     }
 
     //The regular point gain call
-    public void GainPoints(int amountGain)
+    public void GainPoints(float amountGain)
     {
         playerStats.Playerpoints += amountGain;
     }
 
     //The regular point loss call
-    public void LosePoints(int amountLose)
+    public void LosePoints(float amountLose)
     {
         playerStats.Playerpoints -= amountLose;
     }

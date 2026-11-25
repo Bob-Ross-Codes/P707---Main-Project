@@ -5,10 +5,10 @@ using System.IO;
 [System.Serializable]
 public class SaveData
 {
-    public int value1;
-    public int value2;
-    public int value3;
-    public int value4;
+    public float value1;
+    public float value2;
+    public float value3;
+    public float value4;
 }
 
 public static class SaveSystem
@@ -36,28 +36,28 @@ public static class SaveSystem
     }
 
     // SAVE INDIVIDUAL VALUES
-    public static void SaveStat1(int value)
+    public static void SaveStat1(float value)
     {
         SaveData data = Load();
         data.value1 = value;
         SaveAll(data);
     }
 
-    public static void SaveStat2(int value)
+    public static void SaveStat2(float value)
     {
         SaveData data = Load();
         data.value2 = value;
         SaveAll(data);
     }
 
-    public static void SaveStat3(int value)
+    public static void SaveStat3(float value)
     {
         SaveData data = Load();
         data.value3 = value;
         SaveAll(data);
     }
 
-    public static void SaveStat4(int value)
+    public static void SaveStat4(float value)
     {
         SaveData data = Load();
         data.value4 = value;

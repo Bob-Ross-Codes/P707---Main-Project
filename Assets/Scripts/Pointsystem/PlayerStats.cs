@@ -10,11 +10,11 @@ public class PlayerStats : MonoBehaviour
 {
     [Header("Playerstats and Categorization")]
     [Tooltip("Amount of points")]
-    public int Playerpoints;
+    public float Playerpoints;
     [Tooltip("How long the player needs to stand still for lowspeed")]
     public float timeThreshold;
     [Tooltip("Threshold between the two types")]
-    public int CategorizationDivitionThreshold;
+    public float CategorizationDivitionThreshold;
     [Tooltip("Player is classified as a Looker")]
     public bool Lookercategorization;
     [Tooltip("Player is classified as a Cooker")]
@@ -36,13 +36,6 @@ public class PlayerStats : MonoBehaviour
 
     void Start()
     {
-        //Find Amount of interest points in scene
-        PlayerZoneTrigger[] triggers = FindObjectsByType<PlayerZoneTrigger>(FindObjectsSortMode.None);
-        Debug.Log("Number of hit colliders: " + triggers.Length);
-
-        // Give penalty depending of amount of interest points in the scene
-        Playerpoints = Playerpoints - triggers.Length;
-
         // Speed position
         lastPosition = transform.position;
     }
