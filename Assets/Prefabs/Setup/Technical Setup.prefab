@@ -790,7 +790,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7018098797068980455}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a41b238141e52014d9442f4e46a9f937, type: 3}
   m_Name: 
@@ -5302,11 +5302,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1846471513652576499, guid: 0f0165e6f00e88846a64270a98aeb55c, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 120
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 1846471513652576499, guid: 0f0165e6f00e88846a64270a98aeb55c, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 120
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 1986028717137634626, guid: 0f0165e6f00e88846a64270a98aeb55c, type: 3}
       propertyPath: m_Color.a
@@ -5326,11 +5326,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2672935094619173835, guid: 0f0165e6f00e88846a64270a98aeb55c, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 120
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 2672935094619173835, guid: 0f0165e6f00e88846a64270a98aeb55c, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 120
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 2917731218633204276, guid: 0f0165e6f00e88846a64270a98aeb55c, type: 3}
       propertyPath: m_Name
@@ -5338,11 +5338,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4245949900444245484, guid: 0f0165e6f00e88846a64270a98aeb55c, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 120
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 4245949900444245484, guid: 0f0165e6f00e88846a64270a98aeb55c, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 120
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 5986500612351888916, guid: 0f0165e6f00e88846a64270a98aeb55c, type: 3}
       propertyPath: m_Color.a
