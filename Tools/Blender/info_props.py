@@ -88,9 +88,7 @@ def tex_set(kind):
         return _SETS[kind]
     s = 1024
     if kind == "rawhide":
-        col = load(os.path.join(HUT_TEX, "Hut_Rawhide_BaseColor.png"))
-        m = col.mean((0, 1))
-        out = ((col - m) * 0.55 + m * 1.12,                       # calmer blotches over the whole hide, so dye reads
+        out = (load(os.path.join(HUT_TEX, "Hut_Rawhide_BaseColor.png")),
                load(os.path.join(HUT_TEX, "Hut_Rawhide_Normal.png")))
     else:
         low, mid, hi = fbm(s, 1.8), fbm(s, 1.2), fbm(s, 0.4)
@@ -124,13 +122,27 @@ def tex_set(kind):
     return out
 
 
-def write_surface(name, kind, bbox, paint=None):
+def write_surface(name, kind, bbox, paint=None, backdrop=False):
     """Texture for a writing surface whose UVs span bbox (xmin, xmax, zmin, zmax, relative to the page centre).
-    paint(base, xs, zs): extra decoration."""
+    paint(base, xs, zs): extra decoration. backdrop: a scraped/rubbed lighter area behind the page, ragged-edged,
+    that keeps the surface's grain and bump (only its contrast is lowered) so dark text reads on it."""
     xmin, xmax, zmin, zmax = bbox
     W, H = int(round((xmax - xmin) * PPM / 8)) * 8, int(round((zmax - zmin) * PPM / 8)) * 8
     col, nrm = tex_set(kind)
     base, nn = tile(col, H, W), tile(nrm, H, W)
+    if backdrop:
+        m, f = 0.07 * PPM, 0.09 * PPM                                       # margin round the page, edge feather
+        x0, x1 = (-PAGE_W / 2 - xmin) * PPM - m, (PAGE_W / 2 - xmin) * PPM + m
+        y0, y1 = (-PAGE_H / 2 - zmin) * PPM - m, (PAGE_H / 2 - zmin) * PPM + m
+        yy, xx = np.mgrid[0:H, 0:W]
+        d = np.minimum(np.minimum(xx - x0, x1 - xx), np.minimum(yy - y0, y1 - yy))
+        rag = tile(fbm(512, 1.6)[..., None], H, W)[..., 0]                  # ragged, worn edge instead of a box
+        s = np.clip(d / f + (rag - 0.5) * 1.6, 0, 1)
+        s = (s * s * (3 - 2 * s))[..., None]
+        mean = base.mean((0, 1))
+        light = mean * 1.25 + (base - mean) * 0.45                          # lighter, grain kept at 45%
+        base = base * (1 - s) + light * s
+        nn = nn * (1 - s * 0.6) + np.array((0.5, 0.5, 1.0)) * s * 0.6       # bump calmed so it can't break up letters
     if paint:
         xs = xmin + (np.arange(W) + 0.5) / PPM
         zs = zmin + (np.arange(H) + 0.5) / PPM
@@ -294,7 +306,7 @@ def frame_sheet(name, seed, kind, square):
     a, b = PAGE_W / 2 + 0.16, PAGE_H / 2 + 0.17
     edge = hide_edge(a, b, k, lobes=not square, p=SE if not square else 8.0)
     bb = extent(edge)
-    write_surface(name, kind, bb)
+    write_surface(name, kind, bb, backdrop=kind == "rawhide")
     xmin, xmax, zmin, zmax = bb
     zc = ZC
     z_bot, z_top = zc + zmin - 0.08, zc + zmax + 0.08
@@ -348,7 +360,7 @@ def drying_rack(name, seed):
     a, b = PAGE_W / 2 + 0.16, PAGE_H / 2 + 0.17
     edge = hide_edge(a, b, k)
     bb = extent(edge)
-    write_surface(name, "rawhide", bb)
+    write_surface(name, "rawhide", bb, backdrop=True)
     xmin, xmax, zmin, zmax = bb
     zc = ZC
     z_bar = zc + zmax + 0.06
@@ -403,7 +415,7 @@ def slab(name, seed, kind, a, b_top, b_bot, p_top, p_bot, thick, rough, band=Fal
         base[inband] = base[inband] * 0.35 + np.array((0.55, 0.13, 0.07)) * 0.65
         base[edge_line | stroke] = base[edge_line | stroke] * 0.3 + np.array((0.08, 0.05, 0.04)) * 0.7
 
-    write_surface(name, kind, bb, paint=runes if band else None)
+    write_surface(name, kind, bb, paint=runes if band else None, backdrop=True)
 
     def fill(bm, uv):
         faces = sheet(bm, uv, edge, ZC, bb, rough=0.004, k=k, NA=144, NR=24)
