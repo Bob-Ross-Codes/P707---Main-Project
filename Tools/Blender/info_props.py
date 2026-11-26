@@ -24,7 +24,7 @@ PHOTOS = os.path.join(CARDS, "Photos")
 CARD_FILES = {"4000": {"TV": "4000_TV2.png", "MID": "4000_Mid2.png", "TH": "4000_TH2.png"},
               "1130": {k: "1130_%s2.png" % k for k in ("TV", "MID", "TH")},
               "1620": {k: "1620_%s2.png" % k for k in ("TV", "MID", "TH")}}
-PAGE_W, PAGE_H = 2.45, 1.8      # the live page: title across, 1.4 m body column, photo and caption beside it
+PAGE_W, PAGE_H = 1.65, 1.5      # the live page: title across, 0.8 m body column, photo and caption beside it
 ZC = 0.55 + PAGE_H / 2          # page centre height: its lowest line sits 0.55 m up, clear of long grass
 PPM = 640                       # texture pixels per metre
 SE = 6.0                        # superellipse power of a stretched hide
@@ -88,7 +88,9 @@ def tex_set(kind):
         return _SETS[kind]
     s = 1024
     if kind == "rawhide":
-        out = (load(os.path.join(HUT_TEX, "Hut_Rawhide_BaseColor.png")),
+        col = load(os.path.join(HUT_TEX, "Hut_Rawhide_BaseColor.png"))
+        m = col.mean((0, 1))
+        out = ((col - m) * 0.55 + m * 1.12,                       # calmer blotches over the whole hide, so dye reads
                load(os.path.join(HUT_TEX, "Hut_Rawhide_Normal.png")))
     else:
         low, mid, hi = fbm(s, 1.8), fbm(s, 1.2), fbm(s, 0.4)
@@ -122,22 +124,13 @@ def tex_set(kind):
     return out
 
 
-def write_surface(name, kind, bbox, lighten=True, paint=None):
+def write_surface(name, kind, bbox, paint=None):
     """Texture for a writing surface whose UVs span bbox (xmin, xmax, zmin, zmax, relative to the page centre).
-    lighten: scrape the area behind the page lighter and smoother. paint(base, xs, zs): extra decoration."""
+    paint(base, xs, zs): extra decoration."""
     xmin, xmax, zmin, zmax = bbox
     W, H = int(round((xmax - xmin) * PPM / 8)) * 8, int(round((zmax - zmin) * PPM / 8)) * 8
     col, nrm = tex_set(kind)
     base, nn = tile(col, H, W), tile(nrm, H, W)
-    if lighten:
-        x0, y0 = (-PAGE_W / 2 - xmin) * PPM, (-PAGE_H / 2 - zmin) * PPM
-        yy, xx = np.mgrid[0:H, 0:W]
-        f = 40
-        s = (np.clip(np.minimum(xx - x0 + f, x0 + PAGE_W * PPM + f - xx) / f, 0, 1) *
-             np.clip(np.minimum(yy - y0 + f, y0 + PAGE_H * PPM + f - yy) / f, 0, 1))
-        s = (s * s * (3 - 2 * s))[..., None]
-        base = base * (1 - s * 0.6) + base.mean((0, 1)) * 1.1 * s * 0.6
-        nn = nn * (1 - s * 0.85) + np.array((0.5, 0.5, 1.0)) * s * 0.85
     if paint:
         xs = xmin + (np.arange(W) + 0.5) / PPM
         zs = zmin + (np.arange(H) + 0.5) / PPM
@@ -432,7 +425,7 @@ def board_on_posts(name, seed, notice):
     if notice:
         paper_edge = hide_edge(PAGE_W / 2 + 0.09, PAGE_H / 2 + 0.1, k, lobes=False, p=30.0)
         pbb = extent(paper_edge)
-        write_surface(name, "paper", pbb, lighten=False)
+        write_surface(name, "paper", pbb)
     else:
         write_surface(name, "oak", front)
     zc = ZC
@@ -488,7 +481,7 @@ def hanging_sign(name, seed):
         line = (np.abs(X) < PAGE_W / 2 + 0.085) & (np.abs(Z) < PAGE_H / 2 + 0.085) & ~inner
         base[~inner] = np.array((0.36, 0.08, 0.06))                # oxblood frame
         base[line] = np.array((0.72, 0.56, 0.22))                  # ochre-gold pinstripe
-    write_surface(name, "painted", front, lighten=False, paint=border)
+    write_surface(name, "painted", front, paint=border)
     zc = ZC
     z_arm = zc + sh / 2 + 0.32
     x_post = -(sw / 2 + 0.45)
@@ -518,7 +511,7 @@ def scroll_stand(name, seed):
     pw, ph = PAGE_W + 0.24, PAGE_H + 0.34
     edge = hide_edge(pw / 2, ph / 2, k, lobes=False, p=30.0)
     bb = extent(edge)
-    write_surface(name, "parchment", bb, lighten=False)
+    write_surface(name, "parchment", bb)
     zc = ZC
     z_rod = zc + bb[3] + 0.07
     xs = pw / 2 + 0.22

@@ -13,7 +13,7 @@ public class InfoPage : MonoBehaviour
     [TextArea(2, 6)] public string caption;
     public Texture2D photo;
 
-    const float CaptionGap = 0.04f, PhotoShare = 0.7f;
+    const float CaptionGap = 0.04f, PhotoShare = 0.7f, BodyMin = 0.36f, BodyMax = 0.46f;
     static readonly int BaseMap = Shader.PropertyToID("_BaseMap");
     MaterialPropertyBlock block;
 
@@ -29,11 +29,25 @@ public class InfoPage : MonoBehaviour
         foreach (var t in GetComponentsInChildren<TMP_Text>(true))
         {
             if (t.name == "Title") t.text = title;
-            else if (t.name == "Body") t.text = body;
+            else if (t.name == "Body") { t.text = body; FitBody(t); }
             else if (t.name == "Caption") t.text = caption;
         }
         foreach (var area in GetComponentsInChildren<Transform>(true))
             if (area.name == "PhotoArea") FitPhoto(area);
+    }
+
+    // the largest body size up to BodyMax that fits the column; TMP's own auto-size steps too coarsely at world sizes
+    void FitBody(TMP_Text t)
+    {
+        t.enableAutoSizing = false;
+        var box = ((RectTransform)t.transform).rect.size;
+        float lo = BodyMin, hi = BodyMax;
+        for (int i = 0; i < 8; i++)
+        {
+            t.fontSize = (lo + hi) / 2;
+            if (t.GetPreferredValues(body, box.x, 0).y <= box.y) lo = t.fontSize; else hi = t.fontSize;
+        }
+        t.fontSize = lo;
     }
 
     void FitPhoto(Transform area)
