@@ -156,7 +156,7 @@ Material:
     - _WindBranchAmpl: 0.5
     - _WindBranchFreq: 0.01
     - _WindBranchSpeed: 0.04
-    - _WindLeafAmpl: 0.32
+    - _WindLeafAmpl: 0.08
     - _WindLeafFreq: 1.18
     - _WindLeafSpeed: 0.13
     - _WindTreeAmpl: 0.2

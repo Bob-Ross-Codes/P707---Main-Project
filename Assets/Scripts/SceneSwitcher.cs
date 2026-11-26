@@ -115,7 +115,7 @@ public class SceneSwitcher : MonoBehaviour
 
         SceneManager.LoadScene(sceneName);
     }
-   
+
     public void LoadLastAllowedScene()
     {
         int sceneCount = SceneManager.sceneCountInBuildSettings;
@@ -123,18 +123,9 @@ public class SceneSwitcher : MonoBehaviour
 
         int minAllowed = Mathf.Clamp(minAllowedBuildIndex, 0, sceneCount - 1);
         int currentIndex = SceneManager.GetActiveScene().buildIndex;
+        int targetIndex = currentIndex - 1;
 
-        int targetIndex;
-        if (currentIndex > minAllowed)
-        {
-            targetIndex = minAllowed;
-        }
-        else
-        {
-            targetIndex = currentIndex - 1;
-        }
-
-        if (targetIndex >= minAllowed && targetIndex >= 0 && targetIndex != currentIndex)
+        if (targetIndex >= minAllowed && targetIndex >= 0)
         {
             SceneManager.LoadScene(targetIndex);
         }
