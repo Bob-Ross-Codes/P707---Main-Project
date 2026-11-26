@@ -14,7 +14,7 @@ public class InfoPage : MonoBehaviour
     public Texture2D photo;
 
     const float CaptionGap = 0.04f, PhotoShare = 0.7f, BodyMin = 0.36f, BodyMax = 0.46f;
-    static readonly int BaseMap = Shader.PropertyToID("_BaseMap");
+    static readonly int BaseMap = Shader.PropertyToID("_BaseColorMap"); // HDRP/Lit name; URP used _BaseMap
     MaterialPropertyBlock block;
 
     void OnEnable() => Apply();
