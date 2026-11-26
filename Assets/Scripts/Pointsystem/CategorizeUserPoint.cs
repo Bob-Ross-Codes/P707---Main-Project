@@ -1,147 +1,234 @@
 using UnityEngine;
-using System.Collections;
-using System.Runtime.CompilerServices;
-using Unity.VisualScripting;
-using System;
+using UnityEngine.SceneManagement;
 
 public class CategorizeUserPoint : MonoBehaviour
 {
+    [System.Serializable]
+    public class ScenePointState
+    {
+        [Header("Scene State")]
+
+        public float ScoreMult = 0.5f;
+
+        public float timer;
+
+        public bool HasReceivedRevisitBonus;
+
+        public bool HasVisitedAgeSection;
+
+        public bool Cooldown;
+
+        [Header("Private Runtime Values")]
+
+        public bool Scoremultreset;
+
+        public bool ScoreMultIsRunning;
+
+        public bool timerRunning;
+
+        public float DwellTimer;
+
+        public bool IsInside;
+    }
+
+    [Header("Scene Setup")]
+
+    [Tooltip("Scene names must match the actual Unity scene names")]
+    public string[] SceneNames;
+
+    [Tooltip("One separate state for each scene")]
+    public ScenePointState[] SceneStates;
+
+    private ScenePointState CurrentState;
+
+    private int CurrentSceneIndex = -1;
+
     [Header("Dwelltime point count")]
 
-    [Tooltip("Private Values")]
-    [SerializeField]
-    private float ScoreMult;
-    private bool ScoreMultIsRunning;
+    public float ScoreMultTimerLoop = 1f;
 
-    [Tooltip("Time speed for how fast the scoremulitiplier counts up whitin interest point (in sec)")]
-    public float ScoreMultTimerLoop;
+    public float ScoreLowPenaltyThreshold = 0.6f;
 
-    [Tooltip("What ScoreMult need to reach to miss penalty when leaving interest point (in sec)")]
-    public float ScoreLowPenaltyThreshold;
+    public float Penalty = 5f;
 
-    [Tooltip("Amount of points lost to penalty")]
-    public float Penalty;
+    [Header("Revisit Bonus")]
 
-    [Tooltip("Time before revisit bonus")]
     public float timer;
 
-    [Header("Penalty/Rewardtriggers")]
+    public int TimerReturn = 10;
 
-    [Tooltip("Player has recieved bonuspoint for revisiting")]
-    public bool HasReceivedRevisitBonus;
+    [Header("Test Values")]
 
-    [Tooltip("Player have visited the time before")]
-    public bool HasVisitedAgeSection;
-
-    [Tooltip("return timer")]
-    public int TimerReturn;
-
-    [Tooltip("Cooldown trigger")]
-    public bool Cooldown;
-
-    [Header("TestValues")]
     public bool Test;
-    private bool Scoremultreset;
-    
-    private bool timerRunning = false;
 
     private PlayerStats playerStats;
 
-    private Coroutine standCoroutine;
-
     private void Start()
     {
-        //Get Playerstats so we can alter points
         playerStats = FindFirstObjectByType<PlayerStats>();
+
+        UpdateSceneState();
     }
 
     private void Update()
     {
+        UpdateSceneState();
+
+        if (CurrentState == null)
+            return;
+
         if (Test)
         {
             RevisitBonus();
             Test = false;
         }
 
-        if (timerRunning)
+        // Revisit timer
+        if (CurrentState.timerRunning)
         {
-            timer += Time.deltaTime;
+            CurrentState.timer += Time.deltaTime;
 
-            if (timer >= TimerReturn)
+            if (CurrentState.timer >= TimerReturn)
             {
-                timer = TimerReturn;
-                timerRunning = false;
+                CurrentState.timer = TimerReturn;
 
-                Cooldown = true;
+                CurrentState.timerRunning = false;
+
+                CurrentState.Cooldown = true;
             }
+        }
+
+        // Dwell timer
+        if (CurrentState.IsInside)
+        {
+            UpdateDwellTimer();
         }
     }
 
-    //On Player Exit. Visit again bous;
+    // Finds which scene we are currently in
+    private void UpdateSceneState()
+    {
+        string sceneName = SceneManager.GetActiveScene().name;
+
+        int sceneIndex = -1;
+
+        for (int i = 0; i < SceneNames.Length; i++)
+        {
+            if (SceneNames[i] == sceneName)
+            {
+                sceneIndex = i;
+                break;
+            }
+        }
+
+        // Scene not found in our array
+        if (sceneIndex == -1)
+        {
+            CurrentState = null;
+            return;
+        }
+
+        // No need to update if we are already using the correct scene
+        if (sceneIndex == CurrentSceneIndex)
+            return;
+
+        CurrentSceneIndex = sceneIndex;
+
+        CurrentState = SceneStates[sceneIndex];
+
+        Debug.Log(gameObject.name + " is now using state for scene: " + sceneName);
+    }
+
+    // On Player Exit - starts revisit timer
     public void RevisitBonus()
     {
-        timer = 0f;
-        timerRunning = true;
+        if (CurrentState == null)
+            return;
+
+        CurrentState.timer = 0f;
+
+        CurrentState.timerRunning = true;
+
+        CurrentState.Cooldown = false;
     }
 
-    //On Player Enter. 
+    // On Player Enter
     public void Bonuspoint()
     {
-
+        // Your bonus logic goes here
     }
 
-    //On Player Exit. cooldown period for when leaving interest point and returning to acctually ge tthe points.
+    // On Player Exit
     public void Cooldownperiod()
     {
-        //Reset Scoremult for each visit to interestpoint
-        Scoremultreset = false;
+        if (CurrentState == null)
+            return;
 
-        if (ScoreMult <= ScoreLowPenaltyThreshold)
+        // Reset multiplier for the next visit
+        CurrentState.Scoremultreset = false;
+
+        CurrentState.ScoreMultIsRunning = false;
+
+        CurrentState.IsInside = false;
+
+        CurrentState.DwellTimer = 0f;
+
+        // Penalty
+        if (CurrentState.ScoreMult <= ScoreLowPenaltyThreshold)
         {
             LosePoints(Penalty);
         }
 
-        playerStats.Playerpoints = playerStats.Playerpoints * ScoreMult;
-
+        // Apply multiplier
+        playerStats.Playerpoints *= CurrentState.ScoreMult;
     }
 
-    //While inside colider Event. Dwell cheker.
+    // While inside collider
     public void WithinInterestPoint()
     {
-        if (!Scoremultreset)
-        {
-            ScoreMult = 0.5f;
-            Scoremultreset = true;
-        }
+        if (CurrentState == null)
+            return;
 
-        if (!ScoreMultIsRunning)
+        CurrentState.IsInside = true;
+
+        if (!CurrentState.Scoremultreset)
         {
-            standCoroutine = StartCoroutine(DwellTimer());
+            CurrentState.ScoreMult = 0.5f;
+
+            CurrentState.Scoremultreset = true;
+
+            CurrentState.DwellTimer = 0f;
         }
     }
 
-    IEnumerator DwellTimer()
+    // Dwell timer
+    private void UpdateDwellTimer()
     {
-        ScoreMultIsRunning = true;
+        if (CurrentState.ScoreMult >= 2.0f)
+            return;
 
-        while (ScoreMult < 2.0f)
+        CurrentState.DwellTimer += Time.deltaTime;
+
+        if (CurrentState.DwellTimer >= ScoreMultTimerLoop)
         {
-            ScoreMult += 0.01f;
-            ScoreMult = Mathf.Min(ScoreMult, 2.0f);
+            CurrentState.DwellTimer = 0f;
 
-            yield return new WaitForSeconds(ScoreMultTimerLoop);
+            CurrentState.ScoreMult += 0.01f;
+
+            CurrentState.ScoreMult = Mathf.Min(
+                CurrentState.ScoreMult,
+                2.0f
+            );
         }
-
-        ScoreMultIsRunning = false;
     }
 
-    //The regular point gain call
+    // Regular point gain
     public void GainPoints(float amountGain)
     {
         playerStats.Playerpoints += amountGain;
     }
 
-    //The regular point loss call
+    // Regular point loss
     public void LosePoints(float amountLose)
     {
         playerStats.Playerpoints -= amountLose;
