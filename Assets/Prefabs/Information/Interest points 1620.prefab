@@ -29,12 +29,12 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 2745333773869467576}
-  - {fileID: 6945813305477049057}
-  - {fileID: 8460182505053437996}
+  - {fileID: 5170462079111169208}
+  - {fileID: 4470154447059724362}
+  - {fileID: 578665101908109421}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &2382962846492595394
+--- !u!1001 &4596442993614052121
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -42,205 +42,673 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 153555380835384833}
     m_Modifications:
-    - target: {fileID: 4013676703193658887, guid: 874f977d8584e73428a1f062127eb77a, type: 3}
-      propertyPath: m_Name
-      value: Interestpoint TH
+    - target: {fileID: 237826017943210953, guid: 0279a5ab4fa3243f893e45b3e7d7ce5d, type: 3}
+      propertyPath: m_text
+      value: "Lige ved infopunktet er der fundet spor af syldsten, som formentlig
+        har haft en bindingsv\xE6rksoverbygning. Inde i huset var der lergulve, og
+        et sted kunne der ses spor af et yngre tr\xE6gulv, der var lagt oven p\xE5
+        et lergulv. Oven over disse spor l\xE5 endnu en r\xE6kke store syldsten fra
+        et yngre hus, som har ligget omtrent samme sted. Flere andre steder er der
+        fra perioden fundet spor af syldsten fra husenes fundamenter eller spor af
+        lergulve fra husenes indre. Der er ogs\xE5 nogle spor af mure, som kan v\xE6re
+        rester af stenhuse, der kan have ligget der i 1620."
       objectReference: {fileID: 0}
-    - target: {fileID: 6087009892966225134, guid: 874f977d8584e73428a1f062127eb77a, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.44379646
+    - target: {fileID: 311113509142722892, guid: 0279a5ab4fa3243f893e45b3e7d7ce5d, type: 3}
+      propertyPath: m_text
+      value: "Lige ved infopunktet er der fundet spor af syldsten, som formentlig
+        har haft en bindingsv\xE6rksoverbygning. Inde i huset var der lergulve, og
+        et sted kunne der ses spor af et yngre tr\xE6gulv, der var lagt oven p\xE5
+        et lergulv. Oven over disse spor l\xE5 endnu en r\xE6kke store syldsten fra
+        et yngre hus, som har ligget omtrent samme sted. Flere andre steder er der
+        fra perioden fundet spor af syldsten fra husenes fundamenter eller spor af
+        lergulve fra husenes indre. Der er ogs\xE5 nogle spor af mure, som kan v\xE6re
+        rester af stenhuse, der kan have ligget der i 1620."
       objectReference: {fileID: 0}
-    - target: {fileID: 6087009892966225134, guid: 874f977d8584e73428a1f062127eb77a, type: 3}
+    - target: {fileID: 1327395550706130593, guid: 0279a5ab4fa3243f893e45b3e7d7ce5d, type: 3}
+      propertyPath: m_text
+      value: "Foto fra udgravning i Lavendelstr\xE6de (KBM4912), ved infopunktet,
+        hvor der cirka 1,5 m under nutidens asfalt til venstre ses de temmelig m\xF8rke
+        spor af tr\xE6konstruktionen fra et bindingsv\xE6rkshus. Oven for den lille
+        m\xE5lestok ses rester af det gule lergulv."
+      objectReference: {fileID: 0}
+    - target: {fileID: 1341486872904994856, guid: 0279a5ab4fa3243f893e45b3e7d7ce5d, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0.7168966
+      objectReference: {fileID: 0}
+    - target: {fileID: 1341486872904994856, guid: 0279a5ab4fa3243f893e45b3e7d7ce5d, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -0.18310341
+      objectReference: {fileID: 0}
+    - target: {fileID: 1493070781174740374, guid: 0279a5ab4fa3243f893e45b3e7d7ce5d, type: 3}
+      propertyPath: body
+      value: "Lige ved infopunktet er der fundet spor af syldsten, som formentlig
+        har haft en bindingsv\xE6rksoverbygning. Inde i huset var der lergulve, og
+        et sted kunne der ses spor af et yngre tr\xE6gulv, der var lagt oven p\xE5
+        et lergulv. Oven over disse spor l\xE5 endnu en r\xE6kke store syldsten fra
+        et yngre hus, som har ligget omtrent samme sted. Flere andre steder er der
+        fra perioden fundet spor af syldsten fra husenes fundamenter eller spor af
+        lergulve fra husenes indre. Der er ogs\xE5 nogle spor af mure, som kan v\xE6re
+        rester af stenhuse, der kan have ligget der i 1620."
+      objectReference: {fileID: 0}
+    - target: {fileID: 1493070781174740374, guid: 0279a5ab4fa3243f893e45b3e7d7ce5d, type: 3}
+      propertyPath: photo
+      value: 
+      objectReference: {fileID: 2800000, guid: 7265b59ca0989425a80e52d09a51743d, type: 3}
+    - target: {fileID: 1493070781174740374, guid: 0279a5ab4fa3243f893e45b3e7d7ce5d, type: 3}
+      propertyPath: title
+      value: Spor af huse
+      objectReference: {fileID: 0}
+    - target: {fileID: 1493070781174740374, guid: 0279a5ab4fa3243f893e45b3e7d7ce5d, type: 3}
+      propertyPath: caption
+      value: "Foto fra udgravning i Lavendelstr\xE6de (KBM4912), ved infopunktet,
+        hvor der cirka 1,5 m under nutidens asfalt til venstre ses de temmelig m\xF8rke
+        spor af tr\xE6konstruktionen fra et bindingsv\xE6rkshus. Oven for den lille
+        m\xE5lestok ses rester af det gule lergulv."
+      objectReference: {fileID: 0}
+    - target: {fileID: 2493651716499498182, guid: 0279a5ab4fa3243f893e45b3e7d7ce5d, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0.7168966
+      objectReference: {fileID: 0}
+    - target: {fileID: 2493651716499498182, guid: 0279a5ab4fa3243f893e45b3e7d7ce5d, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -0.18310341
+      objectReference: {fileID: 0}
+    - target: {fileID: 3142143830907740686, guid: 0279a5ab4fa3243f893e45b3e7d7ce5d, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.44379646
+      value: 0.5209515
       objectReference: {fileID: 0}
-    - target: {fileID: 6087009892966225134, guid: 874f977d8584e73428a1f062127eb77a, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0.44379646
-      objectReference: {fileID: 0}
-    - target: {fileID: 6087009892966225134, guid: 874f977d8584e73428a1f062127eb77a, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 1.094
-      objectReference: {fileID: 0}
-    - target: {fileID: 6087009892966225134, guid: 874f977d8584e73428a1f062127eb77a, type: 3}
+    - target: {fileID: 3142143830907740686, guid: 0279a5ab4fa3243f893e45b3e7d7ce5d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.503
+      value: 0.23952425
       objectReference: {fileID: 0}
-    - target: {fileID: 6087009892966225134, guid: 874f977d8584e73428a1f062127eb77a, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -2.721
+    - target: {fileID: 4358878430883774369, guid: 0279a5ab4fa3243f893e45b3e7d7ce5d, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0.7168966
       objectReference: {fileID: 0}
-    - target: {fileID: 6087009892966225134, guid: 874f977d8584e73428a1f062127eb77a, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
+    - target: {fileID: 4358878430883774369, guid: 0279a5ab4fa3243f893e45b3e7d7ce5d, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -0.18310341
       objectReference: {fileID: 0}
-    - target: {fileID: 6087009892966225134, guid: 874f977d8584e73428a1f062127eb77a, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
+    - target: {fileID: 4368178264151894758, guid: 0279a5ab4fa3243f893e45b3e7d7ce5d, type: 3}
+      propertyPath: m_text
+      value: Spor af huse
       objectReference: {fileID: 0}
-    - target: {fileID: 6087009892966225134, guid: 874f977d8584e73428a1f062127eb77a, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
+    - target: {fileID: 5798827866081060021, guid: 0279a5ab4fa3243f893e45b3e7d7ce5d, type: 3}
+      propertyPath: m_text
+      value: Spor af huse
       objectReference: {fileID: 0}
-    - target: {fileID: 6087009892966225134, guid: 874f977d8584e73428a1f062127eb77a, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
+    - target: {fileID: 5838441673626194164, guid: 0279a5ab4fa3243f893e45b3e7d7ce5d, type: 3}
+      propertyPath: m_text
+      value: "Lige ved infopunktet er der fundet spor af syldsten, som formentlig
+        har haft en bindingsv\xE6rksoverbygning. Inde i huset var der lergulve, og
+        et sted kunne der ses spor af et yngre tr\xE6gulv, der var lagt oven p\xE5
+        et lergulv. Oven over disse spor l\xE5 endnu en r\xE6kke store syldsten fra
+        et yngre hus, som har ligget omtrent samme sted. Flere andre steder er der
+        fra perioden fundet spor af syldsten fra husenes fundamenter eller spor af
+        lergulve fra husenes indre. Der er ogs\xE5 nogle spor af mure, som kan v\xE6re
+        rester af stenhuse, der kan have ligget der i 1620."
       objectReference: {fileID: 0}
-    - target: {fileID: 6087009892966225134, guid: 874f977d8584e73428a1f062127eb77a, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
+    - target: {fileID: 6005446282144973439, guid: 0279a5ab4fa3243f893e45b3e7d7ce5d, type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6087009892966225134, guid: 874f977d8584e73428a1f062127eb77a, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6087009892966225134, guid: 874f977d8584e73428a1f062127eb77a, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8875517735535445494, guid: 874f977d8584e73428a1f062127eb77a, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: ba587eb2114906b4b993ef4d5251109d, type: 3}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 874f977d8584e73428a1f062127eb77a, type: 3}
---- !u!4 &8460182505053437996 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 6087009892966225134, guid: 874f977d8584e73428a1f062127eb77a, type: 3}
-  m_PrefabInstance: {fileID: 2382962846492595394}
-  m_PrefabAsset: {fileID: 0}
---- !u!1001 &3755187736914329103
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 153555380835384833}
-    m_Modifications:
-    - target: {fileID: 4013676703193658887, guid: 874f977d8584e73428a1f062127eb77a, type: 3}
-      propertyPath: m_Name
-      value: Interestpoint MID
-      objectReference: {fileID: 0}
-    - target: {fileID: 6087009892966225134, guid: 874f977d8584e73428a1f062127eb77a, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 4.455
-      objectReference: {fileID: 0}
-    - target: {fileID: 6087009892966225134, guid: 874f977d8584e73428a1f062127eb77a, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.3
-      objectReference: {fileID: 0}
-    - target: {fileID: 6087009892966225134, guid: 874f977d8584e73428a1f062127eb77a, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -2.9
-      objectReference: {fileID: 0}
-    - target: {fileID: 6087009892966225134, guid: 874f977d8584e73428a1f062127eb77a, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6087009892966225134, guid: 874f977d8584e73428a1f062127eb77a, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6087009892966225134, guid: 874f977d8584e73428a1f062127eb77a, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6087009892966225134, guid: 874f977d8584e73428a1f062127eb77a, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6087009892966225134, guid: 874f977d8584e73428a1f062127eb77a, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6087009892966225134, guid: 874f977d8584e73428a1f062127eb77a, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6087009892966225134, guid: 874f977d8584e73428a1f062127eb77a, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8875517735535445494, guid: 874f977d8584e73428a1f062127eb77a, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: 4573024261d972945bd10dc7a1ae78f5, type: 3}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 874f977d8584e73428a1f062127eb77a, type: 3}
---- !u!4 &6945813305477049057 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 6087009892966225134, guid: 874f977d8584e73428a1f062127eb77a, type: 3}
-  m_PrefabInstance: {fileID: 3755187736914329103}
-  m_PrefabAsset: {fileID: 0}
---- !u!1001 &8241593618064020310
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 153555380835384833}
-    m_Modifications:
-    - target: {fileID: 4013676703193658887, guid: 874f977d8584e73428a1f062127eb77a, type: 3}
+    - target: {fileID: 6958024535903978260, guid: 0279a5ab4fa3243f893e45b3e7d7ce5d, type: 3}
       propertyPath: m_Name
       value: Interestpoint TV
       objectReference: {fileID: 0}
-    - target: {fileID: 6087009892966225134, guid: 874f977d8584e73428a1f062127eb77a, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 4.941
+    - target: {fileID: 6958024535903978260, guid: 0279a5ab4fa3243f893e45b3e7d7ce5d, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6087009892966225134, guid: 874f977d8584e73428a1f062127eb77a, type: 3}
+    - target: {fileID: 7269181773766021857, guid: 0279a5ab4fa3243f893e45b3e7d7ce5d, type: 3}
+      propertyPath: m_text
+      value: "Foto fra udgravning i Lavendelstr\xE6de (KBM4912), ved infopunktet,
+        hvor der cirka 1,5 m under nutidens asfalt til venstre ses de temmelig m\xF8rke
+        spor af tr\xE6konstruktionen fra et bindingsv\xE6rkshus. Oven for den lille
+        m\xE5lestok ses rester af det gule lergulv."
+      objectReference: {fileID: 0}
+    - target: {fileID: 7429482852145493569, guid: 0279a5ab4fa3243f893e45b3e7d7ce5d, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.5209515
+      objectReference: {fileID: 0}
+    - target: {fileID: 7429482852145493569, guid: 0279a5ab4fa3243f893e45b3e7d7ce5d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.564
+      value: 0.23952425
       objectReference: {fileID: 0}
-    - target: {fileID: 6087009892966225134, guid: 874f977d8584e73428a1f062127eb77a, type: 3}
+    - target: {fileID: 7548482369679110369, guid: 0279a5ab4fa3243f893e45b3e7d7ce5d, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7803430666374741554, guid: 0279a5ab4fa3243f893e45b3e7d7ce5d, type: 3}
+      propertyPath: m_text
+      value: "Foto fra udgravning i Lavendelstr\xE6de (KBM4912), ved infopunktet,
+        hvor der cirka 1,5 m under nutidens asfalt til venstre ses de temmelig m\xF8rke
+        spor af tr\xE6konstruktionen fra et bindingsv\xE6rkshus. Oven for den lille
+        m\xE5lestok ses rester af det gule lergulv."
+      objectReference: {fileID: 0}
+    - target: {fileID: 7894263092076619457, guid: 0279a5ab4fa3243f893e45b3e7d7ce5d, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.5209515
+      objectReference: {fileID: 0}
+    - target: {fileID: 7894263092076619457, guid: 0279a5ab4fa3243f893e45b3e7d7ce5d, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.23952425
+      objectReference: {fileID: 0}
+    - target: {fileID: 7986753995327930805, guid: 0279a5ab4fa3243f893e45b3e7d7ce5d, type: 3}
+      propertyPath: m_text
+      value: Spor af huse
+      objectReference: {fileID: 0}
+    - target: {fileID: 8649430615306690465, guid: 0279a5ab4fa3243f893e45b3e7d7ce5d, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 8649430615306690465, guid: 0279a5ab4fa3243f893e45b3e7d7ce5d, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 8649430615306690465, guid: 0279a5ab4fa3243f893e45b3e7d7ce5d, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 8649430615306690465, guid: 0279a5ab4fa3243f893e45b3e7d7ce5d, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 4.7957544
+      objectReference: {fileID: 0}
+    - target: {fileID: 8649430615306690465, guid: 0279a5ab4fa3243f893e45b3e7d7ce5d, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.34977418
+      objectReference: {fileID: 0}
+    - target: {fileID: 8649430615306690465, guid: 0279a5ab4fa3243f893e45b3e7d7ce5d, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -3.092
+      value: -2.8409996
       objectReference: {fileID: 0}
-    - target: {fileID: 6087009892966225134, guid: 874f977d8584e73428a1f062127eb77a, type: 3}
+    - target: {fileID: 8649430615306690465, guid: 0279a5ab4fa3243f893e45b3e7d7ce5d, type: 3}
       propertyPath: m_LocalRotation.w
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 6087009892966225134, guid: 874f977d8584e73428a1f062127eb77a, type: 3}
+    - target: {fileID: 8649430615306690465, guid: 0279a5ab4fa3243f893e45b3e7d7ce5d, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6087009892966225134, guid: 874f977d8584e73428a1f062127eb77a, type: 3}
+    - target: {fileID: 8649430615306690465, guid: 0279a5ab4fa3243f893e45b3e7d7ce5d, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6087009892966225134, guid: 874f977d8584e73428a1f062127eb77a, type: 3}
+    - target: {fileID: 8649430615306690465, guid: 0279a5ab4fa3243f893e45b3e7d7ce5d, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6087009892966225134, guid: 874f977d8584e73428a1f062127eb77a, type: 3}
+    - target: {fileID: 8649430615306690465, guid: 0279a5ab4fa3243f893e45b3e7d7ce5d, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6087009892966225134, guid: 874f977d8584e73428a1f062127eb77a, type: 3}
+    - target: {fileID: 8649430615306690465, guid: 0279a5ab4fa3243f893e45b3e7d7ce5d, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6087009892966225134, guid: 874f977d8584e73428a1f062127eb77a, type: 3}
+    - target: {fileID: 8649430615306690465, guid: 0279a5ab4fa3243f893e45b3e7d7ce5d, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8875517735535445494, guid: 874f977d8584e73428a1f062127eb77a, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: c3b9dd6208b29ea4e9430c613332475c, type: 3}
+    - target: {fileID: 8708951516642647983, guid: 0279a5ab4fa3243f893e45b3e7d7ce5d, type: 3}
+      propertyPath: zoneSelection
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 874f977d8584e73428a1f062127eb77a, type: 3}
---- !u!4 &2745333773869467576 stripped
+  m_SourcePrefab: {fileID: 100100000, guid: 0279a5ab4fa3243f893e45b3e7d7ce5d, type: 3}
+--- !u!4 &5170462079111169208 stripped
 Transform:
-  m_CorrespondingSourceObject: {fileID: 6087009892966225134, guid: 874f977d8584e73428a1f062127eb77a, type: 3}
-  m_PrefabInstance: {fileID: 8241593618064020310}
+  m_CorrespondingSourceObject: {fileID: 8649430615306690465, guid: 0279a5ab4fa3243f893e45b3e7d7ce5d, type: 3}
+  m_PrefabInstance: {fileID: 4596442993614052121}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &5044557803165775851
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 153555380835384833}
+    m_Modifications:
+    - target: {fileID: 237826017943210953, guid: 0279a5ab4fa3243f893e45b3e7d7ce5d, type: 3}
+      propertyPath: m_text
+      value: "Tidligere var K\xF8benhavn ikke anlagt efter en overordnet plan. Gadenettet
+        fulgte de gamle landeveje, der f\xF8rte ind og ud af byen. I Christian d.
+        4\u2019s regeringstid blev der foretaget store \xE6ndringer, idet st\xF8rre
+        dele af byen blev udlagt efter n\xF8je udt\xE6nkte planer med symmetri og
+        geometrisk strenghed. Der findes ikke et matrikelkort fra 1620. Der er dog
+        udarbejdet en rekonstruktion af, hvordan matrikuleringen af grundene kan
+        have v\xE6ret udlagt i 1689, som stemmer overens med en plan fra 1649. Der
+        kan naturligvis v\xE6re sket \xE6ndringer i l\xF8bet af disse knap 30 \xE5r,
+        men inden for middelalderbyen var det nok begr\xE6nset, da denne del af byen
+        allerede dengang var t\xE6t bebygget."
+      objectReference: {fileID: 0}
+    - target: {fileID: 311113509142722892, guid: 0279a5ab4fa3243f893e45b3e7d7ce5d, type: 3}
+      propertyPath: m_text
+      value: "Tidligere var K\xF8benhavn ikke anlagt efter en overordnet plan. Gadenettet
+        fulgte de gamle landeveje, der f\xF8rte ind og ud af byen. I Christian d.
+        4\u2019s regeringstid blev der foretaget store \xE6ndringer, idet st\xF8rre
+        dele af byen blev udlagt efter n\xF8je udt\xE6nkte planer med symmetri og
+        geometrisk strenghed. Der findes ikke et matrikelkort fra 1620. Der er dog
+        udarbejdet en rekonstruktion af, hvordan matrikuleringen af grundene kan
+        have v\xE6ret udlagt i 1689, som stemmer overens med en plan fra 1649. Der
+        kan naturligvis v\xE6re sket \xE6ndringer i l\xF8bet af disse knap 30 \xE5r,
+        men inden for middelalderbyen var det nok begr\xE6nset, da denne del af byen
+        allerede dengang var t\xE6t bebygget."
+      objectReference: {fileID: 0}
+    - target: {fileID: 1327395550706130593, guid: 0279a5ab4fa3243f893e45b3e7d7ce5d, type: 3}
+      propertyPath: m_text
+      value: "Udsnit af Resens kort over K\xF8benhavn fra 1674, som viser forskellen
+        mellem middelalderbyens krogede gader til h\xF8jre og de planlagte nye bydele,
+        is\xE6r Nyboder fra 1630\u2019erne, til venstre. Vesterport ses i h\xF8jre
+        side."
+      objectReference: {fileID: 0}
+    - target: {fileID: 1341486872904994856, guid: 0279a5ab4fa3243f893e45b3e7d7ce5d, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 1.044
+      objectReference: {fileID: 0}
+    - target: {fileID: 1341486872904994856, guid: 0279a5ab4fa3243f893e45b3e7d7ce5d, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0.14400002
+      objectReference: {fileID: 0}
+    - target: {fileID: 1493070781174740374, guid: 0279a5ab4fa3243f893e45b3e7d7ce5d, type: 3}
+      propertyPath: body
+      value: "Tidligere var K\xF8benhavn ikke anlagt efter en overordnet plan. Gadenettet
+        fulgte de gamle landeveje, der f\xF8rte ind og ud af byen. I Christian d.
+        4\u2019s regeringstid blev der foretaget store \xE6ndringer, idet st\xF8rre
+        dele af byen blev udlagt efter n\xF8je udt\xE6nkte planer med symmetri og
+        geometrisk strenghed. Der findes ikke et matrikelkort fra 1620. Der er dog
+        udarbejdet en rekonstruktion af, hvordan matrikuleringen af grundene kan
+        have v\xE6ret udlagt i 1689, som stemmer overens med en plan fra 1649. Der
+        kan naturligvis v\xE6re sket \xE6ndringer i l\xF8bet af disse knap 30 \xE5r,
+        men inden for middelalderbyen var det nok begr\xE6nset, da denne del af byen
+        allerede dengang var t\xE6t bebygget."
+      objectReference: {fileID: 0}
+    - target: {fileID: 1493070781174740374, guid: 0279a5ab4fa3243f893e45b3e7d7ce5d, type: 3}
+      propertyPath: photo
+      value: 
+      objectReference: {fileID: 2800000, guid: d3b957e244047471c80f50005883fed6, type: 3}
+    - target: {fileID: 1493070781174740374, guid: 0279a5ab4fa3243f893e45b3e7d7ce5d, type: 3}
+      propertyPath: title
+      value: "Byplanl\xE6gning"
+      objectReference: {fileID: 0}
+    - target: {fileID: 1493070781174740374, guid: 0279a5ab4fa3243f893e45b3e7d7ce5d, type: 3}
+      propertyPath: caption
+      value: "Udsnit af Resens kort over K\xF8benhavn fra 1674, som viser forskellen
+        mellem middelalderbyens krogede gader til h\xF8jre og de planlagte nye bydele,
+        is\xE6r Nyboder fra 1630\u2019erne, til venstre. Vesterport ses i h\xF8jre
+        side."
+      objectReference: {fileID: 0}
+    - target: {fileID: 2493651716499498182, guid: 0279a5ab4fa3243f893e45b3e7d7ce5d, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 1.044
+      objectReference: {fileID: 0}
+    - target: {fileID: 2493651716499498182, guid: 0279a5ab4fa3243f893e45b3e7d7ce5d, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0.14400002
+      objectReference: {fileID: 0}
+    - target: {fileID: 3142143830907740686, guid: 0279a5ab4fa3243f893e45b3e7d7ce5d, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.31392404
+      objectReference: {fileID: 0}
+    - target: {fileID: 3142143830907740686, guid: 0279a5ab4fa3243f893e45b3e7d7ce5d, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.343038
+      objectReference: {fileID: 0}
+    - target: {fileID: 3848048925147685390, guid: 0279a5ab4fa3243f893e45b3e7d7ce5d, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4358878430883774369, guid: 0279a5ab4fa3243f893e45b3e7d7ce5d, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 1.044
+      objectReference: {fileID: 0}
+    - target: {fileID: 4358878430883774369, guid: 0279a5ab4fa3243f893e45b3e7d7ce5d, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0.14400002
+      objectReference: {fileID: 0}
+    - target: {fileID: 4368178264151894758, guid: 0279a5ab4fa3243f893e45b3e7d7ce5d, type: 3}
+      propertyPath: m_text
+      value: "Byplanl\xE6gning"
+      objectReference: {fileID: 0}
+    - target: {fileID: 5798827866081060021, guid: 0279a5ab4fa3243f893e45b3e7d7ce5d, type: 3}
+      propertyPath: m_text
+      value: "Byplanl\xE6gning"
+      objectReference: {fileID: 0}
+    - target: {fileID: 5838441673626194164, guid: 0279a5ab4fa3243f893e45b3e7d7ce5d, type: 3}
+      propertyPath: m_text
+      value: "Tidligere var K\xF8benhavn ikke anlagt efter en overordnet plan. Gadenettet
+        fulgte de gamle landeveje, der f\xF8rte ind og ud af byen. I Christian d.
+        4\u2019s regeringstid blev der foretaget store \xE6ndringer, idet st\xF8rre
+        dele af byen blev udlagt efter n\xF8je udt\xE6nkte planer med symmetri og
+        geometrisk strenghed. Der findes ikke et matrikelkort fra 1620. Der er dog
+        udarbejdet en rekonstruktion af, hvordan matrikuleringen af grundene kan
+        have v\xE6ret udlagt i 1689, som stemmer overens med en plan fra 1649. Der
+        kan naturligvis v\xE6re sket \xE6ndringer i l\xF8bet af disse knap 30 \xE5r,
+        men inden for middelalderbyen var det nok begr\xE6nset, da denne del af byen
+        allerede dengang var t\xE6t bebygget."
+      objectReference: {fileID: 0}
+    - target: {fileID: 6005446282144973439, guid: 0279a5ab4fa3243f893e45b3e7d7ce5d, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6958024535903978260, guid: 0279a5ab4fa3243f893e45b3e7d7ce5d, type: 3}
+      propertyPath: m_Name
+      value: Interestpoint MID
+      objectReference: {fileID: 0}
+    - target: {fileID: 6958024535903978260, guid: 0279a5ab4fa3243f893e45b3e7d7ce5d, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7269181773766021857, guid: 0279a5ab4fa3243f893e45b3e7d7ce5d, type: 3}
+      propertyPath: m_text
+      value: "Udsnit af Resens kort over K\xF8benhavn fra 1674, som viser forskellen
+        mellem middelalderbyens krogede gader til h\xF8jre og de planlagte nye bydele,
+        is\xE6r Nyboder fra 1630\u2019erne, til venstre. Vesterport ses i h\xF8jre
+        side."
+      objectReference: {fileID: 0}
+    - target: {fileID: 7429482852145493569, guid: 0279a5ab4fa3243f893e45b3e7d7ce5d, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.31392404
+      objectReference: {fileID: 0}
+    - target: {fileID: 7429482852145493569, guid: 0279a5ab4fa3243f893e45b3e7d7ce5d, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.343038
+      objectReference: {fileID: 0}
+    - target: {fileID: 7803430666374741554, guid: 0279a5ab4fa3243f893e45b3e7d7ce5d, type: 3}
+      propertyPath: m_text
+      value: "Udsnit af Resens kort over K\xF8benhavn fra 1674, som viser forskellen
+        mellem middelalderbyens krogede gader til h\xF8jre og de planlagte nye bydele,
+        is\xE6r Nyboder fra 1630\u2019erne, til venstre. Vesterport ses i h\xF8jre
+        side."
+      objectReference: {fileID: 0}
+    - target: {fileID: 7894263092076619457, guid: 0279a5ab4fa3243f893e45b3e7d7ce5d, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.31392404
+      objectReference: {fileID: 0}
+    - target: {fileID: 7894263092076619457, guid: 0279a5ab4fa3243f893e45b3e7d7ce5d, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.343038
+      objectReference: {fileID: 0}
+    - target: {fileID: 7986753995327930805, guid: 0279a5ab4fa3243f893e45b3e7d7ce5d, type: 3}
+      propertyPath: m_text
+      value: "Byplanl\xE6gning"
+      objectReference: {fileID: 0}
+    - target: {fileID: 8649430615306690465, guid: 0279a5ab4fa3243f893e45b3e7d7ce5d, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 8649430615306690465, guid: 0279a5ab4fa3243f893e45b3e7d7ce5d, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 8649430615306690465, guid: 0279a5ab4fa3243f893e45b3e7d7ce5d, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 8649430615306690465, guid: 0279a5ab4fa3243f893e45b3e7d7ce5d, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 2.8457546
+      objectReference: {fileID: 0}
+    - target: {fileID: 8649430615306690465, guid: 0279a5ab4fa3243f893e45b3e7d7ce5d, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.34977418
+      objectReference: {fileID: 0}
+    - target: {fileID: 8649430615306690465, guid: 0279a5ab4fa3243f893e45b3e7d7ce5d, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -2.9909992
+      objectReference: {fileID: 0}
+    - target: {fileID: 8649430615306690465, guid: 0279a5ab4fa3243f893e45b3e7d7ce5d, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8649430615306690465, guid: 0279a5ab4fa3243f893e45b3e7d7ce5d, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8649430615306690465, guid: 0279a5ab4fa3243f893e45b3e7d7ce5d, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8649430615306690465, guid: 0279a5ab4fa3243f893e45b3e7d7ce5d, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8649430615306690465, guid: 0279a5ab4fa3243f893e45b3e7d7ce5d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8649430615306690465, guid: 0279a5ab4fa3243f893e45b3e7d7ce5d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8649430615306690465, guid: 0279a5ab4fa3243f893e45b3e7d7ce5d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8708951516642647983, guid: 0279a5ab4fa3243f893e45b3e7d7ce5d, type: 3}
+      propertyPath: zoneSelection
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 0279a5ab4fa3243f893e45b3e7d7ce5d, type: 3}
+--- !u!4 &4470154447059724362 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8649430615306690465, guid: 0279a5ab4fa3243f893e45b3e7d7ce5d, type: 3}
+  m_PrefabInstance: {fileID: 5044557803165775851}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &8074716127430424524
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 153555380835384833}
+    m_Modifications:
+    - target: {fileID: 237826017943210953, guid: 0279a5ab4fa3243f893e45b3e7d7ce5d, type: 3}
+      propertyPath: m_text
+      value: "Den nye Vesterport er den anden byport mod vest i byens historie. Den
+        l\xE5 l\xE6ngere mod vest end den f\xF8rste byport, der stadig stod. Der
+        er kun begr\xE6nsede beskrivelser af den nye port i skriftlige kilder, og
+        der findes ingen illustrationer. Ud fra beskrivelser og fund fra udgravninger
+        har vi sammensat et bud p\xE5, hvordan porten kan have set ud i 1620."
+      objectReference: {fileID: 0}
+    - target: {fileID: 311113509142722892, guid: 0279a5ab4fa3243f893e45b3e7d7ce5d, type: 3}
+      propertyPath: m_text
+      value: "Den nye Vesterport er den anden byport mod vest i byens historie. Den
+        l\xE5 l\xE6ngere mod vest end den f\xF8rste byport, der stadig stod. Der
+        er kun begr\xE6nsede beskrivelser af den nye port i skriftlige kilder, og
+        der findes ingen illustrationer. Ud fra beskrivelser og fund fra udgravninger
+        har vi sammensat et bud p\xE5, hvordan porten kan have set ud i 1620."
+      objectReference: {fileID: 0}
+    - target: {fileID: 1327395550706130593, guid: 0279a5ab4fa3243f893e45b3e7d7ce5d, type: 3}
+      propertyPath: m_text
+      value: "Forel\xF8big skitse af, hvordan porten kan have set ud i 1620. Tegning:
+        K\xF8benhavns Museum."
+      objectReference: {fileID: 0}
+    - target: {fileID: 1341486872904994856, guid: 0279a5ab4fa3243f893e45b3e7d7ce5d, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0.43399996
+      objectReference: {fileID: 0}
+    - target: {fileID: 1341486872904994856, guid: 0279a5ab4fa3243f893e45b3e7d7ce5d, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -0.46600005
+      objectReference: {fileID: 0}
+    - target: {fileID: 1493070781174740374, guid: 0279a5ab4fa3243f893e45b3e7d7ce5d, type: 3}
+      propertyPath: body
+      value: "Den nye Vesterport er den anden byport mod vest i byens historie. Den
+        l\xE5 l\xE6ngere mod vest end den f\xF8rste byport, der stadig stod. Der
+        er kun begr\xE6nsede beskrivelser af den nye port i skriftlige kilder, og
+        der findes ingen illustrationer. Ud fra beskrivelser og fund fra udgravninger
+        har vi sammensat et bud p\xE5, hvordan porten kan have set ud i 1620."
+      objectReference: {fileID: 0}
+    - target: {fileID: 1493070781174740374, guid: 0279a5ab4fa3243f893e45b3e7d7ce5d, type: 3}
+      propertyPath: photo
+      value: 
+      objectReference: {fileID: 2800000, guid: 20c809ec223b0473cbe08ccc5016c915, type: 3}
+    - target: {fileID: 1493070781174740374, guid: 0279a5ab4fa3243f893e45b3e7d7ce5d, type: 3}
+      propertyPath: title
+      value: Den nye Vesterport
+      objectReference: {fileID: 0}
+    - target: {fileID: 1493070781174740374, guid: 0279a5ab4fa3243f893e45b3e7d7ce5d, type: 3}
+      propertyPath: caption
+      value: "Forel\xF8big skitse af, hvordan porten kan have set ud i 1620. Tegning:
+        K\xF8benhavns Museum."
+      objectReference: {fileID: 0}
+    - target: {fileID: 2493651716499498182, guid: 0279a5ab4fa3243f893e45b3e7d7ce5d, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0.43399996
+      objectReference: {fileID: 0}
+    - target: {fileID: 2493651716499498182, guid: 0279a5ab4fa3243f893e45b3e7d7ce5d, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -0.46600005
+      objectReference: {fileID: 0}
+    - target: {fileID: 3142143830907740686, guid: 0279a5ab4fa3243f893e45b3e7d7ce5d, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.720505
+      objectReference: {fileID: 0}
+    - target: {fileID: 3142143830907740686, guid: 0279a5ab4fa3243f893e45b3e7d7ce5d, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.70000005
+      objectReference: {fileID: 0}
+    - target: {fileID: 3142143830907740686, guid: 0279a5ab4fa3243f893e45b3e7d7ce5d, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.14999999
+      objectReference: {fileID: 0}
+    - target: {fileID: 4358878430883774369, guid: 0279a5ab4fa3243f893e45b3e7d7ce5d, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0.43399996
+      objectReference: {fileID: 0}
+    - target: {fileID: 4358878430883774369, guid: 0279a5ab4fa3243f893e45b3e7d7ce5d, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -0.46600005
+      objectReference: {fileID: 0}
+    - target: {fileID: 4368178264151894758, guid: 0279a5ab4fa3243f893e45b3e7d7ce5d, type: 3}
+      propertyPath: m_text
+      value: Den nye Vesterport
+      objectReference: {fileID: 0}
+    - target: {fileID: 5798827866081060021, guid: 0279a5ab4fa3243f893e45b3e7d7ce5d, type: 3}
+      propertyPath: m_text
+      value: Den nye Vesterport
+      objectReference: {fileID: 0}
+    - target: {fileID: 5838441673626194164, guid: 0279a5ab4fa3243f893e45b3e7d7ce5d, type: 3}
+      propertyPath: m_text
+      value: "Den nye Vesterport er den anden byport mod vest i byens historie. Den
+        l\xE5 l\xE6ngere mod vest end den f\xF8rste byport, der stadig stod. Der
+        er kun begr\xE6nsede beskrivelser af den nye port i skriftlige kilder, og
+        der findes ingen illustrationer. Ud fra beskrivelser og fund fra udgravninger
+        har vi sammensat et bud p\xE5, hvordan porten kan have set ud i 1620."
+      objectReference: {fileID: 0}
+    - target: {fileID: 6958024535903978260, guid: 0279a5ab4fa3243f893e45b3e7d7ce5d, type: 3}
+      propertyPath: m_Name
+      value: Interestpoint TH
+      objectReference: {fileID: 0}
+    - target: {fileID: 6958024535903978260, guid: 0279a5ab4fa3243f893e45b3e7d7ce5d, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7269181773766021857, guid: 0279a5ab4fa3243f893e45b3e7d7ce5d, type: 3}
+      propertyPath: m_text
+      value: "Forel\xF8big skitse af, hvordan porten kan have set ud i 1620. Tegning:
+        K\xF8benhavns Museum."
+      objectReference: {fileID: 0}
+    - target: {fileID: 7429482852145493569, guid: 0279a5ab4fa3243f893e45b3e7d7ce5d, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.720505
+      objectReference: {fileID: 0}
+    - target: {fileID: 7429482852145493569, guid: 0279a5ab4fa3243f893e45b3e7d7ce5d, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.70000005
+      objectReference: {fileID: 0}
+    - target: {fileID: 7429482852145493569, guid: 0279a5ab4fa3243f893e45b3e7d7ce5d, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.14999999
+      objectReference: {fileID: 0}
+    - target: {fileID: 7803430666374741554, guid: 0279a5ab4fa3243f893e45b3e7d7ce5d, type: 3}
+      propertyPath: m_text
+      value: "Forel\xF8big skitse af, hvordan porten kan have set ud i 1620. Tegning:
+        K\xF8benhavns Museum."
+      objectReference: {fileID: 0}
+    - target: {fileID: 7894263092076619457, guid: 0279a5ab4fa3243f893e45b3e7d7ce5d, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.720505
+      objectReference: {fileID: 0}
+    - target: {fileID: 7894263092076619457, guid: 0279a5ab4fa3243f893e45b3e7d7ce5d, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.70000005
+      objectReference: {fileID: 0}
+    - target: {fileID: 7894263092076619457, guid: 0279a5ab4fa3243f893e45b3e7d7ce5d, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.14999999
+      objectReference: {fileID: 0}
+    - target: {fileID: 7986753995327930805, guid: 0279a5ab4fa3243f893e45b3e7d7ce5d, type: 3}
+      propertyPath: m_text
+      value: Den nye Vesterport
+      objectReference: {fileID: 0}
+    - target: {fileID: 8649430615306690465, guid: 0279a5ab4fa3243f893e45b3e7d7ce5d, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 8649430615306690465, guid: 0279a5ab4fa3243f893e45b3e7d7ce5d, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 8649430615306690465, guid: 0279a5ab4fa3243f893e45b3e7d7ce5d, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 8649430615306690465, guid: 0279a5ab4fa3243f893e45b3e7d7ce5d, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1.4457545
+      objectReference: {fileID: 0}
+    - target: {fileID: 8649430615306690465, guid: 0279a5ab4fa3243f893e45b3e7d7ce5d, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.34977418
+      objectReference: {fileID: 0}
+    - target: {fileID: 8649430615306690465, guid: 0279a5ab4fa3243f893e45b3e7d7ce5d, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -3.0909996
+      objectReference: {fileID: 0}
+    - target: {fileID: 8649430615306690465, guid: 0279a5ab4fa3243f893e45b3e7d7ce5d, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8649430615306690465, guid: 0279a5ab4fa3243f893e45b3e7d7ce5d, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8649430615306690465, guid: 0279a5ab4fa3243f893e45b3e7d7ce5d, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8649430615306690465, guid: 0279a5ab4fa3243f893e45b3e7d7ce5d, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8649430615306690465, guid: 0279a5ab4fa3243f893e45b3e7d7ce5d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8649430615306690465, guid: 0279a5ab4fa3243f893e45b3e7d7ce5d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8649430615306690465, guid: 0279a5ab4fa3243f893e45b3e7d7ce5d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 0279a5ab4fa3243f893e45b3e7d7ce5d, type: 3}
+--- !u!4 &578665101908109421 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8649430615306690465, guid: 0279a5ab4fa3243f893e45b3e7d7ce5d, type: 3}
+  m_PrefabInstance: {fileID: 8074716127430424524}
   m_PrefabAsset: {fileID: 0}

@@ -936,10 +936,11 @@ def preview(hut):
         bpy.ops.render.render(write_still=True)
 
 
-bpy.ops.wm.read_factory_settings(use_empty=True)
-hut = build()
-export(hut)
-interior = build_interior()
-export(interior, "Hut 4000 Interior")
-if PREVIEW:
-    preview(hut)
+if __name__ == "__main__":  # info_hide_4000.py imports the helpers above
+    bpy.ops.wm.read_factory_settings(use_empty=True)
+    hut = build()
+    export(hut)
+    interior = build_interior()
+    export(interior, "Hut 4000 Interior")
+    if PREVIEW:
+        preview(hut)
