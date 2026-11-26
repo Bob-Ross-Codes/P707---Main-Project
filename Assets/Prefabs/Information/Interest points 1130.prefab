@@ -199,8 +199,20 @@ PrefabInstance:
       value: 0.022137918
       objectReference: {fileID: 0}
     - target: {fileID: 6598680380975740980, guid: e20b6cb1294a047f4b8fb29f4fbe2f13, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 6598680380975740980, guid: e20b6cb1294a047f4b8fb29f4fbe2f13, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 6598680380975740980, guid: e20b6cb1294a047f4b8fb29f4fbe2f13, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 6598680380975740980, guid: e20b6cb1294a047f4b8fb29f4fbe2f13, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -3.179976
+      value: -2.379976
       objectReference: {fileID: 0}
     - target: {fileID: 6598680380975740980, guid: e20b6cb1294a047f4b8fb29f4fbe2f13, type: 3}
       propertyPath: m_LocalPosition.y
@@ -208,7 +220,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6598680380975740980, guid: e20b6cb1294a047f4b8fb29f4fbe2f13, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -5.665985
+      value: -4.665985
       objectReference: {fileID: 0}
     - target: {fileID: 6598680380975740980, guid: e20b6cb1294a047f4b8fb29f4fbe2f13, type: 3}
       propertyPath: m_LocalRotation.w
@@ -421,8 +433,20 @@ PrefabInstance:
       value: 0.022137918
       objectReference: {fileID: 0}
     - target: {fileID: 6598680380975740980, guid: e20b6cb1294a047f4b8fb29f4fbe2f13, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 6598680380975740980, guid: e20b6cb1294a047f4b8fb29f4fbe2f13, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 6598680380975740980, guid: e20b6cb1294a047f4b8fb29f4fbe2f13, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 6598680380975740980, guid: e20b6cb1294a047f4b8fb29f4fbe2f13, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -4.9299755
+      value: -5.7299757
       objectReference: {fileID: 0}
     - target: {fileID: 6598680380975740980, guid: e20b6cb1294a047f4b8fb29f4fbe2f13, type: 3}
       propertyPath: m_LocalPosition.y
@@ -430,7 +454,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6598680380975740980, guid: e20b6cb1294a047f4b8fb29f4fbe2f13, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -5.915985
+      value: -4.915985
       objectReference: {fileID: 0}
     - target: {fileID: 6598680380975740980, guid: e20b6cb1294a047f4b8fb29f4fbe2f13, type: 3}
       propertyPath: m_LocalRotation.w
@@ -647,6 +671,18 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6598680380975740980, guid: e20b6cb1294a047f4b8fb29f4fbe2f13, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 6598680380975740980, guid: e20b6cb1294a047f4b8fb29f4fbe2f13, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 6598680380975740980, guid: e20b6cb1294a047f4b8fb29f4fbe2f13, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 6598680380975740980, guid: e20b6cb1294a047f4b8fb29f4fbe2f13, type: 3}
       propertyPath: m_LocalPosition.x
       value: -4.329976
       objectReference: {fileID: 0}
@@ -656,7 +692,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6598680380975740980, guid: e20b6cb1294a047f4b8fb29f4fbe2f13, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -5.815979
+      value: -4.815979
       objectReference: {fileID: 0}
     - target: {fileID: 6598680380975740980, guid: e20b6cb1294a047f4b8fb29f4fbe2f13, type: 3}
       propertyPath: m_LocalRotation.w

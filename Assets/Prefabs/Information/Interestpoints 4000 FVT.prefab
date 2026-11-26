@@ -123,6 +123,18 @@ PrefabInstance:
         er bygget som en rekonstruktion af en af Niv\xE5-hytterne fra Nordsj\xE6lland."
       objectReference: {fileID: 0}
     - target: {fileID: 3045178787394915237, guid: c9cefef997ebc4734bab3f752dd47e7f, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 3045178787394915237, guid: c9cefef997ebc4734bab3f752dd47e7f, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 3045178787394915237, guid: c9cefef997ebc4734bab3f752dd47e7f, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 3045178787394915237, guid: c9cefef997ebc4734bab3f752dd47e7f, type: 3}
       propertyPath: m_LocalPosition.x
       value: -2.703
       objectReference: {fileID: 0}
@@ -132,7 +144,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3045178787394915237, guid: c9cefef997ebc4734bab3f752dd47e7f, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -2.8520002
+      value: -1.8520002
       objectReference: {fileID: 0}
     - target: {fileID: 3045178787394915237, guid: c9cefef997ebc4734bab3f752dd47e7f, type: 3}
       propertyPath: m_LocalRotation.w
@@ -342,8 +354,20 @@ PrefabInstance:
         vige og med \xE5bne strand-arealer. Foto: CoastalSandpiper, Pixabay."
       objectReference: {fileID: 0}
     - target: {fileID: 3045178787394915237, guid: c9cefef997ebc4734bab3f752dd47e7f, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 3045178787394915237, guid: c9cefef997ebc4734bab3f752dd47e7f, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 3045178787394915237, guid: c9cefef997ebc4734bab3f752dd47e7f, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 3045178787394915237, guid: c9cefef997ebc4734bab3f752dd47e7f, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -3.303
+      value: -4.103
       objectReference: {fileID: 0}
     - target: {fileID: 3045178787394915237, guid: c9cefef997ebc4734bab3f752dd47e7f, type: 3}
       propertyPath: m_LocalPosition.y
@@ -351,7 +375,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3045178787394915237, guid: c9cefef997ebc4734bab3f752dd47e7f, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -3.012
+      value: -2.012
       objectReference: {fileID: 0}
     - target: {fileID: 3045178787394915237, guid: c9cefef997ebc4734bab3f752dd47e7f, type: 3}
       propertyPath: m_LocalRotation.w
@@ -549,8 +573,20 @@ PrefabInstance:
       value: "Illustration der med en r\xF8d streg viser stenalderkystlinjen i K\xF8benhavn."
       objectReference: {fileID: 0}
     - target: {fileID: 3045178787394915237, guid: c9cefef997ebc4734bab3f752dd47e7f, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 3045178787394915237, guid: c9cefef997ebc4734bab3f752dd47e7f, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 3045178787394915237, guid: c9cefef997ebc4734bab3f752dd47e7f, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 3045178787394915237, guid: c9cefef997ebc4734bab3f752dd47e7f, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.553
+      value: -0.75299996
       objectReference: {fileID: 0}
     - target: {fileID: 3045178787394915237, guid: c9cefef997ebc4734bab3f752dd47e7f, type: 3}
       propertyPath: m_LocalPosition.y
@@ -558,7 +594,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3045178787394915237, guid: c9cefef997ebc4734bab3f752dd47e7f, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -2.672
+      value: -1.6719999
       objectReference: {fileID: 0}
     - target: {fileID: 3045178787394915237, guid: c9cefef997ebc4734bab3f752dd47e7f, type: 3}
       propertyPath: m_LocalRotation.w
