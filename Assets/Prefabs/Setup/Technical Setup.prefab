@@ -1218,7 +1218,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 7527054505470494759, guid: 48c3b533dcbf2c14ca6681fb36652f88, type: 3}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -4689,6 +4689,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: TimeYear
       objectReference: {fileID: 0}
+    - target: {fileID: 6802331914089296140, guid: cd6e96097a73bce4ba74a80679b5a87a, type: 3}
+      propertyPath: m_UiScaleMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6802331914089296140, guid: cd6e96097a73bce4ba74a80679b5a87a, type: 3}
+      propertyPath: m_ReferenceResolution.x
+      value: 1920
+      objectReference: {fileID: 0}
+    - target: {fileID: 6802331914089296140, guid: cd6e96097a73bce4ba74a80679b5a87a, type: 3}
+      propertyPath: m_ReferenceResolution.y
+      value: 1080
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5722,6 +5734,18 @@ PrefabInstance:
     - target: {fileID: 6562576401533800575, guid: 0f0165e6f00e88846a64270a98aeb55c, type: 3}
       propertyPath: m_Name
       value: Forward Icon Loading
+      objectReference: {fileID: 0}
+    - target: {fileID: 7818225578643831759, guid: 0f0165e6f00e88846a64270a98aeb55c, type: 3}
+      propertyPath: m_UiScaleMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7818225578643831759, guid: 0f0165e6f00e88846a64270a98aeb55c, type: 3}
+      propertyPath: m_ReferenceResolution.x
+      value: 1920
+      objectReference: {fileID: 0}
+    - target: {fileID: 7818225578643831759, guid: 0f0165e6f00e88846a64270a98aeb55c, type: 3}
+      propertyPath: m_ReferenceResolution.y
+      value: 1080
       objectReference: {fileID: 0}
     - target: {fileID: 8313131325725011566, guid: 0f0165e6f00e88846a64270a98aeb55c, type: 3}
       propertyPath: m_AnchorMax.x
