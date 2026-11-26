@@ -14,9 +14,6 @@ public class PlayerStats : MonoBehaviour
     [Tooltip("Amount of points")]
     public float Playerpoints;
 
-    [Tooltip("Point Reset call")]
-    public float PlayerpointsZero = 0;
-
     [Tooltip("Bonus points from scene to scene")]
     public float PlayerpointsSceneBonus = 0;
 
@@ -41,6 +38,7 @@ public class PlayerStats : MonoBehaviour
     public bool test;
     private bool FirstTimeEnterScene2 = false;
     private bool FirstTimeEnterScene3 = false;
+    private float PlayerpointsZero = 0;
 
     [Header("Playerspeed")]
     public float speed;

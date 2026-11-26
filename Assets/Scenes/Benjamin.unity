@@ -1151,6 +1151,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerStats
   Playerpoints: 0
+  PlayerpointsSceneBonus: 0
+  PlayerpointsSceneDivition: 2
   timeThreshold: 10
   CategorizationDivitionThreshold: 0
   Lookercategorization: 0
@@ -1551,13 +1553,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7140867c13df74148ad822482d4d90d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CategorizeUserPoint
-  EarlyExitThreshhold: 0
   ScoreMult: 0
-  ScoremultTimer: 0.5
-  Exitearly: 0
-  HasVisitedInterestpoint: 0
+  ScoreMultTimerLoop: 0
+  ScoreLowPenaltyThreshold: 0
+  Penalty: 0
+  timer: 0
   HasReceivedRevisitBonus: 0
   HasVisitedAgeSection: 0
+  TimerReturn: 30
+  Cooldown: 0
   Test: 0
 --- !u!4 &330631970
 Transform:

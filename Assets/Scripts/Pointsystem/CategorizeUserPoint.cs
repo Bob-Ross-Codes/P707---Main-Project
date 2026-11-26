@@ -22,6 +22,9 @@ public class CategorizeUserPoint : MonoBehaviour
     [Tooltip("Amount of points lost to penalty")]
     public float Penalty;
 
+    [Tooltip("Time before revisit bonus")]
+    public float timer;
+
     [Header("Penalty/Rewardtriggers")]
 
     [Tooltip("Player has recieved bonuspoint for revisiting")]
@@ -30,9 +33,17 @@ public class CategorizeUserPoint : MonoBehaviour
     [Tooltip("Player have visited the time before")]
     public bool HasVisitedAgeSection;
 
+    [Tooltip("return timer")]
+    public int TimerReturn;
+
+    [Tooltip("Cooldown trigger")]
+    public bool Cooldown;
+
     [Header("TestValues")]
     public bool Test;
     private bool Scoremultreset;
+    
+    private bool timerRunning = false;
 
     private PlayerStats playerStats;
 
@@ -44,20 +55,39 @@ public class CategorizeUserPoint : MonoBehaviour
         playerStats = FindFirstObjectByType<PlayerStats>();
     }
 
-    //On First Time Enter. Check if this current age has been visited
-    public void SceneShiftTrigger()
+    private void Update()
     {
-        HasVisitedAgeSection = true;
+        if (Test)
+        {
+            RevisitBonus();
+            Test = false;
+        }
+
+        if (timerRunning)
+        {
+            timer += Time.deltaTime;
+
+            if (timer >= TimerReturn)
+            {
+                timer = TimerReturn;
+                timerRunning = false;
+
+                Cooldown = true;
+            }
+        }
     }
 
-    //On Player Enter. Visit again bous;
+    //On Player Exit. Visit again bous;
     public void RevisitBonus()
     {
-        if (HasReceivedRevisitBonus == false)
-        {
-            GainPoints(1);
-            HasReceivedRevisitBonus = true;
-        }
+        timer = 0f;
+        timerRunning = true;
+    }
+
+    //On Player Enter. 
+    public void Bonuspoint()
+    {
+
     }
 
     //On Player Exit. cooldown period for when leaving interest point and returning to acctually ge tthe points.
