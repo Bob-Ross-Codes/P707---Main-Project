@@ -64,6 +64,8 @@ public class PlayerStats : MonoBehaviour
         // Speed position
         lastPosition = transform.position;
 
+        // Start once: the coroutine loops forever on its own
+        speedCoroutine = StartCoroutine(CheckPlayerSpeed());
     }
 
     void OnEnable()
@@ -181,9 +183,6 @@ public class PlayerStats : MonoBehaviour
 
     private void Update()
     {
-
-        speedCoroutine = StartCoroutine(CheckPlayerSpeed());
-
         if (Playerpoints < CategorizationDivitionThreshold)
         {
             Lookercategorization = true;

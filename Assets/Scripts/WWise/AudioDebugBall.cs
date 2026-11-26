@@ -1,6 +1,8 @@
 
 using UnityEngine;
+#if UNITY_EDITOR
 using UnityEditor;
+#endif
 
 [ExecuteAlways]
 public class AudioDebugBall : MonoBehaviour
