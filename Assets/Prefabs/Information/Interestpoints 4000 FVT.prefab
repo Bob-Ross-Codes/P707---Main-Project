@@ -42,6 +42,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 478466810286315909}
     m_Modifications:
+    - target: {fileID: 44782005389602031, guid: c9cefef997ebc4734bab3f752dd47e7f, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1051849449015226817, guid: c9cefef997ebc4734bab3f752dd47e7f, type: 3}
       propertyPath: m_Name
       value: Interestpoint MID
@@ -50,17 +54,21 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1490496392901417705, guid: c9cefef997ebc4734bab3f752dd47e7f, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1548566668699467066, guid: c9cefef997ebc4734bab3f752dd47e7f, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.8694498
+      value: 0.8734117
       objectReference: {fileID: 0}
     - target: {fileID: 1548566668699467066, guid: c9cefef997ebc4734bab3f752dd47e7f, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.70000005
+      value: 0.7
       objectReference: {fileID: 0}
     - target: {fileID: 1548566668699467066, guid: c9cefef997ebc4734bab3f752dd47e7f, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.14999999
+      value: 0.15
       objectReference: {fileID: 0}
     - target: {fileID: 1602818667145596610, guid: c9cefef997ebc4734bab3f752dd47e7f, type: 3}
       propertyPath: m_text
@@ -74,6 +82,14 @@ PrefabInstance:
         har passeret forbi. Derfor viser vi i modellen en simpel boplads, som den
         kunne have set ud. P\xE5 denne tid har der ikke v\xE6ret egentlige landsbyer
         med mange hytter men snarere ensomt liggende hytter."
+      objectReference: {fileID: 0}
+    - target: {fileID: 1602818667145596610, guid: c9cefef997ebc4734bab3f752dd47e7f, type: 3}
+      propertyPath: m_fontSize
+      value: 0.45804688
+      objectReference: {fileID: 0}
+    - target: {fileID: 1602818667145596610, guid: c9cefef997ebc4734bab3f752dd47e7f, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 0.45804688
       objectReference: {fileID: 0}
     - target: {fileID: 1708709804305473277, guid: c9cefef997ebc4734bab3f752dd47e7f, type: 3}
       propertyPath: m_text
@@ -176,15 +192,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4109202434645031681, guid: c9cefef997ebc4734bab3f752dd47e7f, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.8694498
+      value: 0.8734117
       objectReference: {fileID: 0}
     - target: {fileID: 4109202434645031681, guid: c9cefef997ebc4734bab3f752dd47e7f, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.70000005
+      value: 0.7
       objectReference: {fileID: 0}
     - target: {fileID: 4109202434645031681, guid: c9cefef997ebc4734bab3f752dd47e7f, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.14999999
+      value: 0.15
       objectReference: {fileID: 0}
     - target: {fileID: 4131334680768775540, guid: c9cefef997ebc4734bab3f752dd47e7f, type: 3}
       propertyPath: m_text
@@ -199,23 +215,35 @@ PrefabInstance:
         kunne have set ud. P\xE5 denne tid har der ikke v\xE6ret egentlige landsbyer
         med mange hytter men snarere ensomt liggende hytter."
       objectReference: {fileID: 0}
+    - target: {fileID: 4131334680768775540, guid: c9cefef997ebc4734bab3f752dd47e7f, type: 3}
+      propertyPath: m_fontSize
+      value: 0.45804688
+      objectReference: {fileID: 0}
+    - target: {fileID: 4131334680768775540, guid: c9cefef997ebc4734bab3f752dd47e7f, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 0.45804688
+      objectReference: {fileID: 0}
     - target: {fileID: 4267991570798208127, guid: c9cefef997ebc4734bab3f752dd47e7f, type: 3}
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4599695183649821342, guid: c9cefef997ebc4734bab3f752dd47e7f, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 0.43399996
+      value: 0.344
       objectReference: {fileID: 0}
     - target: {fileID: 4599695183649821342, guid: c9cefef997ebc4734bab3f752dd47e7f, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -0.46600005
+      value: -0.406
       objectReference: {fileID: 0}
     - target: {fileID: 5247235575603844291, guid: c9cefef997ebc4734bab3f752dd47e7f, type: 3}
       propertyPath: m_text
       value: "Billede fra indersiden af en rekonstrueret stenalderhytte fra Sagnlandet
         Lejre, hvor der er fiskeredskaber, skind og ildsted inde i hytten. Hytten
         er bygget som en rekonstruktion af en af Niv\xE5-hytterne fra Nordsj\xE6lland."
+      objectReference: {fileID: 0}
+    - target: {fileID: 5478683547408435719, guid: c9cefef997ebc4734bab3f752dd47e7f, type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5624916185470311417, guid: c9cefef997ebc4734bab3f752dd47e7f, type: 3}
       propertyPath: m_text
@@ -230,25 +258,33 @@ PrefabInstance:
         kunne have set ud. P\xE5 denne tid har der ikke v\xE6ret egentlige landsbyer
         med mange hytter men snarere ensomt liggende hytter."
       objectReference: {fileID: 0}
+    - target: {fileID: 5624916185470311417, guid: c9cefef997ebc4734bab3f752dd47e7f, type: 3}
+      propertyPath: m_fontSize
+      value: 0.45804688
+      objectReference: {fileID: 0}
+    - target: {fileID: 5624916185470311417, guid: c9cefef997ebc4734bab3f752dd47e7f, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 0.45804688
+      objectReference: {fileID: 0}
     - target: {fileID: 6140560549350192151, guid: c9cefef997ebc4734bab3f752dd47e7f, type: 3}
       propertyPath: zoneSelection
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6663404496677509667, guid: c9cefef997ebc4734bab3f752dd47e7f, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 0.43399996
+      value: 0.344
       objectReference: {fileID: 0}
     - target: {fileID: 6663404496677509667, guid: c9cefef997ebc4734bab3f752dd47e7f, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -0.46600005
+      value: -0.406
       objectReference: {fileID: 0}
     - target: {fileID: 6846314827708593189, guid: c9cefef997ebc4734bab3f752dd47e7f, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 0.43399996
+      value: 0.344
       objectReference: {fileID: 0}
     - target: {fileID: 6846314827708593189, guid: c9cefef997ebc4734bab3f752dd47e7f, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -0.46600005
+      value: -0.406
       objectReference: {fileID: 0}
     - target: {fileID: 7135486568897155102, guid: c9cefef997ebc4734bab3f752dd47e7f, type: 3}
       propertyPath: m_text
@@ -256,15 +292,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7346844633916176920, guid: c9cefef997ebc4734bab3f752dd47e7f, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.8694498
+      value: 0.8734117
       objectReference: {fileID: 0}
     - target: {fileID: 7346844633916176920, guid: c9cefef997ebc4734bab3f752dd47e7f, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.70000005
+      value: 0.7
       objectReference: {fileID: 0}
     - target: {fileID: 7346844633916176920, guid: c9cefef997ebc4734bab3f752dd47e7f, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.14999999
+      value: 0.15
       objectReference: {fileID: 0}
     - target: {fileID: 7856907603732906471, guid: c9cefef997ebc4734bab3f752dd47e7f, type: 3}
       propertyPath: m_text
@@ -288,6 +324,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 478466810286315909}
     m_Modifications:
+    - target: {fileID: 44782005389602031, guid: c9cefef997ebc4734bab3f752dd47e7f, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1051849449015226817, guid: c9cefef997ebc4734bab3f752dd47e7f, type: 3}
       propertyPath: m_Name
       value: Interestpoint TV
@@ -296,13 +336,21 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1490496392901417705, guid: c9cefef997ebc4734bab3f752dd47e7f, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1548566668699467066, guid: c9cefef997ebc4734bab3f752dd47e7f, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1548566668699467066, guid: c9cefef997ebc4734bab3f752dd47e7f, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.39105195
+      value: 0.38927802
       objectReference: {fileID: 0}
     - target: {fileID: 1548566668699467066, guid: c9cefef997ebc4734bab3f752dd47e7f, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.30447403
+      value: 0.30536097
       objectReference: {fileID: 0}
     - target: {fileID: 1602818667145596610, guid: c9cefef997ebc4734bab3f752dd47e7f, type: 3}
       propertyPath: m_text
@@ -406,12 +454,16 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4109202434645031681, guid: c9cefef997ebc4734bab3f752dd47e7f, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4109202434645031681, guid: c9cefef997ebc4734bab3f752dd47e7f, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.39105195
+      value: 0.38927802
       objectReference: {fileID: 0}
     - target: {fileID: 4109202434645031681, guid: c9cefef997ebc4734bab3f752dd47e7f, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.30447403
+      value: 0.30536097
       objectReference: {fileID: 0}
     - target: {fileID: 4131334680768775540, guid: c9cefef997ebc4734bab3f752dd47e7f, type: 3}
       propertyPath: m_text
@@ -426,16 +478,20 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4599695183649821342, guid: c9cefef997ebc4734bab3f752dd47e7f, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 0.9221379
+      value: 0.7417241
       objectReference: {fileID: 0}
     - target: {fileID: 4599695183649821342, guid: c9cefef997ebc4734bab3f752dd47e7f, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0.02213791
+      value: -0.008275904
       objectReference: {fileID: 0}
     - target: {fileID: 5247235575603844291, guid: c9cefef997ebc4734bab3f752dd47e7f, type: 3}
       propertyPath: m_text
       value: "Kysten mellem Sj\xE6lland og Amager var pr\xE6get af sm\xE5 afsk\xE6rmede
         vige og med \xE5bne strand-arealer. Foto: CoastalSandpiper, Pixabay."
+      objectReference: {fileID: 0}
+    - target: {fileID: 5478683547408435719, guid: c9cefef997ebc4734bab3f752dd47e7f, type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5624916185470311417, guid: c9cefef997ebc4734bab3f752dd47e7f, type: 3}
       propertyPath: m_text
@@ -450,31 +506,35 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6663404496677509667, guid: c9cefef997ebc4734bab3f752dd47e7f, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 0.9221379
+      value: 0.7417241
       objectReference: {fileID: 0}
     - target: {fileID: 6663404496677509667, guid: c9cefef997ebc4734bab3f752dd47e7f, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0.02213791
+      value: -0.008275904
       objectReference: {fileID: 0}
     - target: {fileID: 6846314827708593189, guid: c9cefef997ebc4734bab3f752dd47e7f, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 0.9221379
+      value: 0.7417241
       objectReference: {fileID: 0}
     - target: {fileID: 6846314827708593189, guid: c9cefef997ebc4734bab3f752dd47e7f, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0.02213791
+      value: -0.008275904
       objectReference: {fileID: 0}
     - target: {fileID: 7135486568897155102, guid: c9cefef997ebc4734bab3f752dd47e7f, type: 3}
       propertyPath: m_text
       value: Den salte kystmarsk
       objectReference: {fileID: 0}
     - target: {fileID: 7346844633916176920, guid: c9cefef997ebc4734bab3f752dd47e7f, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7346844633916176920, guid: c9cefef997ebc4734bab3f752dd47e7f, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.39105195
+      value: 0.38927802
       objectReference: {fileID: 0}
     - target: {fileID: 7346844633916176920, guid: c9cefef997ebc4734bab3f752dd47e7f, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.30447403
+      value: 0.30536097
       objectReference: {fileID: 0}
     - target: {fileID: 7856907603732906471, guid: c9cefef997ebc4734bab3f752dd47e7f, type: 3}
       propertyPath: m_text
@@ -498,6 +558,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 478466810286315909}
     m_Modifications:
+    - target: {fileID: 44782005389602031, guid: c9cefef997ebc4734bab3f752dd47e7f, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1051849449015226817, guid: c9cefef997ebc4734bab3f752dd47e7f, type: 3}
       propertyPath: m_Name
       value: Interestpoint TH
@@ -506,17 +570,21 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1490496392901417705, guid: c9cefef997ebc4734bab3f752dd47e7f, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1548566668699467066, guid: c9cefef997ebc4734bab3f752dd47e7f, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.90787274
+      value: 0.9120098
       objectReference: {fileID: 0}
     - target: {fileID: 1548566668699467066, guid: c9cefef997ebc4734bab3f752dd47e7f, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.70000005
+      value: 0.7
       objectReference: {fileID: 0}
     - target: {fileID: 1548566668699467066, guid: c9cefef997ebc4734bab3f752dd47e7f, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.14999999
+      value: 0.15
       objectReference: {fileID: 0}
     - target: {fileID: 1602818667145596610, guid: c9cefef997ebc4734bab3f752dd47e7f, type: 3}
       propertyPath: m_text
@@ -626,15 +694,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4109202434645031681, guid: c9cefef997ebc4734bab3f752dd47e7f, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.90787274
+      value: 0.9120098
       objectReference: {fileID: 0}
     - target: {fileID: 4109202434645031681, guid: c9cefef997ebc4734bab3f752dd47e7f, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.70000005
+      value: 0.7
       objectReference: {fileID: 0}
     - target: {fileID: 4109202434645031681, guid: c9cefef997ebc4734bab3f752dd47e7f, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.14999999
+      value: 0.15
       objectReference: {fileID: 0}
     - target: {fileID: 4131334680768775540, guid: c9cefef997ebc4734bab3f752dd47e7f, type: 3}
       propertyPath: m_text
@@ -649,15 +717,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4599695183649821342, guid: c9cefef997ebc4734bab3f752dd47e7f, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 0.43399996
+      value: 0.344
       objectReference: {fileID: 0}
     - target: {fileID: 4599695183649821342, guid: c9cefef997ebc4734bab3f752dd47e7f, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -0.46600005
+      value: -0.406
       objectReference: {fileID: 0}
     - target: {fileID: 5247235575603844291, guid: c9cefef997ebc4734bab3f752dd47e7f, type: 3}
       propertyPath: m_text
       value: "Illustration der med en r\xF8d streg viser stenalderkystlinjen i K\xF8benhavn."
+      objectReference: {fileID: 0}
+    - target: {fileID: 5478683547408435719, guid: c9cefef997ebc4734bab3f752dd47e7f, type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5624916185470311417, guid: c9cefef997ebc4734bab3f752dd47e7f, type: 3}
       propertyPath: m_text
@@ -676,19 +748,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6663404496677509667, guid: c9cefef997ebc4734bab3f752dd47e7f, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 0.43399996
+      value: 0.344
       objectReference: {fileID: 0}
     - target: {fileID: 6663404496677509667, guid: c9cefef997ebc4734bab3f752dd47e7f, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -0.46600005
+      value: -0.406
       objectReference: {fileID: 0}
     - target: {fileID: 6846314827708593189, guid: c9cefef997ebc4734bab3f752dd47e7f, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 0.43399996
+      value: 0.344
       objectReference: {fileID: 0}
     - target: {fileID: 6846314827708593189, guid: c9cefef997ebc4734bab3f752dd47e7f, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -0.46600005
+      value: -0.406
       objectReference: {fileID: 0}
     - target: {fileID: 7135486568897155102, guid: c9cefef997ebc4734bab3f752dd47e7f, type: 3}
       propertyPath: m_text
@@ -696,15 +768,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7346844633916176920, guid: c9cefef997ebc4734bab3f752dd47e7f, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.90787274
+      value: 0.9120098
       objectReference: {fileID: 0}
     - target: {fileID: 7346844633916176920, guid: c9cefef997ebc4734bab3f752dd47e7f, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.70000005
+      value: 0.7
       objectReference: {fileID: 0}
     - target: {fileID: 7346844633916176920, guid: c9cefef997ebc4734bab3f752dd47e7f, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.14999999
+      value: 0.15
       objectReference: {fileID: 0}
     - target: {fileID: 7856907603732906471, guid: c9cefef997ebc4734bab3f752dd47e7f, type: 3}
       propertyPath: m_text
