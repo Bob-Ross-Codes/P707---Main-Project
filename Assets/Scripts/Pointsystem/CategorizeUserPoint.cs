@@ -38,15 +38,10 @@ public class CategorizeUserPoint : MonoBehaviour
 
     private Coroutine standCoroutine;
 
-    public Array inter;
-
     private void Start()
     {
+        //Get Playerstats so we can alter points
         playerStats = FindFirstObjectByType<PlayerStats>();
-
-        //Find Amount of interest points in scene
-        PlayerZoneTrigger[] inter = FindObjectsByType<PlayerZoneTrigger>(FindObjectsSortMode.None);
-        Debug.Log("Number of hit colliders: " + inter.Length);
     }
 
     //On First Time Enter. Check if this current age has been visited
