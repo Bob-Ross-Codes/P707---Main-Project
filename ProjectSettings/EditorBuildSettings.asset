@@ -6,17 +6,17 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/D Testing/WIP Tutorial 3.unity
-    guid: 7aa54bef4516aaa41a1c310c54eac310
+    path: Assets/Scenes/Playscenes/Scene_0_Tutorial.unity
+    guid: 826f045e09be9e84a8de48bd3d54f8bd
   - enabled: 1
-    path: Assets/Scenes/D Testing/4000 f.v.t test2.unity
-    guid: b889621d22f004c48baf8e994373a82c
+    path: Assets/Scenes/Playscenes/Scene_1_4000.unity
+    guid: e5f4641a9463fea419fc92b4692bfd5c
   - enabled: 1
-    path: Assets/Scenes/D Testing/1130 Mark Testing.unity
-    guid: 40e43405741099e4c8e5205041233fc8
+    path: Assets/Scenes/Playscenes/Scene_2_1130.unity
+    guid: 2acf355c358634d4da95ad0df3319091
   - enabled: 1
-    path: Assets/Scenes/D Testing/1650 For test.unity
-    guid: 453d604cdb8ccfa4c9cf13e14d1036dc
+    path: Assets/Scenes/Playscenes/Scene_3_1650.unity
+    guid: eb5f7322b045b5543a0b1c05439a2e76
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   m_UseUCBPForAssetBundles: 0

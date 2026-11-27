@@ -52,9 +52,6 @@ public class PlayerStats : MonoBehaviour
     {
         // Remember the scene we start in
         previousSceneIndex = SceneManager.GetActiveScene().buildIndex;
-
-        // Keep this manager alive between scenes
-        DontDestroyOnLoad(gameObject);
     }
 
     void Start()
@@ -115,12 +112,12 @@ public class PlayerStats : MonoBehaviour
         Debug.Log("State: Scene 2 - Forward");
 
         //Save stats from scene 1
-        SaveSystem.SaveStat1(Playerpoints);
+        //SaveSystem.SaveStat1(Playerpoints);
 
         //Subtract point bonus or load stats
         if (FirstTimeEnterScene2 == true)
         {
-            Playerpoints = SaveSystem.Load().value2;
+            //Playerpoints = SaveSystem.Load().value2;
         }
         else if (FirstTimeEnterScene2 == false)
         {
@@ -140,12 +137,12 @@ public class PlayerStats : MonoBehaviour
         Debug.Log("State: Scene 2 - Forward");
 
         //Save stats from scene 1
-        SaveSystem.SaveStat2(Playerpoints);
+        //SaveSystem.SaveStat2(Playerpoints);
 
         //Subtract point bonus or load stats
         if (FirstTimeEnterScene3 == true)
         {
-            Playerpoints = SaveSystem.Load().value3;
+            //Playerpoints = SaveSystem.Load().value3;
         }
         else if (FirstTimeEnterScene3 == false)
         {
@@ -163,7 +160,7 @@ public class PlayerStats : MonoBehaviour
     void Scene2Backward()
     {
         Debug.Log("State: Scene 2 - Backward");
-        Playerpoints = SaveSystem.Load().value2;
+        //Playerpoints = SaveSystem.Load().value2;
         //Show save path 
         Debug.Log(Application.persistentDataPath + "/save.json");
         
@@ -172,7 +169,7 @@ public class PlayerStats : MonoBehaviour
     void Scene1Backward()
     {
         Debug.Log("State: Scene 2 - Backward");
-        Playerpoints = SaveSystem.Load().value1;
+        //Playerpoints = SaveSystem.Load().value1;
         //Show save path 
         Debug.Log(Application.persistentDataPath + "/save.json");
     }

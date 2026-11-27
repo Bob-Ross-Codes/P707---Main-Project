@@ -78,12 +78,20 @@ PrefabInstance:
       value: "Bulhuse p\xE5 R\xE5dhuspladsen"
       objectReference: {fileID: 0}
     - target: {fileID: 501635520527851673, guid: e20b6cb1294a047f4b8fb29f4fbe2f13, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 501635520527851673, guid: e20b6cb1294a047f4b8fb29f4fbe2f13, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.39105195
+      value: 0.38927802
       objectReference: {fileID: 0}
     - target: {fileID: 501635520527851673, guid: e20b6cb1294a047f4b8fb29f4fbe2f13, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.30447403
+      value: 0.30536097
+      objectReference: {fileID: 0}
+    - target: {fileID: 842448716409119520, guid: e20b6cb1294a047f4b8fb29f4fbe2f13, type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 910465560261660157, guid: e20b6cb1294a047f4b8fb29f4fbe2f13, type: 3}
       propertyPath: m_text
@@ -98,13 +106,29 @@ PrefabInstance:
         de ark\xE6ologiske unders\xF8gelser p\xE5 R\xE5dhuspladsen, s\xE5 der har
         nok b\xE5de v\xE6ret lerklinede huse af bindingsv\xE6rk og bulhuse."
       objectReference: {fileID: 0}
+    - target: {fileID: 910465560261660157, guid: e20b6cb1294a047f4b8fb29f4fbe2f13, type: 3}
+      propertyPath: m_fontSize
+      value: 0.4584375
+      objectReference: {fileID: 0}
+    - target: {fileID: 910465560261660157, guid: e20b6cb1294a047f4b8fb29f4fbe2f13, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 0.4584375
+      objectReference: {fileID: 0}
+    - target: {fileID: 1246144904260809615, guid: e20b6cb1294a047f4b8fb29f4fbe2f13, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1246144904260809615, guid: e20b6cb1294a047f4b8fb29f4fbe2f13, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.39105195
+      value: 0.38927802
       objectReference: {fileID: 0}
     - target: {fileID: 1246144904260809615, guid: e20b6cb1294a047f4b8fb29f4fbe2f13, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.30447403
+      value: 0.30536097
+      objectReference: {fileID: 0}
+    - target: {fileID: 1254416301298527595, guid: e20b6cb1294a047f4b8fb29f4fbe2f13, type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1914701982045956199, guid: e20b6cb1294a047f4b8fb29f4fbe2f13, type: 3}
       propertyPath: m_IsActive
@@ -112,27 +136,31 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2097081220345516577, guid: e20b6cb1294a047f4b8fb29f4fbe2f13, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 0.9221379
+      value: 0.7417241
       objectReference: {fileID: 0}
     - target: {fileID: 2097081220345516577, guid: e20b6cb1294a047f4b8fb29f4fbe2f13, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0.022137918
+      value: -0.008275904
+      objectReference: {fileID: 0}
+    - target: {fileID: 2261481047284231516, guid: e20b6cb1294a047f4b8fb29f4fbe2f13, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2261481047284231516, guid: e20b6cb1294a047f4b8fb29f4fbe2f13, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.39105195
+      value: 0.38927802
       objectReference: {fileID: 0}
     - target: {fileID: 2261481047284231516, guid: e20b6cb1294a047f4b8fb29f4fbe2f13, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.30447403
+      value: 0.30536097
       objectReference: {fileID: 0}
     - target: {fileID: 2773867852966075662, guid: e20b6cb1294a047f4b8fb29f4fbe2f13, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 0.9221379
+      value: 0.7417241
       objectReference: {fileID: 0}
     - target: {fileID: 2773867852966075662, guid: e20b6cb1294a047f4b8fb29f4fbe2f13, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0.022137918
+      value: -0.008275904
       objectReference: {fileID: 0}
     - target: {fileID: 3030593448679946537, guid: e20b6cb1294a047f4b8fb29f4fbe2f13, type: 3}
       propertyPath: m_Name
@@ -141,6 +169,10 @@ PrefabInstance:
     - target: {fileID: 3030593448679946537, guid: e20b6cb1294a047f4b8fb29f4fbe2f13, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3327099607449481066, guid: e20b6cb1294a047f4b8fb29f4fbe2f13, type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3537144981897803544, guid: e20b6cb1294a047f4b8fb29f4fbe2f13, type: 3}
       propertyPath: m_IsActive
@@ -159,6 +191,14 @@ PrefabInstance:
         de ark\xE6ologiske unders\xF8gelser p\xE5 R\xE5dhuspladsen, s\xE5 der har
         nok b\xE5de v\xE6ret lerklinede huse af bindingsv\xE6rk og bulhuse."
       objectReference: {fileID: 0}
+    - target: {fileID: 3630760025944078832, guid: e20b6cb1294a047f4b8fb29f4fbe2f13, type: 3}
+      propertyPath: m_fontSize
+      value: 0.4584375
+      objectReference: {fileID: 0}
+    - target: {fileID: 3630760025944078832, guid: e20b6cb1294a047f4b8fb29f4fbe2f13, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 0.4584375
+      objectReference: {fileID: 0}
     - target: {fileID: 4656826326359483649, guid: e20b6cb1294a047f4b8fb29f4fbe2f13, type: 3}
       propertyPath: m_text
       value: "Der er fundet enkelte levn af tr\xE6bygninger, blandt andet i den nord\xF8stlige
@@ -171,6 +211,14 @@ PrefabInstance:
         st\xE5et bindingsv\xE6rk. Der er fundet en del lerklining i forbindelse med
         de ark\xE6ologiske unders\xF8gelser p\xE5 R\xE5dhuspladsen, s\xE5 der har
         nok b\xE5de v\xE6ret lerklinede huse af bindingsv\xE6rk og bulhuse."
+      objectReference: {fileID: 0}
+    - target: {fileID: 4656826326359483649, guid: e20b6cb1294a047f4b8fb29f4fbe2f13, type: 3}
+      propertyPath: m_fontSize
+      value: 0.4584375
+      objectReference: {fileID: 0}
+    - target: {fileID: 4656826326359483649, guid: e20b6cb1294a047f4b8fb29f4fbe2f13, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 0.4584375
       objectReference: {fileID: 0}
     - target: {fileID: 4726304191057658516, guid: e20b6cb1294a047f4b8fb29f4fbe2f13, type: 3}
       propertyPath: m_text
@@ -192,11 +240,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6049952979272995702, guid: e20b6cb1294a047f4b8fb29f4fbe2f13, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 0.9221379
+      value: 0.7417241
       objectReference: {fileID: 0}
     - target: {fileID: 6049952979272995702, guid: e20b6cb1294a047f4b8fb29f4fbe2f13, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0.022137918
+      value: -0.008275904
       objectReference: {fileID: 0}
     - target: {fileID: 6598680380975740980, guid: e20b6cb1294a047f4b8fb29f4fbe2f13, type: 3}
       propertyPath: m_LocalScale.x
@@ -311,12 +359,20 @@ PrefabInstance:
       value: "Kirkeg\xE5rden"
       objectReference: {fileID: 0}
     - target: {fileID: 501635520527851673, guid: e20b6cb1294a047f4b8fb29f4fbe2f13, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 501635520527851673, guid: e20b6cb1294a047f4b8fb29f4fbe2f13, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.39105195
+      value: 0.38927802
       objectReference: {fileID: 0}
     - target: {fileID: 501635520527851673, guid: e20b6cb1294a047f4b8fb29f4fbe2f13, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.30447403
+      value: 0.30536097
+      objectReference: {fileID: 0}
+    - target: {fileID: 842448716409119520, guid: e20b6cb1294a047f4b8fb29f4fbe2f13, type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 910465560261660157, guid: e20b6cb1294a047f4b8fb29f4fbe2f13, type: 3}
       propertyPath: m_text
@@ -334,37 +390,57 @@ PrefabInstance:
         der er et omr\xE5de uden grave p\xE5 kirkeg\xE5rden, kan det derfor vise,
         hvor kirken har st\xE5et."
       objectReference: {fileID: 0}
+    - target: {fileID: 910465560261660157, guid: e20b6cb1294a047f4b8fb29f4fbe2f13, type: 3}
+      propertyPath: m_fontSize
+      value: 0.41273442
+      objectReference: {fileID: 0}
+    - target: {fileID: 910465560261660157, guid: e20b6cb1294a047f4b8fb29f4fbe2f13, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 0.41273442
+      objectReference: {fileID: 0}
+    - target: {fileID: 1246144904260809615, guid: e20b6cb1294a047f4b8fb29f4fbe2f13, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1246144904260809615, guid: e20b6cb1294a047f4b8fb29f4fbe2f13, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.39105195
+      value: 0.38927802
       objectReference: {fileID: 0}
     - target: {fileID: 1246144904260809615, guid: e20b6cb1294a047f4b8fb29f4fbe2f13, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.30447403
+      value: 0.30536097
+      objectReference: {fileID: 0}
+    - target: {fileID: 1254416301298527595, guid: e20b6cb1294a047f4b8fb29f4fbe2f13, type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2097081220345516577, guid: e20b6cb1294a047f4b8fb29f4fbe2f13, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 0.9221379
+      value: 0.7417241
       objectReference: {fileID: 0}
     - target: {fileID: 2097081220345516577, guid: e20b6cb1294a047f4b8fb29f4fbe2f13, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0.022137918
+      value: -0.008275904
+      objectReference: {fileID: 0}
+    - target: {fileID: 2261481047284231516, guid: e20b6cb1294a047f4b8fb29f4fbe2f13, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2261481047284231516, guid: e20b6cb1294a047f4b8fb29f4fbe2f13, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.39105195
+      value: 0.38927802
       objectReference: {fileID: 0}
     - target: {fileID: 2261481047284231516, guid: e20b6cb1294a047f4b8fb29f4fbe2f13, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.30447403
+      value: 0.30536097
       objectReference: {fileID: 0}
     - target: {fileID: 2773867852966075662, guid: e20b6cb1294a047f4b8fb29f4fbe2f13, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 0.9221379
+      value: 0.7417241
       objectReference: {fileID: 0}
     - target: {fileID: 2773867852966075662, guid: e20b6cb1294a047f4b8fb29f4fbe2f13, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0.022137918
+      value: -0.008275904
       objectReference: {fileID: 0}
     - target: {fileID: 3030593448679946537, guid: e20b6cb1294a047f4b8fb29f4fbe2f13, type: 3}
       propertyPath: m_Name
@@ -373,6 +449,10 @@ PrefabInstance:
     - target: {fileID: 3030593448679946537, guid: e20b6cb1294a047f4b8fb29f4fbe2f13, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3327099607449481066, guid: e20b6cb1294a047f4b8fb29f4fbe2f13, type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3630760025944078832, guid: e20b6cb1294a047f4b8fb29f4fbe2f13, type: 3}
       propertyPath: m_text
@@ -390,6 +470,14 @@ PrefabInstance:
         der er et omr\xE5de uden grave p\xE5 kirkeg\xE5rden, kan det derfor vise,
         hvor kirken har st\xE5et."
       objectReference: {fileID: 0}
+    - target: {fileID: 3630760025944078832, guid: e20b6cb1294a047f4b8fb29f4fbe2f13, type: 3}
+      propertyPath: m_fontSize
+      value: 0.41273442
+      objectReference: {fileID: 0}
+    - target: {fileID: 3630760025944078832, guid: e20b6cb1294a047f4b8fb29f4fbe2f13, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 0.41273442
+      objectReference: {fileID: 0}
     - target: {fileID: 4656826326359483649, guid: e20b6cb1294a047f4b8fb29f4fbe2f13, type: 3}
       propertyPath: m_text
       value: "Kun en lille del af kirkeg\xE5rden er unders\xF8gt. Der ligger nok
@@ -405,6 +493,14 @@ PrefabInstance:
         inde i selve kirkebygningen, medmindre det var bisper eller kongelige. N\xE5r
         der er et omr\xE5de uden grave p\xE5 kirkeg\xE5rden, kan det derfor vise,
         hvor kirken har st\xE5et."
+      objectReference: {fileID: 0}
+    - target: {fileID: 4656826326359483649, guid: e20b6cb1294a047f4b8fb29f4fbe2f13, type: 3}
+      propertyPath: m_fontSize
+      value: 0.41273442
+      objectReference: {fileID: 0}
+    - target: {fileID: 4656826326359483649, guid: e20b6cb1294a047f4b8fb29f4fbe2f13, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 0.41273442
       objectReference: {fileID: 0}
     - target: {fileID: 4726304191057658516, guid: e20b6cb1294a047f4b8fb29f4fbe2f13, type: 3}
       propertyPath: m_text
@@ -426,11 +522,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6049952979272995702, guid: e20b6cb1294a047f4b8fb29f4fbe2f13, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 0.9221379
+      value: 0.7417241
       objectReference: {fileID: 0}
     - target: {fileID: 6049952979272995702, guid: e20b6cb1294a047f4b8fb29f4fbe2f13, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0.022137918
+      value: -0.008275904
       objectReference: {fileID: 0}
     - target: {fileID: 6598680380975740980, guid: e20b6cb1294a047f4b8fb29f4fbe2f13, type: 3}
       propertyPath: m_LocalScale.x
@@ -547,12 +643,20 @@ PrefabInstance:
       value: "Hjulspor p\xE5 R\xE5dhuspladsen"
       objectReference: {fileID: 0}
     - target: {fileID: 501635520527851673, guid: e20b6cb1294a047f4b8fb29f4fbe2f13, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 501635520527851673, guid: e20b6cb1294a047f4b8fb29f4fbe2f13, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.39105195
+      value: 0.38927802
       objectReference: {fileID: 0}
     - target: {fileID: 501635520527851673, guid: e20b6cb1294a047f4b8fb29f4fbe2f13, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.30447403
+      value: 0.30536097
+      objectReference: {fileID: 0}
+    - target: {fileID: 842448716409119520, guid: e20b6cb1294a047f4b8fb29f4fbe2f13, type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 910465560261660157, guid: e20b6cb1294a047f4b8fb29f4fbe2f13, type: 3}
       propertyPath: m_text
@@ -569,13 +673,29 @@ PrefabInstance:
         snarere var en slags plads. Lignende brede veje eller pladser ses blandt
         andet i Lund."
       objectReference: {fileID: 0}
+    - target: {fileID: 910465560261660157, guid: e20b6cb1294a047f4b8fb29f4fbe2f13, type: 3}
+      propertyPath: m_fontSize
+      value: 0.4299219
+      objectReference: {fileID: 0}
+    - target: {fileID: 910465560261660157, guid: e20b6cb1294a047f4b8fb29f4fbe2f13, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 0.4299219
+      objectReference: {fileID: 0}
+    - target: {fileID: 1246144904260809615, guid: e20b6cb1294a047f4b8fb29f4fbe2f13, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1246144904260809615, guid: e20b6cb1294a047f4b8fb29f4fbe2f13, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.39105195
+      value: 0.38927802
       objectReference: {fileID: 0}
     - target: {fileID: 1246144904260809615, guid: e20b6cb1294a047f4b8fb29f4fbe2f13, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.30447403
+      value: 0.30536097
+      objectReference: {fileID: 0}
+    - target: {fileID: 1254416301298527595, guid: e20b6cb1294a047f4b8fb29f4fbe2f13, type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1914701982045956199, guid: e20b6cb1294a047f4b8fb29f4fbe2f13, type: 3}
       propertyPath: m_IsActive
@@ -583,27 +703,31 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2097081220345516577, guid: e20b6cb1294a047f4b8fb29f4fbe2f13, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 0.9221379
+      value: 0.7417241
       objectReference: {fileID: 0}
     - target: {fileID: 2097081220345516577, guid: e20b6cb1294a047f4b8fb29f4fbe2f13, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0.022137918
+      value: -0.008275904
+      objectReference: {fileID: 0}
+    - target: {fileID: 2261481047284231516, guid: e20b6cb1294a047f4b8fb29f4fbe2f13, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2261481047284231516, guid: e20b6cb1294a047f4b8fb29f4fbe2f13, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.39105195
+      value: 0.38927802
       objectReference: {fileID: 0}
     - target: {fileID: 2261481047284231516, guid: e20b6cb1294a047f4b8fb29f4fbe2f13, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.30447403
+      value: 0.30536097
       objectReference: {fileID: 0}
     - target: {fileID: 2773867852966075662, guid: e20b6cb1294a047f4b8fb29f4fbe2f13, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 0.9221379
+      value: 0.7417241
       objectReference: {fileID: 0}
     - target: {fileID: 2773867852966075662, guid: e20b6cb1294a047f4b8fb29f4fbe2f13, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0.022137918
+      value: -0.008275904
       objectReference: {fileID: 0}
     - target: {fileID: 3030593448679946537, guid: e20b6cb1294a047f4b8fb29f4fbe2f13, type: 3}
       propertyPath: m_Name
@@ -612,6 +736,10 @@ PrefabInstance:
     - target: {fileID: 3030593448679946537, guid: e20b6cb1294a047f4b8fb29f4fbe2f13, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3327099607449481066, guid: e20b6cb1294a047f4b8fb29f4fbe2f13, type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3630760025944078832, guid: e20b6cb1294a047f4b8fb29f4fbe2f13, type: 3}
       propertyPath: m_text
@@ -628,6 +756,14 @@ PrefabInstance:
         snarere var en slags plads. Lignende brede veje eller pladser ses blandt
         andet i Lund."
       objectReference: {fileID: 0}
+    - target: {fileID: 3630760025944078832, guid: e20b6cb1294a047f4b8fb29f4fbe2f13, type: 3}
+      propertyPath: m_fontSize
+      value: 0.4299219
+      objectReference: {fileID: 0}
+    - target: {fileID: 3630760025944078832, guid: e20b6cb1294a047f4b8fb29f4fbe2f13, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 0.4299219
+      objectReference: {fileID: 0}
     - target: {fileID: 4656826326359483649, guid: e20b6cb1294a047f4b8fb29f4fbe2f13, type: 3}
       propertyPath: m_text
       value: "Ved de store udgravninger p\xE5 R\xE5dhuspladsen i 2011 blev der fundet
@@ -642,6 +778,14 @@ PrefabInstance:
         R\xE5dhuspladsen. Vejforl\xF8bet var nogle steder s\xE5 bredt, at det m\xE5ske
         snarere var en slags plads. Lignende brede veje eller pladser ses blandt
         andet i Lund."
+      objectReference: {fileID: 0}
+    - target: {fileID: 4656826326359483649, guid: e20b6cb1294a047f4b8fb29f4fbe2f13, type: 3}
+      propertyPath: m_fontSize
+      value: 0.4299219
+      objectReference: {fileID: 0}
+    - target: {fileID: 4656826326359483649, guid: e20b6cb1294a047f4b8fb29f4fbe2f13, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 0.4299219
       objectReference: {fileID: 0}
     - target: {fileID: 4726304191057658516, guid: e20b6cb1294a047f4b8fb29f4fbe2f13, type: 3}
       propertyPath: m_text
@@ -660,11 +804,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6049952979272995702, guid: e20b6cb1294a047f4b8fb29f4fbe2f13, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 0.9221379
+      value: 0.7417241
       objectReference: {fileID: 0}
     - target: {fileID: 6049952979272995702, guid: e20b6cb1294a047f4b8fb29f4fbe2f13, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0.022137918
+      value: -0.008275904
       objectReference: {fileID: 0}
     - target: {fileID: 6149550330887014840, guid: e20b6cb1294a047f4b8fb29f4fbe2f13, type: 3}
       propertyPath: m_IsActive

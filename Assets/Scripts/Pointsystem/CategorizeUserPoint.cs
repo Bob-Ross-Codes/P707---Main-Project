@@ -68,7 +68,7 @@ public class CategorizeUserPoint : MonoBehaviour
 
 
     // How many points the player loses if the multiplier is below the penalty threshold when exiting.
-    public float Penalty = 5f;
+    public float Penalty;
 
     [Header("Revisit Bonus")]
     // A separate public timer variable.
@@ -179,7 +179,7 @@ public class CategorizeUserPoint : MonoBehaviour
         Debug.Log(gameObject.name + " is now using state for scene: " + sceneName);
     }
 
-    //Onexit
+    //On exit
     public void RevisitBonus()
     {
         // No valid scene state, no timer
@@ -196,9 +196,11 @@ public class CategorizeUserPoint : MonoBehaviour
         CurrentState.Cooldown = false;
     }
 
-    //Player Exit.
+    // On Exit.
     public void Cooldownperiod()
     {
+        float Scoremulpoint;
+
         // no valid scene state, then stop the function.
         if (CurrentState == null)
             return;
@@ -223,8 +225,11 @@ public class CategorizeUserPoint : MonoBehaviour
             LosePoints(Penalty);
         }
 
-        //apply multiplier
-        playerStats.Playerpoints *= CurrentState.ScoreMult;
+        // Calculation of points given
+        Scoremulpoint = CurrentState.ScoreMult;
+
+        //apply multiplierpoint to current points
+        playerStats.Playerpoints += CurrentState.ScoreMult;
     }
 
     //On player enter
