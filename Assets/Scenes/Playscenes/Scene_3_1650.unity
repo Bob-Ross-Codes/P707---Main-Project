@@ -10648,6 +10648,10 @@ PrefabInstance:
       propertyPath: SceneStates.Array.size
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 5958023189296904119, guid: 41390cf68bb956648830133fee34b73e, type: 3}
+      propertyPath: 'SceneNames.Array.data[2]'
+      value: Scene_3_1650
+      objectReference: {fileID: 0}
     - target: {fileID: 8082033071064355421, guid: 41390cf68bb956648830133fee34b73e, type: 3}
       propertyPath: m_LocalPosition.x
       value: -1.242

@@ -3360,6 +3360,10 @@ PrefabInstance:
       propertyPath: Penalty
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7421579801071964387, guid: 41390cf68bb956648830133fee34b73e, type: 3}
+      propertyPath: RevisitPoints
+      value: 100
+      objectReference: {fileID: 0}
     - target: {fileID: 7543083367612236498, guid: 41390cf68bb956648830133fee34b73e, type: 3}
       propertyPath: m_IsActive
       value: 1

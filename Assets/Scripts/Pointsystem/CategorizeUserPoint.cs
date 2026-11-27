@@ -16,7 +16,10 @@ public class CategorizeUserPoint : MonoBehaviour
         public float timer;
 
         // Has the player already received the revisit bonus?
-        public bool HasReceivedRevisitBonus;
+        public bool HasReceivedRevisitBonus = false;
+
+        // Has the player already visited the Interestpoint?
+        public bool HasVisited = false;
 
         // Is this scene currently in cooldown?
         public bool Cooldown;
@@ -62,19 +65,21 @@ public class CategorizeUserPoint : MonoBehaviour
     // How often the multiplier increases.( 1 = 0.01)
     public float ScoreMultTimerLoop = 1f;
 
-
     // If the multiplier is equal to or below this value when the player exits, a penalty is applied.
     public float ScoreLowPenaltyThreshold = 0.6f;
 
-
     // How many points the player loses if the multiplier is below the penalty threshold when exiting.
     public float Penalty;
+
+    // How many points the player gains when entering an InterestPoint
+    public float EnterBonus;
 
     [Header("Revisit Bonus")]
     // A separate public timer variable.
     // (This timer is not the same as the timer stored inside ScenePointState)
     public float timer;
 
+    public float RevisitPoints;
 
     // How long the revisit timer should count before finishing.
     public int TimerReturn = 30;
@@ -97,16 +102,9 @@ public class CategorizeUserPoint : MonoBehaviour
         // Check which scene we are currently in.
         UpdateSceneState();
 
-
         // Check if scene is real
         if (CurrentState == null)
             return;
-
-        if (Test)
-        {
-            RevisitBonus();
-            Test = false;
-        }
 
         if (CurrentState.timerRunning)
         {
@@ -131,6 +129,7 @@ public class CategorizeUserPoint : MonoBehaviour
         {
             UpdateDwellTimer();
         }
+
     }
 
     //Find current scene
@@ -168,6 +167,9 @@ public class CategorizeUserPoint : MonoBehaviour
         if (sceneIndex == CurrentSceneIndex)
             return;
 
+        // Switch CurrentState to the state belonging to the new scene in array.
+        CurrentState = SceneStates[sceneIndex];
+
         // Store the index of the new active scene.
         CurrentSceneIndex = sceneIndex;
 
@@ -177,6 +179,12 @@ public class CategorizeUserPoint : MonoBehaviour
 
         // Print a message of what state
         Debug.Log(gameObject.name + " is now using state for scene: " + sceneName);
+    }
+
+    //Function first time a scene is entered minus playerpoints from the Enterbonus Minus the amount of states in each scene (3)
+    private void FirstTimeSceneEnter()
+    {
+        playerStats.Playerpoints = playerStats.Playerpoints - (EnterBonus * 3);
     }
 
     //On exit
@@ -223,10 +231,14 @@ public class CategorizeUserPoint : MonoBehaviour
         {
             // Subtract the global penalty amount from the player's points.
             LosePoints(Penalty);
+            // Subtract the scoremult from the points also
+            Scoremulpoint = -CurrentState.ScoreMult;
         }
-
-        // Calculation of points given
-        Scoremulpoint = CurrentState.ScoreMult;
+        else
+        {
+            // Calculation of points given if over penalty
+            Scoremulpoint = CurrentState.ScoreMult;
+        }
 
         //apply multiplierpoint to current points
         playerStats.Playerpoints += CurrentState.ScoreMult;
@@ -238,6 +250,13 @@ public class CategorizeUserPoint : MonoBehaviour
         // If no scene state exists, stop.
         if (CurrentState == null)
             return;
+
+        if (CurrentState.HasVisited == false)
+        {
+            GainPoints(EnterBonus);
+            CurrentState.HasVisited = true;
+        }
+        
 
         // Mark that the player is currently inside the interest point.
         CurrentState.IsInside = true;
@@ -252,6 +271,13 @@ public class CategorizeUserPoint : MonoBehaviour
 
             // Reset the dwell timer.
             CurrentState.DwellTimer = 0f;
+        }
+
+        //If the cooldown has expired and they revisit gain points
+        if (CurrentState.Cooldown == true && CurrentState.HasReceivedRevisitBonus == false)
+        {
+            GainPoints(RevisitPoints);
+            CurrentState.HasReceivedRevisitBonus = true;
         }
     }
 

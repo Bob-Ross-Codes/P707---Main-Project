@@ -611,7 +611,7 @@ Transform:
   m_GameObject: {fileID: 6489883830880478559}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 7.1559997, y: 0.98899996, z: 7.7210016}
+  m_LocalPosition: {x: 7.1559997, y: 0.98899996, z: 7.7210007}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2211,7 +2211,7 @@ MonoBehaviour:
   SceneNames:
   - Scene_1_4000
   - Scene_2_1130
-  - 'Scene_3_1650 '
+  - Scene_3_1650
   SceneStates:
   - ScoreMult: 0
     timer: 0
