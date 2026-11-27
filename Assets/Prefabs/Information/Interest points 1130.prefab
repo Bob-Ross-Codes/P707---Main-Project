@@ -29,12 +29,12 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 2918515539965152647}
-  - {fileID: 8754651211344520554}
-  - {fileID: 2923009106381993471}
+  - {fileID: 2023379991304712240}
+  - {fileID: 246665499523287613}
+  - {fileID: 6746529292074253557}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &3244742220995654020
+--- !u!1001 &446776095438505153
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -42,171 +42,233 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 900269832908634810}
     m_Modifications:
-    - target: {fileID: 4013676703193658887, guid: 874f977d8584e73428a1f062127eb77a, type: 3}
-      propertyPath: m_Name
-      value: Interestpoint MID
-      objectReference: {fileID: 0}
-    - target: {fileID: 4013676703193658887, guid: 874f977d8584e73428a1f062127eb77a, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6087009892966225134, guid: 874f977d8584e73428a1f062127eb77a, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.65982646
-      objectReference: {fileID: 0}
-    - target: {fileID: 6087009892966225134, guid: 874f977d8584e73428a1f062127eb77a, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.65982646
-      objectReference: {fileID: 0}
-    - target: {fileID: 6087009892966225134, guid: 874f977d8584e73428a1f062127eb77a, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0.65982646
-      objectReference: {fileID: 0}
-    - target: {fileID: 6087009892966225134, guid: 874f977d8584e73428a1f062127eb77a, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -2.433
-      objectReference: {fileID: 0}
-    - target: {fileID: 6087009892966225134, guid: 874f977d8584e73428a1f062127eb77a, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -0.434
-      objectReference: {fileID: 0}
-    - target: {fileID: 6087009892966225134, guid: 874f977d8584e73428a1f062127eb77a, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -4.4480247
-      objectReference: {fileID: 0}
-    - target: {fileID: 6087009892966225134, guid: 874f977d8584e73428a1f062127eb77a, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6087009892966225134, guid: 874f977d8584e73428a1f062127eb77a, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6087009892966225134, guid: 874f977d8584e73428a1f062127eb77a, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6087009892966225134, guid: 874f977d8584e73428a1f062127eb77a, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6087009892966225134, guid: 874f977d8584e73428a1f062127eb77a, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6087009892966225134, guid: 874f977d8584e73428a1f062127eb77a, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6087009892966225134, guid: 874f977d8584e73428a1f062127eb77a, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7104571815380151926, guid: 874f977d8584e73428a1f062127eb77a, type: 3}
-      propertyPath: zoneSelection
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8875517735535445494, guid: 874f977d8584e73428a1f062127eb77a, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: 22f7a327efe5c4f4ab8b520acffa9943, type: 3}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 874f977d8584e73428a1f062127eb77a, type: 3}
---- !u!4 &8754651211344520554 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 6087009892966225134, guid: 874f977d8584e73428a1f062127eb77a, type: 3}
-  m_PrefabInstance: {fileID: 3244742220995654020}
-  m_PrefabAsset: {fileID: 0}
---- !u!1001 &9001000710353658129
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 900269832908634810}
-    m_Modifications:
-    - target: {fileID: 4013676703193658887, guid: 874f977d8584e73428a1f062127eb77a, type: 3}
-      propertyPath: m_Name
-      value: Interestpoint TH
-      objectReference: {fileID: 0}
-    - target: {fileID: 4013676703193658887, guid: 874f977d8584e73428a1f062127eb77a, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6087009892966225134, guid: 874f977d8584e73428a1f062127eb77a, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.65982646
-      objectReference: {fileID: 0}
-    - target: {fileID: 6087009892966225134, guid: 874f977d8584e73428a1f062127eb77a, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.65982646
-      objectReference: {fileID: 0}
-    - target: {fileID: 6087009892966225134, guid: 874f977d8584e73428a1f062127eb77a, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0.65982646
-      objectReference: {fileID: 0}
-    - target: {fileID: 6087009892966225134, guid: 874f977d8584e73428a1f062127eb77a, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -2.475
-      objectReference: {fileID: 0}
-    - target: {fileID: 6087009892966225134, guid: 874f977d8584e73428a1f062127eb77a, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -0.321
-      objectReference: {fileID: 0}
-    - target: {fileID: 6087009892966225134, guid: 874f977d8584e73428a1f062127eb77a, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -4.4640245
-      objectReference: {fileID: 0}
-    - target: {fileID: 6087009892966225134, guid: 874f977d8584e73428a1f062127eb77a, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6087009892966225134, guid: 874f977d8584e73428a1f062127eb77a, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6087009892966225134, guid: 874f977d8584e73428a1f062127eb77a, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6087009892966225134, guid: 874f977d8584e73428a1f062127eb77a, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6087009892966225134, guid: 874f977d8584e73428a1f062127eb77a, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6087009892966225134, guid: 874f977d8584e73428a1f062127eb77a, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6087009892966225134, guid: 874f977d8584e73428a1f062127eb77a, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7104571815380151926, guid: 874f977d8584e73428a1f062127eb77a, type: 3}
+    - target: {fileID: 149451097607040353, guid: e20b6cb1294a047f4b8fb29f4fbe2f13, type: 3}
       propertyPath: zoneSelection
       value: 2
       objectReference: {fileID: 0}
-    - target: {fileID: 8875517735535445494, guid: 874f977d8584e73428a1f062127eb77a, type: 3}
-      propertyPath: m_Sprite
+    - target: {fileID: 197956369606419583, guid: e20b6cb1294a047f4b8fb29f4fbe2f13, type: 3}
+      propertyPath: body
+      value: "Der er fundet enkelte levn af tr\xE6bygninger, blandt andet i den nord\xF8stlige
+        del af R\xE5dhuspladsen. Bygningerne er enten br\xE6ndt ned p\xE5 et tidspunkt,
+        eller man har revet dem ned og genbrugt materialerne i andet byggeri. Men
+        der er i flere tilf\xE6lde fundet de syldsten, som konstruktionerne har hvilet
+        p\xE5. Syldstenene kan variere meget i st\xF8rrelse og v\xE6re stablet i
+        flere lag. De fort\xE6ller os ikke, om der er tale om bindingsv\xE6rkshuse
+        eller bulhuse, men ofte vil der v\xE6re spor efter lerklining, hvor der har
+        st\xE5et bindingsv\xE6rk. Der er fundet en del lerklining i forbindelse med
+        de ark\xE6ologiske unders\xF8gelser p\xE5 R\xE5dhuspladsen, s\xE5 der har
+        nok b\xE5de v\xE6ret lerklinede huse af bindingsv\xE6rk og bulhuse."
+      objectReference: {fileID: 0}
+    - target: {fileID: 197956369606419583, guid: e20b6cb1294a047f4b8fb29f4fbe2f13, type: 3}
+      propertyPath: photo
       value: 
-      objectReference: {fileID: 21300000, guid: f441d43c96d76554e83ab21a86ddd285, type: 3}
+      objectReference: {fileID: 2800000, guid: 7285789ef6a2b4392bb9c3a15c013ade, type: 3}
+    - target: {fileID: 197956369606419583, guid: e20b6cb1294a047f4b8fb29f4fbe2f13, type: 3}
+      propertyPath: title
+      value: "Bulhuse p\xE5 R\xE5dhuspladsen"
+      objectReference: {fileID: 0}
+    - target: {fileID: 197956369606419583, guid: e20b6cb1294a047f4b8fb29f4fbe2f13, type: 3}
+      propertyPath: caption
+      value: "Smal gr\xF8ft fra bj\xE6lke fra et hus, set til venstre for landm\xE5lerstokken.
+        Aftrykket blev fundet netop her under de store metro-udgravninger i 2011.
+        Foto: K\xF8benhavns Museum."
+      objectReference: {fileID: 0}
+    - target: {fileID: 375352395081321327, guid: e20b6cb1294a047f4b8fb29f4fbe2f13, type: 3}
+      propertyPath: m_text
+      value: "Bulhuse p\xE5 R\xE5dhuspladsen"
+      objectReference: {fileID: 0}
+    - target: {fileID: 501635520527851673, guid: e20b6cb1294a047f4b8fb29f4fbe2f13, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.39105195
+      objectReference: {fileID: 0}
+    - target: {fileID: 501635520527851673, guid: e20b6cb1294a047f4b8fb29f4fbe2f13, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.30447403
+      objectReference: {fileID: 0}
+    - target: {fileID: 910465560261660157, guid: e20b6cb1294a047f4b8fb29f4fbe2f13, type: 3}
+      propertyPath: m_text
+      value: "Der er fundet enkelte levn af tr\xE6bygninger, blandt andet i den nord\xF8stlige
+        del af R\xE5dhuspladsen. Bygningerne er enten br\xE6ndt ned p\xE5 et tidspunkt,
+        eller man har revet dem ned og genbrugt materialerne i andet byggeri. Men
+        der er i flere tilf\xE6lde fundet de syldsten, som konstruktionerne har hvilet
+        p\xE5. Syldstenene kan variere meget i st\xF8rrelse og v\xE6re stablet i
+        flere lag. De fort\xE6ller os ikke, om der er tale om bindingsv\xE6rkshuse
+        eller bulhuse, men ofte vil der v\xE6re spor efter lerklining, hvor der har
+        st\xE5et bindingsv\xE6rk. Der er fundet en del lerklining i forbindelse med
+        de ark\xE6ologiske unders\xF8gelser p\xE5 R\xE5dhuspladsen, s\xE5 der har
+        nok b\xE5de v\xE6ret lerklinede huse af bindingsv\xE6rk og bulhuse."
+      objectReference: {fileID: 0}
+    - target: {fileID: 1246144904260809615, guid: e20b6cb1294a047f4b8fb29f4fbe2f13, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.39105195
+      objectReference: {fileID: 0}
+    - target: {fileID: 1246144904260809615, guid: e20b6cb1294a047f4b8fb29f4fbe2f13, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.30447403
+      objectReference: {fileID: 0}
+    - target: {fileID: 1914701982045956199, guid: e20b6cb1294a047f4b8fb29f4fbe2f13, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2097081220345516577, guid: e20b6cb1294a047f4b8fb29f4fbe2f13, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0.9221379
+      objectReference: {fileID: 0}
+    - target: {fileID: 2097081220345516577, guid: e20b6cb1294a047f4b8fb29f4fbe2f13, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0.022137918
+      objectReference: {fileID: 0}
+    - target: {fileID: 2261481047284231516, guid: e20b6cb1294a047f4b8fb29f4fbe2f13, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.39105195
+      objectReference: {fileID: 0}
+    - target: {fileID: 2261481047284231516, guid: e20b6cb1294a047f4b8fb29f4fbe2f13, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.30447403
+      objectReference: {fileID: 0}
+    - target: {fileID: 2773867852966075662, guid: e20b6cb1294a047f4b8fb29f4fbe2f13, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0.9221379
+      objectReference: {fileID: 0}
+    - target: {fileID: 2773867852966075662, guid: e20b6cb1294a047f4b8fb29f4fbe2f13, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0.022137918
+      objectReference: {fileID: 0}
+    - target: {fileID: 3030593448679946537, guid: e20b6cb1294a047f4b8fb29f4fbe2f13, type: 3}
+      propertyPath: m_Name
+      value: Interestpoint TH
+      objectReference: {fileID: 0}
+    - target: {fileID: 3030593448679946537, guid: e20b6cb1294a047f4b8fb29f4fbe2f13, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3537144981897803544, guid: e20b6cb1294a047f4b8fb29f4fbe2f13, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3630760025944078832, guid: e20b6cb1294a047f4b8fb29f4fbe2f13, type: 3}
+      propertyPath: m_text
+      value: "Der er fundet enkelte levn af tr\xE6bygninger, blandt andet i den nord\xF8stlige
+        del af R\xE5dhuspladsen. Bygningerne er enten br\xE6ndt ned p\xE5 et tidspunkt,
+        eller man har revet dem ned og genbrugt materialerne i andet byggeri. Men
+        der er i flere tilf\xE6lde fundet de syldsten, som konstruktionerne har hvilet
+        p\xE5. Syldstenene kan variere meget i st\xF8rrelse og v\xE6re stablet i
+        flere lag. De fort\xE6ller os ikke, om der er tale om bindingsv\xE6rkshuse
+        eller bulhuse, men ofte vil der v\xE6re spor efter lerklining, hvor der har
+        st\xE5et bindingsv\xE6rk. Der er fundet en del lerklining i forbindelse med
+        de ark\xE6ologiske unders\xF8gelser p\xE5 R\xE5dhuspladsen, s\xE5 der har
+        nok b\xE5de v\xE6ret lerklinede huse af bindingsv\xE6rk og bulhuse."
+      objectReference: {fileID: 0}
+    - target: {fileID: 4656826326359483649, guid: e20b6cb1294a047f4b8fb29f4fbe2f13, type: 3}
+      propertyPath: m_text
+      value: "Der er fundet enkelte levn af tr\xE6bygninger, blandt andet i den nord\xF8stlige
+        del af R\xE5dhuspladsen. Bygningerne er enten br\xE6ndt ned p\xE5 et tidspunkt,
+        eller man har revet dem ned og genbrugt materialerne i andet byggeri. Men
+        der er i flere tilf\xE6lde fundet de syldsten, som konstruktionerne har hvilet
+        p\xE5. Syldstenene kan variere meget i st\xF8rrelse og v\xE6re stablet i
+        flere lag. De fort\xE6ller os ikke, om der er tale om bindingsv\xE6rkshuse
+        eller bulhuse, men ofte vil der v\xE6re spor efter lerklining, hvor der har
+        st\xE5et bindingsv\xE6rk. Der er fundet en del lerklining i forbindelse med
+        de ark\xE6ologiske unders\xF8gelser p\xE5 R\xE5dhuspladsen, s\xE5 der har
+        nok b\xE5de v\xE6ret lerklinede huse af bindingsv\xE6rk og bulhuse."
+      objectReference: {fileID: 0}
+    - target: {fileID: 4726304191057658516, guid: e20b6cb1294a047f4b8fb29f4fbe2f13, type: 3}
+      propertyPath: m_text
+      value: "Smal gr\xF8ft fra bj\xE6lke fra et hus, set til venstre for landm\xE5lerstokken.
+        Aftrykket blev fundet netop her under de store metro-udgravninger i 2011.
+        Foto: K\xF8benhavns Museum."
+      objectReference: {fileID: 0}
+    - target: {fileID: 4997704836247358736, guid: e20b6cb1294a047f4b8fb29f4fbe2f13, type: 3}
+      propertyPath: m_text
+      value: "Smal gr\xF8ft fra bj\xE6lke fra et hus, set til venstre for landm\xE5lerstokken.
+        Aftrykket blev fundet netop her under de store metro-udgravninger i 2011.
+        Foto: K\xF8benhavns Museum."
+      objectReference: {fileID: 0}
+    - target: {fileID: 5666468793910167777, guid: e20b6cb1294a047f4b8fb29f4fbe2f13, type: 3}
+      propertyPath: m_text
+      value: "Smal gr\xF8ft fra bj\xE6lke fra et hus, set til venstre for landm\xE5lerstokken.
+        Aftrykket blev fundet netop her under de store metro-udgravninger i 2011.
+        Foto: K\xF8benhavns Museum."
+      objectReference: {fileID: 0}
+    - target: {fileID: 6049952979272995702, guid: e20b6cb1294a047f4b8fb29f4fbe2f13, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0.9221379
+      objectReference: {fileID: 0}
+    - target: {fileID: 6049952979272995702, guid: e20b6cb1294a047f4b8fb29f4fbe2f13, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0.022137918
+      objectReference: {fileID: 0}
+    - target: {fileID: 6598680380975740980, guid: e20b6cb1294a047f4b8fb29f4fbe2f13, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 6598680380975740980, guid: e20b6cb1294a047f4b8fb29f4fbe2f13, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 6598680380975740980, guid: e20b6cb1294a047f4b8fb29f4fbe2f13, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 6598680380975740980, guid: e20b6cb1294a047f4b8fb29f4fbe2f13, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -2.379976
+      objectReference: {fileID: 0}
+    - target: {fileID: 6598680380975740980, guid: e20b6cb1294a047f4b8fb29f4fbe2f13, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.020915527
+      objectReference: {fileID: 0}
+    - target: {fileID: 6598680380975740980, guid: e20b6cb1294a047f4b8fb29f4fbe2f13, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -4.665985
+      objectReference: {fileID: 0}
+    - target: {fileID: 6598680380975740980, guid: e20b6cb1294a047f4b8fb29f4fbe2f13, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6598680380975740980, guid: e20b6cb1294a047f4b8fb29f4fbe2f13, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6598680380975740980, guid: e20b6cb1294a047f4b8fb29f4fbe2f13, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6598680380975740980, guid: e20b6cb1294a047f4b8fb29f4fbe2f13, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6598680380975740980, guid: e20b6cb1294a047f4b8fb29f4fbe2f13, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6598680380975740980, guid: e20b6cb1294a047f4b8fb29f4fbe2f13, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6598680380975740980, guid: e20b6cb1294a047f4b8fb29f4fbe2f13, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7368655614491170978, guid: e20b6cb1294a047f4b8fb29f4fbe2f13, type: 3}
+      propertyPath: m_text
+      value: "Bulhuse p\xE5 R\xE5dhuspladsen"
+      objectReference: {fileID: 0}
+    - target: {fileID: 7549712751577984931, guid: e20b6cb1294a047f4b8fb29f4fbe2f13, type: 3}
+      propertyPath: m_text
+      value: "Bulhuse p\xE5 R\xE5dhuspladsen"
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 874f977d8584e73428a1f062127eb77a, type: 3}
---- !u!4 &2923009106381993471 stripped
+  m_SourcePrefab: {fileID: 100100000, guid: e20b6cb1294a047f4b8fb29f4fbe2f13, type: 3}
+--- !u!4 &6746529292074253557 stripped
 Transform:
-  m_CorrespondingSourceObject: {fileID: 6087009892966225134, guid: 874f977d8584e73428a1f062127eb77a, type: 3}
-  m_PrefabInstance: {fileID: 9001000710353658129}
+  m_CorrespondingSourceObject: {fileID: 6598680380975740980, guid: e20b6cb1294a047f4b8fb29f4fbe2f13, type: 3}
+  m_PrefabInstance: {fileID: 446776095438505153}
   m_PrefabAsset: {fileID: 0}
---- !u!1001 &9005441500210714985
+--- !u!1001 &5154164963266021380
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -214,77 +276,467 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 900269832908634810}
     m_Modifications:
-    - target: {fileID: 4013676703193658887, guid: 874f977d8584e73428a1f062127eb77a, type: 3}
+    - target: {fileID: 197956369606419583, guid: e20b6cb1294a047f4b8fb29f4fbe2f13, type: 3}
+      propertyPath: body
+      value: "Kun en lille del af kirkeg\xE5rden er unders\xF8gt. Der ligger nok
+        flere grave af de \xE6ldste k\xF8benhavnere bare en lille meter under nutidens
+        vejbel\xE6gning uden for de arealer, der har skullet bruges til anl\xE6gsarbejde.
+        Der var b\xE5de kvinder, m\xE6nd og b\xF8rn begravet her, og kulstof 14-dateringer
+        af skeletterne viser, at de var blevet begravet mellem ca. 1026 og 1155.
+        Gravene l\xE5 derfor ogs\xE5 i flere niveauer og var gravet ned delvist oven
+        i hinanden. Gravene i middelalderen l\xE5 generelt, s\xE5 de pegede i samme
+        retning som kirken, \xF8st-vest. P\xE5 R\xE5dhuspladsen l\xE5 gravene med
+        lidt forskellig retning, og det viser, at de anlagte grave kan have forholdt
+        sig til to versioner af kirken. F\xF8r \xE5r 1200 blev folk ikke begravet
+        inde i selve kirkebygningen, medmindre det var bisper eller kongelige. N\xE5r
+        der er et omr\xE5de uden grave p\xE5 kirkeg\xE5rden, kan det derfor vise,
+        hvor kirken har st\xE5et."
+      objectReference: {fileID: 0}
+    - target: {fileID: 197956369606419583, guid: e20b6cb1294a047f4b8fb29f4fbe2f13, type: 3}
+      propertyPath: photo
+      value: 
+      objectReference: {fileID: 2800000, guid: 8c1691e5780244f07a288c58649c593c, type: 3}
+    - target: {fileID: 197956369606419583, guid: e20b6cb1294a047f4b8fb29f4fbe2f13, type: 3}
+      propertyPath: title
+      value: "Kirkeg\xE5rden"
+      objectReference: {fileID: 0}
+    - target: {fileID: 197956369606419583, guid: e20b6cb1294a047f4b8fb29f4fbe2f13, type: 3}
+      propertyPath: caption
+      value: "Flere grave fra kirkeg\xE5rden p\xE5 R\xE5dhuspladsen. Gravene er her
+        t\xF8mt for jord og skeletter og fremst\xE5r som de nedgravninger, man lagde
+        kister og de d\xF8de i."
+      objectReference: {fileID: 0}
+    - target: {fileID: 375352395081321327, guid: e20b6cb1294a047f4b8fb29f4fbe2f13, type: 3}
+      propertyPath: m_text
+      value: "Kirkeg\xE5rden"
+      objectReference: {fileID: 0}
+    - target: {fileID: 501635520527851673, guid: e20b6cb1294a047f4b8fb29f4fbe2f13, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.39105195
+      objectReference: {fileID: 0}
+    - target: {fileID: 501635520527851673, guid: e20b6cb1294a047f4b8fb29f4fbe2f13, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.30447403
+      objectReference: {fileID: 0}
+    - target: {fileID: 910465560261660157, guid: e20b6cb1294a047f4b8fb29f4fbe2f13, type: 3}
+      propertyPath: m_text
+      value: "Kun en lille del af kirkeg\xE5rden er unders\xF8gt. Der ligger nok
+        flere grave af de \xE6ldste k\xF8benhavnere bare en lille meter under nutidens
+        vejbel\xE6gning uden for de arealer, der har skullet bruges til anl\xE6gsarbejde.
+        Der var b\xE5de kvinder, m\xE6nd og b\xF8rn begravet her, og kulstof 14-dateringer
+        af skeletterne viser, at de var blevet begravet mellem ca. 1026 og 1155.
+        Gravene l\xE5 derfor ogs\xE5 i flere niveauer og var gravet ned delvist oven
+        i hinanden. Gravene i middelalderen l\xE5 generelt, s\xE5 de pegede i samme
+        retning som kirken, \xF8st-vest. P\xE5 R\xE5dhuspladsen l\xE5 gravene med
+        lidt forskellig retning, og det viser, at de anlagte grave kan have forholdt
+        sig til to versioner af kirken. F\xF8r \xE5r 1200 blev folk ikke begravet
+        inde i selve kirkebygningen, medmindre det var bisper eller kongelige. N\xE5r
+        der er et omr\xE5de uden grave p\xE5 kirkeg\xE5rden, kan det derfor vise,
+        hvor kirken har st\xE5et."
+      objectReference: {fileID: 0}
+    - target: {fileID: 1246144904260809615, guid: e20b6cb1294a047f4b8fb29f4fbe2f13, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.39105195
+      objectReference: {fileID: 0}
+    - target: {fileID: 1246144904260809615, guid: e20b6cb1294a047f4b8fb29f4fbe2f13, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.30447403
+      objectReference: {fileID: 0}
+    - target: {fileID: 2097081220345516577, guid: e20b6cb1294a047f4b8fb29f4fbe2f13, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0.9221379
+      objectReference: {fileID: 0}
+    - target: {fileID: 2097081220345516577, guid: e20b6cb1294a047f4b8fb29f4fbe2f13, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0.022137918
+      objectReference: {fileID: 0}
+    - target: {fileID: 2261481047284231516, guid: e20b6cb1294a047f4b8fb29f4fbe2f13, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.39105195
+      objectReference: {fileID: 0}
+    - target: {fileID: 2261481047284231516, guid: e20b6cb1294a047f4b8fb29f4fbe2f13, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.30447403
+      objectReference: {fileID: 0}
+    - target: {fileID: 2773867852966075662, guid: e20b6cb1294a047f4b8fb29f4fbe2f13, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0.9221379
+      objectReference: {fileID: 0}
+    - target: {fileID: 2773867852966075662, guid: e20b6cb1294a047f4b8fb29f4fbe2f13, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0.022137918
+      objectReference: {fileID: 0}
+    - target: {fileID: 3030593448679946537, guid: e20b6cb1294a047f4b8fb29f4fbe2f13, type: 3}
       propertyPath: m_Name
       value: Interestpoint TV
       objectReference: {fileID: 0}
-    - target: {fileID: 4013676703193658887, guid: 874f977d8584e73428a1f062127eb77a, type: 3}
+    - target: {fileID: 3030593448679946537, guid: e20b6cb1294a047f4b8fb29f4fbe2f13, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6087009892966225134, guid: 874f977d8584e73428a1f062127eb77a, type: 3}
+    - target: {fileID: 3630760025944078832, guid: e20b6cb1294a047f4b8fb29f4fbe2f13, type: 3}
+      propertyPath: m_text
+      value: "Kun en lille del af kirkeg\xE5rden er unders\xF8gt. Der ligger nok
+        flere grave af de \xE6ldste k\xF8benhavnere bare en lille meter under nutidens
+        vejbel\xE6gning uden for de arealer, der har skullet bruges til anl\xE6gsarbejde.
+        Der var b\xE5de kvinder, m\xE6nd og b\xF8rn begravet her, og kulstof 14-dateringer
+        af skeletterne viser, at de var blevet begravet mellem ca. 1026 og 1155.
+        Gravene l\xE5 derfor ogs\xE5 i flere niveauer og var gravet ned delvist oven
+        i hinanden. Gravene i middelalderen l\xE5 generelt, s\xE5 de pegede i samme
+        retning som kirken, \xF8st-vest. P\xE5 R\xE5dhuspladsen l\xE5 gravene med
+        lidt forskellig retning, og det viser, at de anlagte grave kan have forholdt
+        sig til to versioner af kirken. F\xF8r \xE5r 1200 blev folk ikke begravet
+        inde i selve kirkebygningen, medmindre det var bisper eller kongelige. N\xE5r
+        der er et omr\xE5de uden grave p\xE5 kirkeg\xE5rden, kan det derfor vise,
+        hvor kirken har st\xE5et."
+      objectReference: {fileID: 0}
+    - target: {fileID: 4656826326359483649, guid: e20b6cb1294a047f4b8fb29f4fbe2f13, type: 3}
+      propertyPath: m_text
+      value: "Kun en lille del af kirkeg\xE5rden er unders\xF8gt. Der ligger nok
+        flere grave af de \xE6ldste k\xF8benhavnere bare en lille meter under nutidens
+        vejbel\xE6gning uden for de arealer, der har skullet bruges til anl\xE6gsarbejde.
+        Der var b\xE5de kvinder, m\xE6nd og b\xF8rn begravet her, og kulstof 14-dateringer
+        af skeletterne viser, at de var blevet begravet mellem ca. 1026 og 1155.
+        Gravene l\xE5 derfor ogs\xE5 i flere niveauer og var gravet ned delvist oven
+        i hinanden. Gravene i middelalderen l\xE5 generelt, s\xE5 de pegede i samme
+        retning som kirken, \xF8st-vest. P\xE5 R\xE5dhuspladsen l\xE5 gravene med
+        lidt forskellig retning, og det viser, at de anlagte grave kan have forholdt
+        sig til to versioner af kirken. F\xF8r \xE5r 1200 blev folk ikke begravet
+        inde i selve kirkebygningen, medmindre det var bisper eller kongelige. N\xE5r
+        der er et omr\xE5de uden grave p\xE5 kirkeg\xE5rden, kan det derfor vise,
+        hvor kirken har st\xE5et."
+      objectReference: {fileID: 0}
+    - target: {fileID: 4726304191057658516, guid: e20b6cb1294a047f4b8fb29f4fbe2f13, type: 3}
+      propertyPath: m_text
+      value: "Flere grave fra kirkeg\xE5rden p\xE5 R\xE5dhuspladsen. Gravene er her
+        t\xF8mt for jord og skeletter og fremst\xE5r som de nedgravninger, man lagde
+        kister og de d\xF8de i."
+      objectReference: {fileID: 0}
+    - target: {fileID: 4997704836247358736, guid: e20b6cb1294a047f4b8fb29f4fbe2f13, type: 3}
+      propertyPath: m_text
+      value: "Flere grave fra kirkeg\xE5rden p\xE5 R\xE5dhuspladsen. Gravene er her
+        t\xF8mt for jord og skeletter og fremst\xE5r som de nedgravninger, man lagde
+        kister og de d\xF8de i."
+      objectReference: {fileID: 0}
+    - target: {fileID: 5666468793910167777, guid: e20b6cb1294a047f4b8fb29f4fbe2f13, type: 3}
+      propertyPath: m_text
+      value: "Flere grave fra kirkeg\xE5rden p\xE5 R\xE5dhuspladsen. Gravene er her
+        t\xF8mt for jord og skeletter og fremst\xE5r som de nedgravninger, man lagde
+        kister og de d\xF8de i."
+      objectReference: {fileID: 0}
+    - target: {fileID: 6049952979272995702, guid: e20b6cb1294a047f4b8fb29f4fbe2f13, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0.9221379
+      objectReference: {fileID: 0}
+    - target: {fileID: 6049952979272995702, guid: e20b6cb1294a047f4b8fb29f4fbe2f13, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0.022137918
+      objectReference: {fileID: 0}
+    - target: {fileID: 6598680380975740980, guid: e20b6cb1294a047f4b8fb29f4fbe2f13, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.65982646
+      value: 0.8
       objectReference: {fileID: 0}
-    - target: {fileID: 6087009892966225134, guid: 874f977d8584e73428a1f062127eb77a, type: 3}
+    - target: {fileID: 6598680380975740980, guid: e20b6cb1294a047f4b8fb29f4fbe2f13, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.65982646
+      value: 0.8
       objectReference: {fileID: 0}
-    - target: {fileID: 6087009892966225134, guid: 874f977d8584e73428a1f062127eb77a, type: 3}
+    - target: {fileID: 6598680380975740980, guid: e20b6cb1294a047f4b8fb29f4fbe2f13, type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.65982646
+      value: 0.8
       objectReference: {fileID: 0}
-    - target: {fileID: 6087009892966225134, guid: 874f977d8584e73428a1f062127eb77a, type: 3}
+    - target: {fileID: 6598680380975740980, guid: e20b6cb1294a047f4b8fb29f4fbe2f13, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -6.165
+      value: -5.7299757
       objectReference: {fileID: 0}
-    - target: {fileID: 6087009892966225134, guid: 874f977d8584e73428a1f062127eb77a, type: 3}
+    - target: {fileID: 6598680380975740980, guid: e20b6cb1294a047f4b8fb29f4fbe2f13, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.208
+      value: -0.020915527
       objectReference: {fileID: 0}
-    - target: {fileID: 6087009892966225134, guid: 874f977d8584e73428a1f062127eb77a, type: 3}
+    - target: {fileID: 6598680380975740980, guid: e20b6cb1294a047f4b8fb29f4fbe2f13, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -4.2
+      value: -4.915985
       objectReference: {fileID: 0}
-    - target: {fileID: 6087009892966225134, guid: 874f977d8584e73428a1f062127eb77a, type: 3}
+    - target: {fileID: 6598680380975740980, guid: e20b6cb1294a047f4b8fb29f4fbe2f13, type: 3}
       propertyPath: m_LocalRotation.w
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 6087009892966225134, guid: 874f977d8584e73428a1f062127eb77a, type: 3}
+    - target: {fileID: 6598680380975740980, guid: e20b6cb1294a047f4b8fb29f4fbe2f13, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6087009892966225134, guid: 874f977d8584e73428a1f062127eb77a, type: 3}
+    - target: {fileID: 6598680380975740980, guid: e20b6cb1294a047f4b8fb29f4fbe2f13, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6087009892966225134, guid: 874f977d8584e73428a1f062127eb77a, type: 3}
+    - target: {fileID: 6598680380975740980, guid: e20b6cb1294a047f4b8fb29f4fbe2f13, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6087009892966225134, guid: 874f977d8584e73428a1f062127eb77a, type: 3}
+    - target: {fileID: 6598680380975740980, guid: e20b6cb1294a047f4b8fb29f4fbe2f13, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6087009892966225134, guid: 874f977d8584e73428a1f062127eb77a, type: 3}
+    - target: {fileID: 6598680380975740980, guid: e20b6cb1294a047f4b8fb29f4fbe2f13, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6087009892966225134, guid: 874f977d8584e73428a1f062127eb77a, type: 3}
+    - target: {fileID: 6598680380975740980, guid: e20b6cb1294a047f4b8fb29f4fbe2f13, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8875517735535445494, guid: 874f977d8584e73428a1f062127eb77a, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: 0c957d59e11f15a40aff7163404c87ce, type: 3}
+    - target: {fileID: 7368655614491170978, guid: e20b6cb1294a047f4b8fb29f4fbe2f13, type: 3}
+      propertyPath: m_text
+      value: "Kirkeg\xE5rden"
+      objectReference: {fileID: 0}
+    - target: {fileID: 7549712751577984931, guid: e20b6cb1294a047f4b8fb29f4fbe2f13, type: 3}
+      propertyPath: m_text
+      value: "Kirkeg\xE5rden"
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 874f977d8584e73428a1f062127eb77a, type: 3}
---- !u!4 &2918515539965152647 stripped
+  m_SourcePrefab: {fileID: 100100000, guid: e20b6cb1294a047f4b8fb29f4fbe2f13, type: 3}
+--- !u!4 &2023379991304712240 stripped
 Transform:
-  m_CorrespondingSourceObject: {fileID: 6087009892966225134, guid: 874f977d8584e73428a1f062127eb77a, type: 3}
-  m_PrefabInstance: {fileID: 9005441500210714985}
+  m_CorrespondingSourceObject: {fileID: 6598680380975740980, guid: e20b6cb1294a047f4b8fb29f4fbe2f13, type: 3}
+  m_PrefabInstance: {fileID: 5154164963266021380}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &6412963345045647881
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 900269832908634810}
+    m_Modifications:
+    - target: {fileID: 149451097607040353, guid: e20b6cb1294a047f4b8fb29f4fbe2f13, type: 3}
+      propertyPath: zoneSelection
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 197956369606419583, guid: e20b6cb1294a047f4b8fb29f4fbe2f13, type: 3}
+      propertyPath: body
+      value: "Ved de store udgravninger p\xE5 R\xE5dhuspladsen i 2011 blev der fundet
+        vejbel\xE6gninger og hjulspor fra vogne, der har k\xF8rt p\xE5 vejen. Der
+        var hjulspor, der f\xF8rte lige ind mod byen, mens andre drejede lidt ned
+        mod kysten. Derfor er det sandsynligt, at vejen har delt sig og er fortsat
+        mod syd. Vejen var en jordvej med en bel\xE6gning af sk\xE6rver af sten og
+        affald s\xE5som knogler og jernslagger. Vejen var s\xE5ledes opbygget af
+        forskellige h\xE5rde materialer, der kunne bruges til at skabe en stabil
+        overflade. Nogle steder var vejene p\xE5 den tid belagt med tr\xE6 eller
+        st\xF8rre eller mindre sten, eller de kunne v\xE6re en art jordveje som p\xE5
+        R\xE5dhuspladsen. Vejforl\xF8bet var nogle steder s\xE5 bredt, at det m\xE5ske
+        snarere var en slags plads. Lignende brede veje eller pladser ses blandt
+        andet i Lund."
+      objectReference: {fileID: 0}
+    - target: {fileID: 197956369606419583, guid: e20b6cb1294a047f4b8fb29f4fbe2f13, type: 3}
+      propertyPath: photo
+      value: 
+      objectReference: {fileID: 2800000, guid: 1cd653a523e73462abd40c0321e44bb6, type: 3}
+    - target: {fileID: 197956369606419583, guid: e20b6cb1294a047f4b8fb29f4fbe2f13, type: 3}
+      propertyPath: title
+      value: "Hjulspor p\xE5 R\xE5dhuspladsen"
+      objectReference: {fileID: 0}
+    - target: {fileID: 197956369606419583, guid: e20b6cb1294a047f4b8fb29f4fbe2f13, type: 3}
+      propertyPath: caption
+      value: "Udsnit af hjulspor fra R\xE5dhuspladsen og vejens bel\xE6gning. Landm\xE5lerstokkens
+        felter er hver 20 cm."
+      objectReference: {fileID: 0}
+    - target: {fileID: 375352395081321327, guid: e20b6cb1294a047f4b8fb29f4fbe2f13, type: 3}
+      propertyPath: m_text
+      value: "Hjulspor p\xE5 R\xE5dhuspladsen"
+      objectReference: {fileID: 0}
+    - target: {fileID: 501635520527851673, guid: e20b6cb1294a047f4b8fb29f4fbe2f13, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.39105195
+      objectReference: {fileID: 0}
+    - target: {fileID: 501635520527851673, guid: e20b6cb1294a047f4b8fb29f4fbe2f13, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.30447403
+      objectReference: {fileID: 0}
+    - target: {fileID: 910465560261660157, guid: e20b6cb1294a047f4b8fb29f4fbe2f13, type: 3}
+      propertyPath: m_text
+      value: "Ved de store udgravninger p\xE5 R\xE5dhuspladsen i 2011 blev der fundet
+        vejbel\xE6gninger og hjulspor fra vogne, der har k\xF8rt p\xE5 vejen. Der
+        var hjulspor, der f\xF8rte lige ind mod byen, mens andre drejede lidt ned
+        mod kysten. Derfor er det sandsynligt, at vejen har delt sig og er fortsat
+        mod syd. Vejen var en jordvej med en bel\xE6gning af sk\xE6rver af sten og
+        affald s\xE5som knogler og jernslagger. Vejen var s\xE5ledes opbygget af
+        forskellige h\xE5rde materialer, der kunne bruges til at skabe en stabil
+        overflade. Nogle steder var vejene p\xE5 den tid belagt med tr\xE6 eller
+        st\xF8rre eller mindre sten, eller de kunne v\xE6re en art jordveje som p\xE5
+        R\xE5dhuspladsen. Vejforl\xF8bet var nogle steder s\xE5 bredt, at det m\xE5ske
+        snarere var en slags plads. Lignende brede veje eller pladser ses blandt
+        andet i Lund."
+      objectReference: {fileID: 0}
+    - target: {fileID: 1246144904260809615, guid: e20b6cb1294a047f4b8fb29f4fbe2f13, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.39105195
+      objectReference: {fileID: 0}
+    - target: {fileID: 1246144904260809615, guid: e20b6cb1294a047f4b8fb29f4fbe2f13, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.30447403
+      objectReference: {fileID: 0}
+    - target: {fileID: 1914701982045956199, guid: e20b6cb1294a047f4b8fb29f4fbe2f13, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2097081220345516577, guid: e20b6cb1294a047f4b8fb29f4fbe2f13, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0.9221379
+      objectReference: {fileID: 0}
+    - target: {fileID: 2097081220345516577, guid: e20b6cb1294a047f4b8fb29f4fbe2f13, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0.022137918
+      objectReference: {fileID: 0}
+    - target: {fileID: 2261481047284231516, guid: e20b6cb1294a047f4b8fb29f4fbe2f13, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.39105195
+      objectReference: {fileID: 0}
+    - target: {fileID: 2261481047284231516, guid: e20b6cb1294a047f4b8fb29f4fbe2f13, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.30447403
+      objectReference: {fileID: 0}
+    - target: {fileID: 2773867852966075662, guid: e20b6cb1294a047f4b8fb29f4fbe2f13, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0.9221379
+      objectReference: {fileID: 0}
+    - target: {fileID: 2773867852966075662, guid: e20b6cb1294a047f4b8fb29f4fbe2f13, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0.022137918
+      objectReference: {fileID: 0}
+    - target: {fileID: 3030593448679946537, guid: e20b6cb1294a047f4b8fb29f4fbe2f13, type: 3}
+      propertyPath: m_Name
+      value: Interestpoint MID
+      objectReference: {fileID: 0}
+    - target: {fileID: 3030593448679946537, guid: e20b6cb1294a047f4b8fb29f4fbe2f13, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3630760025944078832, guid: e20b6cb1294a047f4b8fb29f4fbe2f13, type: 3}
+      propertyPath: m_text
+      value: "Ved de store udgravninger p\xE5 R\xE5dhuspladsen i 2011 blev der fundet
+        vejbel\xE6gninger og hjulspor fra vogne, der har k\xF8rt p\xE5 vejen. Der
+        var hjulspor, der f\xF8rte lige ind mod byen, mens andre drejede lidt ned
+        mod kysten. Derfor er det sandsynligt, at vejen har delt sig og er fortsat
+        mod syd. Vejen var en jordvej med en bel\xE6gning af sk\xE6rver af sten og
+        affald s\xE5som knogler og jernslagger. Vejen var s\xE5ledes opbygget af
+        forskellige h\xE5rde materialer, der kunne bruges til at skabe en stabil
+        overflade. Nogle steder var vejene p\xE5 den tid belagt med tr\xE6 eller
+        st\xF8rre eller mindre sten, eller de kunne v\xE6re en art jordveje som p\xE5
+        R\xE5dhuspladsen. Vejforl\xF8bet var nogle steder s\xE5 bredt, at det m\xE5ske
+        snarere var en slags plads. Lignende brede veje eller pladser ses blandt
+        andet i Lund."
+      objectReference: {fileID: 0}
+    - target: {fileID: 4656826326359483649, guid: e20b6cb1294a047f4b8fb29f4fbe2f13, type: 3}
+      propertyPath: m_text
+      value: "Ved de store udgravninger p\xE5 R\xE5dhuspladsen i 2011 blev der fundet
+        vejbel\xE6gninger og hjulspor fra vogne, der har k\xF8rt p\xE5 vejen. Der
+        var hjulspor, der f\xF8rte lige ind mod byen, mens andre drejede lidt ned
+        mod kysten. Derfor er det sandsynligt, at vejen har delt sig og er fortsat
+        mod syd. Vejen var en jordvej med en bel\xE6gning af sk\xE6rver af sten og
+        affald s\xE5som knogler og jernslagger. Vejen var s\xE5ledes opbygget af
+        forskellige h\xE5rde materialer, der kunne bruges til at skabe en stabil
+        overflade. Nogle steder var vejene p\xE5 den tid belagt med tr\xE6 eller
+        st\xF8rre eller mindre sten, eller de kunne v\xE6re en art jordveje som p\xE5
+        R\xE5dhuspladsen. Vejforl\xF8bet var nogle steder s\xE5 bredt, at det m\xE5ske
+        snarere var en slags plads. Lignende brede veje eller pladser ses blandt
+        andet i Lund."
+      objectReference: {fileID: 0}
+    - target: {fileID: 4726304191057658516, guid: e20b6cb1294a047f4b8fb29f4fbe2f13, type: 3}
+      propertyPath: m_text
+      value: "Udsnit af hjulspor fra R\xE5dhuspladsen og vejens bel\xE6gning. Landm\xE5lerstokkens
+        felter er hver 20 cm."
+      objectReference: {fileID: 0}
+    - target: {fileID: 4997704836247358736, guid: e20b6cb1294a047f4b8fb29f4fbe2f13, type: 3}
+      propertyPath: m_text
+      value: "Udsnit af hjulspor fra R\xE5dhuspladsen og vejens bel\xE6gning. Landm\xE5lerstokkens
+        felter er hver 20 cm."
+      objectReference: {fileID: 0}
+    - target: {fileID: 5666468793910167777, guid: e20b6cb1294a047f4b8fb29f4fbe2f13, type: 3}
+      propertyPath: m_text
+      value: "Udsnit af hjulspor fra R\xE5dhuspladsen og vejens bel\xE6gning. Landm\xE5lerstokkens
+        felter er hver 20 cm."
+      objectReference: {fileID: 0}
+    - target: {fileID: 6049952979272995702, guid: e20b6cb1294a047f4b8fb29f4fbe2f13, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0.9221379
+      objectReference: {fileID: 0}
+    - target: {fileID: 6049952979272995702, guid: e20b6cb1294a047f4b8fb29f4fbe2f13, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0.022137918
+      objectReference: {fileID: 0}
+    - target: {fileID: 6149550330887014840, guid: e20b6cb1294a047f4b8fb29f4fbe2f13, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6598680380975740980, guid: e20b6cb1294a047f4b8fb29f4fbe2f13, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 6598680380975740980, guid: e20b6cb1294a047f4b8fb29f4fbe2f13, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 6598680380975740980, guid: e20b6cb1294a047f4b8fb29f4fbe2f13, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 6598680380975740980, guid: e20b6cb1294a047f4b8fb29f4fbe2f13, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -4.329976
+      objectReference: {fileID: 0}
+    - target: {fileID: 6598680380975740980, guid: e20b6cb1294a047f4b8fb29f4fbe2f13, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.020915527
+      objectReference: {fileID: 0}
+    - target: {fileID: 6598680380975740980, guid: e20b6cb1294a047f4b8fb29f4fbe2f13, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -4.815979
+      objectReference: {fileID: 0}
+    - target: {fileID: 6598680380975740980, guid: e20b6cb1294a047f4b8fb29f4fbe2f13, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6598680380975740980, guid: e20b6cb1294a047f4b8fb29f4fbe2f13, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6598680380975740980, guid: e20b6cb1294a047f4b8fb29f4fbe2f13, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6598680380975740980, guid: e20b6cb1294a047f4b8fb29f4fbe2f13, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6598680380975740980, guid: e20b6cb1294a047f4b8fb29f4fbe2f13, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6598680380975740980, guid: e20b6cb1294a047f4b8fb29f4fbe2f13, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6598680380975740980, guid: e20b6cb1294a047f4b8fb29f4fbe2f13, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7368655614491170978, guid: e20b6cb1294a047f4b8fb29f4fbe2f13, type: 3}
+      propertyPath: m_text
+      value: "Hjulspor p\xE5 R\xE5dhuspladsen"
+      objectReference: {fileID: 0}
+    - target: {fileID: 7549712751577984931, guid: e20b6cb1294a047f4b8fb29f4fbe2f13, type: 3}
+      propertyPath: m_text
+      value: "Hjulspor p\xE5 R\xE5dhuspladsen"
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: e20b6cb1294a047f4b8fb29f4fbe2f13, type: 3}
+--- !u!4 &246665499523287613 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6598680380975740980, guid: e20b6cb1294a047f4b8fb29f4fbe2f13, type: 3}
+  m_PrefabInstance: {fileID: 6412963345045647881}
   m_PrefabAsset: {fileID: 0}

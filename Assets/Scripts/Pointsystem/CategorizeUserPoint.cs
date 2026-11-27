@@ -1,110 +1,288 @@
 using UnityEngine;
-using System.Collections;
+using UnityEngine.SceneManagement;
 
 public class CategorizeUserPoint : MonoBehaviour
 {
+    // This class stores all the variables that belong to ONE specific scene.
+    [System.Serializable]
+    public class ScenePointState
+    {
+        [Header("Scene State")]
+
+        // The current score multiplier for this element, Starts at 0.5 and can increase up to 2.0.
+        public float ScoreMult = 0.5f;
+
+        // The revisit timer for THIS scene in this element.
+        public float timer;
+
+        // Has the player already received the revisit bonus?
+        public bool HasReceivedRevisitBonus;
+
+        // Is this scene currently in cooldown?
+        public bool Cooldown;
+
+        [Header("Private Runtime Values")]
+
+        // Used to make sure the multiplier is only reset
+        // once when entering an interest point.
+        public bool Scoremultreset;
+
+        // Can be used to track whether the multiplier is running.
+        public bool ScoreMultIsRunning;
+
+        // Determines whether the revisit timer is currently counting.
+        public bool timerRunning;
+
+        // Tracks how long the player has been inside the
+        // interest point before the multiplier increases.
+        public float DwellTimer;
+
+        // Is the player currently inside the interest point?
+        public bool IsInside;
+    }
+
+    [Header("Scene Setup")]
+
+    // Names of the scenes that this script should recognize.
+    public string[] SceneNames;
+
+
+    // Stores one ScenePointState for every scene.
+    public ScenePointState[] SceneStates;
+
+
+    // A reference to the state belonging to the scene we are CURRENTLY inside.
+    private ScenePointState CurrentState;
+
+    // Stores the index of the scene we are currently using. (-1 is no scene)
+    private int CurrentSceneIndex = -1;
+
     [Header("Dwelltime point count")]
-    [Tooltip("Amount of current loops")]
-    public int loopCount;
-    [Tooltip("Max amount of loops in logic")]
-    public int maxLoops;
-    [Tooltip("Loops aqquired before penalty")]
-    public int EarlyExitThreshhold;
- 
-    [Header("Penalty/Rewardtriggers")]
-    [Tooltip("Player left interestpoint early")]
-    public bool Exitearly;
-    [Tooltip("Player have visited current interestpoint")]
-    public bool HasVisitedInterestpoint;
-    [Tooltip("Player has recieved bonuspoint for revisiting")]
-    public bool HasReceivedRevisitBonus;
-    [Tooltip("Player have visited the time before")]
-    public bool HasVisitedAgeSection;
 
-    [Header("TestValues")]
+    // How often the multiplier increases.( 1 = 0.01)
+    public float ScoreMultTimerLoop = 1f;
+
+
+    // If the multiplier is equal to or below this value when the player exits, a penalty is applied.
+    public float ScoreLowPenaltyThreshold = 0.6f;
+
+
+    // How many points the player loses if the multiplier is below the penalty threshold when exiting.
+    public float Penalty = 5f;
+
+    [Header("Revisit Bonus")]
+    // A separate public timer variable.
+    // (This timer is not the same as the timer stored inside ScenePointState)
+    public float timer;
+
+
+    // How long the revisit timer should count before finishing.
+    public int TimerReturn = 30;
+
+    [Header("Test Values")]
     public bool Test;
-
-    private Coroutine standCoroutine;
 
     private PlayerStats playerStats;
 
     private void Start()
     {
         playerStats = FindFirstObjectByType<PlayerStats>();
+
+        // Find out which scene we are currently in.
+        UpdateSceneState();
     }
 
-    //On First Time Enter. Found interest point, gives 1 point subtracted from the penalty. 
-    public void GainInteractionPoint()
+    private void Update()
     {
-        GainPoints(1);
-        HasVisitedInterestpoint = true;
+        // Check which scene we are currently in.
+        UpdateSceneState();
+
+
+        // Check if scene is real
+        if (CurrentState == null)
+            return;
+
+        if (Test)
+        {
+            RevisitBonus();
+            Test = false;
+        }
+
+        if (CurrentState.timerRunning)
+        {
+            // Increase time
+            CurrentState.timer += Time.deltaTime;
+
+            if (CurrentState.timer >= TimerReturn)
+            {
+                // Make sure the timer doesn't go above max time
+                CurrentState.timer = TimerReturn;
+
+                // Stop the timer.
+                CurrentState.timerRunning = false;
+
+                // Mark this scene/trigger as being in cooldown.
+                CurrentState.Cooldown = true;
+            }
+        }
+
+        // Only run the dwell timer if the player is currently inside the interest point.
+        if (CurrentState.IsInside)
+        {
+            UpdateDwellTimer();
+        }
     }
 
-    //On First Time Enter. Check if this current age has been visited
-    public void SceneShiftTrigger()
+    //Find current scene
+    private void UpdateSceneState()
     {
-        HasVisitedAgeSection = true;
+        // Get the name of the scene currently loaded in Unity.
+        string sceneName = SceneManager.GetActiveScene().name;
+
+        // Scene check
+        int sceneIndex = -1;
+
+        // Go through all scene names in array
+        for (int i = 0; i < SceneNames.Length; i++)
+        {
+            // Compare the current scene name with the scene names in our array.
+            if (SceneNames[i] == sceneName)
+            {
+                // Match found then Store the index of the matching scene.
+                sceneIndex = i;
+                break;
+            }
+        }
+
+        // If the scene isn't in our SceneNames array,no state  
+        if (sceneIndex == -1)
+        {
+            // Clear the current state.
+            CurrentState = null;
+
+            // Stop the function here.
+            return;
+        }
+
+        // Statecheck
+        if (sceneIndex == CurrentSceneIndex)
+            return;
+
+        // Store the index of the new active scene.
+        CurrentSceneIndex = sceneIndex;
+
+
+        // Switch CurrentState to the state belonging to the new scene in array.
+        CurrentState = SceneStates[sceneIndex];
+
+        // Print a message of what state
+        Debug.Log(gameObject.name + " is now using state for scene: " + sceneName);
     }
 
-    //On Player Enter. Visit again bous;
+    //Onexit
     public void RevisitBonus()
     {
-        if (HasVisitedInterestpoint && !HasReceivedRevisitBonus)
-        {
-            GainPoints(1);
-            HasReceivedRevisitBonus = true;
-        }
+        // No valid scene state, no timer
+        if (CurrentState == null)
+            return;
+
+        // Reset the timer to 0
+        CurrentState.timer = 0f;
+
+        // Start the timer.
+        CurrentState.timerRunning = true;
+
+        // Remove the cooldown state.
+        CurrentState.Cooldown = false;
     }
 
-    //On Player Exit. cooldown period for when leaving interest point and returning to acctually ge tthe points.
+    //Player Exit.
     public void Cooldownperiod()
     {
-  
+        // no valid scene state, then stop the function.
+        if (CurrentState == null)
+            return;
+
+        // reset multiplier
+        CurrentState.Scoremultreset = false;
+
+        // Stop the multiplier-running flag.
+        CurrentState.ScoreMultIsRunning = false;
+
+        // Player is no longer inside
+        CurrentState.IsInside = false;
+
+
+        // Reset dwell timer
+        CurrentState.DwellTimer = 0f;
+
+        //Penalty if score is low
+        if (CurrentState.ScoreMult <= ScoreLowPenaltyThreshold)
+        {
+            // Subtract the global penalty amount from the player's points.
+            LosePoints(Penalty);
+        }
+
+        //apply multiplier
+        playerStats.Playerpoints *= CurrentState.ScoreMult;
     }
 
-    //While inside colider Event. Dwell cheker.
+    //On player enter
     public void WithinInterestPoint()
     {
-        standCoroutine = StartCoroutine(DwellTimer());
-    }
+        // If no scene state exists, stop.
+        if (CurrentState == null)
+            return;
 
-    IEnumerator DwellTimer()
-    {
-        while (loopCount < maxLoops)
+        // Mark that the player is currently inside the interest point.
+        CurrentState.IsInside = true;
+
+        if (!CurrentState.Scoremultreset)
         {
-            if (loopCount < EarlyExitThreshhold)
-            {
-                Exitearly = true;
-            }
-            else if (loopCount > EarlyExitThreshhold)
-            {
-                Exitearly = false;
-            }
-                yield return new WaitForSeconds(10f);
+            // Set the multiplier back to its starting value.
+            CurrentState.ScoreMult = 0.5f;
 
-            GainPoints(1);
-            loopCount++;
+            // Mark that the multiplier has now been reset.
+            CurrentState.Scoremultreset = true;
+
+            // Reset the dwell timer.
+            CurrentState.DwellTimer = 0f;
         }
     }
 
-    //OnplayerExit. Penalty check
-    public void OnexitPenalty()
+    private void UpdateDwellTimer()
     {
-        if (Exitearly ==true)
+        //Stop scoremultiplier at 2 if reached
+        if (CurrentState.ScoreMult >= 2.0f)
+            return;
+
+        // Count up
+        CurrentState.DwellTimer += Time.deltaTime;
+        if (CurrentState.DwellTimer >= ScoreMultTimerLoop)
         {
-            LosePoints(1);
-            Exitearly = false;
+
+            // This starts counting towards the next increase.
+            CurrentState.DwellTimer = 0f;
+
+            // Increase the multiplier by 0.01.
+            CurrentState.ScoreMult += 0.01f;
+
+            // Make sure the multiplier never exceeds 2.0.
+            CurrentState.ScoreMult = Mathf.Min(
+                CurrentState.ScoreMult,
+                2.0f
+            );
         }
     }
 
-    //The regular point gain call
-    public void GainPoints(int amountGain)
+    //Gain x amount of points
+    public void GainPoints(float amountGain)
     {
         playerStats.Playerpoints += amountGain;
     }
 
-    //The regular point loss call
-    public void LosePoints(int amountLose)
+    //Lose x amount of points
+    public void LosePoints(float amountLose)
     {
         playerStats.Playerpoints -= amountLose;
     }

@@ -30,7 +30,8 @@ FlagParams GetFlagParams(float3 packed)
     p.swivel = packed.y < 0 ? 0 : 1;
     p.speed = abs(packed.y);
 
-    float3 pivotWS = GetObjectToWorldMatrix()._m03_m13_m23;
+    // HDRP renders camera-relative; the absolute pivot keeps the seed and gusts fixed to the world.
+    float3 pivotWS = GetAbsolutePositionWS(GetObjectToWorldMatrix()._m03_m13_m23);
     p.seed = frac(sin(dot(pivotWS, float3(12.9898, 78.233, 37.719))) * 43758.5453);
 
     float2 dir = dot(_FlagWind.xy, _FlagWind.xy) > 1e-4 ? normalize(_FlagWind.xy) : float2(1, 0);
